@@ -34,7 +34,14 @@ const esc = (s) => s.replace(/[&<>]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>':
 const card = (id, f) => `<article id="${id}" class="card"><div class="inner">${fx(f).trim().split(/\r?\n/).map((l) => `<div><span>${esc(l)}</span></div>`).join('')}</div></article>`;
 const page = `<!doctype html><html><head><meta charset="utf-8"><title>Fixture results</title><style>body{font:14px sans-serif;margin:20px;background:#eef}.card{background:#fff;margin:12px 0;padding:10px;border-radius:8px;width:520px}#noise{padding:10px}</style></head><body>
 <div id="noise">${fx('noise.txt').split(/\r?\n/).map((l) => `<p>${esc(l)}</p>`).join('')}</div>
-${card('details', 'details-one-stop.txt')}${card('cardview', 'card-one-stop.txt')}${card('ret', 'details-return.txt')}${card('ath', 'details-unsupported.txt')}${card('direct', 'details-direct.txt')}${card('night', 'details-overnight-self-transfer.txt')}${card('change', 'details-airport-change.txt')}${card('tlv', 'details-to-tlv.txt')}${card('lhr35', 'details-lhr-t3-t5.txt')}${card('lhrly', 'details-lhr-elal.txt')}${card('lhrself', 'details-lhr-self-transfer.txt')}</body></html>`;
+${card('details', 'details-one-stop.txt')}${card('cardview', 'card-one-stop.txt')}${card('ret', 'details-return.txt')}${card('ath', 'details-unsupported.txt')}${card('direct', 'details-direct.txt')}${card('night', 'details-overnight-self-transfer.txt')}${card('change', 'details-airport-change.txt')}${card('tlv', 'details-to-tlv.txt')}${card('lhr35', 'details-lhr-t3-t5.txt')}${card('lhrly', 'details-lhr-elal.txt')}${card('lhrself', 'details-lhr-self-transfer.txt')}${card('spa', 'details-one-stop.txt')}
+<script>
+// Stands in for Skyscanner's single-page behaviour (owner report 2026-11-09): a press on a card makes the page
+// re-render, dropping every node of <html> it did not create, i.e. the extension's host.
+window.__spaPresses = 0;
+document.addEventListener('mousedown', (e) => { if (!e.target.closest('#spa')) return; window.__spaPresses++;
+  [...document.documentElement.children].filter((c) => c !== document.head && c !== document.body).forEach((c) => c.remove()); });
+</script></body></html>`;
 const srv = http.createServer((q, r) => { r.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' }); r.end(page); });
 await new Promise((ok) => srv.listen(0, '127.0.0.1', ok));
 const pageUrl = `http://127.0.0.1:${srv.address().port}/results`;
@@ -88,6 +95,13 @@ try {
   check('map marks the arrival and the departure', await sh('.cx-map svg .mark.from') && await sh('.cx-map svg .mark.to'));
   const pageVerdict = await p.evaluate(() => document.getElementById('cdgx-host').shadowRoot.querySelector('.cx-verdict')?.innerText ?? '');
   await p.screenshot({ path: path.join(shots, 'details-cdg.png') });
+
+  // single-page site: the press on the card must not reach the page, and a page re-render must not lose the panel
+  t = await analyse('spa');
+  check('picking a card: the press does not reach the page (no re-render), analysis shown', /Connection at CDG/.test(t) && await p.evaluate(() => window.__spaPresses) === 0, `page saw ${await p.evaluate(() => window.__spaPresses)} press(es)`);
+  await p.evaluate(() => document.getElementById('cdgx-host').remove());
+  const back = await p.waitForFunction(() => /Connection at CDG/.test(document.getElementById('cdgx-host')?.shadowRoot?.querySelector('.cx-drawer')?.innerText ?? ''), { timeout: 5000 }).then(() => true, () => false);
+  check('page removes the panel → it comes back with the same result', back);
 
   t = await analyse('night');
   const line = (re) => (new RegExp(`[^\\n]*(${re})[^\\n]*`, 'i').exec(t) ?? [''])[0];

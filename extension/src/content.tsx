@@ -2,7 +2,7 @@
 // itinerary (or has selected its text). Only that element's visible text is parsed, in the page; nothing is sent to
 // Skyscanner or stored. Everything is drawn inside a closed shadow root so the page's styles and ours do not mix.
 import { createRoot } from 'react-dom/client';
-import { useState } from 'react';
+import { Component, useState, type ReactNode } from 'react';
 import panelCssModule from './ui/panel.css';
 import mapCssModule from '../../airportmaps/app/app.css';
 // esbuild loads .css as text (scripts/build.ts); the vite/client typing of *.css does not know that
@@ -30,7 +30,33 @@ export function itineraryElement(el: Element | null): HTMLElement | null {
   return null;
 }
 
-async function ask(req: Request): Promise<Response> { return chrome.runtime.sendMessage<Response>(req); }
+async function ask(req: Request): Promise<Response> {
+  try { return await chrome.runtime.sendMessage<Response>(req); }
+  catch (e) {
+    // after the extension is reloaded or updated, scripts already in open tabs lose their connection to it
+    const m = (e as Error).message ?? String(e);
+    return { type: 'error', detail: /context invalidated|Receiving end does not exist/i.test(m) ? 'The extension was reloaded or updated. Reload this page, then try again.' : m };
+  }
+}
+
+/** Keeps a rendering error inside the drawer: without it React unmounts the whole tree and the button disappears. */
+class Boundary extends Component<{ children: ReactNode; onReset: () => void }, { error: Error | null }> {
+  state = { error: null as Error | null };
+  static getDerivedStateFromError(error: Error) { return { error }; }
+  render() {
+    if (!this.state.error) return this.props.children;
+    return <aside className="cx-drawer" role="dialog" aria-label="Connection analysis">
+      <button className="cx-close" onClick={() => { this.setState({ error: null }); this.props.onReset(); }} aria-label="Close">✕</button>
+      <p className="cx-note">Something went wrong while showing the result: {this.state.error.message}</p>
+    </aside>;
+  }
+}
+
+// While the traveller picks an itinerary, the page must not also react to that press: Skyscanner opens or re-renders a
+// card on pointer/mouse down, which tore our host out of the page (2026-11-09 owner report). The click itself is
+// handled by us; the presses before it are stopped (touch is not preventDefault-ed, or the browser sends no click).
+const SHIELDED = ['pointerdown', 'mousedown', 'pointerup', 'mouseup', 'touchstart', 'touchend', 'auxclick', 'dblclick'] as const;
+const shield = (e: Event) => { e.stopImmediatePropagation(); if (!e.type.startsWith('touch')) e.preventDefault(); };
 
 type State =
   | { k: 'idle' } | { k: 'picking' } | { k: 'busy'; note: string }
@@ -62,18 +88,26 @@ function App() {
     if (sel.trim().length > 20) return fromText(sel);
     set({ k: 'picking' });
     const move = (e: MouseEvent) => { const el = itineraryElement(e.target as Element); setHl(el ? el.getBoundingClientRect() : null); };
-    const done = () => { document.removeEventListener('mousemove', move, true); document.removeEventListener('click', click, true); document.removeEventListener('keydown', key, true); setHl(null); };
+    const done = () => {
+      document.removeEventListener('mousemove', move, true); window.removeEventListener('click', click, true); document.removeEventListener('keydown', key, true);
+      // the press events of this click are already dispatched; release the shield after them
+      setTimeout(() => SHIELDED.forEach((t) => window.removeEventListener(t, shield, true)), 0);
+      setHl(null);
+    };
     const click = (e: MouseEvent) => {
-      e.preventDefault(); e.stopPropagation(); done();
+      e.preventDefault(); e.stopImmediatePropagation(); done();
       const el = itineraryElement(e.target as Element);
       if (el) fromText(el.innerText); else set({ k: 'manual', initial: blankConnection(), note: 'That part of the page does not look like an itinerary. Try clicking inside a flight card or the itinerary details, or enter the connection by hand.' });
     };
     const key = (e: KeyboardEvent) => { if (e.key === 'Escape') { done(); set({ k: 'idle' }); } };
-    document.addEventListener('mousemove', move, true); document.addEventListener('click', click, true); document.addEventListener('keydown', key, true);
+    // window (capture) runs before any listener of the page, including its own document/root capture listeners
+    SHIELDED.forEach((t) => window.addEventListener(t, shield, true));
+    document.addEventListener('mousemove', move, true); window.addEventListener('click', click, true); document.addEventListener('keydown', key, true);
   };
   const close = () => set({ k: 'idle' });
 
   return (
+    <Boundary onReset={close}>
     <div className="cx-root">
       {s.k === 'idle' && <button className="cx-fab" onClick={start} title="Click, then click an itinerary on the page">Analyze connection</button>}
       {s.k === 'picking' && <div className="cx-hint">Click the itinerary to analyse · Esc to cancel</div>}
@@ -92,6 +126,7 @@ function App() {
         </aside>
       )}
     </div>
+    </Boundary>
   );
 }
 
@@ -107,5 +142,11 @@ function mount() {
   shadow.append(style, root);
   document.documentElement.append(host);
   createRoot(root).render(<App />);
+  // Single-page sites re-render and may drop nodes they did not create (the page does not reload, so the content script
+  // is not injected again). Re-attaching the same host keeps the React tree and its state (an open drawer survives).
+  const reattach = () => { if (!host.isConnected) document.documentElement.append(host); };
+  new MutationObserver(reattach).observe(document.documentElement, { childList: true });
+  new MutationObserver(reattach).observe(document, { childList: true });   // the whole <html> element replaced
+  setInterval(reattach, 1500);   // safety net for removals the observers above cannot see
 }
 mount();

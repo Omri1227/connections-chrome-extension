@@ -13,6 +13,16 @@
 > - The time estimates come from sourced assumptions and have **not yet been validated against timed real connections** (see [Limits](#limits)).
 > - Never treat a verdict as a guarantee.
 
+## Screenshots
+
+The page behind the panel is the project's own test page (a mock-up of a results list), not a live flight-search site.
+
+![Analysis panel next to a results list: connection at Munich, arrival terminal predicted from earlier flights, schematic map and illustrative route](docs/screenshots/panel-on-results-page.png)
+
+| Full result with map and transfer time | Screenshot mode: check what was read, then analyse |
+|---|---|
+| ![Result for a connection at Paris-CDG: verdict, ticket-type question, map, route, time needed](docs/screenshots/result-with-map.png) | ![Flights read from a pasted itinerary screenshot, each field marked Read, Check or Missing](docs/screenshots/screenshot-mode.png) |
+
 ## How it works
 
 ```

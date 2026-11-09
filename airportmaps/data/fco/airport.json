@@ -1,0 +1,3055 @@
+{
+  "iata": "FCO",
+  "icao": "LIRF",
+  "name": "Rome Fiumicino \"Leonardo da Vinci\"",
+  "city": "Rome (Fiumicino)",
+  "asOf": "2026-10-31",
+  "schematic": {
+    "width": 1000,
+    "height": 640,
+    "northDeg": 0,
+    "background": [
+      {
+        "shape": {
+          "type": "poly",
+          "points": [
+            [
+              150,
+              281
+            ],
+            [
+              196,
+              296
+            ],
+            [
+              273,
+              308
+            ],
+            [
+              392,
+              305
+            ]
+          ]
+        },
+        "kind": "other",
+        "label": "SkyBridge guideway (OSM)"
+      },
+      {
+        "shape": {
+          "type": "poly",
+          "points": [
+            [
+              556,
+              420
+            ],
+            [
+              575,
+              450
+            ],
+            [
+              610,
+              500
+            ],
+            [
+              660,
+              560
+            ],
+            [
+              700,
+              620
+            ]
+          ]
+        },
+        "kind": "rail",
+        "label": "FL1 / Leonardo Express to Rome"
+      },
+      {
+        "shape": {
+          "type": "rect",
+          "x": 300,
+          "y": 512,
+          "w": 45,
+          "h": 42
+        },
+        "kind": "other",
+        "label": "T5 (not in regular passenger use)"
+      },
+      {
+        "shape": {
+          "type": "poly",
+          "points": [
+            [
+              540,
+              360
+            ],
+            [
+              690,
+              360
+            ],
+            [
+              700,
+              470
+            ],
+            [
+              560,
+              470
+            ]
+          ]
+        },
+        "kind": "parking",
+        "label": "Car parks A–D / offices"
+      },
+      {
+        "shape": {
+          "type": "poly",
+          "points": [
+            [
+              160,
+              120
+            ],
+            [
+              880,
+              100
+            ],
+            [
+              880,
+              140
+            ],
+            [
+              420,
+              150
+            ],
+            [
+              400,
+              230
+            ],
+            [
+              160,
+              230
+            ]
+          ]
+        },
+        "kind": "apron",
+        "label": "Aprons"
+      }
+    ],
+    "labels": [
+      {
+        "text": "N ↑ (OSM-derived, ~2 m per unit)",
+        "at": [
+          20,
+          20
+        ],
+        "kind": "note"
+      },
+      {
+        "text": "Schengen (T1 · gates A)",
+        "at": [
+          700,
+          60
+        ],
+        "kind": "note"
+      },
+      {
+        "text": "Non-Schengen (T3 · gates E)",
+        "at": [
+          180,
+          90
+        ],
+        "kind": "note"
+      },
+      {
+        "text": "Landside walkway T1–T3–station",
+        "at": [
+          560,
+          395
+        ],
+        "kind": "note"
+      }
+    ]
+  },
+  "feedTerminals": { "arrival": { "1": ["fco-a1-3", "fco-a21-27", "fco-a31-52", "fco-a61-83"], "3": ["fco-e1-8", "fco-e11-24", "fco-e51-61", "fco-e31-44", "fco-a1-3", "fco-a21-27", "fco-a31-52", "fco-a61-83"]}, "departure": { "1": ["fco-a1-3", "fco-a21-27", "fco-a31-52", "fco-a61-83", "fco-e1-8", "fco-e11-24", "fco-e51-61", "fco-e31-44"], "3": ["fco-e1-8", "fco-e11-24", "fco-e51-61", "fco-e31-44", "fco-a1-3", "fco-a21-27", "fco-a31-52", "fco-a61-83"], "5": []}},
+  "oneStopSecurity": { "countries": ["AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IE", "IT", "LV", "LT", "LU", "MT", "NL", "PL", "PT", "RO", "SK", "SI", "ES", "SE", "IS", "NO", "LI", "CH", "US", "CA", "ME"], "airports": ["FAE"], "excludedAirports": ["TLV"], "asOf": "2026-11-01", "sources": ["src:fco-adr-transiti", "src:eu-oss-2025-920"], "note": "ADR transit page: re-screening is skipped after flights from the US, Canada, Montenegro, the Faroe Islands (Vagar), Greenland (Kangerlussuaq), Guernsey, Jersey and the Isle of Man. The last four were removed from the EU list by Reg. 2025/920 and are left out here. ADR does not list the United Kingdom, so UK arrivals are treated as re-screened at FCO (conservative; conflict with the EU list). The ADR page still lists the four airports removed in May 2025, so it predates Reg. 2025/920 (stale): owner capture of a current ADR page (DR-B5, FCO side)." },
+  "specialScreening": [{ "id": "ss:fco-us-israel-t1", "appliesTo": { "destinationCountries": ["US", "IL"], "airlines": ["AZ"]}, "certainty": "verified", "issueLevel": "material", "text": "ADR: traditional X-ray screening (liquids ≤ 100 ml, taken out with electronics) stays in force for direct flights to the USA or Israel of airlines that check in at Terminal 1 (ITA Airways: feed TLV departures report terminal 1), i.e. a separate screening flow; ITA passengers to the USA / Israel must check in at the airport counters. Boarding in area E. No time is published (\"arrive well in advance\").", "sources": ["src:fco-adr-checks", "src:fd-feed-terminals-2026-11-01"]},{ "id": "ss:fco-israel-other", "appliesTo": { "destinationCountries": ["IL"]}, "certainty": "unknown", "issueLevel": "material", "text": "Flights to Israel: whether this airline has an additional document check, interview or separate screening at Rome Fiumicino (ADR documents a separate flow for US and Israel flights only for airlines checking in at T1) is not established by any source we could read. Allow extra time and check with the airline.", "sources": ["src:fco-adr-checks"]},{ "id": "ss:fco-us-enhanced", "appliesTo": { "destinationCountries": ["US"]}, "certainty": "unknown", "issueLevel": "secondary", "text": "US-bound flights: TSA / DHS enhanced security measures for all last-point-of-departure airports (2017, still the baseline as far as known) may add checks at check-in or at the gate (interviews, document checks, separate screening of electronics). The procedures are not public; no time is known.", "sources": ["src:dhs-tsa-2017-enhanced"]}],
+  "areas": [
+    {
+      "id": "fco-t1-land",
+      "checkIn": { "serves": ["fco-a1-3", "fco-a21-27", "fco-a31-52", "fco-a61-83", "fco-e1-8", "fco-e11-24", "fco-e51-61", "fco-e31-44"], "sources": ["src:fd-feed-terminals-2026-11-01"], "note": "T1 check-in: Schengen and domestic, and the airlines that check in at T1 for non-Schengen flights (ITA; the feed shows T1 departures to TLV, JFK, LHR)" },
+      "name": "Terminal 1 · landside halls (check-in level 1, arrivals level 0)",
+      "short": "T1",
+      "kind": "landside-hall",
+      "terminal": "T1",
+      "side": "landside",
+      "zone": "n/a",
+      "matrix": true,
+      "anchor": [
+        690,
+        326
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            600,
+            300
+          ],
+          [
+            775,
+            302
+          ],
+          [
+            772,
+            348
+          ],
+          [
+            604,
+            346
+          ]
+        ]
+      },
+      "level": "Level 1 departures (check-in islands A–E, entrances 1–5); level 0 arrivals",
+      "description": "Domestic and Schengen terminal (ITA Airways hub). Check-in islands A–E; security on level 1 at the west side of the hall.",
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-t1-maps",
+        "src:fco-adr-which-terminal",
+        "src:fco-osm",
+        "src:fco-yt-groming-landside"
+      ]
+    },
+    {
+      "id": "fco-t3-land",
+      "checkIn": { "serves": ["fco-e1-8", "fco-e11-24", "fco-e51-61", "fco-e31-44", "fco-a1-3", "fco-a21-27", "fco-a31-52", "fco-a61-83"], "sources": ["src:fd-feed-terminals-2026-11-01"], "note": "T3 check-in: non-Schengen carriers (US/Israel flights at island N) and some Schengen flights (feed: 159 Schengen departures with terminal 3)" },
+      "name": "Terminal 3 · landside halls (check-in level 1, arrivals level 0)",
+      "short": "T3",
+      "kind": "landside-hall",
+      "terminal": "T3",
+      "side": "landside",
+      "zone": "n/a",
+      "matrix": true,
+      "anchor": [
+        495,
+        326
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            418,
+            306
+          ],
+          [
+            566,
+            292
+          ],
+          [
+            572,
+            342
+          ],
+          [
+            428,
+            356
+          ]
+        ]
+      },
+      "level": "Level 1 departures (check-in F–O, entrances 1–7); level 0 arrivals and baggage reclaim",
+      "description": "Main international terminal: non-Schengen check-in (incl. US/Israel flights at island N), arrivals from non-Schengen flights. The T1 and T3 halls form one continuous building on level 1.",
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-t3-maps",
+        "src:fco-adr-which-terminal",
+        "src:fco-osm",
+        "src:fco-yt-orwecould-2026",
+        "src:fco-yt-rameez-2023"
+      ]
+    },
+    {
+      "id": "fco-station",
+      "name": "Fiumicino Aeroporto railway station (Leonardo Express / FL1)",
+      "short": "Rail",
+      "kind": "station",
+      "side": "landside",
+      "zone": "n/a",
+      "matrix": true,
+      "anchor": [
+        556,
+        420
+      ],
+      "shape": {
+        "type": "rect",
+        "x": 535,
+        "y": 410,
+        "w": 45,
+        "h": 22
+      },
+      "description": "Mainline station south of the terminals, reached on foot through the elevated pedestrian walkway system (moving walkways) that also links T1, T3, car parks and the Hilton.",
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-walkway",
+        "src:fco-osm",
+        "src:fco-yt-groming-landside"
+      ]
+    },
+    {
+      "id": "fco-t1-air",
+      "name": "Terminal 1 · airside plaza (after T1 security, Schengen)",
+      "short": "T1 air",
+      "kind": "transfer-hub",
+      "terminal": "T1",
+      "side": "airside",
+      "zone": "schengen",
+      "matrix": false,
+      "anchor": [
+        680,
+        268
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            600,
+            252
+          ],
+          [
+            770,
+            256
+          ],
+          [
+            772,
+            290
+          ],
+          [
+            602,
+            288
+          ]
+        ]
+      },
+      "level": "Level 1 departures",
+      "description": "Shopping plaza after T1 security. Signed branches: A31-52 (north), A61-83 (east), A1-27 and E (west, towards T3).",
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-t1-maps",
+        "src:fco-yt-groming-airside"
+      ]
+    },
+    {
+      "id": "fco-a1-3",
+      "name": "Terminal 1 · Boarding area A1–3",
+      "short": "A1-3",
+      "kind": "pier",
+      "terminal": "T1",
+      "side": "airside",
+      "zone": "schengen",
+      "matrix": false,
+      "anchor": [
+        560,
+        125
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            540,
+            192
+          ],
+          [
+            566,
+            190
+          ],
+          [
+            582,
+            62
+          ],
+          [
+            556,
+            58
+          ]
+        ]
+      },
+      "level": "Level 1",
+      "description": "Pier north-west of T1 (OSM 'Boarding Area A1-A10'). Current ADR maps show only A1–A3 here.",
+      "confidence": "probable",
+      "sources": [
+        "src:fco-adr-maps-a1-3",
+        "src:fco-adr-overview",
+        "src:fco-osm"
+      ],
+      "notes": "Gate range contradicts between sources: ADR map page (2025) 'A1-3'; ADR overview map (2024-05), OSM and 2024 signs 'A1-10'. Only A1–A3 are individually attested."
+    },
+    {
+      "id": "fco-a21-27",
+      "intraWalk": { "min": 1, "typical": 1.5, "max": 3, "basis": "derived", "note": "Derived (R-02): pier length ≈ 100 m (gate path × 2.15 m/unit); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Terminal 1 · Boarding area A21–27 (west junction, bus gates)",
+      "short": "A21-27",
+      "kind": "concourse",
+      "terminal": "T1",
+      "side": "airside",
+      "zone": "schengen",
+      "matrix": true,
+      "anchor": [
+        600,
+        218
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            570,
+            200
+          ],
+          [
+            626,
+            194
+          ],
+          [
+            631,
+            236
+          ],
+          [
+            575,
+            241
+          ]
+        ]
+      },
+      "level": "Gates on level 0 (ground), reached by escalator from the level-1 junction",
+      "description": "Junction between T1 and the T3 corridor; ground-level gates A21–A27. The 'galleria transiti' passport control (entry into Schengen for passengers coming from the E gates) is drawn here on the ADR level-1 map.",
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-maps-a21-27",
+        "src:fco-osm"
+      ]
+    },
+    {
+      "id": "fco-a31-52",
+      "intraWalk": { "min": 1, "typical": 2.5, "max": 6, "basis": "derived", "note": "Derived (R-02): pier length ≈ 350 m (far end ≈ 350 m from the plaza (w:fco-t1air-a3152)); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Terminal 1 · Boarding area A31–52 (north pier)",
+      "short": "A31-52",
+      "kind": "pier",
+      "terminal": "T1",
+      "side": "airside",
+      "zone": "schengen",
+      "matrix": true,
+      "anchor": [
+        692,
+        185
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            668,
+            246
+          ],
+          [
+            692,
+            246
+          ],
+          [
+            714,
+            126
+          ],
+          [
+            690,
+            122
+          ]
+        ]
+      },
+      "level": "Level 1 contact gates; A34–41 and A51–52 on level 0",
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-maps-a31-52",
+        "src:fco-osm",
+        "src:fco-yt-groming-airside",
+        "src:fco-adr-press-2023-04",
+        "src:fco-yt-markoolavi-2025"
+      ],
+      "notes": "OSM area name and the ADR overview map say 'A31-59'; current ADR maps list A31–A52 only.",
+      "status": [
+        {
+          "state": "closed",
+          "from": "2020-07-01",
+          "until": "2023-04-12",
+          "note": "T1 boarding area closed in July 2020 (day not given; 07-01 used) and reopened renovated on 2023-04-12, operational 2023-04-13: 22 gates, more than half with bridges. Identification with A31–A52 is inferred from the gate count (22 = A31–A52) and its position as the T1 pier between Pier A and A1-27; the release names no gate numbers.",
+          "confidence": "inferred",
+          "sources": [
+            "src:fco-adr-press-2023-04"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fco-a61-83",
+      "intraWalk": { "min": 1, "typical": 3, "max": 7, "basis": "derived", "note": "Derived (R-02): pier length ≈ 460 m (gate path × 2.15 m/unit); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Terminal 1 · Boarding area A61–83 (Pier A, opened 2022)",
+      "short": "A61-83",
+      "kind": "pier",
+      "terminal": "T1",
+      "side": "airside",
+      "zone": "schengen",
+      "matrix": true,
+      "anchor": [
+        820,
+        245
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            788,
+            302
+          ],
+          [
+            812,
+            308
+          ],
+          [
+            852,
+            190
+          ],
+          [
+            828,
+            182
+          ]
+        ]
+      },
+      "level": "Level 1 contact gates A61–A73; level 0 remote gates A74–A83",
+      "description": "New Pier A (Schengen/domestic) opened 19 May 2022: 23 gates, 13 with jet bridges.",
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-maps-a61-83",
+        "src:fco-osm",
+        "src:fco-italiavola-2022",
+        "src:fco-wiki",
+        "src:fco-yt-groming-airside",
+        "src:fco-adr-press-2023-04"
+      ],
+      "status": [
+        {
+          "state": "planned",
+          "until": "2022-05-18",
+          "note": "Pier A (A61–A83) inaugurated 2022-05-18, operational from 2022-05-19 (first flight ITA to Linate).",
+          "confidence": "verified",
+          "sources": [
+            "src:fco-italiavola-2022",
+            "src:fco-adr-press-2023-04"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fco-t3-conn",
+      "name": "Terminal 3 · post-security strip / corridor to T1 (Schengen side, before passport control)",
+      "short": "T3 sec",
+      "kind": "transfer-hub",
+      "terminal": "T3",
+      "side": "airside",
+      "zone": "schengen",
+      "matrix": false,
+      "anchor": [
+        540,
+        262
+      ],
+      "level": "Level 1 departures",
+      "description": "Airside space after T3 security and before the exit passport control; from here the corridor leads east to T1 / A gates and the passport control leads to the E gates.",
+      "confidence": "inferred",
+      "sources": [
+        "src:fco-adr-t3-maps",
+        "src:fco-yt-groming-airside",
+        "src:fco-yt-orwecould-2026"
+      ],
+      "notes": "Inferred from the ADR T3 level-1 map (security, then 'Passport control', 'E1-61 ↑' and 'A1-83 →') and from the T1→T3 walk video reaching the sign 'Controllo passaporti / Passport control ↑ · E1-61 ↑'. Not directly filmed as one sequence from T3 security to the T1 corridor."
+    },
+    {
+      "id": "fco-e1-8",
+      "intraWalk": { "min": 1, "typical": 2, "max": 4.5, "basis": "derived", "note": "Derived (R-02): pier length ≈ 230 m (gate path × 2.15 m/unit); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Terminal 3 · Boarding area E1–8 (central E plaza, after passport control)",
+      "short": "E1-8",
+      "kind": "concourse",
+      "terminal": "T3",
+      "side": "airside",
+      "zone": "non-schengen",
+      "matrix": true,
+      "anchor": [
+        470,
+        246
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            405,
+            236
+          ],
+          [
+            530,
+            214
+          ],
+          [
+            538,
+            254
+          ],
+          [
+            414,
+            280
+          ]
+        ]
+      },
+      "level": "Level 1 shopping plaza; gates E1–E8 on level 0; level 2 food court and lounges",
+      "description": "Duty-free plaza after the T3 passport control, hub of all E gates: E11-24 pier (north-west), E51-61 (south-west), SkyBridge to E31-44 (west rotunda), A1-83 back to T1.",
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-maps-e1-8",
+        "src:fco-osm",
+        "src:fco-yt-groming-airside",
+        "src:fco-yt-orwecould-2026"
+      ]
+    },
+    {
+      "id": "fco-e11-24",
+      "intraWalk": { "min": 1, "typical": 3, "max": 6.5, "basis": "derived", "note": "Derived (R-02): pier length ≈ 400 m (far end ≈ 400 m from the plaza (w:fco-e18-e1124)); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Terminal 3 · Boarding area E11–24 (Pier E, opened 2016)",
+      "short": "E11-24",
+      "kind": "pier",
+      "terminal": "T3",
+      "side": "airside",
+      "zone": "non-schengen",
+      "matrix": true,
+      "anchor": [
+        352,
+        200
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            358,
+            268
+          ],
+          [
+            382,
+            264
+          ],
+          [
+            350,
+            132
+          ],
+          [
+            328,
+            137
+          ]
+        ]
+      },
+      "level": "Level 1 departures (moving walkways); level 2 arrivals corridor",
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-maps-e11-24",
+        "src:fco-osm",
+        "src:fco-missionline",
+        "src:fco-yt-orwecould-2026",
+        "src:fco-yt-flybyguy-2025"
+      ]
+    },
+    {
+      "id": "fco-e51-61",
+      "intraWalk": { "min": 1, "typical": 2.5, "max": 6, "basis": "derived", "note": "Derived (R-02): pier length ≈ 360 m (w:fco-e18-e5161 distance); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Terminal 3 · Boarding area E51–61 (south-west pier)",
+      "short": "E51-61",
+      "kind": "pier",
+      "terminal": "T3",
+      "side": "airside",
+      "zone": "non-schengen",
+      "matrix": true,
+      "anchor": [
+        320,
+        338
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            396,
+            312
+          ],
+          [
+            401,
+            328
+          ],
+          [
+            262,
+            360
+          ],
+          [
+            258,
+            344
+          ]
+        ]
+      },
+      "level": "Level 1: E51–E52; level 0: E53–E61",
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-maps-e51-61",
+        "src:fco-osm",
+        "src:fco-yt-groming-airside",
+        "src:fco-yt-walkerscape-2025"
+      ]
+    },
+    {
+      "id": "fco-e31-44",
+      "arrivals": "segregated",
+      "intraWalk": { "min": 1, "typical": 3, "max": 7, "basis": "derived", "note": "Derived (R-02): pier length ≈ 440 m (satellite ring, gate path × 2.15 m/unit); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Terminal 3 · Boarding area E31–44 (satellite, SkyBridge)",
+      "short": "E31-44",
+      "kind": "satellite",
+      "terminal": "T3",
+      "side": "airside",
+      "zone": "non-schengen",
+      "matrix": true,
+      "anchor": [
+        120,
+        262
+      ],
+      "shape": {
+        "type": "rect",
+        "x": 88,
+        "y": 230,
+        "w": 64,
+        "h": 64,
+        "rotate": 20
+      },
+      "level": "Level 2 departures (quota 11.50, gate lounges); level 1 arrivals and the APMS station (quota 6.50) are the separate node fco-e31-44-arr",
+      "description": "Remote satellite (ex 'Satellite C/West', opened 1999) reached only by the SkyBridge people mover.",
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-maps-e31-44",
+        "src:fco-osm",
+        "src:fco-wiki",
+        "src:fco-yt-groming-airside",
+        "src:fco-yt-happypizza-2022",
+        "src:fco-adr-maps-e31-44-l1",
+        "src:fco-italiavola-2020-11"
+      ],
+      "stack": {
+        "group": "fco-e31-44",
+        "order": 1,
+        "label": "L2"
+      },
+      "status": [
+        {
+          "state": "closed",
+          "from": "2020-11-17",
+          "until": "2022-04-08",
+          "note": "Satellite E31–E44 (and so the SkyBridge) temporarily closed during the Covid traffic drop; extra-Schengen flights moved to Pier E. Reopening date not found: the end is an upper bound (the satellite was in use on 2022-04-09, video).",
+          "confidence": "probable",
+          "sources": [
+            "src:fco-italiavola-2020-11",
+            "src:fco-yt-happypizza-2022"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fco-e31-44-arr",
+      "name": "Terminal 3 · Satellite E31–44, arrivals level 1",
+      "short": "E31 arr",
+      "kind": "satellite",
+      "terminal": "T3",
+      "side": "airside",
+      "zone": "non-schengen",
+      "matrix": false,
+      "anchor": [
+        128,
+        300
+      ],
+      "shape": {
+        "type": "rect",
+        "x": 88,
+        "y": 230,
+        "w": 64,
+        "h": 64,
+        "rotate": 20
+      },
+      "level": "Level 1 arrivals ring and APMS station (quota 6.50)",
+      "stack": {
+        "group": "fco-e31-44",
+        "order": 0,
+        "label": "L1"
+      },
+      "description": "Arrivals ring of the satellite: passengers leaving aircraft at E31–E44 walk round a one-way ring corridor to the people-mover corridors at the south-east corner and ride the SkyBridge to T3.",
+      "confidence": "probable",
+      "sources": [
+        "src:fco-adr-maps-e31-44-l1",
+        "src:fco-adr-maps-e31-44",
+        "src:fco-wiki",
+        "src:fco-adr-apms-oi-2024"
+      ],
+      "notes": "Support node (not in the matrix) so that the eastbound SkyBridge can be reached only through the arrivals flow. Same footprint as fco-e31-44 (stack L1/L2).",
+      "status": [
+        {
+          "state": "closed",
+          "from": "2020-11-17",
+          "until": "2022-04-08",
+          "note": "Satellite E31–E44 (and so the SkyBridge) temporarily closed during the Covid traffic drop; extra-Schengen flights moved to Pier E. Reopening date not found: the end is an upper bound (the satellite was in use on 2022-04-09, video).",
+          "confidence": "probable",
+          "sources": [
+            "src:fco-italiavola-2020-11",
+            "src:fco-yt-happypizza-2022"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fco-t3-arr",
+      "name": "Terminal 3 · non-Schengen arrivals / transfer level (before entry passport control)",
+      "short": "T3 arr",
+      "kind": "transfer-hub",
+      "terminal": "T3",
+      "side": "airside",
+      "zone": "non-schengen",
+      "matrix": false,
+      "anchor": [
+        428,
+        292
+      ],
+      "level": "Arrivals flow (levels 1–2 of the piers, down to level 0 reclaim)",
+      "description": "Arrivals-only node: arriving non-Schengen passengers from the E piers (arrivals-flow walks) and the eastbound SkyBridge come in here; from here \"Uscita/Exit\" via passport control and baggage reclaim to T3 arrivals, or the transfer desks (\"Banco transiti\") towards the E plaza or the galleria transiti to T1.",
+      "confidence": "inferred",
+      "sources": [
+        "src:fco-adr-maps-e1-8",
+        "src:fco-adr-maps-e31-44",
+        "src:fco-yt-mjtravel-2026",
+        "src:fco-wiki",
+        "src:fco-adr-t3-l0",
+        "src:fco-yt-ozment-2022"
+      ],
+      "notes": "Entered only through arrivals flows (directly, or via the eastbound SkyBridge whose platform is reached only through the satellite arrivals flow), so departing passengers are never routed through it. The ground-level arrivals layout is from the updated ADR T3 map (2025); the upper arrivals corridors are not mapped."
+    }
+  ],
+  "gateGroups": [
+    {
+      "id": "fco-gates-a1-a3",
+      "area": "fco-a1-3",
+      "label": "A1–A3",
+      "gates": [
+        "A1",
+        "A2",
+        "A3"
+      ],
+      "zone": "schengen",
+      "path": [
+        [
+          556,
+          172
+        ],
+        [
+          566,
+          110
+        ]
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:fco-adr-maps-a1-3",
+        "src:fco-osm"
+      ],
+      "notes": "A4–A10 appear only as range labels (ADR overview map 2024, OSM area name, 2024 sign 'A1-10,31-83, E'); not individually attested and absent from the 2025 ADR map page — see open question q:fco-a-ranges."
+    },
+    {
+      "id": "fco-gates-a21-a27",
+      "area": "fco-a21-27",
+      "label": "A21–A27 (ground level)",
+      "gates": [
+        "A21",
+        "A22",
+        "A23",
+        "A24",
+        "A25",
+        "A26",
+        "A27"
+      ],
+      "zone": "schengen",
+      "path": [
+        [
+          578,
+          224
+        ],
+        [
+          624,
+          216
+        ]
+      ],
+      "bus": true,
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-maps-a21-27",
+        "src:fco-osm"
+      ],
+      "notes": "Ground-level gate room without jet bridges on the ADR map: bus boarding inferred."
+    },
+    {
+      "id": "fco-gates-a31-a52-contact",
+      "area": "fco-a31-52",
+      "label": "A31–A33, A42–A50",
+      "gates": [
+        "A31",
+        "A32",
+        "A33",
+        "A42",
+        "A43",
+        "A44",
+        "A45",
+        "A46",
+        "A47",
+        "A48",
+        "A49",
+        "A50"
+      ],
+      "zone": "schengen",
+      "path": [
+        [
+          678,
+          236
+        ],
+        [
+          688,
+          190
+        ],
+        [
+          702,
+          130
+        ]
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-maps-a31-52",
+        "src:fco-osm",
+        "src:fco-yt-markoolavi-2025"
+      ]
+    },
+    {
+      "id": "fco-gates-a34-a41",
+      "area": "fco-a31-52",
+      "label": "A34–A41 (ground level)",
+      "gates": [
+        "A34",
+        "A35",
+        "A36",
+        "A37",
+        "A38",
+        "A39",
+        "A40",
+        "A41"
+      ],
+      "zone": "schengen",
+      "path": [
+        [
+          684,
+          212
+        ],
+        [
+          692,
+          176
+        ]
+      ],
+      "bus": true,
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-maps-a31-52",
+        "src:fco-osm"
+      ],
+      "notes": "Level 0 below the pier, one OSM node with ref 'A34-A41': bus/walk-out boarding inferred."
+    },
+    {
+      "id": "fco-gates-a51-a52",
+      "area": "fco-a31-52",
+      "label": "A51–A52 (ground level)",
+      "gates": [
+        "A51",
+        "A52"
+      ],
+      "zone": "schengen",
+      "path": [
+        [
+          706,
+          140
+        ],
+        [
+          710,
+          126
+        ]
+      ],
+      "bus": true,
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-maps-a31-52",
+        "src:fco-osm"
+      ],
+      "notes": "Level 0 at the pier head, OSM ref 'A51-A52': bus boarding inferred."
+    },
+    {
+      "id": "fco-gates-a61-a73",
+      "area": "fco-a61-83",
+      "label": "A61–A73",
+      "gates": [
+        "A61",
+        "A62",
+        "A63",
+        "A64",
+        "A65",
+        "A66",
+        "A67",
+        "A68",
+        "A69",
+        "A70",
+        "A71",
+        "A72",
+        "A73"
+      ],
+      "zone": "schengen",
+      "path": [
+        [
+          800,
+          296
+        ],
+        [
+          820,
+          240
+        ],
+        [
+          838,
+          186
+        ]
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-maps-a61-83",
+        "src:fco-osm",
+        "src:fco-yt-groming-airside"
+      ],
+      "notes": "13 contact gates = the '13 with jet bridges' of the 2022 Pier A."
+    },
+    {
+      "id": "fco-gates-a74-a83",
+      "area": "fco-a61-83",
+      "label": "A74–A83 (ground level, remote)",
+      "gates": [
+        "A74",
+        "A75",
+        "A76",
+        "A77",
+        "A78",
+        "A79",
+        "A80",
+        "A81",
+        "A82",
+        "A83"
+      ],
+      "zone": "schengen",
+      "path": [
+        [
+          808,
+          284
+        ],
+        [
+          844,
+          192
+        ]
+      ],
+      "bus": true,
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-maps-a61-83",
+        "src:fco-osm",
+        "src:fco-wiki"
+      ],
+      "notes": "Level 0 of Pier A; Wikipedia: Pier A has 13 boarding and 10 remote gates. A76 has no own OSM node (covered by OSM 'A74-83')."
+    },
+    {
+      "id": "fco-gates-e1-e8",
+      "area": "fco-e1-8",
+      "label": "E1–E8 (ground level)",
+      "gates": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "zone": "non-schengen",
+      "path": [
+        [
+          420,
+          266
+        ],
+        [
+          470,
+          256
+        ],
+        [
+          524,
+          244
+        ]
+      ],
+      "bus": true,
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-maps-e1-8",
+        "src:fco-yt-orwecould-2026"
+      ],
+      "notes": "Gate rooms on level 0 under the E plaza (escalators 'E1-4', 'E5-8'): bus boarding inferred."
+    },
+    {
+      "id": "fco-gates-e11-e24",
+      "area": "fco-e11-24",
+      "label": "E11–E24",
+      "gates": [
+        "E11",
+        "E12",
+        "E13",
+        "E14",
+        "E15",
+        "E16",
+        "E17",
+        "E18",
+        "E19",
+        "E20",
+        "E21",
+        "E22",
+        "E23",
+        "E24"
+      ],
+      "zone": "non-schengen",
+      "path": [
+        [
+          366,
+          256
+        ],
+        [
+          354,
+          200
+        ],
+        [
+          340,
+          142
+        ]
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-maps-e11-24",
+        "src:fco-osm",
+        "src:fco-yt-orwecould-2026"
+      ]
+    },
+    {
+      "id": "fco-gates-e31-e44",
+      "area": "fco-e31-44",
+      "label": "E31–E44",
+      "gates": [
+        "E31",
+        "E32",
+        "E33",
+        "E34",
+        "E35",
+        "E36",
+        "E37",
+        "E38",
+        "E39",
+        "E40",
+        "E41",
+        "E42",
+        "E43",
+        "E44"
+      ],
+      "zone": "non-schengen",
+      "path": [
+        [
+          124,
+          296
+        ],
+        [
+          96,
+          284
+        ],
+        [
+          86,
+          256
+        ],
+        [
+          96,
+          230
+        ],
+        [
+          124,
+          222
+        ],
+        [
+          150,
+          232
+        ],
+        [
+          158,
+          262
+        ],
+        [
+          150,
+          290
+        ]
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-maps-e31-44",
+        "src:fco-yt-groming-airside"
+      ]
+    },
+    {
+      "id": "fco-gates-e51-e52",
+      "area": "fco-e51-61",
+      "label": "E51–E52",
+      "gates": [
+        "E51",
+        "E52"
+      ],
+      "zone": "non-schengen",
+      "path": [
+        [
+          386,
+          318
+        ],
+        [
+          360,
+          325
+        ]
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-maps-e51-61",
+        "src:fco-yt-groming-airside"
+      ]
+    },
+    {
+      "id": "fco-gates-e53-e61",
+      "area": "fco-e51-61",
+      "label": "E53–E61 (ground level)",
+      "gates": [
+        "E53",
+        "E54",
+        "E55",
+        "E56",
+        "E57",
+        "E58",
+        "E59",
+        "E60",
+        "E61"
+      ],
+      "zone": "non-schengen",
+      "path": [
+        [
+          340,
+          332
+        ],
+        [
+          300,
+          342
+        ],
+        [
+          264,
+          350
+        ]
+      ],
+      "bus": true,
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-maps-e51-61",
+        "src:fco-osm",
+        "src:fco-yt-walkerscape-2025"
+      ],
+      "notes": "Level-0 gate room reached by escalator; bus boarding inferred."
+    }
+  ],
+  "stops": [
+    {
+      "id": "s:fco-sb-t3-dep",
+      "name": "SkyBridge · Terminal 3 station (departures side)",
+      "area": "fco-e1-8",
+      "side": "airside",
+      "anchor": [
+        395,
+        300
+      ],
+      "accessMinutes": {
+        "min": 2,
+        "typical": 3,
+        "max": 5,
+        "basis": "observed"
+      },
+      "where": "T3 west rotunda: from the E plaza (departures level, quota 6.10) escalators up to the station's central boarding platform (quota 12.10), signed 'Imbarchi/Gates E31-44' with the people-mover pictogram; platform screen doors",
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-maps-e1-8",
+        "src:fco-yt-groming-airside",
+        "src:fco-yt-walkerscape-2025",
+        "src:fco-adr-apms-oi-2024"
+      ]
+    },
+    {
+      "id": "s:fco-sb-e-dep",
+      "name": "SkyBridge · Satellite E31–44 station (departures level 2)",
+      "area": "fco-e31-44",
+      "side": "airside",
+      "anchor": [
+        152,
+        282
+      ],
+      "accessMinutes": {
+        "min": 1,
+        "typical": 2,
+        "max": 4,
+        "basis": "derived"
+      },
+      "where": "Satellite station (quota 6.50, south-east corner): departing passengers alight on a side platform and take the escalators up to the departures ring (quota 11.50)",
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-maps-e31-44",
+        "src:fco-yt-groming-airside",
+        "src:fco-adr-apms-oi-2024"
+      ]
+    },
+    {
+      "id": "s:fco-sb-e-arr",
+      "name": "SkyBridge · Satellite E31–44 station (arrivals level 1)",
+      "area": "fco-e31-44-arr",
+      "side": "airside",
+      "anchor": [
+        146,
+        290
+      ],
+      "accessMinutes": {
+        "min": 0,
+        "typical": 1,
+        "max": 2,
+        "basis": "derived"
+      },
+      "where": "Satellite station central boarding platform (quota 6.50), reached on foot from the level-1 arrivals ring on the same level",
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-maps-e31-44",
+        "src:fco-wiki",
+        "src:fco-adr-maps-e31-44-l1",
+        "src:fco-adr-apms-oi-2024"
+      ],
+      "notes": "Reached only from the satellite arrivals level (fco-e31-44-arr), i.e. only through the arrivals flow."
+    },
+    {
+      "id": "s:fco-sb-t3-arr",
+      "name": "SkyBridge · Terminal 3 station (arrivals side)",
+      "area": "fco-t3-arr",
+      "side": "airside",
+      "anchor": [
+        400,
+        310
+      ],
+      "accessMinutes": {
+        "min": 1,
+        "typical": 2,
+        "max": 3,
+        "basis": "derived",
+        "note": "one or two escalator flights (6–10 m) from the side platform"
+      },
+      "where": "T3 station (quota 12.10): arriving passengers alight on a side platform (separated from the central boarding platform), then go down to quota 2.00 (passport control, reclaim) or to quota 6.10 (transfer security, gates)",
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-maps-e1-8",
+        "src:fco-wiki",
+        "src:fco-adr-t3-l0",
+        "src:fco-adr-apms-oi-2024"
+      ]
+    },
+    {
+      "id": "s:fco-apmsbus-e1",
+      "name": "Gate E1 (APMS outage bus to E31–44)",
+      "area": "fco-e1-8",
+      "side": "airside",
+      "anchor": [
+        470,
+        264
+      ],
+      "accessMinutes": {
+        "min": 1,
+        "typical": 2,
+        "max": 4,
+        "basis": "derived",
+        "note": "escalator down from the E plaza to the E1-4 gate room"
+      },
+      "where": "Gate E1, ground-level gate room (quota 2.00); departing passengers for E31–44 are sent here (after T3 security) when the APMS is down",
+      "confidence": "probable",
+      "sources": [
+        "src:fco-adr-apms-oi-2024"
+      ]
+    },
+    {
+      "id": "s:fco-apmsbus-sat-dep",
+      "name": "Satellite door PRT-509 (stand 701)",
+      "area": "fco-e31-44",
+      "side": "airside",
+      "anchor": [
+        104,
+        302
+      ],
+      "accessMinutes": {
+        "min": 2,
+        "typical": 3,
+        "max": 5,
+        "basis": "assumed"
+      },
+      "where": "Satellite apron level (quota 2.00) opposite stand 701; external vertical links up to the departures level (quota 11.50)",
+      "confidence": "probable",
+      "sources": [
+        "src:fco-adr-apms-oi-2024"
+      ]
+    },
+    {
+      "id": "s:fco-apmsbus-sat-arr",
+      "name": "Collection point under emergency exit E31-E44",
+      "area": "fco-e31-44-arr",
+      "side": "airside",
+      "anchor": [
+        126,
+        310
+      ],
+      "accessMinutes": {
+        "min": 1,
+        "typical": 3,
+        "max": 5,
+        "basis": "assumed"
+      },
+      "where": "Emergency exit TFP-327-074 on the arrivals ring (quota 6.50, next to gate E31), stairs down to the bus stand at apron level",
+      "confidence": "probable",
+      "sources": [
+        "src:fco-adr-apms-oi-2024"
+      ]
+    },
+    {
+      "id": "s:fco-apmsbus-t3arr",
+      "name": "T3 Arrivals (APMS outage bus drop-off)",
+      "area": "fco-t3-arr",
+      "side": "airside",
+      "anchor": [
+        436,
+        302
+      ],
+      "accessMinutes": {
+        "min": 1,
+        "typical": 2,
+        "max": 4,
+        "basis": "assumed"
+      },
+      "where": "\"Arrivi T3\": the bus drops arriving E31–44 passengers on the T3 arrivals side, before the arrivals passport control",
+      "confidence": "probable",
+      "sources": [
+        "src:fco-adr-apms-oi-2024"
+      ]
+    }
+  ],
+  "lines": [
+    {
+      "id": "l:fco-skybridge-west",
+      "name": "SkyBridge (westbound, departures)",
+      "mode": "people-mover",
+      "operator": "Aeroporti di Roma; system operated and maintained by Alstom (Innovia APM 100, ex Bombardier)",
+      "colour": "#1f6fb2",
+      "access": "airside",
+      "side": "airside",
+      "stops": [
+        "s:fco-sb-t3-dep",
+        "s:fco-sb-e-dep"
+      ],
+      "direction": "one-way",
+      "rideMin": [
+        1
+      ],
+      "service": [
+        {
+          "hours": "≈ 05:30–24:00: one or two shuttles depending on passenger traffic, provided according to the flights planned at E31–44 (ADR 2024)",
+          "windows": [
+            {
+              "from": "05:30",
+              "until": "24:00"
+            }
+          ],
+          "headwayMin": {
+            "min": 1.5,
+            "max": 4
+          },
+          "headwayBasis": "derived",
+          "waitMin": {
+            "min": 0,
+            "typical": 1.5,
+            "max": 4,
+            "basis": "derived",
+            "note": "half the headway; dual-lane shuttle, round trip ≈ 2 × (1 min ride + 0.5–1 min dwell)"
+          },
+          "sources": [
+            "src:fco-adr-apms-oi-2024",
+            "src:fco-yt-demicheli-2016",
+            "src:fco-yt-ttt-2015"
+          ],
+          "notes": "Day pattern: hours from the ADR operating instruction (the night pattern runs \"from about midnight to 05:30\"); ADR publishes no headway: derived from the operation (2 two-car shuttles on 2 independent guideways, double or single shuttle by traffic). Westbound trips carry departing passengers boarded at the T3 central platform."
+        },
+        {
+          "hours": "≈ 00:00–05:30: a single shuttle, on call only (ADR 2024)",
+          "windows": [
+            {
+              "from": "00:00",
+              "until": "05:30"
+            }
+          ],
+          "headwayMin": {
+            "min": 3,
+            "max": 5
+          },
+          "headwayBasis": "derived",
+          "waitMin": {
+            "min": 0.5,
+            "typical": 2,
+            "max": 5,
+            "basis": "derived",
+            "note": "on call: the shuttle may first have to come from the other station (call + 1 min ride + door cycle)"
+          },
+          "sources": [
+            "src:fco-adr-apms-oi-2024"
+          ],
+          "notes": "Night pattern published by ADR (\"in orario notturno, da mezzanotte circa alle 05.30 del mattino, una sola navetta viaggia solo su chiamata\"). The line keeps running at night, so the satellite stays reachable when flights are planned there."
+        }
+      ],
+      "eligibility": "Departing passengers already past T3 passport control (non-Schengen airside) with a gate at E31–E44; the only passenger link to those gates. They board the central platform at T3 (quota 12.10) and alight on a side platform at the satellite (quota 6.50), physically separated from the arrivals boarding platform (ADR 2024).",
+      "path": [
+        [
+          395,
+          300
+        ],
+        [
+          273,
+          308
+        ],
+        [
+          196,
+          296
+        ],
+        [
+          152,
+          282
+        ]
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-maps-e1-8",
+        "src:fco-adr-maps-e31-44",
+        "src:fco-osm",
+        "src:fco-wiki",
+        "src:fco-yt-groming-airside",
+        "src:fco-yt-happypizza-2022",
+        "src:fco-yt-methylorange-2020",
+        "src:fco-pointsanalyst-2026",
+        "src:fco-ted-2023-pm",
+        "src:fco-adr-apms-oi-2024",
+        "src:fco-yt-demicheli-2016",
+        "src:fco-yt-ttt-2015",
+        "src:fco-eu-pm-shuttle-tender"
+      ],
+      "notes": "APMS (\"SkyBridge\"): 4 rubber-tyred vehicles coupled in pairs = 2 shuttles, each on its own guideway, fully automatic, run by Alstom from a control room at satellite quota 6.50; double or single shuttle by traffic, one shuttle on call from about midnight to 05:30 (ADR operating instruction 2024-06-04). Each shuttle shuttles back and forth: it carries departing passengers westbound and arriving passengers eastbound; the station platforms keep the two flows apart (central platform = boarding, side platforms = alighting). Ride ≈ 1 min (observed in two uncut ride clips). Not operated while E31–E44 was closed (2020-11-17 to at most 2022-04-08), modelled on the satellite areas. Replacement: ADR tendered a \"new People Mover system\" in 2023 (TED 336457-2023) and an apron shuttle-bus service \"during the People Mover replacement works\" (EU notice, 403, dates unknown): a future suspension is expected but cannot be dated (q:fco-new-people-mover). Unplanned outages > 15/30 min: contingency buses (l:fco-apms-outage-bus, not routed).",
+      "ride": [
+        {
+          "min": 1,
+          "typical": 1,
+          "max": 1.5,
+          "basis": "observed",
+          "note": "motion ≈ 50–60 s in two ride clips with 1-s frames and no cut (2015, 2016; one misses the start, the other the stop) plus the door cycle; guideway ≈ 0.6 km (OSM)"
+        }
+      ]
+    },
+    {
+      "id": "l:fco-skybridge-east",
+      "name": "SkyBridge (eastbound, arrivals)",
+      "mode": "people-mover",
+      "operator": "Aeroporti di Roma; system operated and maintained by Alstom (Innovia APM 100, ex Bombardier)",
+      "colour": "#6aa8dc",
+      "access": "airside",
+      "side": "airside",
+      "stops": [
+        "s:fco-sb-e-arr",
+        "s:fco-sb-t3-arr"
+      ],
+      "direction": "one-way",
+      "rideMin": [
+        1
+      ],
+      "service": [
+        {
+          "hours": "≈ 05:30–24:00: one or two shuttles depending on passenger traffic, provided according to the flights planned at E31–44 (ADR 2024)",
+          "windows": [
+            {
+              "from": "05:30",
+              "until": "24:00"
+            }
+          ],
+          "headwayMin": {
+            "min": 1.5,
+            "max": 4
+          },
+          "headwayBasis": "derived",
+          "waitMin": {
+            "min": 0,
+            "typical": 1.5,
+            "max": 4,
+            "basis": "derived",
+            "note": "half the headway; dual-lane shuttle, round trip ≈ 2 × (1 min ride + 0.5–1 min dwell)"
+          },
+          "sources": [
+            "src:fco-adr-apms-oi-2024",
+            "src:fco-yt-demicheli-2016",
+            "src:fco-yt-ttt-2015"
+          ],
+          "notes": "Day pattern: hours from the ADR operating instruction (the night pattern runs \"from about midnight to 05:30\"); ADR publishes no headway: derived from the operation (2 two-car shuttles on 2 independent guideways, double or single shuttle by traffic). Eastbound trips carry arriving passengers boarded at the satellite central platform from the arrivals ring."
+        },
+        {
+          "hours": "≈ 00:00–05:30: a single shuttle, on call only (ADR 2024)",
+          "windows": [
+            {
+              "from": "00:00",
+              "until": "05:30"
+            }
+          ],
+          "headwayMin": {
+            "min": 3,
+            "max": 5
+          },
+          "headwayBasis": "derived",
+          "waitMin": {
+            "min": 0.5,
+            "typical": 2,
+            "max": 5,
+            "basis": "derived",
+            "note": "on call: the shuttle may first have to come from the other station (call + 1 min ride + door cycle)"
+          },
+          "sources": [
+            "src:fco-adr-apms-oi-2024"
+          ],
+          "notes": "Night pattern published by ADR (\"in orario notturno, da mezzanotte circa alle 05.30 del mattino, una sola navetta viaggia solo su chiamata\"). The line keeps running at night, so the satellite stays reachable when flights are planned there."
+        }
+      ],
+      "eligibility": "Arriving passengers from gates E31–E44 only: they walk from the level-1 arrivals ring (quota 6.50) to the satellite central platform; at T3 they alight on a side platform (quota 12.10) and go down to quota 2.00 (passport control, reclaim) or, if connecting, to quota 6.10 for the transfer security check (ADR 2024). Departing passengers who go back must clear security again.",
+      "path": [
+        [
+          146,
+          290
+        ],
+        [
+          196,
+          302
+        ],
+        [
+          273,
+          314
+        ],
+        [
+          400,
+          310
+        ]
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:fco-wiki",
+        "src:fco-pointsanalyst-2026",
+        "src:fco-adr-maps-e1-8",
+        "src:fco-adr-maps-e31-44-l1",
+        "src:fco-adr-t3-l0",
+        "src:fco-ted-2023-pm",
+        "src:fco-adr-apms-oi-2024",
+        "src:fco-yt-demicheli-2016",
+        "src:fco-yt-ttt-2015",
+        "src:fco-eu-pm-shuttle-tender"
+      ],
+      "notes": "Same trains as the westbound line (see its notes). Direction split now stated by ADR (operating instruction 2024: passengers to E31–44 are departing passengers; passengers to T3 are passengers who landed at E31–44, ending in Rome or connecting) in addition to Wikipedia and the 2026 guide: upgraded probable → verified. Modelled structurally: the satellite boarding stop belongs to the arrivals-only node fco-e31-44-arr.",
+      "ride": [
+        {
+          "min": 1,
+          "typical": 1,
+          "max": 1.5,
+          "basis": "observed",
+          "note": "motion ≈ 50–60 s in two ride clips with 1-s frames and no cut (2015, 2016; one misses the start, the other the stop) plus the door cycle; guideway ≈ 0.6 km (OSM)"
+        }
+      ]
+    },
+    {
+      "id": "l:fco-apms-outage-bus",
+      "name": "APMS outage buses (interpista, contingency)",
+      "mode": "bus",
+      "operator": "ADR contractor (apron buses), coordinated by the ADR duty manager (Capo Scalo di Servizio)",
+      "colour": "#9aa5b1",
+      "access": "airside",
+      "side": "airside",
+      "stops": [
+        "s:fco-apmsbus-e1",
+        "s:fco-apmsbus-sat-dep",
+        "s:fco-apmsbus-sat-arr",
+        "s:fco-apmsbus-t3arr"
+      ],
+      "direction": "loop",
+      "rideMin": [
+        6,
+        1,
+        6,
+        3
+      ],
+      "rideBasis": "assumed",
+      "notRouted": "Contingency only: started by ADR when the people mover stops for more than 15 min (external cause) or 30 min (system fault); not a scheduled service and no published times. Airlines may instead serve E31–44 stands as remote stands.",
+      "service": [
+        {
+          "hours": "only during a total APMS outage (> 15 or > 30 min)",
+          "headwayMin": {
+            "min": 5,
+            "max": 20
+          },
+          "headwayBasis": "assumed",
+          "waitMin": {
+            "min": 0,
+            "typical": 10,
+            "max": 30,
+            "basis": "assumed"
+          },
+          "notes": "At least two buses (BUS 1, BUS 2), about 100 passengers per trip. Loop: gate E1 → satellite door PRT-509 (stand 701) → collection point under emergency exit E31-E44 → T3 Arrivals → gate E1 (empty)."
+        }
+      ],
+      "eligibility": "E31–44 passengers during an outage only: departing passengers are re-screened at T3 security and boarded at gate E1; arriving passengers are taken to T3 Arrivals (passport control). Stranded shuttle passengers are walked along the emergency walkways by APMS staff.",
+      "confidence": "probable",
+      "sources": [
+        "src:fco-adr-apms-oi-2024"
+      ],
+      "notes": "Recorded so the map shows that the satellite is not isolated in an outage. Not linked with `replaces` because it has no dated period; the planned replacement works will need their own (bus) service once dated (q:fco-new-people-mover)."
+    }
+  ],
+  "walks": [
+    {
+      "id": "w:fco-t1land-t3land",
+      "from": "fco-t1-land",
+      "to": "fco-t3-land",
+      "bidirectional": true,
+      "access": "public",
+      "minutes": {
+        "min": 4,
+        "typical": 7,
+        "max": 12,
+        "basis": "derived"
+      },
+      "distanceM": 420,
+      "practical": "practical",
+      "via": "Continuous departures level (T1 check-in → T3 check-in) or the elevated walkway with moving walkways",
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-overview",
+        "src:fco-adr-walkway",
+        "src:fco-yt-groming-landside",
+        "src:fco-yt-rameez-2023"
+      ],
+      "notes": "≈420 m centre to centre from OSM at 70 m/min; a 2024 video takes ~3.5 min from leaving T1 to the T3 side of the walkway."
+    },
+    {
+      "id": "w:fco-t3land-station",
+      "from": "fco-t3-land",
+      "to": "fco-station",
+      "bidirectional": true,
+      "access": "public",
+      "minutes": {
+        "min": 4,
+        "typical": 6,
+        "max": 12,
+        "basis": "derived"
+      },
+      "distanceM": 300,
+      "practical": "practical",
+      "via": "Escalator up to the mezzanine, covered walkway with moving walkways south to the station",
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-walkway",
+        "src:fco-osm",
+        "src:fco-yt-groming-landside",
+        "src:fco-yt-skytd-2019",
+        "src:fco-adr-t3-l2"
+      ]
+    },
+    {
+      "id": "w:fco-t1land-station",
+      "from": "fco-t1-land",
+      "to": "fco-station",
+      "bidirectional": true,
+      "access": "public",
+      "minutes": {
+        "min": 5,
+        "typical": 7,
+        "max": 12,
+        "basis": "derived"
+      },
+      "distanceM": 380,
+      "practical": "practical",
+      "via": "Covered walkway (moving walkways) via the junction serving car parks B/C and the T3 branch",
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-walkway",
+        "src:fco-osm",
+        "src:fco-yt-groming-landside"
+      ]
+    },
+    {
+      "id": "w:fco-t1land-t1air",
+      "from": "fco-t1-land",
+      "to": "fco-t1-air",
+      "bidirectional": false,
+      "access": "public",
+      "minutes": {
+        "min": 1,
+        "typical": 2,
+        "max": 4,
+        "basis": "derived"
+      },
+      "controls": [
+        {
+          "kind": "boarding-pass",
+          "minutes": {
+            "min": 0,
+            "typical": 1,
+            "max": 3,
+            "basis": "assumed"
+          },
+          "note": "automatic boarding-pass gates before security"
+        },
+        {
+          "kind": "security",
+          "minutes": {
+            "min": 5,
+            "typical": 12,
+            "max": 35,
+            "basis": "assumed"
+          },
+          "note": "T1 security, level 1 west (Fast Track available)"
+        }
+      ],
+      "practical": "practical",
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-t1-maps",
+        "src:fco-yt-rameez-2023"
+      ]
+    },
+    {
+      "id": "w:fco-t1air-t1land",
+      "from": "fco-t1-air",
+      "to": "fco-t1-land",
+      "bidirectional": false,
+      "access": "airside",
+      "minutes": {
+        "min": 3,
+        "typical": 5,
+        "max": 8,
+        "basis": "derived"
+      },
+      "practical": "practical",
+      "via": "'Uscita/Exit' signs, escalator down to baggage reclaim and T1 arrivals (level 0)",
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-t1-maps",
+        "src:fco-adr-maps-a31-52",
+        "src:fco-yt-markoolavi-2025"
+      ],
+      "notes": "Schengen arrivals exit, used by arriving passengers (who share the departure piers in T1) and by departing passengers who leave; no passport control. Re-entry needs security again. 2025 video: T1 plaza sign \"A61-83 ← · Uscita ↓ · A1-27 ↑\", escalator down to reclaim, then the exit doors to the T1 arrivals hall (≈ 5 min of footage without the wait for bags)."
+    },
+    {
+      "id": "w:fco-t1air-a2127",
+      "from": "fco-t1-air",
+      "to": "fco-a21-27",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": {
+        "min": 2,
+        "typical": 3,
+        "max": 5,
+        "basis": "derived"
+      },
+      "distanceM": 190,
+      "practical": "practical",
+      "via": "West through the T1 shopping gallery ('A1-27, E'); gates on level 0 by escalator",
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-t1-maps",
+        "src:fco-adr-maps-a21-27",
+        "src:fco-yt-groming-airside"
+      ]
+    },
+    {
+      "id": "w:fco-a2127-a1-3",
+      "from": "fco-a21-27",
+      "to": "fco-a1-3",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": {
+        "min": 1,
+        "typical": 2,
+        "max": 4,
+        "basis": "derived"
+      },
+      "distanceM": 140,
+      "practical": "practical",
+      "via": "North-west from the A21-27 junction, signed 'A1-3'",
+      "confidence": "probable",
+      "sources": [
+        "src:fco-adr-maps-a21-27",
+        "src:fco-adr-maps-a1-3"
+      ]
+    },
+    {
+      "id": "w:fco-t1air-a3152",
+      "from": "fco-t1-air",
+      "to": "fco-a31-52",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": {
+        "min": 2,
+        "typical": 3,
+        "max": 7,
+        "basis": "derived"
+      },
+      "distanceM": 200,
+      "practical": "practical",
+      "via": "North from the plaza ('A31-52 ↑'); A34–41 / A51–52 by escalator to level 0",
+      "confidence": "probable",
+      "sources": [
+        "src:fco-adr-t1-maps",
+        "src:fco-adr-maps-a31-52"
+      ],
+      "notes": "Far end (A47–A52) ≈ 350 m from the plaza."
+    },
+    {
+      "id": "w:fco-t1air-a6183",
+      "from": "fco-t1-air",
+      "to": "fco-a61-83",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": {
+        "min": 3,
+        "typical": 5,
+        "max": 9,
+        "basis": "observed"
+      },
+      "distanceM": 330,
+      "practical": "practical",
+      "via": "East through the T1 gallery ('A61-83 →'), Pier A corridor; A74–83 by escalator to level 0",
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-t1-maps",
+        "src:fco-adr-maps-a61-83",
+        "src:fco-yt-groming-airside"
+      ],
+      "notes": "2024 video: from gate A72 (far end) to the T1 centre in ~7 min of footage with stops."
+    },
+    {
+      "id": "w:fco-t3land-t3conn",
+      "from": "fco-t3-land",
+      "to": "fco-t3-conn",
+      "bidirectional": false,
+      "access": "public",
+      "minutes": {
+        "min": 1,
+        "typical": 2,
+        "max": 4,
+        "basis": "derived"
+      },
+      "controls": [
+        {
+          "kind": "security",
+          "minutes": {
+            "min": 5,
+            "typical": 15,
+            "max": 40,
+            "basis": "assumed"
+          },
+          "note": "T3 security (main checkpoint centre-left; second checkpoint with Fast Track near entrance 1); separate screening for US/Israel flights"
+        }
+      ],
+      "practical": "practical",
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-t3-maps",
+        "src:fco-yt-orwecould-2026",
+        "src:fco-yt-walkerscape-2025"
+      ]
+    },
+    {
+      "id": "w:fco-t3conn-t1air",
+      "from": "fco-t3-conn",
+      "to": "fco-t1-air",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": {
+        "min": 2.5,
+        "typical": 3,
+        "max": 5,
+        "basis": "measured",
+        "note": "2024 one-take video, T1 centre (07:08) → \"Controllo passaporti\" sign (≈ 10:00): 170 ± 10 s at normal pace, 10-s frames, no cut; max for slower walkers"
+      },
+      "distanceM": 300,
+      "practical": "practical",
+      "via": "Airside corridor between T3 and T1 (signs 'A1-27 ←' / 'Passport control · E Gates ↑')",
+      "confidence": "probable",
+      "sources": [
+        "src:fco-yt-groming-airside",
+        "src:fco-adr-t3-maps"
+      ],
+      "notes": "2024 video measured (T1 → passport-control approach, the A → E direction; the reverse is assumed equal). Whether T3-security passengers can walk to T1 is inferred from the ADR T3 map arrow \"A1-83 →\" on the airside side."
+    },
+    {
+      "id": "w:fco-t3conn-e18",
+      "from": "fco-t3-conn",
+      "to": "fco-e1-8",
+      "bidirectional": false,
+      "access": "airside",
+      "minutes": {
+        "min": 1,
+        "typical": 2,
+        "max": 4,
+        "basis": "derived"
+      },
+      "controls": [
+        {
+          "kind": "passport",
+          "minutes": {
+            "min": 3,
+            "typical": 15,
+            "max": 45,
+            "basis": "assumed"
+          },
+          "note": "exit from Schengen; EES since 2025-10-12, e-gates for EU and eligible passports; peak queues 30–45 min reported (guide)"
+        }
+      ],
+      "practical": "practical",
+      "via": "'Controllo passaporti / Passport control' then the duty-free plaza",
+      "confidence": "verified",
+      "sources": [
+        "src:fco-yt-groming-airside",
+        "src:fco-yt-orwecould-2026",
+        "src:fco-adr-t3-maps",
+        "src:fco-pointsanalyst-2026"
+      ]
+    },
+    {
+      "id": "w:fco-e18-a2127",
+      "from": "fco-e1-8",
+      "to": "fco-a21-27",
+      "bidirectional": false,
+      "access": "transfer",
+      "minutes": {
+        "min": 3,
+        "typical": 5,
+        "max": 8,
+        "basis": "derived"
+      },
+      "distanceM": 300,
+      "controls": [
+        {
+          "kind": "passport",
+          "minutes": {
+            "min": 3,
+            "typical": 10,
+            "max": 30,
+            "basis": "assumed"
+          },
+          "note": "entry into Schengen (galleria transiti, e-gates + manual booths)"
+        }
+      ],
+      "practical": "practical",
+      "via": "Signed 'Imbarchi/Gates A1-83' from the E plaza; 'galleria transiti' (>240 m corridor) with passport control near A21-27",
+      "confidence": "probable",
+      "sources": [
+        "src:fco-adr-maps-e1-8",
+        "src:fco-adr-maps-a21-27",
+        "src:fco-yt-orwecould-2026",
+        "src:fco-meteoweb-2016",
+        "src:fco-lineaedp-2022"
+      ],
+      "notes": "The signed route from E to A is verified (ADR map + 2026 video sign). The position of its passport control (drawn at A21-27 on the ADR map) and whether passengers coming from a departure plaza (rather than from an arriving flight) are admitted are inferred. Access set to transfer (connecting passengers) in pass 2: the 2016 and 2022 sources describe the galleria as a transit corridor; a non-connecting passenger in the E plaza is not routed through it (q:fco-galleria-departing)."
+    },
+    {
+      "id": "w:fco-e18-e1124",
+      "from": "fco-e1-8",
+      "to": "fco-e11-24",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": {
+        "min": 2,
+        "typical": 4,
+        "max": 8,
+        "basis": "derived"
+      },
+      "distanceM": 260,
+      "practical": "practical",
+      "via": "North-west from the plaza ('E11-24'), moving walkways along the pier",
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-maps-e1-8",
+        "src:fco-adr-maps-e11-24",
+        "src:fco-yt-orwecould-2026"
+      ],
+      "notes": "Far end E21–E24 ≈ 400 m from the plaza."
+    },
+    {
+      "id": "w:fco-e18-e5161",
+      "from": "fco-e1-8",
+      "to": "fco-e51-61",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": {
+        "min": 3,
+        "typical": 5,
+        "max": 9,
+        "basis": "observed"
+      },
+      "distanceM": 360,
+      "practical": "practical",
+      "via": "West then south-west corridor ('E51-61'); E53–E61 by escalator to level 0",
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-maps-e1-8",
+        "src:fco-adr-maps-e51-61",
+        "src:fco-yt-groming-airside",
+        "src:fco-yt-walkerscape-2025"
+      ],
+      "notes": "2024 video: passport control (~10:00) to E51 (14:46) including the duty-free plaza ≈ 4.5 min."
+    },
+    {
+      "id": "w:fco-e1124-t3arr",
+      "from": "fco-e11-24",
+      "to": "fco-t3-arr",
+      "bidirectional": false,
+      "access": "airside",
+      "minutes": {
+        "min": 3,
+        "typical": 6,
+        "max": 10,
+        "basis": "observed"
+      },
+      "practical": "practical",
+      "via": "Arrivals corridor (level 2 of the pier), 'Uscita/Exit'",
+      "confidence": "probable",
+      "sources": [
+        "src:fco-adr-maps-e11-24",
+        "src:fco-yt-flybyguy-2025",
+        "src:fco-yt-ozment-2022",
+        "src:fco-adr-t3-l0"
+      ],
+      "notes": "Arriving passengers only (deplaning flow). Dec 2022 video: from gate E23 (pier head) to the T3 arrivals passport control ≈ 8 min of footage, walking through the E11-24 lounge and the E plaza to the \"Uscita/Exit · Ritiro bagagli\" doors (during the T3 works; whether piers now separate arrivals is not established). Modelled as an arrivals flow (usable only at the start of a route whose origin is an arriving flight).",
+      "flow": "arrivals"
+    },
+    {
+      "id": "w:fco-e5161-t3arr",
+      "from": "fco-e51-61",
+      "to": "fco-t3-arr",
+      "bidirectional": false,
+      "access": "airside",
+      "minutes": {
+        "min": 3,
+        "typical": 5,
+        "max": 8,
+        "basis": "derived"
+      },
+      "practical": "practical",
+      "via": "'Uscita/Exit' towards T3 arrivals",
+      "confidence": "inferred",
+      "sources": [
+        "src:fco-adr-maps-e51-61",
+        "src:fco-adr-t3-l0"
+      ],
+      "notes": "Arriving passengers only (deplaning flow). Modelled as an arrivals flow (usable only at the start of a route whose origin is an arriving flight).",
+      "flow": "arrivals"
+    },
+    {
+      "id": "w:fco-e18-t3arr",
+      "from": "fco-e1-8",
+      "to": "fco-t3-arr",
+      "bidirectional": false,
+      "access": "airside",
+      "minutes": {
+        "min": 2,
+        "typical": 3,
+        "max": 6,
+        "basis": "derived"
+      },
+      "practical": "practical",
+      "via": "'Uscita/Exit' escalators around the T3 rotunda",
+      "confidence": "inferred",
+      "sources": [
+        "src:fco-adr-maps-e1-8",
+        "src:fco-adr-t3-l0"
+      ],
+      "notes": "Arriving passengers of gates E1–E8 (bus) only. Modelled as an arrivals flow (usable only at the start of a route whose origin is an arriving flight).",
+      "flow": "arrivals"
+    },
+    {
+      "id": "w:fco-t3arr-t3land",
+      "from": "fco-t3-arr",
+      "to": "fco-t3-land",
+      "bidirectional": false,
+      "access": "airside",
+      "minutes": {
+        "min": 4,
+        "typical": 7,
+        "max": 12,
+        "basis": "derived"
+      },
+      "controls": [
+        {
+          "kind": "passport",
+          "minutes": {
+            "min": 3,
+            "typical": 15,
+            "max": 60,
+            "basis": "assumed"
+          },
+          "note": "entry into Schengen (EES registration for third-country nationals since 2025-10-12)"
+        },
+        {
+          "kind": "customs",
+          "minutes": {
+            "min": 0,
+            "typical": 1,
+            "max": 5,
+            "basis": "assumed"
+          },
+          "note": "after baggage reclaim"
+        }
+      ],
+      "practical": "practical",
+      "via": "Down at the T3 west rotunda (\"Arrivi/Arrivals\"), east along the corridor to the passport control at the west end of the reclaim hall, belts 1–14, customs, exit to the arrivals hall (entrances 1–6)",
+      "confidence": "verified",
+      "sources": [
+        "src:fco-yt-mjtravel-2026",
+        "src:fco-yt-heregoes-2024",
+        "src:fco-adr-t3-maps",
+        "src:fco-adr-t3-l0"
+      ]
+    },
+    {
+      "id": "w:fco-t3arr-e18",
+      "from": "fco-t3-arr",
+      "to": "fco-e1-8",
+      "bidirectional": false,
+      "access": "transfer",
+      "minutes": {
+        "min": 2,
+        "typical": 3,
+        "max": 6,
+        "basis": "derived",
+        "note": "≈ 100–250 m from the transit desk / T3 transfer screening (quota 6.10) into the E plaza at 70 m/min (ADR maps)"
+      },
+      "controls": [
+        {
+          "kind": "transfer-security", "when": "origin-not-one-stop",
+          "minutes": {
+            "min": 3,
+            "typical": 10,
+            "max": 25,
+            "basis": "assumed"
+          },
+          "note": "transfer desk / screening for connecting passengers; may not apply to every origin"
+        }
+      ],
+      "practical": "practical",
+      "via": "'Transiti / Connections', 'Banco transiti / Transit desk'",
+      "confidence": "probable",
+      "sources": [
+        "src:fco-adr-maps-e1-8",
+        "src:fco-adr-maps-e11-24",
+        "src:fco-yt-flybyguy-2025",
+        "src:fco-wiki",
+        "src:fco-adr-apms-oi-2024"
+      ],
+      "notes": "Non-Schengen → non-Schengen connection. ADR (2024) states that connecting passengers arriving by the SkyBridge go down to quota 6.10 of T3 and pass the security check before the gates: transfer security confirmed for that flow. For pier arrivals the 2025 transit video shows a barrier line between the jet-bridge corridor and the E11-24 concourse whose nature is not readable (q:fco-transfer-security)."
+    },
+    {
+      "id": "w:fco-t3arr-a2127",
+      "from": "fco-t3-arr",
+      "to": "fco-a21-27",
+      "bidirectional": false,
+      "access": "transfer",
+      "minutes": {
+        "min": 4,
+        "typical": 6,
+        "max": 10,
+        "basis": "derived"
+      },
+      "distanceM": 350,
+      "controls": [
+        {
+          "kind": "passport",
+          "minutes": {
+            "min": 3,
+            "typical": 12,
+            "max": 40,
+            "basis": "assumed"
+          },
+          "note": "entry into Schengen in the galleria transiti"
+        },
+        {
+          "kind": "transfer-security", "when": "origin-not-one-stop",
+          "minutes": {
+            "min": 0,
+            "typical": 8,
+            "max": 25,
+            "basis": "assumed"
+          },
+          "note": "if arriving from outside the EU one-stop-security area"
+        }
+      ],
+      "practical": "practical",
+      "via": "Galleria transiti (Schengen ↔ non-Schengen transfer corridor, >240 m, e-gates and manual booths)",
+      "confidence": "probable",
+      "sources": [
+        "src:fco-meteoweb-2016",
+        "src:fco-lineaedp-2022",
+        "src:fco-adr-maps-a21-27",
+        "src:fco-pointsanalyst-2026"
+      ]
+    },
+    {
+      "id": "w:fco-e18-e3144-none",
+      "from": "fco-e1-8",
+      "to": "fco-e31-44",
+      "bidirectional": true,
+      "access": "restricted",
+      "minutes": {
+        "min": 10,
+        "typical": 12,
+        "max": 15,
+        "basis": "derived"
+      },
+      "practical": "avoid",
+      "confidence": "verified",
+      "sources": [
+        "src:fco-wiki",
+        "src:fco-pointsanalyst-2026",
+        "src:fco-adr-apms-oi-2024"
+      ],
+      "notes": "Recorded as NOT usable: no passenger walkway to the satellite; the SkyBridge is the only link. ADR (2024): the only other connections are the open-air emergency walkways along the guideways (passerelle d'emergenza), accessible only under APMS staff control, and apron buses in an outage (l:fco-apms-outage-bus)."
+    },
+    {
+      "id": "w:fco-e3144-arr",
+      "from": "fco-e31-44",
+      "to": "fco-e31-44-arr",
+      "bidirectional": false,
+      "access": "airside",
+      "flow": "arrivals",
+      "minutes": {
+        "min": 1,
+        "typical": 3,
+        "max": 5,
+        "basis": "derived"
+      },
+      "practical": "practical",
+      "via": "From the aircraft door down to the level-1 arrivals ring (quota 6.50, one-way clockwise circulation) to the people-mover central platform on the same level",
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-maps-e31-44-l1",
+        "src:fco-adr-maps-e31-44",
+        "src:fco-adr-apms-oi-2024",
+        "src:fco-wiki"
+      ],
+      "notes": "Arriving passengers only. Minutes: half the ring (≈ 120–200 m on the ADR plan) at 70 m/min."
+    }
+  ],
+  "rules": [
+    {
+      "id": "r:fco-zones",
+      "text": "Terminal 1 / gates A = domestic and Schengen flights; Terminal 3 / gates E = non-Schengen (extra-Schengen and intercontinental). All E gates lie beyond the T3 passport control.",
+      "confidence": "verified",
+      "sources": [
+        "src:fco-adr-which-terminal",
+        "src:fco-pointsanalyst-2026",
+        "src:fco-yt-groming-airside",
+        "src:fco-yt-orwecould-2026"
+      ]
+    },
+    {
+      "id": "r:fco-a-e-passport",
+      "text": "Any move between the A gates (Schengen) and the E gates (non-Schengen) crosses a passport control: exit control at T3 before the E plaza (A→E), entry control in the galleria transiti (E→A).",
+      "confidence": "verified",
+      "sources": [
+        "src:fco-yt-groming-airside",
+        "src:fco-yt-orwecould-2026",
+        "src:fco-adr-maps-a21-27",
+        "src:fco-meteoweb-2016"
+      ]
+    },
+    {
+      "id": "r:fco-e31-skybridge",
+      "text": "Gates E31–E44 are reachable only by the SkyBridge people mover (APMS, run by Alstom: 2 two-car shuttles on 2 independent guideways). Departing passengers board the central platform at T3 (quota 12.10, one level above the E plaza) and alight at the satellite (quota 6.50) below its departures level (11.50); arriving passengers board the satellite central platform from the arrivals ring and alight on the T3 side platforms; the platforms keep the two flows apart. From about midnight to 05:30 one shuttle runs on call. A departing passenger cannot go back without clearing security again. Allow extra time (guide: +15 min).",
+      "confidence": "verified",
+      "sources": [
+        "src:fco-wiki",
+        "src:fco-pointsanalyst-2026",
+        "src:fco-yt-orwecould-2026",
+        "src:fco-adr-apms-oi-2024"
+      ]
+    },
+    {
+      "id": "r:fco-ees",
+      "text": "EU Entry/Exit System in force since 2025-10-12: biometric registration at passport control lengthens non-Schengen processing times.",
+      "confidence": "verified",
+      "sources": [
+        "src:fco-pointsanalyst-2026",
+        "src:fco-yt-orwecould-2026"
+      ]
+    },
+    {
+      "id": "r:fco-mct",
+      "text": "Published minimum connecting time 40 min (guide figure); realistic allowances from the same guide: Schengen→Schengen T1 45–60 min, any Schengen↔non-Schengen 75–90 min.",
+      "confidence": "probable",
+      "sources": [
+        "src:fco-pointsanalyst-2026"
+      ]
+    },
+    {
+      "id": "r:fco-arrivals-flows",
+      "text": "Non-Schengen arrivals are separated from departures beyond the aircraft door: E31–E44 arrivals use the satellite level-1 ring and the eastbound SkyBridge; the E piers lead to \"Uscita/Exit\" and down to the T3 arrivals passport control, reclaim and customs, or to the transit desks. Schengen arrivals in T1 share the departure piers and leave by the \"Uscita\" escalators to the T1 reclaim.",
+      "confidence": "probable",
+      "sources": [
+        "src:fco-adr-maps-e31-44-l1",
+        "src:fco-adr-t3-l0",
+        "src:fco-yt-markoolavi-2025",
+        "src:fco-yt-ozment-2022"
+      ]
+    },
+    {
+      "id": "r:fco-t3-renewal",
+      "text": "The renewed Terminal 3 was inaugurated on 2025-05-13 (works over four years with the terminal open): 248 check-in counters, renewed security for sensitive flights, baggage belts 9 → 14, upgraded transit areas. The current ADR T3 ground-level map shows belts 1–14.",
+      "confidence": "probable",
+      "sources": [
+        "src:fco-mundys-t3-2025",
+        "src:fco-adr-t3-l0"
+      ]
+    },
+    {
+      "id": "r:fco-apms-outage",
+      "text": "If the people mover stops for more than 15 min (external cause) or 30 min (system fault), ADR runs apron buses: departing E31–44 passengers are re-screened at T3 and boarded at gate E1; arriving passengers are bussed from a collection point under emergency exit E31-E44 to T3 Arrivals; airlines may serve E31–44 stands as remote stands (ADR operating instruction 2024-06-04).",
+      "confidence": "probable",
+      "sources": [
+        "src:fco-adr-apms-oi-2024"
+      ]
+    },
+    {
+      "id": "r:fco-rail",
+      "text": "Rail (phase 3, read 2026-11-01). The Leonardo Express runs non-stop between Fiumicino Aeroporto and Roma Termini in 32 min, every 15 min: from Fiumicino Aeroporto 05:38–23:27, from Roma Termini 04:50–23:05. The Trenitalia and ADR train pages give identical figures. FL1 regional trains (to Roma Tiburtina and beyond) run every 15 min on working days and every 30 min at weekends and holidays (ADR). The FL1 first and last trains were not extracted: the text layer of the Trenitalia Lazio timetable (valid from 2026-10-24) is unreadable. The station is a landside node, reached by the elevated walkways from T1 and T3. The station walks have no hours because the FL1 hours are not established, so at 03:00 a route to the station is shown although no train runs.",
+      "confidence": "verified",
+      "sources": [
+        "src:fco-trenitalia-le",
+        "src:fco-adr-train"
+      ]
+    }
+  ],
+  "openQuestions": [
+    {
+      "id": "q:fco-a-ranges",
+      "question": "Do gates A4–A10 and A53–A59 exist in 2025–2026? The ADR map page lists A1-3 and A31-52, but the ADR overview map (2024-05), OSM area names and 2024 signs say A1-10 and A31-59.",
+      "impact": "Gate search / placement only; routing unchanged (same piers).",
+      "howToResolve": "Owner photo of the T1 gate directory signs, or current FCO departures boards keyed by gate."
+    },
+    {
+      "id": "q:fco-skybridge-service",
+      "question": "SkyBridge headway and exact ride time. ADR (2024) gives the pattern (one or two shuttles by traffic, run according to the flights planned at E31–44; one shuttle on call from about midnight to 05:30) but no headway or timetable; the ride (≈ 1 min) comes from video clips that miss the door cycle.",
+      "impact": "Wait and ride on every E31–44 route (now derived/observed, ± 2 min).",
+      "howToResolve": "Owner capture: an uncut video or stopwatch from the T3 platform (doors closing) to the satellite (doors opening), plus the wait at the platform at a busy and a quiet hour."
+    },
+    {
+      "id": "q:fco-galleria-departing",
+      "question": "Can a departing passenger already in the E plaza walk back to the A gates (signed 'Gates A1-83'), and is the passport control on that path the galleria transiti control drawn at A21-27?",
+      "impact": "E→A routes for passengers who are not arriving transfers.",
+      "howToResolve": "Video or field walk following the 'A1-83' sign from the E plaza."
+    },
+    {
+      "id": "q:fco-transfer-security",
+      "question": "Where and for whom is transfer security applied for non-Schengen → non-Schengen and non-Schengen → Schengen connections (one-stop-security origins vs others)?",
+      "impact": "Control allowance on transfers into E1-8 and A.",
+      "howToResolve": "ADR transit page (owner capture), ITA Airways connection guide, a transit video from a non-EU origin."
+    },
+    {
+      "id": "q:fco-t3-conn",
+      "question": "Does the airside space after T3 security connect to the T1 corridor before passport control (i.e. can a Schengen passenger screened at T3 walk to the A gates)?",
+      "impact": "T3 landside → A gates route (otherwise via T1 landside and T1 security).",
+      "howToResolve": "Walk-through video starting at T3 security heading to 'A1-83'."
+    },
+    {
+      "id": "q:fco-swing",
+      "question": "Are any A gates (e.g. A21–A27 next to the galleria passport control) operated as non-Schengen or swing gates?",
+      "impact": "Zone of A21–A27 and possible non-Schengen departures from T1.",
+      "howToResolve": "Flight boards keyed by gate (non-Schengen flights from A gates), ADR statement."
+    },
+    {
+      "id": "q:fco-bus-gates",
+      "question": "Confirm that the ground-level gate rooms (A21–27, A34–41, A51–52, A74–83, E1–8, E53–61) board by apron bus.",
+      "impact": "'bus' flags on gate groups.",
+      "howToResolve": "Trip reports/videos boarding at these gates."
+    },
+    {
+      "id": "q:fco-t5",
+      "question": "Terminal 5 status (closed 2017 for renovation, used for events since) — any passenger use in 2026?",
+      "impact": "None currently; would add a landside/airside area if reopened.",
+      "howToResolve": "ADR press releases."
+    },
+    {
+      "id": "q:fco-new-people-mover",
+      "question": "When will the existing SkyBridge be replaced? ADR tendered a \"new People Mover system\" in 2023: TED 336457-2023, read in phase 3 on ted.europa.eu. It was an open procedure, published 2023-06-06, with tenders due 2023-07-28 and an estimated value of EUR 86 M, covering design, supply, and operation and maintenance. The contract runs 264 months, including a 120-month renewal. The notice gives no works dates, and no award notice was found. ADR also tendered an apron shuttle-bus service \"during the People Mover replacement works\" (EU notice, HTTP 403). Meanwhile Alstom runs the existing APMS under framework contract CQ20230147, concluded 2023-11-01 (TED 006352-2024, EUR 5 M). The replacement implies a period in which buses serve E31–44, with unknown dates.",
+      "impact": "A future suspension of both SkyBridge lines and a dated replacement bus line (`replaces`), possibly with longer E31–44 times.",
+      "howToResolve": "An ADR announcement of the works or an award notice for TED 336457-2023 (search ted.europa.eu for CIG 9857928B86). Owner capture of the op.europa.eu shuttle notice (dates, duration, bus stops)."
+    },
+    {
+      "id": "q:fco-e-arrivals-separation",
+      "question": "Since the T3 renewal (2025), do arriving passengers at E11-24 and E51-61 still walk through the departure lounges (as filmed in Dec 2022) or use a separate arrivals corridor?",
+      "impact": "Arrivals-flow minutes and whether an arriving passenger can enter the E departure plaza without transfer screening.",
+      "howToResolve": "A 2025–2026 arrival video at an E11-24 or E51-61 contact gate."
+    },
+    {
+      "id": "q:fco-t1-ex-areas",
+      "question": "What became of \"ex boarding area C\" (to open before summer 2023) and \"ex Pier D\" (renovation from 2023) named in the April 2023 ADR release, and do they correspond to A1-3/A1-10 or to A53-A59?",
+      "impact": "Gate lists and status of the A1-3 area; possible new gates in T1.",
+      "howToResolve": "ADR press releases 2023–2026 (theflightclub.it is blocked, 403), owner photo of the T1 gate directory."
+    },
+    {
+      "id": "q:fco-e62-63",
+      "question": "Signs in the E plaza filmed in 2024 read \"E5-63\" and \"E11-63\", while the ADR maps (2024-12) list E51–E61 only: do gates E62–E63 exist (remote or bus gates)?",
+      "impact": "Gate lookup for E62/E63 (currently unknown); no effect on area routing (they would belong to the E51-61 area).",
+      "howToResolve": "Owner photo of the E plaza signs or the E51-61 ground-level room; ADR gate list."
+    },
+    {
+      "id": "q:fco-walk-time-signage",
+      "question": "Does FCO display walking times to gates (a 2026 guide says the \"Voli in coincidenza\" connection boards show walking times; no example found)?",
+      "impact": "Would turn the derived/measured walking minutes into published values.",
+      "howToResolve": "Owner photo of a connection board or a gate-directory sign with minutes in T1 and T3."
+    }
+  ],
+  "sources": [
+    { "id": "src:fco-adr-checks", "title": "ADR: security checks at Fiumicino (traditional screening kept for direct USA / Israel flights of airlines checking in at Terminal 1)", "url": "https://www.adr.it/web/aeroporti-di-roma-en/pax-fco-cheks", "publisher": "Aeroporti di Roma", "kind": "official", "group": "adr", "accessed": "2026-11-01" },
+    { "id": "src:dhs-tsa-2017-enhanced", "title": "DHS / TSA: enhanced security measures for all commercial flights to the United States (June 2017; >280 last-point-of-departure airports, security directives and emergency amendments)", "url": "https://www.dhs.gov/", "publisher": "U.S. Department of Homeland Security", "kind": "official", "group": "dhs", "accessed": "2026-11-01", "published": "2017-06", "notes": "Read through the DHS 2017 testimony by the research pass of 2026-11-01; exact page URL not recorded. Procedures themselves are not public." },
+    { "id": "src:fd-feed-terminals-2026-11-01", "title": "CDG Navigator flight-data server: terminal / gate strings observed in the collected feed (2026-10-30 – 2026-11-01), read-only GET /fd-api/stats/distribution and /fd-api/flights", "url": "http://127.0.0.1:8790/fd-api/stats/summary", "publisher": "CDG Navigator (local flight-data collection, AeroDataBox-derived)", "kind": "other", "group": "fd-feed", "accessed": "2026-11-01", "notes": "Cross-tabulated by the other airport's Schengen zone and by gate letter; counts in docs/research/AIRPORT_DATA_REMEDIATION.md. Local research data, not for display." },
+    { "id": "src:eu-oss-2025-920", "title": "Commission Implementing Regulation (EU) 2025/920 amending Reg. (EU) 2015/1998 (one-stop security lists: Ben Gurion removed from Attachments 3-B / 4-B; Kangerlussuaq, Guernsey, Isle of Man, Jersey removed)", "url": "https://eur-lex.europa.eu/eli/reg_impl/2025/920/oj", "publisher": "European Commission", "kind": "official", "group": "eu-law", "accessed": "2026-11-01", "published": "2025-05-20", "notes": "Recitals read from the umwelt-online.de text (EUR-Lex HTML returned empty). The consolidated Attachment 4-B list was NOT read: owner capture. Baseline list: Reg. (EU) 2019/413 (Canada, Faroe Islands Vagar, Greenland Kangerlussuaq, Guernsey, Isle of Man, Jersey, Montenegro, Singapore Changi, United Kingdom, United States)." },
+    { "id": "src:fco-adr-transiti", "title": "ADR: transits at Fiumicino (controls by connection type; one-stop-security exceptions)", "url": "https://www.adr.it/pax-fco-transiti", "publisher": "Aeroporti di Roma", "kind": "official", "group": "adr", "accessed": "2026-11-01" },
+    {
+      "id": "src:fco-adr-map-page",
+      "title": "Airport map – Fiumicino (boarding areas A1-3, A21-27, A31-52, A61-83, E1-8, E11-24, E31-44, E51-61)",
+      "url": "https://www.adr.it/en/web/aeroporti-di-roma-en/pax-fco-airport-map",
+      "publisher": "Aeroporti di Roma",
+      "kind": "official",
+      "group": "adr",
+      "accessed": "2026-10-31",
+      "notes": "Page text lists terminals, levels and the gate ranges; links to all the map images below."
+    },
+    {
+      "id": "src:fco-adr-overview",
+      "title": "\"L. Da Vinci\" – Fiumicino overview map (vista-generale.jpg)",
+      "url": "https://www.adr.it/documents/10157/31562902/vista-generale.jpg/574ab386-a7ad-4ae0-0c2e-8fc3f37fd663?t=1715613726519",
+      "publisher": "Aeroporti di Roma",
+      "kind": "official-map",
+      "group": "adr",
+      "accessed": "2026-10-31",
+      "published": "2024-05-13",
+      "notes": "Shows A1-10, A21-27, A31-59, A61-83, E1-8, E11-24, E31-44, E51-61, T1, T3, T5, train, car parks."
+    },
+    {
+      "id": "src:fco-adr-walkway",
+      "title": "Camminamenti pedonali / Pedestrian walkway map",
+      "url": "https://www.adr.it/documents/10157/31455254/Camminamenti-q.ta-11.jpg/1248a071-3f12-1296-dd1f-3d2365c09e0c?t=1714659414935",
+      "publisher": "Aeroporti di Roma",
+      "kind": "official-map",
+      "group": "adr",
+      "accessed": "2026-10-31",
+      "published": "2024-05-02",
+      "notes": "Landside walkway network T1–T3–train–car parks–hotel."
+    },
+    {
+      "id": "src:fco-adr-t1-maps",
+      "title": "Terminal 1 floor maps (level 1 departures 2025-09; level 0, mezzanine)",
+      "url": "https://www.adr.it/documents/d/guest/t1-q-ta-6-19-09-25",
+      "publisher": "Aeroporti di Roma",
+      "kind": "official-map",
+      "group": "adr",
+      "accessed": "2026-10-31",
+      "published": "2025-09-19",
+      "notes": "Security, check-in islands A–E, airside branches A1-27/E, A31-52, A61-83, exit."
+    },
+    {
+      "id": "src:fco-adr-t3-maps",
+      "title": "Terminal 3 floor maps (level 1 departures 2025-06; level 2 mezzanine; level 0)",
+      "url": "https://www.adr.it/documents/d/guest/terminal-3-q-ta-6",
+      "publisher": "Aeroporti di Roma",
+      "kind": "official-map",
+      "group": "adr",
+      "accessed": "2026-10-31",
+      "published": "2025-06-10",
+      "notes": "Two security checkpoints, passport control, arrows E1-24, E1-61, E51-61, E31-44, A1-83."
+    },
+    {
+      "id": "src:fco-adr-maps-a1-3",
+      "title": "Boarding area A1-3, level 1",
+      "url": "https://www.adr.it/documents/10157/0/T1_A1-3_q.ta-6.jpg/770cd4d9-78e3-c409-6fb5-933e0bed4903?t=1718360023343",
+      "publisher": "Aeroporti di Roma",
+      "kind": "official-map",
+      "group": "adr",
+      "accessed": "2026-10-31",
+      "published": "2024-06-14"
+    },
+    {
+      "id": "src:fco-adr-maps-a21-27",
+      "title": "Boarding area A21-27, level 0 (2024-02) and level 1 (updated 2024-12)",
+      "url": "https://www.adr.it/documents/10157/33750261/T1_A21-27_q.ta+6+AGGIORNATO.png/123114f9-6e2e-8dfe-11d4-51f4f03f010c?t=1734515182897",
+      "publisher": "Aeroporti di Roma",
+      "kind": "official-map",
+      "group": "adr",
+      "accessed": "2026-10-31",
+      "published": "2024-12-18",
+      "notes": "Level 1 shows a Passport Control next to A21-27 and arrows A1-3, A31-83, E1-61; level 0 shows gates A21–A27 and sign 'A1-10,31-83, E'."
+    },
+    {
+      "id": "src:fco-adr-maps-a31-52",
+      "title": "Boarding area A31-52, level 0 and level 1 (updated 2024-12)",
+      "url": "https://www.adr.it/documents/10157/33750261/T1_A31-52_q.ta+6+AGGIORNATO.png/2290c1e8-5f11-48db-46b6-07358ba21251?t=1734515185492",
+      "publisher": "Aeroporti di Roma",
+      "kind": "official-map",
+      "group": "adr",
+      "accessed": "2026-10-31",
+      "published": "2024-12-18"
+    },
+    {
+      "id": "src:fco-adr-maps-a61-83",
+      "title": "Boarding area A61-83, level 0 and level 1 (updated 2024-12)",
+      "url": "https://www.adr.it/documents/10157/33750261/T1_A61-83_q.ta+6+AGGIORNATO.png/709fc2d3-9823-cb09-1847-433125f44cc1?t=1734515190085",
+      "publisher": "Aeroporti di Roma",
+      "kind": "official-map",
+      "group": "adr",
+      "accessed": "2026-10-31",
+      "published": "2024-12-18"
+    },
+    {
+      "id": "src:fco-adr-maps-e1-8",
+      "title": "Boarding area E1-8, levels 0, 1 (updated 2024-12) and 2",
+      "url": "https://www.adr.it/documents/10157/33750261/T3_E1-8_q.ta+7+AGGIORNATO.png/010f53cc-2ecc-c122-0759-79732c2e7b30?t=1734515192160",
+      "publisher": "Aeroporti di Roma",
+      "kind": "official-map",
+      "group": "adr",
+      "accessed": "2026-10-31",
+      "published": "2024-12-18",
+      "notes": "Level 1: plaza, transit desk, customs/VAT, escalators E1-4 / E5-8, arrows E11-24, E51-61, E31-44, A1-83. Level 2: people-mover station 'Imbarchi E31-44' with 'Uscita/Exit' on both sides."
+    },
+    {
+      "id": "src:fco-adr-maps-e11-24",
+      "title": "Boarding area E11-24, level 1 and level 2 (arrivals)",
+      "url": "https://www.adr.it/documents/10157/31009816/23_Terminal-3_E11-24_q.ta-15.jpg/3966980f-eea0-6eeb-a6e9-eecd502976cf?t=1710515064392",
+      "publisher": "Aeroporti di Roma",
+      "kind": "official-map",
+      "group": "adr",
+      "accessed": "2026-10-31",
+      "published": "2024-02-23"
+    },
+    {
+      "id": "src:fco-adr-maps-e31-44",
+      "title": "Boarding area E31-44, level 2 departures (updated 2024-12) and level 1 arrivals",
+      "url": "https://www.adr.it/documents/10157/33750261/T3_E31-44_q.ta11+AGGIORNATO.png/b7ab5fe4-a01e-d18c-5b5d-132c0d6af1ea?t=1734515196557",
+      "publisher": "Aeroporti di Roma",
+      "kind": "official-map",
+      "group": "adr",
+      "accessed": "2026-10-31",
+      "published": "2024-12-18"
+    },
+    {
+      "id": "src:fco-adr-maps-e51-61",
+      "title": "Boarding area E51-61, level 0 and level 1 (updated 2024-12)",
+      "url": "https://www.adr.it/documents/10157/33750261/E51-61+q.ta+6.png/03537d50-749b-d0bb-06cf-a2c8b8dbe814?t=1734515173146",
+      "publisher": "Aeroporti di Roma",
+      "kind": "official-map",
+      "group": "adr",
+      "accessed": "2026-10-31",
+      "published": "2024-12-18"
+    },
+    {
+      "id": "src:fco-adr-which-terminal",
+      "title": "Which terminal – Fiumicino",
+      "url": "https://www.adr.it/web/aeroporti-di-roma-en/pax-fco-which-terminal",
+      "publisher": "Aeroporti di Roma",
+      "kind": "official",
+      "group": "adr",
+      "accessed": "2026-10-31",
+      "notes": "T1 generally domestic and Schengen; T3 primarily extra-Schengen and intercontinental."
+    },
+    {
+      "id": "src:fco-osm",
+      "title": "OpenStreetMap: aeroway=gate/terminal, SkyBridge monorail, Fiumicino Aeroporto station (Overpass, bbox 41.78,12.22,41.82,12.27)",
+      "url": "https://www.openstreetmap.org/#map=16/41.7955/12.2500",
+      "publisher": "OpenStreetMap contributors",
+      "kind": "osm",
+      "group": "osm",
+      "accessed": "2026-10-31",
+      "notes": "© OpenStreetMap contributors, ODbL 1.0. Used for relative placement (2 m per schematic unit) and gate refs A31–A83, E17–E24, E57–E61; area names 'Boarding Area A1-A10', 'A31-A59'."
+    },
+    {
+      "id": "src:fco-wiki",
+      "title": "Rome Fiumicino Airport (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Rome_Fiumicino_Airport",
+      "publisher": "Wikipedia",
+      "kind": "wiki",
+      "group": "wikipedia",
+      "accessed": "2026-10-31",
+      "notes": "SkyBridge (1999, APM 100) direction rule marked 'citation needed'; T2 closed 2017-12-15; T5 closed 2017; Pier A 13 + 10 remote gates. Low weight."
+    },
+    {
+      "id": "src:fco-italiavola-2022",
+      "title": "ADR, inaugurata la nuova area di imbarco \"A\"",
+      "url": "https://italiavola.com/2022/05/18/adr-inaugurata-la-nuova-area-di-imbarco-a-infrastruttura-completamente-green/",
+      "publisher": "Italiavola",
+      "kind": "news",
+      "group": "italiavola",
+      "accessed": "2026-10-31",
+      "published": "2022-05-18",
+      "notes": "23 gates, 13 with jet bridges, Schengen/domestic, opened 2022-05-19."
+    },
+    {
+      "id": "src:fco-meteoweb-2016",
+      "title": "Roma: riapre la \"Galleria transiti\" del Leonardo da Vinci di Fiumicino",
+      "url": "https://www.meteoweb.eu/2016/04/roma-riapre-la-galleria-transiti-del-leonardo-da-vinci-di-fiumicino/678788/",
+      "publisher": "MeteoWeb",
+      "kind": "news",
+      "group": "meteoweb",
+      "accessed": "2026-10-31",
+      "published": "2016-04-29",
+      "notes": "Historical: >240 m transfer corridor linking Schengen and extra-Schengen areas, 12 e-gates + 24 manual posts."
+    },
+    {
+      "id": "src:fco-lineaedp-2022",
+      "title": "Aeroporto di Roma Fiumicino: nuovi varchi intelligenti firmati Minsait",
+      "url": "https://www.lineaedp.it/news/65667/aeroporto-di-roma-fiumicino-nuovi-varchi-intelligenti-firmati-minsait",
+      "publisher": "LineaEDP",
+      "kind": "news",
+      "group": "lineaedp",
+      "accessed": "2026-10-31",
+      "published": "2022-11-18",
+      "notes": "15 e-gates in the galleria transiti / new Pier A for passengers entering Schengen."
+    },
+    {
+      "id": "src:fco-missionline",
+      "title": "Gentiloni inaugura a Roma Fiumicino il nuovo terminal E",
+      "url": "https://www.missionline.it/gentiloni-inaugura-a-roma-fiumicino-il-nuovo-terminal-e/",
+      "publisher": "Mission (missionline.it)",
+      "kind": "news",
+      "group": "missionline",
+      "accessed": "2026-10-31",
+      "notes": "Search-result snippet only: new international pier E for extra-Schengen flights; page not read in full."
+    },
+    {
+      "id": "src:fco-pointsanalyst-2026",
+      "title": "Rome Fiumicino Airport (FCO) guide",
+      "url": "https://www.thepointsanalyst.com/rome-fiumicino-airport-fco/",
+      "publisher": "The Points Analyst",
+      "kind": "guide",
+      "group": "thepointsanalyst",
+      "accessed": "2026-10-31",
+      "published": "2026-03-23",
+      "notes": "Areas A/E, SkyBridge only link to E31-44, EES, connection-time estimates (guide figures)."
+    },
+    {
+      "id": "src:fco-yt-groming-airside",
+      "title": "Rome Fiumicino Airport (FCO) Airside walk from Terminal 1 to Terminal 3 (Gate A72 – Gate E51/E33)",
+      "url": "https://www.youtube.com/watch?v=XDZzFyEjNbQ",
+      "publisher": "YouTube · World of Groming",
+      "kind": "video",
+      "group": "yt-worldofgroming",
+      "accessed": "2026-10-31",
+      "published": "2024-05-07",
+      "notes": "Storyboards read 0–1119 s (320×180, 10 s)."
+    },
+    {
+      "id": "src:fco-yt-groming-landside",
+      "title": "Rome Fiumicino Airport (FCO) Landside walk from Park A to Terminal 1, Terminal 1 to Terminal 3",
+      "url": "https://www.youtube.com/watch?v=VwXvKwWgwxs",
+      "publisher": "YouTube · World of Groming",
+      "kind": "video",
+      "group": "yt-worldofgroming",
+      "accessed": "2026-10-31",
+      "published": "2024-07-20",
+      "notes": "Same channel as the airside walk (same independence group). Storyboards 270–630 s."
+    },
+    {
+      "id": "src:fco-yt-orwecould-2026",
+      "title": "Rome FCO Airport: EES Exit Process & Complete Departures Guide 2026",
+      "url": "https://www.youtube.com/watch?v=yg8D_A3acpo",
+      "publisher": "YouTube · or we could have had kids",
+      "kind": "video",
+      "group": "yt-orwecouldhavehadkids",
+      "accessed": "2026-10-31",
+      "published": "2026-06-25",
+      "notes": "Storyboards 225–585 s."
+    },
+    {
+      "id": "src:fco-yt-happypizza-2022",
+      "title": "Rome-Fiumicino Airport's \"SkyBridge\" Bombardier people mover",
+      "url": "https://www.youtube.com/watch?v=7gvW2pCmUB4",
+      "publisher": "YouTube · HappyPizza64",
+      "kind": "video",
+      "group": "yt-happypizza64",
+      "accessed": "2026-10-31",
+      "published": "2022-06-14",
+      "notes": "Recorded 2022-04-09; ride T3 → satellite."
+    },
+    {
+      "id": "src:fco-yt-methylorange-2020",
+      "title": "People mover ride in Rome Fiumicino airport",
+      "url": "https://www.youtube.com/watch?v=QIOjfmn5eTk",
+      "publisher": "YouTube · MethyIOrange",
+      "kind": "video",
+      "group": "yt-methylorange",
+      "accessed": "2026-10-31",
+      "published": "2020-10-24",
+      "notes": "39 s clip of the ride T3 → non-Schengen satellite (front view of the guideway)."
+    },
+    {
+      "id": "src:fco-yt-walkerscape-2025",
+      "title": "Fiumicino Airport Terminal 3 Walking Tour",
+      "url": "https://www.youtube.com/watch?v=c6rkbC3wEMw",
+      "publisher": "YouTube · Walkerscape",
+      "kind": "video",
+      "group": "yt-walkerscape",
+      "accessed": "2026-10-31",
+      "published": "2026-02-09",
+      "notes": "Filmed 2025-09-15; storyboards 1170–1710 s."
+    },
+    {
+      "id": "src:fco-yt-mjtravel-2026",
+      "title": "Rome Fiumicino Airport (FCO) Arrival Guide | POV Walking T1 to T3",
+      "url": "https://www.youtube.com/watch?v=_1LQhZ-evdY",
+      "publisher": "YouTube · MJ-Travel",
+      "kind": "video",
+      "group": "yt-mjtravel",
+      "accessed": "2026-10-31",
+      "published": "2026-02-17",
+      "notes": "Filmed 2025-12-18; storyboards 0–126 s."
+    },
+    {
+      "id": "src:fco-yt-rameez-2023",
+      "title": "6 Hours at FCO Airport | Terminal 3 to Terminal 1",
+      "url": "https://www.youtube.com/watch?v=AGvjY8x58Nc",
+      "publisher": "YouTube · Travel with Rameez",
+      "kind": "video",
+      "group": "yt-travelwithrameez",
+      "accessed": "2026-10-31",
+      "published": "2023-12-26",
+      "notes": "Storyboards 0–1000 s (landside T3 → T1 check-in, T1 security)."
+    },
+    {
+      "id": "src:fco-yt-flybyguy-2025",
+      "title": "Rome Fiumicino (FCO) Airport Transit | Terminal 3 | Toronto to India",
+      "url": "https://www.youtube.com/watch?v=nyza8Q9b-v0",
+      "publisher": "YouTube · theflybyguy",
+      "kind": "video",
+      "group": "yt-theflybyguy",
+      "accessed": "2026-10-31",
+      "published": "2025-12-24",
+      "notes": "ITA non-Schengen → non-Schengen transfer; storyboards 0–135 s."
+    },
+    {
+      "id": "src:fco-yt-heregoes-2024",
+      "title": "Rome Airport Walk Guide - Terminal 3, Customs, Baggage Claim, Taxi, Leonardo Express",
+      "url": "https://www.youtube.com/watch?v=puFEb0L59N0",
+      "publisher": "YouTube · Here We Go!",
+      "kind": "video",
+      "group": "yt-herewego",
+      "accessed": "2026-10-31",
+      "published": "2024-09-10",
+      "notes": "Description only (walk June 2024): T3 → customs → baggage claim → taxi → Leonardo Express. Frames not read."
+    },
+    {
+      "id": "src:fco-yt-skytd-2019",
+      "title": "How to get to Airport Station @ Fiumicino Rome Airport Terminal 3",
+      "url": "https://www.youtube.com/watch?v=2SH_nQt3zKI",
+      "publisher": "YouTube · skytd915",
+      "kind": "video",
+      "group": "yt-skytd915",
+      "accessed": "2026-10-31",
+      "published": "2019-05-23",
+      "notes": "Description only (historical, 2019): from arrivals go up to departures, then the aerial walkway to the station."
+    },
+    {
+      "id": "src:fco-adr-t3-l0",
+      "title": "ADR map: Terminal 3, ground level (arrivals), updated",
+      "url": "https://www.adr.it/documents/d/guest/terminal-3-q-ta-2-aggiornato",
+      "publisher": "Aeroporti di Roma",
+      "kind": "official-map",
+      "group": "adr",
+      "accessed": "2026-10-31",
+      "notes": "Linked from the ADR airport-map page as \"Terminal 3 Floor 0 – Arrivals\". Read visually; not stored."
+    },
+    {
+      "id": "src:fco-adr-t3-l2",
+      "title": "ADR map: Terminal 3, second level (landside mezzanine)",
+      "url": "https://www.adr.it/documents/10157/31899622/Terminal-3-q.ta-11.jpg/9ad10d19-0ad1-a93b-a1fd-7adf3a208bfc?t=1718352726963",
+      "publisher": "Aeroporti di Roma",
+      "kind": "official-map",
+      "group": "adr",
+      "accessed": "2026-10-31",
+      "published": "2024-06-14",
+      "notes": "Landside level 2: airline ticket offices, escalators down \"Imbarchi/Gates\", exit south to car parks, car rental, train, hotel. Read visually; not stored."
+    },
+    {
+      "id": "src:fco-adr-maps-e31-44-l1",
+      "title": "ADR map: boarding area E31-44, first level (arrivals)",
+      "url": "https://www.adr.it/documents/10157/31899622/T3_E31-44_q.ta-6.jpg/8e01b982-25c3-1762-4eb4-b27a0fddbc98?t=1718359975909",
+      "publisher": "Aeroporti di Roma",
+      "kind": "official-map",
+      "group": "adr",
+      "accessed": "2026-10-31",
+      "published": "2024-06-14",
+      "notes": "Satellite arrivals level: ring corridor with one-way (clockwise) arrows from every gate E31–E44 to the people-mover corridors at the south-east corner. Read visually; not stored."
+    },
+    {
+      "id": "src:fco-adr-press-2023-04",
+      "title": "ADR press release: \"Cresce l'area di imbarco A, con un molo di 25mila mq completamente rinnovato e una nuova piazza\" (12 April 2023)",
+      "url": "https://mundys.com/sites/default/files/documents/ADR%20CRESCE%20LAREA%20DI%20IMBARCO%20A%20CON%20UN%20MOLO%20DI%2025MILA%20MQ.pdf",
+      "publisher": "Aeroporti di Roma (hosted by Mundys)",
+      "kind": "official",
+      "group": "adr",
+      "accessed": "2026-10-31",
+      "published": "2023-04-12",
+      "notes": "T1 boarding area reopened 2023-04-12, operational 2023-04-13 (first flight AZ2010 to Linate): 22 gates, more than half with bridges, domestic and Schengen; the building (opened 1991) was closed in July 2020; renovation from October 2022; ex boarding area C to open before summer 2023, ex Pier D renovation to start. Also: \"less than a year after the inauguration of boarding area A\"."
+    },
+    {
+      "id": "src:fco-mundys-t3-2025",
+      "title": "Mundys: \"Fiumicino Airport: New Terminal 3 Inaugurated\"",
+      "url": "https://mundys.com/en/w/fiumicino-airport-new-terminal-3-inaugurated",
+      "publisher": "Mundys (ADR parent)",
+      "kind": "official",
+      "group": "adr",
+      "accessed": "2026-10-31",
+      "published": "2025-05-15",
+      "notes": "Renewed T3 inaugurated 2025-05-13 after four years of works with the terminal open throughout: 41,000 m² on three levels, 248 check-in counters, renewed security for sensitive flights, baggage belts 9 → 14, transit areas upgraded."
+    },
+    {
+      "id": "src:fco-italiavola-2020-11",
+      "title": "italiavola: \"Roma Fiumicino: da martedì chiude il satellite ovest\"",
+      "url": "https://italiavola.com/2020/11/15/roma-fiumicino-da-martedi-chiude-il-satellite-ovest/",
+      "publisher": "italiavola",
+      "kind": "news",
+      "group": "italiavola",
+      "accessed": "2026-10-31",
+      "published": "2020-11-15",
+      "notes": "From Tuesday 2020-11-17 boarding areas E31–E44 (Satellite Ovest, reached by the people mover) temporarily closed; all extra-Schengen departures and arrivals moved to Pier E. No reopening date given."
+    },
+    {
+      "id": "src:fco-ted-2023-pm",
+      "title": "TED 336457-2023: ADR open procedure for the design and supply of the new People Mover system, Fiumicino",
+      "url": "https://ted.europa.eu/en/notice/336457-2023/pdf",
+      "publisher": "Publications Office of the EU (TED)",
+      "kind": "official",
+      "group": "ted",
+      "accessed": "2026-10-31",
+      "published": "2023-06-06",
+      "notes": "Executive design, supply, operation and maintenance of a \"nuovo sistema People Mover\"; estimated value EUR 86 M; duration 264 months incl. renewal; tenders due 2023-07-28. Route, stations and dates not stated in the notice. Phase 3 (2026-11-01): PDF read on ted.europa.eu: OJ S 107/2023 of 2023-06-06, CIG 9857928B86, estimated value EUR 86 M (excl. VAT), duration 264 months incl. a 120-month renewal of operation/maintenance, tenders due 2023-07-28, award 70 quality / 30 price; no works schedule."
+    },
+    {
+      "id": "src:fco-yt-ozment-2022",
+      "title": "International Arrival at Rome-Fiumicino (FCO), Baggage Claim, and Ground Transportation – Dec 2022",
+      "url": "https://www.youtube.com/watch?v=JqcxF_17pN0",
+      "publisher": "Brian Ozment (YouTube)",
+      "kind": "video",
+      "group": "yt-brianozment",
+      "accessed": "2026-10-31",
+      "published": "2023-01-09",
+      "notes": "Delta A330 arrival at gate E23 (passport stamp 11-12-22). Storyboards read frame by frame (0–866 s), deleted after reading."
+    },
+    {
+      "id": "src:fco-yt-markoolavi-2025",
+      "title": "Arriving at Rome! 4K Walkthrough at Fiumicino Airport (FCO)",
+      "url": "https://www.youtube.com/watch?v=wRYK90RGrJM",
+      "publisher": "MarkoOlavi (YouTube)",
+      "kind": "video",
+      "group": "yt-markoolavi",
+      "accessed": "2026-10-31",
+      "published": "2025-07-14",
+      "notes": "Schengen arrival into the A31-52 pier, T1 plaza, reclaim, T1 arrivals and on to the station. Storyboards read for 0–900 s, deleted after reading."
+    },
+    {
+      "id": "src:fco-adr-apms-oi-2024",
+      "title": "ADR Operating Instruction OI_ADR_Operazioni Landside_02 Rev.0: Trasferimento dei passeggeri in caso di fermo totale del servizio Automated People Mover System",
+      "url": "https://www.adr.it/documents/10157/30783145/Istruzione+tecnica_Fermo+People+Mover_04.06.2024.pdf/d8bbefd8-7935-7d3e-e973-5b42597c719f?t=1718351108689",
+      "publisher": "Aeroporti di Roma",
+      "kind": "official-pdf",
+      "group": "adr",
+      "accessed": "2026-10-31",
+      "published": "2024-06-04",
+      "notes": "Public ADR PDF (20 pages, Italian), text extracted locally. Describes the APMS (SkyBridge) in normal operation (stations, levels, platforms, direction of flows, night on-call pattern, fleet) and the outage bus procedure. No headway or ride time."
+    },
+    {
+      "id": "src:fco-yt-demicheli-2016",
+      "title": "The SkyBridge is an automated people mover at Leonardo da Vinci–Fiumicino Airport in Rome, Italy.",
+      "url": "https://www.youtube.com/watch?v=2Q51O3MLG_Y",
+      "publisher": "Guglielmo de' Micheli (YouTube)",
+      "kind": "video",
+      "group": "yt-demicheli",
+      "accessed": "2026-10-31",
+      "published": "2016-04-14",
+      "notes": "59 s front-window ride clip; storyboard at 1-s intervals read frame by frame (frames deleted)."
+    },
+    {
+      "id": "src:fco-yt-ttt-2015",
+      "title": "Aeroporto Internazionale Leonardo da Vinci di Fiumicino: people mover",
+      "url": "https://www.youtube.com/watch?v=LZYKuEu-AWw",
+      "publisher": "TTT (Transport-Travel-Tourism) / Silviu Sintea (YouTube)",
+      "kind": "video",
+      "group": "yt-ttt",
+      "accessed": "2026-10-31",
+      "published": "2015-11-23",
+      "notes": "68 s rear-window ride clip at dusk; storyboard at 1-s intervals read frame by frame (frames deleted)."
+    },
+    {
+      "id": "src:fco-eu-pm-shuttle-tender",
+      "title": "EU procurement notice: shuttle service with apron (interpista) vehicles for passengers during the People Mover replacement works at Fiumicino airport",
+      "url": "https://op.europa.eu/mt/web/public-procurement/procurement-details/-/procurement/65704d96-e2d3-4bdd-9342-05a90a406cd4",
+      "publisher": "Publications Office of the EU",
+      "kind": "official",
+      "group": "ted",
+      "accessed": "2026-10-31",
+      "notes": "HTTP 403 to WebFetch (not retried). Title known only from search-engine snippets (Maltese machine translation). No dates, value or award read. Owner capture wanted."
+    },
+    {
+      "id": "src:fco-trenitalia-le",
+      "title": "Trenitalia — Leonardo Express: il treno diretto Roma Termini–Aeroporto",
+      "url": "https://www.trenitalia.com/it/regionale/collegamenti-regionale/leonardo-express.html",
+      "publisher": "Trenitalia",
+      "kind": "operator",
+      "group": "trenitalia",
+      "accessed": "2026-11-01",
+      "notes": "'Il servizio è operativo ogni 15 minuti*: da Roma Termini dalle 4.50 alle 23.05 da Fiumicino Aeroporto dalle 05.38 alle 23.27'; 32 min; EUR 14; the station is inside the airport. The Lazio regional timetable PDF (valid from 24/10/2026) was downloaded, but its FL1 tables did not extract as text."
+    },
+    {
+      "id": "src:fco-adr-train",
+      "title": "ADR — Fiumicino Airport train: tickets and timetables",
+      "url": "https://www.adr.it/web/aeroporti-di-roma-en/pax-fco-train",
+      "publisher": "Aeroporti di Roma",
+      "kind": "official",
+      "group": "adr",
+      "accessed": "2026-11-01",
+      "notes": "Leonardo Express 32 min, every 15 min, from Termini 04:50–23:05 and from the airport 05:38–23:27; FL1 every 15 min on working days and every 30 min at weekends and holidays; the station is 'inside the airport area, close to the arrival and departure terminals'."
+    },
+    {
+      "id": "src:fco-ted-2024-apms-om",
+      "title": "TED 006352-2024 — contract award: operation and maintenance of the Automated People Mover System (framework CQ20230147)",
+      "url": "https://ted.europa.eu/en/notice/006352-2024/pdf",
+      "publisher": "Publications Office of the EU (TED), notice by Aeroporti di Roma",
+      "kind": "official",
+      "group": "ted",
+      "accessed": "2026-11-01",
+      "notes": "Awarded without competition (for technical reasons) to A.T.I. Alstom Ferroviaria – Alstom Service Italia; contract concluded 2023-11-01; EUR 5 M; the extracted text states no duration."
+    }
+  ]
+}

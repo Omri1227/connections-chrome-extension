@@ -1,0 +1,4638 @@
+{
+  "iata": "LHR",
+  "icao": "EGLL",
+  "name": "London Heathrow",
+  "city": "London",
+  "asOf": "2026-11-02",
+  "tz": "Europe/London",
+  "schematic": {
+    "width": 1000,
+    "height": 640,
+    "northDeg": 0,
+    "background": [
+      {
+        "shape": {
+          "type": "rect",
+          "x": 150,
+          "y": 48,
+          "w": 720,
+          "h": 10
+        },
+        "kind": "runway",
+        "label": "09L / 27R"
+      },
+      {
+        "shape": {
+          "type": "rect",
+          "x": 200,
+          "y": 360,
+          "w": 650,
+          "h": 10
+        },
+        "kind": "runway",
+        "label": "09R / 27L"
+      }
+    ],
+    "labels": [
+      {
+        "text": "Northern runway",
+        "at": [
+          180,
+          38
+        ],
+        "kind": "runway"
+      },
+      {
+        "text": "Southern runway",
+        "at": [
+          210,
+          352
+        ],
+        "kind": "runway"
+      },
+      {
+        "text": "Schematic, approximately to scale (OpenStreetMap positions); not a survey plan",
+        "at": [
+          30,
+          625
+        ],
+        "kind": "note"
+      },
+      {
+        "text": "Airside Road Tunnel (T2/3 ↔ T5)",
+        "at": [
+          300,
+          300
+        ],
+        "kind": "road"
+      },
+      {
+        "text": "Cargo Tunnel (T2/3 ↔ T4)",
+        "at": [
+          560,
+          420
+        ],
+        "kind": "road"
+      }
+    ]
+  },
+  "areas": [
+    {
+      "id": "lhr-t2a",
+      "name": "Terminal 2 · A gates (main building)",
+      "short": "2A",
+      "kind": "terminal",
+      "terminal": "T2",
+      "side": "airside",
+      "zone": "international",
+      "matrix": true,
+      "anchor": [
+        644,
+        247
+      ],
+      "shape": {
+        "type": "rect",
+        "x": 589,
+        "y": 212,
+        "w": 110,
+        "h": 70
+      },
+      "level": "Departures lounge (international)",
+      "arrivals": "segregated",
+      "description": "Main T2 building: departures lounge and A gates. Arriving passengers are kept apart from departing passengers (arrivals level / corridors, T2 arrivals tour); connecting passengers follow the purple Flight Connections signs and are screened again.",
+      "confidence": "verified",
+      "sources": [
+        "src:lhr-tour-t2",
+        "src:lhr-tour-t2-arr",
+        "src:wiki-t2",
+        "src:lhr-osm"
+      ]
+    },
+    {
+      "id": "lhr-t2b",
+      "name": "Terminal 2 · B gates (satellite)",
+      "short": "2B",
+      "kind": "satellite",
+      "terminal": "T2",
+      "side": "airside",
+      "zone": "international",
+      "matrix": true,
+      "anchor": [
+        727,
+        201
+      ],
+      "shape": {
+        "type": "rect",
+        "x": 707,
+        "y": 146,
+        "w": 40,
+        "h": 110
+      },
+      "arrivals": "segregated",
+      "description": "T2B satellite, reached from T2A through a subway (lift → subway → lift), about 15 min walk (Heathrow T2 tour).",
+      "confidence": "verified",
+      "sources": [
+        "src:lhr-tour-t2",
+        "src:lhr-tour-t2-arr",
+        "src:wiki-t2",
+        "src:lhr-osm"
+      ]
+    },
+    {
+      "id": "lhr-t3",
+      "name": "Terminal 3",
+      "short": "3",
+      "kind": "terminal",
+      "terminal": "T3",
+      "side": "airside",
+      "zone": "international",
+      "matrix": true,
+      "anchor": [
+        493,
+        206
+      ],
+      "shape": {
+        "type": "rect",
+        "x": 418,
+        "y": 161,
+        "w": 150,
+        "h": 90
+      },
+      "level": "Departures lounge and piers",
+      "arrivals": "segregated",
+      "description": "T3 departures lounge with its piers (pier list not published in a source read; Pier 6 built 2006). Arrivals use a separate arrivals walkway that splits towards Flight Connections or passport control (T3 arrivals tour).",
+      "confidence": "verified",
+      "sources": [
+        "src:lhr-assistance-guide",
+        "src:lhr-tour-t3-arr",
+        "src:wiki-t3",
+        "src:lhr-osm"
+      ]
+    },
+    {
+      "id": "lhr-t4",
+      "name": "Terminal 4",
+      "short": "4",
+      "kind": "terminal",
+      "terminal": "T4",
+      "side": "airside",
+      "zone": "international",
+      "matrix": true,
+      "anchor": [
+        689,
+        449
+      ],
+      "shape": {
+        "type": "rect",
+        "x": 614,
+        "y": 424,
+        "w": 150,
+        "h": 50
+      },
+      "arrivals": "segregated",
+      "description": "T4, south of the southern runway; gates \"very close to the check-in and security halls\" (Wikipedia). El Al, Air France / KLM, Qatar and others (terminal finder). Its Flight Connections layout is not described in any source read.",
+      "confidence": "verified",
+      "sources": [
+        "src:lhr-assistance-guide",
+        "src:wiki-t4",
+        "src:lhr-which-terminal"
+      ],
+      "notes": "arrivals: segregated is inferred from the airport-wide design (international arrivals are kept apart from departures at every terminal toured)."
+    },
+    {
+      "id": "lhr-t5a",
+      "name": "Terminal 5 · A gates (main building)",
+      "short": "5A",
+      "kind": "terminal",
+      "terminal": "T5",
+      "side": "airside",
+      "zone": "international",
+      "matrix": true,
+      "anchor": [
+        128,
+        193
+      ],
+      "shape": {
+        "type": "rect",
+        "x": 98,
+        "y": 128,
+        "w": 60,
+        "h": 130
+      },
+      "level": "International Departures Lounge (Level 3) and gates (Level 2)",
+      "arrivals": "segregated",
+      "description": "T5 main building: departures lounge and A gates (A1–A23, \"Gates 10–23\" signed on Level 2). The Transit train to the B and C gates starts here.",
+      "confidence": "verified",
+      "sources": [
+        "src:lhr-tour-t5-dep",
+        "src:lhr-tour-t3-t5",
+        "src:wiki-t5",
+        "src:lhr-osm"
+      ]
+    },
+    {
+      "id": "lhr-t5b",
+      "name": "Terminal 5 · B gates (satellite)",
+      "short": "5B",
+      "kind": "satellite",
+      "terminal": "T5",
+      "side": "airside",
+      "zone": "international",
+      "matrix": true,
+      "anchor": [
+        214,
+        206
+      ],
+      "shape": {
+        "type": "rect",
+        "x": 194,
+        "y": 151,
+        "w": 40,
+        "h": 110
+      },
+      "arrivals": "segregated",
+      "description": "T5B satellite (B32–B48), reached by the airside Transit train or a pedestrian walkway below it.",
+      "confidence": "verified",
+      "sources": [
+        "src:lhr-assistance-guide",
+        "src:wiki-t5",
+        "src:wiki-t5-transit",
+        "src:lhr-osm"
+      ]
+    },
+    {
+      "id": "lhr-t5c",
+      "name": "Terminal 5 · C gates (satellite)",
+      "short": "5C",
+      "kind": "satellite",
+      "terminal": "T5",
+      "side": "airside",
+      "zone": "international",
+      "matrix": true,
+      "anchor": [
+        284,
+        198
+      ],
+      "shape": {
+        "type": "rect",
+        "x": 264,
+        "y": 143,
+        "w": 40,
+        "h": 110
+      },
+      "arrivals": "segregated",
+      "description": "T5C satellite (C52–C66), the last Transit station.",
+      "confidence": "verified",
+      "sources": [
+        "src:lhr-assistance-guide",
+        "src:wiki-t5",
+        "src:wiki-t5-transit",
+        "src:lhr-osm"
+      ]
+    },
+    {
+      "id": "lhr-t2-dom",
+      "name": "Terminal 2 · UK & Ireland flights (in the common departure lounge)",
+      "short": "2 UK",
+      "kind": "other",
+      "terminal": "T2",
+      "side": "airside",
+      "zone": "domestic",
+      "matrix": true,
+      "anchor": [
+        607,
+        181
+      ],
+      "shape": {
+        "type": "rect",
+        "x": 582,
+        "y": 168,
+        "w": 50,
+        "h": 26
+      },
+      "description": "Logical area for UK domestic, Ireland and Isle of Man flights at T2 (Aer Lingus, Loganair: terminal finder). They leave from the common departure lounge; which gates they use is not known, so this area has no gate list. Passengers arriving from abroad reach it only through UK immigration and the biometric check (Heathrow).",
+      "intraWalk": {
+        "min": 3,
+        "typical": 8,
+        "max": 15,
+        "basis": "assumed",
+        "note": "gates of the UK & Ireland flights in T2 are not known",
+        "sources": []
+      },
+      "intraControls": [
+        {
+          "kind": "transfer-security",
+          "minutes": {
+            "min": 3,
+            "typical": 8,
+            "max": 20,
+            "basis": "assumed",
+            "note": "Heathrow MTI: transfer security queue < 10 min in 97.6–100 % of 15-min periods (Jul–Sep 2026, queue only); screening and repacking not published (assumed); liquids up to 2 l and large electricals may stay in the bag when connecting"
+          },
+          "note": "all connecting passengers are screened again at Heathrow"
+        }
+      ],
+      "confidence": "inferred",
+      "sources": [
+        "src:lhr-uk-ireland",
+        "src:lhr-which-terminal",
+        "src:lhr-connecting"
+      ],
+      "notes": "Same physical lounge as T2A/T2B; separated here only because the border rule differs (international → domestic passes UK immigration)."
+    },
+    {
+      "id": "lhr-t5-dom",
+      "name": "Terminal 5 · UK & Ireland flights (in the common departure lounge)",
+      "short": "5 UK",
+      "kind": "other",
+      "terminal": "T5",
+      "side": "airside",
+      "zone": "domestic",
+      "matrix": true,
+      "anchor": [
+        124,
+        125
+      ],
+      "shape": {
+        "type": "rect",
+        "x": 99,
+        "y": 112,
+        "w": 50,
+        "h": 26
+      },
+      "description": "Logical area for BA UK domestic, Ireland and Channel Islands flights at T5 (terminal finder: ABZ, BHD, EDI, GLA, INV, MAN, NCL, JER, GCI, DUB). Gates not known. Reached from an international arrival only through UK immigration and the biometric check.",
+      "intraWalk": {
+        "min": 3,
+        "typical": 8,
+        "max": 15,
+        "basis": "assumed",
+        "note": "gates of the UK & Ireland flights in T5 are not known",
+        "sources": []
+      },
+      "intraControls": [
+        {
+          "kind": "transfer-security",
+          "minutes": {
+            "min": 3,
+            "typical": 8,
+            "max": 20,
+            "basis": "assumed",
+            "note": "Heathrow MTI: transfer security queue < 10 min in 97.6–100 % of 15-min periods (Jul–Sep 2026, queue only); screening and repacking not published (assumed); liquids up to 2 l and large electricals may stay in the bag when connecting"
+          },
+          "note": "all connecting passengers are screened again at Heathrow"
+        }
+      ],
+      "confidence": "inferred",
+      "sources": [
+        "src:lhr-uk-ireland",
+        "src:lhr-which-terminal",
+        "src:lhr-connecting"
+      ],
+      "notes": "Same physical lounge as T5A/B/C (common departure lounge); a separate logical area for the border rule."
+    },
+    {
+      "id": "lhr-t2-fc",
+      "name": "Terminal 2 · Flight Connections (location not published)",
+      "short": "FC2",
+      "kind": "transfer-hub",
+      "terminal": "T2",
+      "side": "airside",
+      "zone": "international",
+      "matrix": false,
+      "anchor": [
+        628,
+        279
+      ],
+      "description": "Where T2 connecting passengers are screened again and the connections buses leave. Exists by the airport-wide rule (purple Flight Connections signs, all connections re-screened); its position and layout are not described in any source read.",
+      "confidence": "inferred",
+      "sources": [
+        "src:lhr-connecting",
+        "src:lhr-blog-connections"
+      ]
+    },
+    {
+      "id": "lhr-t3-fc",
+      "name": "Terminal 3 · Flight Connections Centre and connections bus area",
+      "short": "FC3",
+      "kind": "transfer-hub",
+      "terminal": "T3",
+      "side": "airside",
+      "zone": "international",
+      "matrix": false,
+      "anchor": [
+        466,
+        235
+      ],
+      "description": "Arrivals corridor → Flight Connections Centre → information sign → lifts / escalator down to the connections shuttle area (Heathrow T3 → T5 tour).",
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-tour-t3-t5",
+        "src:lhr-tour-t3-arr"
+      ],
+      "notes": "Where T3 → T3 connecting passengers are screened is not shown in the tour (assumed: in the Flight Connections Centre)."
+    },
+    {
+      "id": "lhr-t4-fc",
+      "name": "Terminal 4 · Flight Connections (not described in any source)",
+      "short": "FC4",
+      "kind": "transfer-hub",
+      "terminal": "T4",
+      "side": "airside",
+      "zone": "international",
+      "matrix": false,
+      "anchor": [
+        648,
+        410
+      ],
+      "description": "Placeholder for the T4 connections area: the airport-wide rule says it exists (all connections re-screened, bus between terminals), but no tour, map or description of it was readable (maps.heathrow.com is a JS app).",
+      "confidence": "unknown",
+      "sources": [
+        "src:lhr-connecting",
+        "src:yt-windowseat-t4-t2"
+      ]
+    },
+    {
+      "id": "lhr-t5-fc",
+      "name": "Terminal 5 · Flight Connections area (bus arrival Level 0 → security Level 3)",
+      "short": "FC5",
+      "kind": "transfer-hub",
+      "terminal": "T5",
+      "side": "airside",
+      "zone": "international",
+      "matrix": false,
+      "anchor": [
+        111,
+        235
+      ],
+      "description": "Connections bus arrival on Level 0 → walkway to Level 2 → connections information display (\"Passengers connecting to Terminals 2, 3 or 4 should follow the signs to the transfer buses\") → pre-security area with airline desks → security eGates on Level 3 → International Departures Lounge (Heathrow T3 → T5 tour).",
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-tour-t3-t5"
+      ]
+    },
+    {
+      "id": "lhr-t2-land",
+      "name": "Terminal 2 · check-in and arrivals (landside)",
+      "short": "T2 L",
+      "kind": "landside-hall",
+      "terminal": "T2",
+      "side": "landside",
+      "zone": "n/a",
+      "matrix": true,
+      "anchor": [
+        587,
+        264
+      ],
+      "shape": {
+        "type": "rect",
+        "x": 562,
+        "y": 249,
+        "w": 50,
+        "h": 30
+      },
+      "checkIn": {
+        "serves": [
+          "lhr-t2a",
+          "lhr-t2b",
+          "lhr-t2-dom"
+        ],
+        "sources": [
+          "src:lhr-tour-t2",
+          "src:lhr-which-terminal"
+        ],
+        "note": "T2 check-in hall (Star Alliance, Aer Lingus, Loganair …)"
+      },
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-tour-t2",
+        "src:lhr-tour-t2-arr"
+      ]
+    },
+    {
+      "id": "lhr-t3-land",
+      "name": "Terminal 3 · check-in and arrivals (landside)",
+      "short": "T3 L",
+      "kind": "landside-hall",
+      "terminal": "T3",
+      "side": "landside",
+      "zone": "n/a",
+      "matrix": true,
+      "anchor": [
+        560,
+        181
+      ],
+      "shape": {
+        "type": "rect",
+        "x": 535,
+        "y": 166,
+        "w": 50,
+        "h": 30
+      },
+      "checkIn": {
+        "serves": [
+          "lhr-t3"
+        ],
+        "sources": [
+          "src:vs-lhr-guide",
+          "src:lhr-which-terminal"
+        ],
+        "note": "T3 check-in (Virgin Atlantic Zone A, AA, BA T3 flights …)"
+      },
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-tour-t3-arr",
+        "src:vs-lhr-guide"
+      ]
+    },
+    {
+      "id": "lhr-t4-land",
+      "name": "Terminal 4 · check-in and arrivals (landside)",
+      "short": "T4 L",
+      "kind": "landside-hall",
+      "terminal": "T4",
+      "side": "landside",
+      "zone": "n/a",
+      "matrix": true,
+      "anchor": [
+        701,
+        503
+      ],
+      "shape": {
+        "type": "rect",
+        "x": 671,
+        "y": 490,
+        "w": 60,
+        "h": 26
+      },
+      "checkIn": {
+        "serves": [
+          "lhr-t4"
+        ],
+        "sources": [
+          "src:lhr-which-terminal"
+        ],
+        "note": "T4 check-in (El Al, Air France / KLM, Qatar …)"
+      },
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-travel-between",
+        "src:wiki-t4"
+      ]
+    },
+    {
+      "id": "lhr-t5-land",
+      "name": "Terminal 5 · check-in and arrivals (landside)",
+      "short": "T5 L",
+      "kind": "landside-hall",
+      "terminal": "T5",
+      "side": "landside",
+      "zone": "n/a",
+      "matrix": true,
+      "anchor": [
+        64,
+        181
+      ],
+      "shape": {
+        "type": "rect",
+        "x": 49,
+        "y": 136,
+        "w": 30,
+        "h": 90
+      },
+      "checkIn": {
+        "serves": [
+          "lhr-t5a",
+          "lhr-t5b",
+          "lhr-t5c",
+          "lhr-t5-dom"
+        ],
+        "sources": [
+          "src:lhr-tour-t5-dep",
+          "src:lhr-which-terminal"
+        ],
+        "note": "T5 check-in and bag drop (British Airways, Iberia)"
+      },
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-tour-t5-dep"
+      ]
+    },
+    {
+      "id": "lhr-t23-station",
+      "name": "Heathrow Terminals 2 & 3 station (Elizabeth line, Heathrow Express, Piccadilly line)",
+      "short": "Stn 2&3",
+      "kind": "station",
+      "terminal": "T2/T3",
+      "side": "landside",
+      "zone": "n/a",
+      "matrix": false,
+      "anchor": [
+        574,
+        206
+      ],
+      "description": "Shared landside station between T2 and T3; a step-free underground walkway links the two terminals (\"average journey time: 10 minutes\").",
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-travel-between",
+        "src:lhr-free-travel-map"
+      ]
+    }
+  ],
+  "gateGroups": [
+    {
+      "id": "g:lhr-t2a",
+      "area": "lhr-t2a",
+      "label": "T2 A1–A26",
+      "gates": [
+        "T2 A1",
+        "T2 A2",
+        "T2 A3",
+        "T2 A4",
+        "T2 A5",
+        "T2 A6",
+        "T2 A7",
+        "T2 A8",
+        "T2 A9",
+        "T2 A10",
+        "T2 A11",
+        "T2 A12",
+        "T2 A13",
+        "T2 A14",
+        "T2 A15",
+        "T2 A16",
+        "T2 A17",
+        "T2 A18",
+        "T2 A19",
+        "T2 A20",
+        "T2 A21",
+        "T2 A22",
+        "T2 A23",
+        "T2 A24",
+        "T2 A25",
+        "T2 A26"
+      ],
+      "path": [
+        [
+          627,
+          274
+        ],
+        [
+          617,
+          273
+        ],
+        [
+          609,
+          273
+        ]
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:wiki-t2",
+        "src:lhr-osm"
+      ],
+      "notes": "Signed as \"A1\"…\"A26\"; prefixed \"T2 \" here because T5 also has A gates. Range from Wikipedia (\"concourse A, gates 1–26\"); OpenStreetMap shows A16–A26 only. The official map is a JS app (owner capture)."
+    },
+    {
+      "id": "g:lhr-t2b",
+      "area": "lhr-t2b",
+      "label": "T2 B28–B49",
+      "gates": [
+        "T2 B28",
+        "T2 B29",
+        "T2 B30",
+        "T2 B31",
+        "T2 B32",
+        "T2 B33",
+        "T2 B34",
+        "T2 B35",
+        "T2 B36",
+        "T2 B37",
+        "T2 B38",
+        "T2 B39",
+        "T2 B40",
+        "T2 B41",
+        "T2 B42",
+        "T2 B43",
+        "T2 B44",
+        "T2 B45",
+        "T2 B46",
+        "T2 B47",
+        "T2 B48",
+        "T2 B49"
+      ],
+      "path": [
+        [
+          719,
+          130
+        ],
+        [
+          728,
+          271
+        ]
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:wiki-t2",
+        "src:lhr-osm"
+      ],
+      "notes": "Signed \"B28\"…\"B49\" (prefix \"T2 \" here: T5 has B gates too). Wikipedia range; OpenStreetMap shows B31–B49."
+    },
+    {
+      "id": "g:lhr-t3",
+      "area": "lhr-t3",
+      "label": "T3 gates (as mapped)",
+      "gates": [
+        "T3 1",
+        "T3 3",
+        "T3 5",
+        "T3 7",
+        "T3 9",
+        "T3 11",
+        "T3 13",
+        "T3 16",
+        "T3 17",
+        "T3 18",
+        "T3 19",
+        "T3 20",
+        "T3 21",
+        "T3 22",
+        "T3 23",
+        "T3 24A",
+        "T3 24B",
+        "T3 24C",
+        "T3 24D",
+        "T3 24E",
+        "T3 25",
+        "T3 26",
+        "T3 27",
+        "T3 28",
+        "T3 29",
+        "T3 30",
+        "T3 31",
+        "T3 32",
+        "T3 34",
+        "T3 35",
+        "T3 36",
+        "T3 40",
+        "T3 42"
+      ],
+      "path": [
+        [
+          570,
+          269
+        ],
+        [
+          513,
+          269
+        ],
+        [
+          446,
+          235
+        ],
+        [
+          433,
+          137
+        ]
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-osm",
+        "src:lhr-assistance-guide"
+      ],
+      "notes": "Numbered gates as mapped in OpenStreetMap with terminal=3 (Heathrow names \"Gate 7\" at T3). Numbers only; prefixed \"T3 \" (T4 also has a Gate 7). Pier membership not established. Not every gate may be listed."
+    },
+    {
+      "id": "g:lhr-t4",
+      "area": "lhr-t4",
+      "label": "T4 gates (only those Heathrow names)",
+      "gates": [
+        "T4 7",
+        "T4 11A"
+      ],
+      "path": [
+        [
+          607,
+          466
+        ],
+        [
+          769,
+          434
+        ]
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-assistance-guide"
+      ],
+      "notes": "PARTIAL: only the gates named on Heathrow's assistance page (\"Near Gate 7\", \"By Gate 11A\"). The full T4 gate list is unknown: OpenStreetMap numbers T4 positions 401–432, which are stand numbers. A secondary site claims gates 1–21 plus 22–25 on \"Victor Pier\" (not used). Owner capture: maps.heathrow.com."
+    },
+    {
+      "id": "g:lhr-t5a",
+      "area": "lhr-t5a",
+      "label": "T5 A1–A23",
+      "gates": [
+        "T5 A1",
+        "T5 A2",
+        "T5 A3",
+        "T5 A5",
+        "T5 A6",
+        "T5 A7",
+        "T5 A8",
+        "T5 A9",
+        "T5 A11",
+        "T5 A12",
+        "T5 A13",
+        "T5 A14",
+        "T5 A15",
+        "T5 A16",
+        "T5 A17",
+        "T5 A18",
+        "T5 A19",
+        "T5 A20",
+        "T5 A21",
+        "T5 A22",
+        "T5 A23"
+      ],
+      "path": [
+        [
+          106,
+          138
+        ],
+        [
+          147,
+          210
+        ],
+        [
+          111,
+          249
+        ]
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:wiki-t5",
+        "src:lhr-osm",
+        "src:lhr-tour-t5-dep",
+        "src:lhr-assistance-guide"
+      ],
+      "notes": "Signed \"A1\"…\"A23\" (prefix \"T5 \" here: T2 has A gates too). Heathrow signs \"Gates 10–23\" on Level 2 and names A2, Gate 12, Gate 21."
+    },
+    {
+      "id": "g:lhr-t5a-coach",
+      "area": "lhr-t5a",
+      "label": "T5 A4, A10 (coaching)",
+      "gates": [
+        "T5 A4",
+        "T5 A10"
+      ],
+      "path": [
+        [
+          133,
+          142
+        ],
+        [
+          140,
+          154
+        ]
+      ],
+      "bus": true,
+      "confidence": "probable",
+      "sources": [
+        "src:wiki-t5",
+        "src:lhr-osm"
+      ],
+      "notes": "Wikipedia: \"gates A4 and A10 which are coaching gates\"; OpenStreetMap shows A10a–e. Some contact gates can also be used for coaching (Wikipedia)."
+    },
+    {
+      "id": "g:lhr-t5b",
+      "area": "lhr-t5b",
+      "label": "T5 B32–B48",
+      "gates": [
+        "T5 B32",
+        "T5 B33",
+        "T5 B34",
+        "T5 B35",
+        "T5 B36",
+        "T5 B37",
+        "T5 B38",
+        "T5 B39",
+        "T5 B42",
+        "T5 B43",
+        "T5 B44",
+        "T5 B45",
+        "T5 B46",
+        "T5 B47",
+        "T5 B48"
+      ],
+      "path": [
+        [
+          205,
+          145
+        ],
+        [
+          206,
+          264
+        ],
+        [
+          223,
+          262
+        ],
+        [
+          225,
+          145
+        ]
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:wiki-t5",
+        "src:wiki-t5-transit",
+        "src:lhr-osm",
+        "src:lhr-assistance-guide"
+      ],
+      "notes": "B32–B48 (Wikipedia); OpenStreetMap has B32–B39 and B42–B48 (no B40/B41 mapped, so they are left out). Heathrow names B35."
+    },
+    {
+      "id": "g:lhr-t5c",
+      "area": "lhr-t5c",
+      "label": "T5 C52–C66",
+      "gates": [
+        "T5 C52",
+        "T5 C53",
+        "T5 C54",
+        "T5 C55",
+        "T5 C56",
+        "T5 C57",
+        "T5 C61",
+        "T5 C62",
+        "T5 C63",
+        "T5 C64",
+        "T5 C65",
+        "T5 C66"
+      ],
+      "path": [
+        [
+          273,
+          249
+        ],
+        [
+          274,
+          150
+        ],
+        [
+          293,
+          145
+        ],
+        [
+          295,
+          245
+        ]
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:wiki-t5",
+        "src:wiki-t5-transit",
+        "src:lhr-osm",
+        "src:lhr-assistance-guide"
+      ],
+      "notes": "C52–C66 (Wikipedia); OpenStreetMap has C52–C57 and C61–C66 (C58–C60 not mapped, left out). Heathrow names C53."
+    }
+  ],
+  "stops": [
+    {
+      "id": "s:lhr-t2-fcbus",
+      "name": "T2 connections bus",
+      "area": "lhr-t2-fc",
+      "side": "airside",
+      "anchor": [
+        628,
+        288
+      ],
+      "accessMinutes": {
+        "min": 1,
+        "typical": 3,
+        "max": 6,
+        "basis": "assumed"
+      },
+      "confidence": "inferred",
+      "sources": [
+        "src:lhr-connecting"
+      ]
+    },
+    {
+      "id": "s:lhr-t3-fcbus",
+      "name": "T3 connections shuttle area",
+      "area": "lhr-t3-fc",
+      "side": "airside",
+      "anchor": [
+        460,
+        245
+      ],
+      "accessMinutes": {
+        "min": 0,
+        "typical": 1,
+        "max": 3,
+        "basis": "assumed",
+        "note": "the lift / escalator down to the shuttle area is inside the 9-min tour walk"
+      },
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-tour-t3-t5"
+      ],
+      "where": "lifts or escalator down from the connections information sign"
+    },
+    {
+      "id": "s:lhr-t4-fcbus",
+      "name": "T4 connections bus (boarding point not described)",
+      "area": "lhr-t4-fc",
+      "side": "airside",
+      "anchor": [
+        637,
+        400
+      ],
+      "accessMinutes": {
+        "min": 1,
+        "typical": 3,
+        "max": 6,
+        "basis": "assumed"
+      },
+      "confidence": "unknown",
+      "sources": [
+        "src:lhr-connecting"
+      ]
+    },
+    {
+      "id": "s:lhr-t5-fcbus",
+      "name": "T5 connections bus (Level 0)",
+      "area": "lhr-t5-fc",
+      "side": "airside",
+      "anchor": [
+        97,
+        245
+      ],
+      "accessMinutes": {
+        "min": 4,
+        "typical": 6,
+        "max": 10,
+        "basis": "published",
+        "note": "tour steps 6–7: bus arrival Level 0 → walkway → Level 2 (3 + 3 min)"
+      },
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-tour-t3-t5"
+      ],
+      "where": "Level 0, follow the signs to the transfer buses"
+    },
+    {
+      "id": "s:lhr-transit-a",
+      "name": "T5 Transit · A (main building)",
+      "area": "lhr-t5a",
+      "side": "airside",
+      "anchor": [
+        137,
+        206
+      ],
+      "accessMinutes": {
+        "min": 2,
+        "typical": 4,
+        "max": 7,
+        "basis": "assumed",
+        "note": "Level 2 junction → lifts and escalators down to the Transit (Heathrow T5 tour names them, no minutes)"
+      },
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-tour-t5-dep",
+        "src:wiki-t5-transit"
+      ]
+    },
+    {
+      "id": "s:lhr-transit-b",
+      "name": "T5 Transit · B",
+      "area": "lhr-t5b",
+      "side": "airside",
+      "anchor": [
+        214,
+        206
+      ],
+      "accessMinutes": {
+        "min": 2,
+        "typical": 3,
+        "max": 6,
+        "basis": "assumed"
+      },
+      "confidence": "probable",
+      "sources": [
+        "src:wiki-t5-transit",
+        "src:lhr-assistance-guide"
+      ]
+    },
+    {
+      "id": "s:lhr-transit-c",
+      "name": "T5 Transit · C",
+      "area": "lhr-t5c",
+      "side": "airside",
+      "anchor": [
+        284,
+        198
+      ],
+      "accessMinutes": {
+        "min": 2,
+        "typical": 3,
+        "max": 6,
+        "basis": "assumed"
+      },
+      "confidence": "probable",
+      "sources": [
+        "src:wiki-t5-transit",
+        "src:lhr-assistance-guide"
+      ]
+    },
+    {
+      "id": "s:lhr-rail-t23",
+      "name": "Heathrow Terminals 2 & 3 (Elizabeth line / Heathrow Express)",
+      "area": "lhr-t23-station",
+      "side": "landside",
+      "anchor": [
+        581,
+        210
+      ],
+      "accessMinutes": {
+        "min": 1,
+        "typical": 2,
+        "max": 4,
+        "basis": "assumed"
+      },
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-free-travel-map"
+      ]
+    },
+    {
+      "id": "s:lhr-rail-t4",
+      "name": "Heathrow Terminal 4 (Elizabeth line)",
+      "area": "lhr-t4-land",
+      "side": "landside",
+      "anchor": [
+        688,
+        515
+      ],
+      "accessMinutes": {
+        "min": 2,
+        "typical": 4,
+        "max": 7,
+        "basis": "assumed"
+      },
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-free-travel-map"
+      ]
+    },
+    {
+      "id": "s:lhr-rail-t5",
+      "name": "Heathrow Terminal 5 (Elizabeth line / Heathrow Express)",
+      "area": "lhr-t5-land",
+      "side": "landside",
+      "anchor": [
+        50,
+        191
+      ],
+      "accessMinutes": {
+        "min": 4,
+        "typical": 6,
+        "max": 10,
+        "basis": "published",
+        "note": "T5 departures tour: ticket gates 2, departures bridge 2, entrance 2"
+      },
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-tour-t5-dep",
+        "src:lhr-free-travel-map"
+      ]
+    },
+    {
+      "id": "s:lhr-tube-t23",
+      "name": "Heathrow Terminals 2 & 3 (Piccadilly line)",
+      "area": "lhr-t23-station",
+      "side": "landside",
+      "anchor": [
+        567,
+        201
+      ],
+      "accessMinutes": {
+        "min": 2,
+        "typical": 4,
+        "max": 7,
+        "basis": "assumed"
+      },
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-free-travel-map"
+      ]
+    },
+    {
+      "id": "s:lhr-tube-t4",
+      "name": "Heathrow Terminal 4 (Piccadilly line)",
+      "area": "lhr-t4-land",
+      "side": "landside",
+      "anchor": [
+        708,
+        522
+      ],
+      "accessMinutes": {
+        "min": 2,
+        "typical": 4,
+        "max": 7,
+        "basis": "assumed"
+      },
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-free-travel-map"
+      ]
+    },
+    {
+      "id": "s:lhr-tube-t5",
+      "name": "Heathrow Terminal 5 (Piccadilly line)",
+      "area": "lhr-t5-land",
+      "side": "landside",
+      "anchor": [
+        54,
+        206
+      ],
+      "accessMinutes": {
+        "min": 2,
+        "typical": 4,
+        "max": 7,
+        "basis": "assumed"
+      },
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-free-travel-map"
+      ]
+    },
+    {
+      "id": "s:lhr-h30-t4",
+      "name": "Terminal 4 bus station (H30)",
+      "area": "lhr-t4-land",
+      "side": "landside",
+      "anchor": [
+        668,
+        498
+      ],
+      "accessMinutes": {
+        "min": 1,
+        "typical": 3,
+        "max": 6,
+        "basis": "assumed"
+      },
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-free-travel-map",
+        "src:lhr-travel-between"
+      ]
+    },
+    {
+      "id": "s:lhr-h30-t5",
+      "name": "Terminal 5 bus stop (H30)",
+      "area": "lhr-t5-land",
+      "side": "landside",
+      "anchor": [
+        50,
+        162
+      ],
+      "accessMinutes": {
+        "min": 1,
+        "typical": 3,
+        "max": 6,
+        "basis": "assumed"
+      },
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-free-travel-map",
+        "src:lhr-travel-between"
+      ]
+    }
+  ],
+  "lines": [
+    {
+      "id": "l:lhr-fcbus-t3-t5",
+      "name": "Flight Connections bus T3 ↔ T5",
+      "mode": "shuttle-bus",
+      "operator": "Heathrow Airport",
+      "colour": "#6b2c91",
+      "access": "transfer",
+      "side": "airside",
+      "stops": [
+        "s:lhr-t3-fcbus",
+        "s:lhr-t5-fcbus"
+      ],
+      "direction": "both",
+      "rideMin": [
+        10
+      ],
+      "ride": [
+        {
+          "min": 8,
+          "typical": 10,
+          "max": 15,
+          "basis": "published",
+          "note": "T3 → T5 tour step \"Terminal 5 connections bus: Proceed 10 minutes\" (Heathrow); reverse direction assumed equal; whether the step includes waiting is not stated"
+        }
+      ],
+      "service": [
+        {
+          "hours": "not published (Heathrow: \"runs regularly throughout the day\")",
+          "headwayMin": {
+            "min": 6,
+            "max": 10
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 4,
+            "max": 10,
+            "basis": "derived",
+            "note": "Heathrow: \"every 10 minutes\"; BA (excerpt): every 6–10 minutes; typical wait about half the headway"
+          },
+          "sources": [
+            "src:lhr-connecting",
+            "src:ba-connections-excerpt"
+          ]
+        }
+      ],
+      "eligibility": "Connecting passengers on a through ticket (purple Flight Connections signs); airside, free",
+      "confidence": "verified",
+      "sources": [
+        "src:lhr-tour-t3-t5",
+        "src:lhr-connecting",
+        "src:ba-connections-excerpt"
+      ],
+      "notes": "Direct T3 → T5 bus \"directly to the Terminal 5 Flight Connections area\" (Heathrow tour); BA (excerpt): free Flight Connections buses between T3 and T5. Existence verified (Heathrow + BA); hours not published."
+    },
+    {
+      "id": "l:lhr-fcbus-t2-t5",
+      "name": "Flight Connections bus T2 ↔ T5",
+      "mode": "shuttle-bus",
+      "operator": "Heathrow Airport",
+      "colour": "#6b2c91",
+      "access": "transfer",
+      "side": "airside",
+      "stops": [
+        "s:lhr-t2-fcbus",
+        "s:lhr-t5-fcbus"
+      ],
+      "direction": "both",
+      "rideMin": [
+        14
+      ],
+      "ride": [
+        {
+          "min": 10,
+          "typical": 14,
+          "max": 20,
+          "basis": "derived",
+          "note": "about 2.7 km straight line T2 → T5 via the Airside Road Tunnel"
+        }
+      ],
+      "service": [
+        {
+          "hours": "not published (Heathrow: \"runs regularly throughout the day\")",
+          "headwayMin": {
+            "min": 6,
+            "max": 10
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 4,
+            "max": 10,
+            "basis": "derived",
+            "note": "Heathrow: \"every 10 minutes\"; BA (excerpt): every 6–10 minutes; typical wait about half the headway"
+          },
+          "sources": [
+            "src:lhr-connecting",
+            "src:ba-connections-excerpt"
+          ]
+        }
+      ],
+      "eligibility": "Connecting passengers on a through ticket (purple Flight Connections signs); airside, free",
+      "confidence": "inferred",
+      "sources": [
+        "src:lhr-connecting",
+        "src:wiki-lhr"
+      ],
+      "notes": "Heathrow says the connections bus links the terminals (every 10 minutes) but does not publish the terminal pairs it serves directly, its boarding points or its ride times. Ride time derived from the airside road distance between the two terminals (via the airside tunnels) at the pace of the published T3 → T5 ride (about 5 min per km), with a wide range."
+    },
+    {
+      "id": "l:lhr-fcbus-t2-t3",
+      "name": "Flight Connections bus T2 ↔ T3",
+      "mode": "shuttle-bus",
+      "operator": "Heathrow Airport",
+      "colour": "#6b2c91",
+      "access": "transfer",
+      "side": "airside",
+      "stops": [
+        "s:lhr-t2-fcbus",
+        "s:lhr-t3-fcbus"
+      ],
+      "direction": "both",
+      "rideMin": [
+        5
+      ],
+      "ride": [
+        {
+          "min": 3,
+          "typical": 5,
+          "max": 10,
+          "basis": "derived",
+          "note": "adjacent terminals, about 0.8 km"
+        }
+      ],
+      "service": [
+        {
+          "hours": "not published (Heathrow: \"runs regularly throughout the day\")",
+          "headwayMin": {
+            "min": 6,
+            "max": 10
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 4,
+            "max": 10,
+            "basis": "derived",
+            "note": "Heathrow: \"every 10 minutes\"; BA (excerpt): every 6–10 minutes; typical wait about half the headway"
+          },
+          "sources": [
+            "src:lhr-connecting",
+            "src:ba-connections-excerpt"
+          ]
+        }
+      ],
+      "eligibility": "Connecting passengers on a through ticket (purple Flight Connections signs); airside, free",
+      "confidence": "inferred",
+      "sources": [
+        "src:lhr-connecting"
+      ],
+      "notes": "Heathrow says the connections bus links the terminals (every 10 minutes) but does not publish the terminal pairs it serves directly, its boarding points or its ride times. Ride time derived from the airside road distance between the two terminals (via the airside tunnels) at the pace of the published T3 → T5 ride (about 5 min per km), with a wide range."
+    },
+    {
+      "id": "l:lhr-fcbus-t2-t4",
+      "name": "Flight Connections bus T2 ↔ T4",
+      "mode": "shuttle-bus",
+      "operator": "Heathrow Airport",
+      "colour": "#6b2c91",
+      "access": "transfer",
+      "side": "airside",
+      "stops": [
+        "s:lhr-t2-fcbus",
+        "s:lhr-t4-fcbus"
+      ],
+      "direction": "both",
+      "rideMin": [
+        9
+      ],
+      "ride": [
+        {
+          "min": 6,
+          "typical": 9,
+          "max": 15,
+          "basis": "derived",
+          "note": "via the Heathrow Cargo Tunnel under the southern runway"
+        }
+      ],
+      "service": [
+        {
+          "hours": "not published (Heathrow: \"runs regularly throughout the day\")",
+          "headwayMin": {
+            "min": 6,
+            "max": 10
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 4,
+            "max": 10,
+            "basis": "derived",
+            "note": "Heathrow: \"every 10 minutes\"; BA (excerpt): every 6–10 minutes; typical wait about half the headway"
+          },
+          "sources": [
+            "src:lhr-connecting",
+            "src:ba-connections-excerpt"
+          ]
+        }
+      ],
+      "eligibility": "Connecting passengers on a through ticket (purple Flight Connections signs); airside, free",
+      "confidence": "inferred",
+      "sources": [
+        "src:lhr-connecting",
+        "src:wiki-lhr",
+        "src:yt-windowseat-t4-t2"
+      ],
+      "notes": "Heathrow says the connections bus links the terminals (every 10 minutes) but does not publish the terminal pairs it serves directly, its boarding points or its ride times. Ride time derived from the airside road distance between the two terminals (via the airside tunnels) at the pace of the published T3 → T5 ride (about 5 min per km), with a wide range. A video titled \"How to get from T4 to T2 … in 20 minutes flat\" shows an airside bus (not timed)."
+    },
+    {
+      "id": "l:lhr-fcbus-t3-t4",
+      "name": "Flight Connections bus T3 ↔ T4",
+      "mode": "shuttle-bus",
+      "operator": "Heathrow Airport",
+      "colour": "#6b2c91",
+      "access": "transfer",
+      "side": "airside",
+      "stops": [
+        "s:lhr-t3-fcbus",
+        "s:lhr-t4-fcbus"
+      ],
+      "direction": "both",
+      "rideMin": [
+        8
+      ],
+      "ride": [
+        {
+          "min": 5,
+          "typical": 8,
+          "max": 14,
+          "basis": "derived",
+          "note": "via the Heathrow Cargo Tunnel"
+        }
+      ],
+      "service": [
+        {
+          "hours": "not published (Heathrow: \"runs regularly throughout the day\")",
+          "headwayMin": {
+            "min": 6,
+            "max": 10
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 4,
+            "max": 10,
+            "basis": "derived",
+            "note": "Heathrow: \"every 10 minutes\"; BA (excerpt): every 6–10 minutes; typical wait about half the headway"
+          },
+          "sources": [
+            "src:lhr-connecting",
+            "src:ba-connections-excerpt"
+          ]
+        }
+      ],
+      "eligibility": "Connecting passengers on a through ticket (purple Flight Connections signs); airside, free",
+      "confidence": "inferred",
+      "sources": [
+        "src:lhr-connecting",
+        "src:wiki-lhr"
+      ],
+      "notes": "Heathrow says the connections bus links the terminals (every 10 minutes) but does not publish the terminal pairs it serves directly, its boarding points or its ride times. Ride time derived from the airside road distance between the two terminals (via the airside tunnels) at the pace of the published T3 → T5 ride (about 5 min per km), with a wide range."
+    },
+    {
+      "id": "l:lhr-fcbus-t4-t5",
+      "name": "Flight Connections bus T4 ↔ T5",
+      "mode": "shuttle-bus",
+      "operator": "Heathrow Airport",
+      "colour": "#6b2c91",
+      "access": "transfer",
+      "side": "airside",
+      "stops": [
+        "s:lhr-t4-fcbus",
+        "s:lhr-t5-fcbus"
+      ],
+      "direction": "both",
+      "rideMin": [
+        16
+      ],
+      "ride": [
+        {
+          "min": 12,
+          "typical": 16,
+          "max": 25,
+          "basis": "derived",
+          "note": "longest pair: T4 → central area (Cargo Tunnel) → Airside Road Tunnel → T5"
+        }
+      ],
+      "service": [
+        {
+          "hours": "not published (Heathrow: \"runs regularly throughout the day\")",
+          "headwayMin": {
+            "min": 6,
+            "max": 10
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 4,
+            "max": 10,
+            "basis": "derived",
+            "note": "Heathrow: \"every 10 minutes\"; BA (excerpt): every 6–10 minutes; typical wait about half the headway"
+          },
+          "sources": [
+            "src:lhr-connecting",
+            "src:ba-connections-excerpt"
+          ]
+        }
+      ],
+      "eligibility": "Connecting passengers on a through ticket (purple Flight Connections signs); airside, free",
+      "confidence": "inferred",
+      "sources": [
+        "src:lhr-connecting",
+        "src:wiki-lhr"
+      ],
+      "notes": "Heathrow says the connections bus links the terminals (every 10 minutes) but does not publish the terminal pairs it serves directly, its boarding points or its ride times. Ride time derived from the airside road distance between the two terminals (via the airside tunnels) at the pace of the published T3 → T5 ride (about 5 min per km), with a wide range."
+    },
+    {
+      "id": "l:lhr-t5-transit",
+      "name": "T5 Transit train",
+      "mode": "people-mover",
+      "operator": "Heathrow Airport",
+      "colour": "#2b6cb0",
+      "access": "airside",
+      "side": "airside",
+      "stops": [
+        "s:lhr-transit-a",
+        "s:lhr-transit-b",
+        "s:lhr-transit-c"
+      ],
+      "direction": "both",
+      "rideMin": [
+        2,
+        1
+      ],
+      "ride": [
+        {
+          "min": 1,
+          "typical": 2,
+          "max": 3,
+          "basis": "derived",
+          "note": "A → B, part of the 0.67 km tunnel"
+        },
+        {
+          "min": 1,
+          "typical": 1,
+          "max": 2,
+          "basis": "derived",
+          "note": "B → C"
+        }
+      ],
+      "service": [
+        {
+          "hours": "not published",
+          "headwayMin": {
+            "min": 2,
+            "max": 5
+          },
+          "headwayBasis": "assumed",
+          "waitMin": {
+            "min": 0,
+            "typical": 2,
+            "max": 5,
+            "basis": "assumed",
+            "note": "headway not published (10 cars, > 6,500 passengers per hour per direction)"
+          },
+          "sources": [
+            "src:wiki-t5-transit"
+          ]
+        }
+      ],
+      "eligibility": "Airside passengers in T5 (after security)",
+      "confidence": "verified",
+      "sources": [
+        "src:lhr-assistance-guide",
+        "src:wiki-t5-transit",
+        "src:lhr-tour-t5-dep"
+      ],
+      "notes": "Train existence and stations verified (Heathrow + Wikipedia). Headway, hours and ride times not published: ride derived from the tunnel length, wait assumed. BA (excerpt, 2016) allows about 20 min to reach the B or C gates."
+    },
+    {
+      "id": "l:lhr-rail-t23-t5",
+      "name": "Heathrow Express / Elizabeth line T2&3 → T5",
+      "mode": "rail",
+      "operator": "Elizabeth line / Heathrow Express / London Underground",
+      "colour": "#6950a1",
+      "access": "public",
+      "side": "landside",
+      "stops": [
+        "s:lhr-rail-t23",
+        "s:lhr-rail-t5"
+      ],
+      "direction": "one-way",
+      "rideMin": [
+        6
+      ],
+      "ride": [
+        {
+          "min": 4,
+          "typical": 6,
+          "max": 9,
+          "basis": "derived",
+          "note": "derived so that access + wait + ride + egress ≈ Heathrow's published average journey time of 20 min (2 + 6 + 6 + 6)"
+        }
+      ],
+      "service": [
+        {
+          "hours": "04:55–23:43 (mon, tue, wed, thu, fri; free travel map May 2025)",
+          "windows": [
+            {
+              "from": "04:55",
+              "until": "23:43"
+            }
+          ],
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "headwayMin": {
+            "min": 5,
+            "max": 15
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 6,
+            "max": 15,
+            "basis": "derived",
+            "note": "Heathrow Express and Elizabeth line together: \"at least every 15 mins to Terminal 5\""
+          },
+          "sources": [
+            "src:lhr-free-travel-map"
+          ]
+        },
+        {
+          "hours": "04:54–23:43 (sat; free travel map May 2025)",
+          "windows": [
+            {
+              "from": "04:54",
+              "until": "23:43"
+            }
+          ],
+          "days": [
+            "sat"
+          ],
+          "headwayMin": {
+            "min": 5,
+            "max": 15
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 6,
+            "max": 15,
+            "basis": "derived",
+            "note": "Heathrow Express and Elizabeth line together: \"at least every 15 mins to Terminal 5\""
+          },
+          "sources": [
+            "src:lhr-free-travel-map"
+          ]
+        },
+        {
+          "hours": "05:14–23:46 (sun; free travel map May 2025)",
+          "windows": [
+            {
+              "from": "05:14",
+              "until": "23:46"
+            }
+          ],
+          "days": [
+            "sun"
+          ],
+          "headwayMin": {
+            "min": 5,
+            "max": 15
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 6,
+            "max": 15,
+            "basis": "derived",
+            "note": "Heathrow Express and Elizabeth line together: \"at least every 15 mins to Terminal 5\""
+          },
+          "sources": [
+            "src:lhr-free-travel-map"
+          ]
+        }
+      ],
+      "eligibility": "Anyone; free between the Heathrow stations (Oyster or contactless needed at the rail gates; free transfer ticket for the Elizabeth line / Heathrow Express; H30 no ticket)",
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-free-travel-map",
+        "src:lhr-travel-between"
+      ]
+    },
+    {
+      "id": "l:lhr-rail-t5-t23",
+      "name": "Heathrow Express / Elizabeth line T5 → T2&3",
+      "mode": "rail",
+      "operator": "Elizabeth line / Heathrow Express / London Underground",
+      "colour": "#6950a1",
+      "access": "public",
+      "side": "landside",
+      "stops": [
+        "s:lhr-rail-t5",
+        "s:lhr-rail-t23"
+      ],
+      "direction": "one-way",
+      "rideMin": [
+        6
+      ],
+      "ride": [
+        {
+          "min": 4,
+          "typical": 6,
+          "max": 9,
+          "basis": "derived",
+          "note": "derived so that access + wait + ride + egress ≈ Heathrow's published average journey time of 20 min (6 + 6 + 6 + 2)"
+        }
+      ],
+      "service": [
+        {
+          "hours": "05:12–00:07 (mon, tue, wed, thu, fri; free travel map May 2025)",
+          "windows": [
+            {
+              "from": "05:12",
+              "until": "00:07"
+            }
+          ],
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "headwayMin": {
+            "min": 5,
+            "max": 15
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 6,
+            "max": 15,
+            "basis": "derived",
+            "note": "Heathrow Express and Elizabeth line together: \"at least every 15 mins to Terminal 5\""
+          },
+          "sources": [
+            "src:lhr-free-travel-map"
+          ]
+        },
+        {
+          "hours": "05:12–00:07 (sat; free travel map May 2025)",
+          "windows": [
+            {
+              "from": "05:12",
+              "until": "00:07"
+            }
+          ],
+          "days": [
+            "sat"
+          ],
+          "headwayMin": {
+            "min": 5,
+            "max": 15
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 6,
+            "max": 15,
+            "basis": "derived",
+            "note": "Heathrow Express and Elizabeth line together: \"at least every 15 mins to Terminal 5\""
+          },
+          "sources": [
+            "src:lhr-free-travel-map"
+          ]
+        },
+        {
+          "hours": "05:27–00:07 (sun; free travel map May 2025)",
+          "windows": [
+            {
+              "from": "05:27",
+              "until": "00:07"
+            }
+          ],
+          "days": [
+            "sun"
+          ],
+          "headwayMin": {
+            "min": 5,
+            "max": 15
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 6,
+            "max": 15,
+            "basis": "derived",
+            "note": "Heathrow Express and Elizabeth line together: \"at least every 15 mins to Terminal 5\""
+          },
+          "sources": [
+            "src:lhr-free-travel-map"
+          ]
+        }
+      ],
+      "eligibility": "Anyone; free between the Heathrow stations (Oyster or contactless needed at the rail gates; free transfer ticket for the Elizabeth line / Heathrow Express; H30 no ticket)",
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-free-travel-map",
+        "src:lhr-travel-between"
+      ]
+    },
+    {
+      "id": "l:lhr-rail-t23-t4",
+      "name": "Elizabeth line T2&3 → T4",
+      "mode": "rail",
+      "operator": "Elizabeth line / Heathrow Express / London Underground",
+      "colour": "#6950a1",
+      "access": "public",
+      "side": "landside",
+      "stops": [
+        "s:lhr-rail-t23",
+        "s:lhr-rail-t4"
+      ],
+      "direction": "one-way",
+      "rideMin": [
+        7
+      ],
+      "ride": [
+        {
+          "min": 5,
+          "typical": 7,
+          "max": 10,
+          "basis": "derived",
+          "note": "derived so that access + wait + ride + egress ≈ Heathrow's published average journey time of 20 min (2 + 7.5 + 7 + 4)"
+        }
+      ],
+      "service": [
+        {
+          "hours": "05:06–23:52 (mon, tue, wed, thu, fri; free travel map May 2025)",
+          "windows": [
+            {
+              "from": "05:06",
+              "until": "23:52"
+            }
+          ],
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "headwayMin": {
+            "min": 15,
+            "max": 15
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 7.5,
+            "max": 15,
+            "basis": "derived",
+            "note": "Elizabeth line \"every 15 mins to Terminal 4\": half the headway"
+          },
+          "sources": [
+            "src:lhr-free-travel-map"
+          ]
+        },
+        {
+          "hours": "05:07–23:52 (sat; free travel map May 2025)",
+          "windows": [
+            {
+              "from": "05:07",
+              "until": "23:52"
+            }
+          ],
+          "days": [
+            "sat"
+          ],
+          "headwayMin": {
+            "min": 15,
+            "max": 15
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 7.5,
+            "max": 15,
+            "basis": "derived",
+            "note": "Elizabeth line \"every 15 mins to Terminal 4\": half the headway"
+          },
+          "sources": [
+            "src:lhr-free-travel-map"
+          ]
+        },
+        {
+          "hours": "05:51–23:27 (sun; free travel map May 2025)",
+          "windows": [
+            {
+              "from": "05:51",
+              "until": "23:27"
+            }
+          ],
+          "days": [
+            "sun"
+          ],
+          "headwayMin": {
+            "min": 15,
+            "max": 15
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 7.5,
+            "max": 15,
+            "basis": "derived",
+            "note": "Elizabeth line \"every 15 mins to Terminal 4\": half the headway"
+          },
+          "sources": [
+            "src:lhr-free-travel-map"
+          ]
+        }
+      ],
+      "eligibility": "Anyone; free between the Heathrow stations (Oyster or contactless needed at the rail gates; free transfer ticket for the Elizabeth line / Heathrow Express; H30 no ticket)",
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-free-travel-map",
+        "src:lhr-travel-between"
+      ]
+    },
+    {
+      "id": "l:lhr-rail-t4-t23",
+      "name": "Elizabeth line T4 → T2&3",
+      "mode": "rail",
+      "operator": "Elizabeth line / Heathrow Express / London Underground",
+      "colour": "#6950a1",
+      "access": "public",
+      "side": "landside",
+      "stops": [
+        "s:lhr-rail-t4",
+        "s:lhr-rail-t23"
+      ],
+      "direction": "one-way",
+      "rideMin": [
+        7
+      ],
+      "ride": [
+        {
+          "min": 5,
+          "typical": 7,
+          "max": 10,
+          "basis": "derived",
+          "note": "derived so that access + wait + ride + egress ≈ Heathrow's published average journey time of 20 min (4 + 7.5 + 7 + 2)"
+        }
+      ],
+      "service": [
+        {
+          "hours": "05:30–23:47 (mon, tue, wed, thu, fri; free travel map May 2025)",
+          "windows": [
+            {
+              "from": "05:30",
+              "until": "23:47"
+            }
+          ],
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "headwayMin": {
+            "min": 15,
+            "max": 15
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 7.5,
+            "max": 15,
+            "basis": "derived",
+            "note": "Elizabeth line \"every 15 mins to Terminal 4\": half the headway"
+          },
+          "sources": [
+            "src:lhr-free-travel-map"
+          ]
+        },
+        {
+          "hours": "05:30–23:47 (sat; free travel map May 2025)",
+          "windows": [
+            {
+              "from": "05:30",
+              "until": "23:47"
+            }
+          ],
+          "days": [
+            "sat"
+          ],
+          "headwayMin": {
+            "min": 15,
+            "max": 15
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 7.5,
+            "max": 15,
+            "basis": "derived",
+            "note": "Elizabeth line \"every 15 mins to Terminal 4\": half the headway"
+          },
+          "sources": [
+            "src:lhr-free-travel-map"
+          ]
+        },
+        {
+          "hours": "06:03–23:47 (sun; free travel map May 2025)",
+          "windows": [
+            {
+              "from": "06:03",
+              "until": "23:47"
+            }
+          ],
+          "days": [
+            "sun"
+          ],
+          "headwayMin": {
+            "min": 15,
+            "max": 15
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 7.5,
+            "max": 15,
+            "basis": "derived",
+            "note": "Elizabeth line \"every 15 mins to Terminal 4\": half the headway"
+          },
+          "sources": [
+            "src:lhr-free-travel-map"
+          ]
+        }
+      ],
+      "eligibility": "Anyone; free between the Heathrow stations (Oyster or contactless needed at the rail gates; free transfer ticket for the Elizabeth line / Heathrow Express; H30 no ticket)",
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-free-travel-map",
+        "src:lhr-travel-between"
+      ]
+    },
+    {
+      "id": "l:lhr-picc-t23-t5",
+      "name": "Piccadilly line T2&3 → T5",
+      "mode": "rail",
+      "operator": "Elizabeth line / Heathrow Express / London Underground",
+      "colour": "#1c3f94",
+      "access": "public",
+      "side": "landside",
+      "stops": [
+        "s:lhr-tube-t23",
+        "s:lhr-tube-t5"
+      ],
+      "direction": "one-way",
+      "rideMin": [
+        7
+      ],
+      "ride": [
+        {
+          "min": 5,
+          "typical": 7,
+          "max": 10,
+          "basis": "derived",
+          "note": "derived so that access + wait + ride + egress ≈ Heathrow's published average journey time of 20 min (4 + 5 + 7 + 4)"
+        }
+      ],
+      "service": [
+        {
+          "hours": "05:10–01:11 (mon, tue, wed, thu; free travel map May 2025)",
+          "windows": [
+            {
+              "from": "05:10",
+              "until": "01:11"
+            }
+          ],
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu"
+          ],
+          "headwayMin": {
+            "min": 10,
+            "max": 10
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 5,
+            "max": 10,
+            "basis": "derived",
+            "note": "Piccadilly line \"every 10 mins\": half the headway"
+          },
+          "sources": [
+            "src:lhr-free-travel-map"
+          ]
+        },
+        {
+          "hours": "05:10–24:00 (fri; free travel map May 2025)",
+          "windows": [
+            {
+              "from": "05:10",
+              "until": "24:00"
+            }
+          ],
+          "days": [
+            "fri"
+          ],
+          "headwayMin": {
+            "min": 10,
+            "max": 10
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 5,
+            "max": 10,
+            "basis": "derived",
+            "note": "Piccadilly line \"every 10 mins\": half the headway"
+          },
+          "sources": [
+            "src:lhr-free-travel-map"
+          ]
+        },
+        {
+          "hours": "00:00–24:00 (sat; free travel map May 2025)",
+          "windows": [
+            {
+              "from": "00:00",
+              "until": "24:00"
+            }
+          ],
+          "days": [
+            "sat"
+          ],
+          "headwayMin": {
+            "min": 10,
+            "max": 10
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 5,
+            "max": 10,
+            "basis": "derived",
+            "note": "Piccadilly line \"every 10 mins\": half the headway"
+          },
+          "sources": [
+            "src:lhr-free-travel-map"
+          ]
+        },
+        {
+          "hours": "00:00–24:00 (sun; free travel map May 2025)",
+          "windows": [
+            {
+              "from": "00:00",
+              "until": "24:00"
+            }
+          ],
+          "days": [
+            "sun"
+          ],
+          "headwayMin": {
+            "min": 10,
+            "max": 10
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 5,
+            "max": 10,
+            "basis": "derived",
+            "note": "Piccadilly line \"every 10 mins\": half the headway"
+          },
+          "sources": [
+            "src:lhr-free-travel-map"
+          ]
+        }
+      ],
+      "eligibility": "Anyone; free between the Heathrow stations (Oyster or contactless needed at the rail gates; free transfer ticket for the Elizabeth line / Heathrow Express; H30 no ticket)",
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-free-travel-map",
+        "src:lhr-travel-between"
+      ],
+      "notes": "Night Tube: 24 h on Friday and Saturday nights (until 00:14 on Sunday night; the Monday 00:00–00:14 tail is not modelled)."
+    },
+    {
+      "id": "l:lhr-picc-t5-t23",
+      "name": "Piccadilly line T5 → T2&3",
+      "mode": "rail",
+      "operator": "Elizabeth line / Heathrow Express / London Underground",
+      "colour": "#1c3f94",
+      "access": "public",
+      "side": "landside",
+      "stops": [
+        "s:lhr-tube-t5",
+        "s:lhr-tube-t23"
+      ],
+      "direction": "one-way",
+      "rideMin": [
+        7
+      ],
+      "ride": [
+        {
+          "min": 5,
+          "typical": 7,
+          "max": 10,
+          "basis": "derived",
+          "note": "derived so that access + wait + ride + egress ≈ Heathrow's published average journey time of 20 min (4 + 5 + 7 + 4)"
+        }
+      ],
+      "service": [
+        {
+          "hours": "05:22–00:18 (mon, tue, wed, thu; free travel map May 2025)",
+          "windows": [
+            {
+              "from": "05:22",
+              "until": "00:18"
+            }
+          ],
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu"
+          ],
+          "headwayMin": {
+            "min": 10,
+            "max": 10
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 5,
+            "max": 10,
+            "basis": "derived",
+            "note": "Piccadilly line \"every 10 mins\": half the headway"
+          },
+          "sources": [
+            "src:lhr-free-travel-map"
+          ]
+        },
+        {
+          "hours": "05:22–24:00 (fri; free travel map May 2025)",
+          "windows": [
+            {
+              "from": "05:22",
+              "until": "24:00"
+            }
+          ],
+          "days": [
+            "fri"
+          ],
+          "headwayMin": {
+            "min": 10,
+            "max": 10
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 5,
+            "max": 10,
+            "basis": "derived",
+            "note": "Piccadilly line \"every 10 mins\": half the headway"
+          },
+          "sources": [
+            "src:lhr-free-travel-map"
+          ]
+        },
+        {
+          "hours": "00:00–24:00 (sat; free travel map May 2025)",
+          "windows": [
+            {
+              "from": "00:00",
+              "until": "24:00"
+            }
+          ],
+          "days": [
+            "sat"
+          ],
+          "headwayMin": {
+            "min": 10,
+            "max": 10
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 5,
+            "max": 10,
+            "basis": "derived",
+            "note": "Piccadilly line \"every 10 mins\": half the headway"
+          },
+          "sources": [
+            "src:lhr-free-travel-map"
+          ]
+        },
+        {
+          "hours": "00:00–23:51 (sun; free travel map May 2025)",
+          "windows": [
+            {
+              "from": "00:00",
+              "until": "23:51"
+            }
+          ],
+          "days": [
+            "sun"
+          ],
+          "headwayMin": {
+            "min": 10,
+            "max": 10
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 5,
+            "max": 10,
+            "basis": "derived",
+            "note": "Piccadilly line \"every 10 mins\": half the headway"
+          },
+          "sources": [
+            "src:lhr-free-travel-map"
+          ]
+        }
+      ],
+      "eligibility": "Anyone; free between the Heathrow stations (Oyster or contactless needed at the rail gates; free transfer ticket for the Elizabeth line / Heathrow Express; H30 no ticket)",
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-free-travel-map",
+        "src:lhr-travel-between"
+      ],
+      "notes": "Night Tube: 24 h on Friday and Saturday nights."
+    },
+    {
+      "id": "l:lhr-picc-t4-t23",
+      "name": "Piccadilly line T4 → T2&3",
+      "mode": "rail",
+      "operator": "Elizabeth line / Heathrow Express / London Underground",
+      "colour": "#1c3f94",
+      "access": "public",
+      "side": "landside",
+      "stops": [
+        "s:lhr-tube-t4",
+        "s:lhr-tube-t23"
+      ],
+      "direction": "one-way",
+      "rideMin": [
+        7
+      ],
+      "ride": [
+        {
+          "min": 5,
+          "typical": 7,
+          "max": 10,
+          "basis": "derived",
+          "note": "derived so that access + wait + ride + egress ≈ Heathrow's published average journey time of 20 min (4 + 5 + 7 + 4)"
+        }
+      ],
+      "service": [
+        {
+          "hours": "05:02–00:09 (mon, tue, wed, thu, fri; free travel map May 2025)",
+          "windows": [
+            {
+              "from": "05:02",
+              "until": "00:09"
+            }
+          ],
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "headwayMin": {
+            "min": 10,
+            "max": 10
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 5,
+            "max": 10,
+            "basis": "derived",
+            "note": "Piccadilly line \"every 10 mins\": half the headway"
+          },
+          "sources": [
+            "src:lhr-free-travel-map"
+          ]
+        },
+        {
+          "hours": "05:06–00:09 (sat; free travel map May 2025)",
+          "windows": [
+            {
+              "from": "05:06",
+              "until": "00:09"
+            }
+          ],
+          "days": [
+            "sat"
+          ],
+          "headwayMin": {
+            "min": 10,
+            "max": 10
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 5,
+            "max": 10,
+            "basis": "derived",
+            "note": "Piccadilly line \"every 10 mins\": half the headway"
+          },
+          "sources": [
+            "src:lhr-free-travel-map"
+          ]
+        },
+        {
+          "hours": "05:47–23:38 (sun; free travel map May 2025)",
+          "windows": [
+            {
+              "from": "05:47",
+              "until": "23:38"
+            }
+          ],
+          "days": [
+            "sun"
+          ],
+          "headwayMin": {
+            "min": 10,
+            "max": 10
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 5,
+            "max": 10,
+            "basis": "derived",
+            "note": "Piccadilly line \"every 10 mins\": half the headway"
+          },
+          "sources": [
+            "src:lhr-free-travel-map"
+          ]
+        }
+      ],
+      "eligibility": "Anyone; free between the Heathrow stations (Oyster or contactless needed at the rail gates; free transfer ticket for the Elizabeth line / Heathrow Express; H30 no ticket)",
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-free-travel-map",
+        "src:lhr-travel-between"
+      ],
+      "notes": "T2&3 → T4 on the Piccadilly line needs a change at Hatton Cross (30 min average, not modelled; the Elizabeth line is modelled instead)."
+    },
+    {
+      "id": "l:lhr-h30-t4-t5",
+      "name": "Free H30 bus T4 → T5",
+      "mode": "bus",
+      "operator": "Heathrow / bus operator (free H30)",
+      "colour": "#e05a1b",
+      "access": "public",
+      "side": "landside",
+      "stops": [
+        "s:lhr-h30-t4",
+        "s:lhr-h30-t5"
+      ],
+      "direction": "one-way",
+      "rideMin": [
+        9
+      ],
+      "ride": [
+        {
+          "min": 6,
+          "typical": 9,
+          "max": 14,
+          "basis": "derived",
+          "note": "derived so that access + wait + ride + egress ≈ Heathrow's published average journey time of 25 min (3 + 10 + 9 + 3)"
+        }
+      ],
+      "service": [
+        {
+          "hours": "03:17–23:43 (first and last bus, free travel map May 2025)",
+          "windows": [
+            {
+              "from": "03:17",
+              "until": "23:43"
+            }
+          ],
+          "headwayMin": {
+            "min": 20,
+            "max": 20
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 10,
+            "max": 20,
+            "basis": "derived",
+            "note": "H30 \"every 20 mins between Terminals 4 and 5\": half the headway"
+          },
+          "sources": [
+            "src:lhr-free-travel-map"
+          ]
+        }
+      ],
+      "eligibility": "Anyone; free between the Heathrow stations (Oyster or contactless needed at the rail gates; free transfer ticket for the Elizabeth line / Heathrow Express; H30 no ticket)",
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-free-travel-map",
+        "src:lhr-travel-between"
+      ]
+    },
+    {
+      "id": "l:lhr-h30-t5-t4",
+      "name": "Free H30 bus T5 → T4",
+      "mode": "bus",
+      "operator": "Heathrow / bus operator (free H30)",
+      "colour": "#e05a1b",
+      "access": "public",
+      "side": "landside",
+      "stops": [
+        "s:lhr-h30-t5",
+        "s:lhr-h30-t4"
+      ],
+      "direction": "one-way",
+      "rideMin": [
+        9
+      ],
+      "ride": [
+        {
+          "min": 6,
+          "typical": 9,
+          "max": 14,
+          "basis": "derived",
+          "note": "derived so that access + wait + ride + egress ≈ Heathrow's published average journey time of 25 min (3 + 10 + 9 + 3)"
+        }
+      ],
+      "service": [
+        {
+          "hours": "03:25–23:25 (first and last bus, free travel map May 2025)",
+          "windows": [
+            {
+              "from": "03:25",
+              "until": "23:25"
+            }
+          ],
+          "headwayMin": {
+            "min": 20,
+            "max": 20
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 10,
+            "max": 20,
+            "basis": "derived",
+            "note": "H30 \"every 20 mins between Terminals 4 and 5\": half the headway"
+          },
+          "sources": [
+            "src:lhr-free-travel-map"
+          ]
+        }
+      ],
+      "eligibility": "Anyone; free between the Heathrow stations (Oyster or contactless needed at the rail gates; free transfer ticket for the Elizabeth line / Heathrow Express; H30 no ticket)",
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-free-travel-map",
+        "src:lhr-travel-between"
+      ]
+    }
+  ],
+  "walks": [
+    {
+      "bidirectional": false,
+      "access": "airside",
+      "practical": "practical",
+      "id": "w:lhr-t2a-arr-fc",
+      "from": "lhr-t2a",
+      "to": "lhr-t2-fc",
+      "flow": "arrivals",
+      "minutes": {
+        "min": 4,
+        "typical": 8,
+        "max": 14,
+        "basis": "assumed",
+        "note": "T2 connections route not toured"
+      },
+      "via": "purple Flight Connections signs",
+      "confidence": "inferred",
+      "sources": [
+        "src:lhr-connecting",
+        "src:lhr-blog-connections"
+      ]
+    },
+    {
+      "bidirectional": false,
+      "access": "airside",
+      "practical": "practical",
+      "id": "w:lhr-t2b-arr-fc",
+      "from": "lhr-t2b",
+      "to": "lhr-t2-fc",
+      "flow": "arrivals",
+      "minutes": {
+        "min": 9,
+        "typical": 13,
+        "max": 20,
+        "basis": "derived",
+        "note": "lift → subway → lift to the T2A arrivals level 5 + 5 (Heathrow T2 arrivals tour) plus an assumed 3 min to the connections point"
+      },
+      "via": "lift, subway to T2A, purple Flight Connections signs",
+      "confidence": "inferred",
+      "sources": [
+        "src:lhr-tour-t2-arr",
+        "src:lhr-connecting"
+      ]
+    },
+    {
+      "bidirectional": false,
+      "access": "airside",
+      "practical": "practical",
+      "id": "w:lhr-t3-arr-fc",
+      "from": "lhr-t3",
+      "to": "lhr-t3-fc",
+      "flow": "arrivals",
+      "minutes": {
+        "min": 6,
+        "typical": 9,
+        "max": 14,
+        "basis": "published",
+        "note": "T3 → T5 tour steps 1–4: gate area 2, arrivals corridor 3 (travelators), towards the connections bus area 2, information sign and lift down 2"
+      },
+      "via": "arrivals corridor, travelators, purple Flight Connections signs",
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-tour-t3-t5"
+      ]
+    },
+    {
+      "bidirectional": false,
+      "access": "airside",
+      "practical": "practical",
+      "id": "w:lhr-t4-arr-fc",
+      "from": "lhr-t4",
+      "to": "lhr-t4-fc",
+      "flow": "arrivals",
+      "minutes": {
+        "min": 4,
+        "typical": 8,
+        "max": 15,
+        "basis": "assumed",
+        "note": "no T4 tour, map or description"
+      },
+      "via": "purple Flight Connections signs",
+      "confidence": "unknown",
+      "sources": [
+        "src:lhr-connecting"
+      ]
+    },
+    {
+      "bidirectional": false,
+      "access": "airside",
+      "practical": "practical",
+      "id": "w:lhr-t5a-arr-fc",
+      "from": "lhr-t5a",
+      "to": "lhr-t5-fc",
+      "flow": "arrivals",
+      "minutes": {
+        "min": 5,
+        "typical": 9,
+        "max": 15,
+        "basis": "assumed",
+        "note": "no T5-arrivals connection tour; joins the T5 Flight Connections route at the information display (assumed)"
+      },
+      "via": "purple Flight Connections signs",
+      "confidence": "inferred",
+      "sources": [
+        "src:lhr-connecting",
+        "src:lhr-tour-t3-t5"
+      ]
+    },
+    {
+      "bidirectional": false,
+      "access": "airside",
+      "practical": "practical",
+      "id": "w:lhr-t5b-arr-fc",
+      "from": "lhr-t5b",
+      "to": "lhr-t5-fc",
+      "flow": "arrivals",
+      "minutes": {
+        "min": 9,
+        "typical": 15,
+        "max": 24,
+        "basis": "assumed",
+        "note": "Transit train to the main building (arrivals side) plus the walk; not toured"
+      },
+      "via": "T5 Transit to the main building, purple signs",
+      "confidence": "inferred",
+      "sources": [
+        "src:lhr-connecting",
+        "src:wiki-t5-transit"
+      ]
+    },
+    {
+      "bidirectional": false,
+      "access": "airside",
+      "practical": "practical",
+      "id": "w:lhr-t5c-arr-fc",
+      "from": "lhr-t5c",
+      "to": "lhr-t5-fc",
+      "flow": "arrivals",
+      "minutes": {
+        "min": 10,
+        "typical": 16,
+        "max": 26,
+        "basis": "assumed",
+        "note": "Transit train to the main building (arrivals side) plus the walk; not toured"
+      },
+      "via": "T5 Transit to the main building, purple signs",
+      "confidence": "inferred",
+      "sources": [
+        "src:lhr-connecting",
+        "src:wiki-t5-transit"
+      ]
+    },
+    {
+      "bidirectional": false,
+      "access": "airside",
+      "practical": "practical",
+      "id": "w:lhr-t2dom-arr-fc",
+      "from": "lhr-t2-dom",
+      "to": "lhr-t2-fc",
+      "flow": "arrivals",
+      "minutes": {
+        "min": 4,
+        "typical": 8,
+        "max": 14,
+        "basis": "assumed"
+      },
+      "via": "purple Flight Connections signs (no UK exit passport control)",
+      "confidence": "inferred",
+      "sources": [
+        "src:lhr-connecting"
+      ],
+      "notes": "UK domestic / Ireland arrival connecting onward: no passport control (the UK has no exit control; Heathrow: immigration only for international → domestic). Inferred."
+    },
+    {
+      "bidirectional": false,
+      "access": "airside",
+      "practical": "practical",
+      "id": "w:lhr-t5dom-arr-fc",
+      "from": "lhr-t5-dom",
+      "to": "lhr-t5-fc",
+      "flow": "arrivals",
+      "minutes": {
+        "min": 4,
+        "typical": 8,
+        "max": 14,
+        "basis": "assumed"
+      },
+      "via": "purple Flight Connections signs (no UK exit passport control)",
+      "confidence": "inferred",
+      "sources": [
+        "src:lhr-connecting"
+      ],
+      "notes": "As T2: no passport control from a domestic arrival to an international departure (inferred)."
+    },
+    {
+      "bidirectional": false,
+      "access": "airside",
+      "practical": "practical",
+      "id": "w:lhr-t2fc-t2a",
+      "from": "lhr-t2-fc",
+      "to": "lhr-t2a",
+      "minutes": {
+        "min": 5,
+        "typical": 10,
+        "max": 18,
+        "basis": "derived",
+        "note": "connections security position not published; T2A gates 2–10 min after security (Heathrow T2 tour)"
+      },
+      "controls": [
+        {
+          "kind": "transfer-security",
+          "minutes": {
+            "min": 3,
+            "typical": 8,
+            "max": 20,
+            "basis": "assumed",
+            "note": "Heathrow MTI: transfer security queue < 10 min in 97.6–100 % of 15-min periods (Jul–Sep 2026, queue only); screening and repacking not published (assumed); liquids up to 2 l and large electricals may stay in the bag when connecting"
+          },
+          "note": "all connecting passengers are screened again at Heathrow"
+        }
+      ],
+      "confidence": "inferred",
+      "sources": [
+        "src:lhr-connecting",
+        "src:lhr-tour-t2"
+      ]
+    },
+    {
+      "bidirectional": false,
+      "access": "airside",
+      "practical": "practical",
+      "id": "w:lhr-t3fc-t3",
+      "from": "lhr-t3-fc",
+      "to": "lhr-t3",
+      "minutes": {
+        "min": 5,
+        "typical": 10,
+        "max": 18,
+        "basis": "assumed",
+        "note": "T3 → T3 connections security not shown in any tour"
+      },
+      "controls": [
+        {
+          "kind": "transfer-security",
+          "minutes": {
+            "min": 3,
+            "typical": 8,
+            "max": 20,
+            "basis": "assumed",
+            "note": "Heathrow MTI: transfer security queue < 10 min in 97.6–100 % of 15-min periods (Jul–Sep 2026, queue only); screening and repacking not published (assumed); liquids up to 2 l and large electricals may stay in the bag when connecting"
+          },
+          "note": "all connecting passengers are screened again at Heathrow"
+        }
+      ],
+      "confidence": "inferred",
+      "sources": [
+        "src:lhr-connecting",
+        "src:lhr-tour-t3-t5"
+      ]
+    },
+    {
+      "bidirectional": false,
+      "access": "airside",
+      "practical": "practical",
+      "id": "w:lhr-t4fc-t4",
+      "from": "lhr-t4-fc",
+      "to": "lhr-t4",
+      "minutes": {
+        "min": 4,
+        "typical": 8,
+        "max": 15,
+        "basis": "assumed",
+        "note": "T4 connections security not described"
+      },
+      "controls": [
+        {
+          "kind": "transfer-security",
+          "minutes": {
+            "min": 3,
+            "typical": 8,
+            "max": 20,
+            "basis": "assumed",
+            "note": "Heathrow MTI: transfer security queue < 10 min in 97.6–100 % of 15-min periods (Jul–Sep 2026, queue only); screening and repacking not published (assumed); liquids up to 2 l and large electricals may stay in the bag when connecting"
+          },
+          "note": "all connecting passengers are screened again at Heathrow"
+        }
+      ],
+      "confidence": "unknown",
+      "sources": [
+        "src:lhr-connecting"
+      ]
+    },
+    {
+      "bidirectional": false,
+      "access": "airside",
+      "practical": "practical",
+      "id": "w:lhr-t5fc-t5a",
+      "from": "lhr-t5-fc",
+      "to": "lhr-t5a",
+      "minutes": {
+        "min": 12,
+        "typical": 16,
+        "max": 24,
+        "basis": "published",
+        "note": "T3 → T5 tour steps 8–11 (display 2, Flight Connections entrance 3, pre-security 3, eGates 2) + T5 departures tour lounge → Gates 10–23 (2 + 2 + 2)"
+      },
+      "controls": [
+        {
+          "kind": "boarding-pass",
+          "minutes": {
+            "min": 0,
+            "typical": 1,
+            "max": 3,
+            "basis": "published",
+            "note": "boarding-pass eGates before security: 2-min tour step (Heathrow virtual tours)"
+          },
+          "note": "security eGates, Level 3"
+        },
+        {
+          "kind": "transfer-security",
+          "minutes": {
+            "min": 3,
+            "typical": 8,
+            "max": 20,
+            "basis": "assumed",
+            "note": "Heathrow MTI: transfer security queue < 10 min in 97.6–100 % of 15-min periods (Jul–Sep 2026, queue only); screening and repacking not published (assumed); liquids up to 2 l and large electricals may stay in the bag when connecting"
+          },
+          "note": "T5 Flight Connections security, Level 3 (\"All connecting passengers must pass through security again\")"
+        }
+      ],
+      "via": "Level 2 → pre-security → Level 3 security → International Departures Lounge → Level 2 gates",
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-tour-t3-t5",
+        "src:lhr-tour-t5-dep"
+      ]
+    },
+    {
+      "bidirectional": false,
+      "access": "airside",
+      "practical": "practical",
+      "id": "w:lhr-t2fc-t2dom",
+      "from": "lhr-t2-fc",
+      "to": "lhr-t2-dom",
+      "minutes": {
+        "min": 6,
+        "typical": 12,
+        "max": 20,
+        "basis": "assumed",
+        "note": "position of the UK border for domestic connections in T2 not published"
+      },
+      "controls": [
+        {
+          "kind": "passport",
+          "minutes": {
+            "min": 3,
+            "typical": 12,
+            "max": 50,
+            "basis": "assumed",
+            "note": "UK Border Force immigration. Heathrow MTI: non-EEA passengers < 45 min 82–98 % (T2/T3 July 2026 only 82–83 %), EEA < 25 min > 99 %. Replaced in the extension by the calibrated value for the traveller's status (calibration.ts)"
+          },
+          "note": "UK immigration for international → UK / Ireland connections, before security"
+        },
+        {
+          "kind": "boarding-pass",
+          "minutes": {
+            "min": 0,
+            "typical": 1,
+            "max": 3,
+            "basis": "assumed",
+            "note": "facial biometric image at the domestic security entry, checked again before the gate (Heathrow, flying within the UK and Ireland)"
+          },
+          "note": "facial biometric capture (and again before the gate)"
+        },
+        {
+          "kind": "transfer-security",
+          "minutes": {
+            "min": 3,
+            "typical": 8,
+            "max": 20,
+            "basis": "assumed",
+            "note": "Heathrow MTI: transfer security queue < 10 min in 97.6–100 % of 15-min periods (Jul–Sep 2026, queue only); screening and repacking not published (assumed); liquids up to 2 l and large electricals may stay in the bag when connecting"
+          },
+          "note": "all connecting passengers are screened again at Heathrow"
+        }
+      ],
+      "confidence": "inferred",
+      "sources": [
+        "src:lhr-connecting",
+        "src:lhr-blog-connections-guide",
+        "src:lhr-uk-ireland"
+      ]
+    },
+    {
+      "bidirectional": false,
+      "access": "airside",
+      "practical": "practical",
+      "id": "w:lhr-t5fc-t5dom",
+      "from": "lhr-t5-fc",
+      "to": "lhr-t5-dom",
+      "minutes": {
+        "min": 8,
+        "typical": 14,
+        "max": 22,
+        "basis": "assumed",
+        "note": "position of the UK border for domestic connections in T5 not published"
+      },
+      "controls": [
+        {
+          "kind": "passport",
+          "minutes": {
+            "min": 3,
+            "typical": 12,
+            "max": 50,
+            "basis": "assumed",
+            "note": "UK Border Force immigration. Heathrow MTI: non-EEA passengers < 45 min 82–98 % (T2/T3 July 2026 only 82–83 %), EEA < 25 min > 99 %. Replaced in the extension by the calibrated value for the traveller's status (calibration.ts)"
+          },
+          "note": "UK immigration for international → UK / Ireland connections, before security"
+        },
+        {
+          "kind": "boarding-pass",
+          "minutes": {
+            "min": 0,
+            "typical": 1,
+            "max": 3,
+            "basis": "assumed",
+            "note": "facial biometric image at the domestic security entry, checked again before the gate (Heathrow, flying within the UK and Ireland)"
+          },
+          "note": "facial biometric capture (and again before the gate)"
+        },
+        {
+          "kind": "transfer-security",
+          "minutes": {
+            "min": 3,
+            "typical": 8,
+            "max": 20,
+            "basis": "assumed",
+            "note": "Heathrow MTI: transfer security queue < 10 min in 97.6–100 % of 15-min periods (Jul–Sep 2026, queue only); screening and repacking not published (assumed); liquids up to 2 l and large electricals may stay in the bag when connecting"
+          },
+          "note": "all connecting passengers are screened again at Heathrow"
+        }
+      ],
+      "confidence": "inferred",
+      "sources": [
+        "src:lhr-connecting",
+        "src:lhr-blog-connections-guide",
+        "src:lhr-uk-ireland"
+      ]
+    },
+    {
+      "bidirectional": true,
+      "access": "airside",
+      "practical": "practical",
+      "id": "w:lhr-t2a-t2b",
+      "from": "lhr-t2a",
+      "to": "lhr-t2b",
+      "minutes": {
+        "min": 10,
+        "typical": 15,
+        "max": 20,
+        "basis": "published",
+        "note": "\"It takes approximately 15 minutes to walk to these gates\" (B gates, via the subway; Heathrow T2 tour)"
+      },
+      "via": "lift, subway, lift",
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-tour-t2",
+        "src:lhr-tour-t2-arr"
+      ]
+    },
+    {
+      "bidirectional": true,
+      "access": "airside",
+      "practical": "long",
+      "id": "w:lhr-t5a-t5b",
+      "from": "lhr-t5a",
+      "to": "lhr-t5b",
+      "minutes": {
+        "min": 8,
+        "typical": 12,
+        "max": 18,
+        "basis": "assumed",
+        "note": "pedestrian walkway below the Transit (opened 2015); length not published"
+      },
+      "via": "walkway below the Transit",
+      "confidence": "inferred",
+      "sources": [
+        "src:wiki-t5"
+      ]
+    },
+    {
+      "bidirectional": true,
+      "access": "airside",
+      "practical": "long",
+      "id": "w:lhr-t5b-t5c",
+      "from": "lhr-t5b",
+      "to": "lhr-t5c",
+      "minutes": {
+        "min": 4,
+        "typical": 7,
+        "max": 12,
+        "basis": "assumed"
+      },
+      "via": "walkway below the Transit",
+      "confidence": "inferred",
+      "sources": [
+        "src:wiki-t5"
+      ]
+    },
+    {
+      "bidirectional": false,
+      "access": "airside",
+      "practical": "practical",
+      "id": "w:lhr-t2a-exit",
+      "from": "lhr-t2a",
+      "to": "lhr-t2-land",
+      "flow": "arrivals",
+      "minutes": {
+        "min": 7,
+        "typical": 11,
+        "max": 18,
+        "basis": "derived",
+        "note": "T2 arrivals tour without the T2B subway part: border control 5, carousels, arrivals hall 5"
+      },
+      "controls": [
+        {
+          "kind": "passport",
+          "minutes": {
+            "min": 3,
+            "typical": 12,
+            "max": 50,
+            "basis": "assumed",
+            "note": "UK Border Force immigration. Heathrow MTI: non-EEA passengers < 45 min 82–98 % (T2/T3 July 2026 only 82–83 %), EEA < 25 min > 99 %. Replaced in the extension by the calibrated value for the traveller's status (calibration.ts)"
+          },
+          "note": "UK border (arrivals)"
+        },
+        {
+          "kind": "customs",
+          "minutes": {
+            "min": 0,
+            "typical": 1,
+            "max": 5,
+            "basis": "assumed",
+            "note": "UK customs channels after baggage reclaim"
+          }
+        }
+      ],
+      "via": "yellow Arrivals signs, UK border, baggage reclaim, customs",
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-tour-t2-arr",
+        "src:lhr-flight-details"
+      ]
+    },
+    {
+      "bidirectional": false,
+      "access": "airside",
+      "practical": "practical",
+      "id": "w:lhr-t2b-exit",
+      "from": "lhr-t2b",
+      "to": "lhr-t2-land",
+      "flow": "arrivals",
+      "minutes": {
+        "min": 14,
+        "typical": 20,
+        "max": 30,
+        "basis": "published",
+        "note": "T2 arrivals tour from T2B: lift to subway 5, lifts to T2A 5, border control 5, arrivals hall 5"
+      },
+      "controls": [
+        {
+          "kind": "passport",
+          "minutes": {
+            "min": 3,
+            "typical": 12,
+            "max": 50,
+            "basis": "assumed",
+            "note": "UK Border Force immigration. Heathrow MTI: non-EEA passengers < 45 min 82–98 % (T2/T3 July 2026 only 82–83 %), EEA < 25 min > 99 %. Replaced in the extension by the calibrated value for the traveller's status (calibration.ts)"
+          },
+          "note": "UK border (arrivals)"
+        },
+        {
+          "kind": "customs",
+          "minutes": {
+            "min": 0,
+            "typical": 1,
+            "max": 5,
+            "basis": "assumed",
+            "note": "UK customs channels after baggage reclaim"
+          }
+        }
+      ],
+      "via": "subway to T2A, UK border, reclaim, customs",
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-tour-t2-arr"
+      ]
+    },
+    {
+      "bidirectional": false,
+      "access": "airside",
+      "practical": "practical",
+      "id": "w:lhr-t3-exit",
+      "from": "lhr-t3",
+      "to": "lhr-t3-land",
+      "flow": "arrivals",
+      "minutes": {
+        "min": 20,
+        "typical": 29,
+        "max": 40,
+        "basis": "published",
+        "note": "T3 arrivals tour: 2 + 4 + 3 + 5 to passport control, eGates 2, exit 3, reclaim 5, arrivals hall 5 (no queues, no bag wait)"
+      },
+      "controls": [
+        {
+          "kind": "passport",
+          "minutes": {
+            "min": 3,
+            "typical": 12,
+            "max": 50,
+            "basis": "assumed",
+            "note": "UK Border Force immigration. Heathrow MTI: non-EEA passengers < 45 min 82–98 % (T2/T3 July 2026 only 82–83 %), EEA < 25 min > 99 %. Replaced in the extension by the calibrated value for the traveller's status (calibration.ts)"
+          },
+          "note": "UK border (arrivals)"
+        },
+        {
+          "kind": "customs",
+          "minutes": {
+            "min": 0,
+            "typical": 1,
+            "max": 5,
+            "basis": "assumed",
+            "note": "UK customs channels after baggage reclaim"
+          }
+        }
+      ],
+      "via": "arrivals walkway, UK border, reclaim, customs",
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-tour-t3-arr"
+      ]
+    },
+    {
+      "bidirectional": false,
+      "access": "airside",
+      "practical": "practical",
+      "id": "w:lhr-t4-exit",
+      "from": "lhr-t4",
+      "to": "lhr-t4-land",
+      "flow": "arrivals",
+      "minutes": {
+        "min": 10,
+        "typical": 18,
+        "max": 30,
+        "basis": "assumed",
+        "note": "no T4 arrivals tour"
+      },
+      "controls": [
+        {
+          "kind": "passport",
+          "minutes": {
+            "min": 3,
+            "typical": 12,
+            "max": 50,
+            "basis": "assumed",
+            "note": "UK Border Force immigration. Heathrow MTI: non-EEA passengers < 45 min 82–98 % (T2/T3 July 2026 only 82–83 %), EEA < 25 min > 99 %. Replaced in the extension by the calibrated value for the traveller's status (calibration.ts)"
+          },
+          "note": "UK border (arrivals)"
+        },
+        {
+          "kind": "customs",
+          "minutes": {
+            "min": 0,
+            "typical": 1,
+            "max": 5,
+            "basis": "assumed",
+            "note": "UK customs channels after baggage reclaim"
+          }
+        }
+      ],
+      "via": "yellow Arrivals signs",
+      "confidence": "inferred",
+      "sources": [
+        "src:lhr-flight-details"
+      ]
+    },
+    {
+      "bidirectional": false,
+      "access": "airside",
+      "practical": "practical",
+      "id": "w:lhr-t5a-exit",
+      "from": "lhr-t5a",
+      "to": "lhr-t5-land",
+      "flow": "arrivals",
+      "minutes": {
+        "min": 10,
+        "typical": 18,
+        "max": 30,
+        "basis": "assumed",
+        "note": "no T5 arrivals tour"
+      },
+      "controls": [
+        {
+          "kind": "passport",
+          "minutes": {
+            "min": 3,
+            "typical": 12,
+            "max": 50,
+            "basis": "assumed",
+            "note": "UK Border Force immigration. Heathrow MTI: non-EEA passengers < 45 min 82–98 % (T2/T3 July 2026 only 82–83 %), EEA < 25 min > 99 %. Replaced in the extension by the calibrated value for the traveller's status (calibration.ts)"
+          },
+          "note": "UK border (arrivals)"
+        },
+        {
+          "kind": "customs",
+          "minutes": {
+            "min": 0,
+            "typical": 1,
+            "max": 5,
+            "basis": "assumed",
+            "note": "UK customs channels after baggage reclaim"
+          }
+        }
+      ],
+      "via": "yellow Arrivals signs",
+      "confidence": "inferred",
+      "sources": [
+        "src:lhr-flight-details"
+      ]
+    },
+    {
+      "bidirectional": false,
+      "access": "airside",
+      "practical": "practical",
+      "id": "w:lhr-t5b-exit",
+      "from": "lhr-t5b",
+      "to": "lhr-t5-land",
+      "flow": "arrivals",
+      "minutes": {
+        "min": 15,
+        "typical": 24,
+        "max": 36,
+        "basis": "assumed",
+        "note": "Transit to the main building, then as from the A gates"
+      },
+      "controls": [
+        {
+          "kind": "passport",
+          "minutes": {
+            "min": 3,
+            "typical": 12,
+            "max": 50,
+            "basis": "assumed",
+            "note": "UK Border Force immigration. Heathrow MTI: non-EEA passengers < 45 min 82–98 % (T2/T3 July 2026 only 82–83 %), EEA < 25 min > 99 %. Replaced in the extension by the calibrated value for the traveller's status (calibration.ts)"
+          },
+          "note": "UK border (arrivals)"
+        },
+        {
+          "kind": "customs",
+          "minutes": {
+            "min": 0,
+            "typical": 1,
+            "max": 5,
+            "basis": "assumed",
+            "note": "UK customs channels after baggage reclaim"
+          }
+        }
+      ],
+      "via": "T5 Transit, yellow Arrivals signs",
+      "confidence": "inferred",
+      "sources": [
+        "src:lhr-flight-details",
+        "src:wiki-t5-transit"
+      ]
+    },
+    {
+      "bidirectional": false,
+      "access": "airside",
+      "practical": "practical",
+      "id": "w:lhr-t5c-exit",
+      "from": "lhr-t5c",
+      "to": "lhr-t5-land",
+      "flow": "arrivals",
+      "minutes": {
+        "min": 16,
+        "typical": 25,
+        "max": 38,
+        "basis": "assumed",
+        "note": "Transit to the main building, then as from the A gates"
+      },
+      "controls": [
+        {
+          "kind": "passport",
+          "minutes": {
+            "min": 3,
+            "typical": 12,
+            "max": 50,
+            "basis": "assumed",
+            "note": "UK Border Force immigration. Heathrow MTI: non-EEA passengers < 45 min 82–98 % (T2/T3 July 2026 only 82–83 %), EEA < 25 min > 99 %. Replaced in the extension by the calibrated value for the traveller's status (calibration.ts)"
+          },
+          "note": "UK border (arrivals)"
+        },
+        {
+          "kind": "customs",
+          "minutes": {
+            "min": 0,
+            "typical": 1,
+            "max": 5,
+            "basis": "assumed",
+            "note": "UK customs channels after baggage reclaim"
+          }
+        }
+      ],
+      "via": "T5 Transit, yellow Arrivals signs",
+      "confidence": "inferred",
+      "sources": [
+        "src:lhr-flight-details",
+        "src:wiki-t5-transit"
+      ]
+    },
+    {
+      "bidirectional": false,
+      "access": "airside",
+      "practical": "practical",
+      "id": "w:lhr-t2dom-exit",
+      "from": "lhr-t2-dom",
+      "to": "lhr-t2-land",
+      "flow": "arrivals",
+      "minutes": {
+        "min": 6,
+        "typical": 12,
+        "max": 20,
+        "basis": "assumed"
+      },
+      "via": "domestic arrivals (no UK border)",
+      "confidence": "inferred",
+      "sources": [
+        "src:lhr-connecting",
+        "src:lhr-flight-details"
+      ],
+      "notes": "UK / Ireland / Crown Dependency arrivals: no routine immigration (Common Travel Area; inferred). Customs channels for arrivals from Ireland or the Channel Islands are not modelled."
+    },
+    {
+      "bidirectional": false,
+      "access": "airside",
+      "practical": "practical",
+      "id": "w:lhr-t5dom-exit",
+      "from": "lhr-t5-dom",
+      "to": "lhr-t5-land",
+      "flow": "arrivals",
+      "minutes": {
+        "min": 6,
+        "typical": 12,
+        "max": 20,
+        "basis": "assumed"
+      },
+      "via": "domestic arrivals (no UK border)",
+      "confidence": "inferred",
+      "sources": [
+        "src:lhr-connecting",
+        "src:lhr-flight-details"
+      ],
+      "notes": "As T2 (inferred)."
+    },
+    {
+      "bidirectional": true,
+      "access": "public",
+      "practical": "practical",
+      "id": "w:lhr-t2land-station",
+      "from": "lhr-t2-land",
+      "to": "lhr-t23-station",
+      "minutes": {
+        "min": 3,
+        "typical": 5,
+        "max": 8,
+        "basis": "derived",
+        "note": "half of Heathrow's 10-min average T2 ↔ T3 walk"
+      },
+      "via": "step-free underground walkway",
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-travel-between"
+      ]
+    },
+    {
+      "bidirectional": true,
+      "access": "public",
+      "practical": "practical",
+      "id": "w:lhr-t3land-station",
+      "from": "lhr-t3-land",
+      "to": "lhr-t23-station",
+      "minutes": {
+        "min": 3,
+        "typical": 5,
+        "max": 8,
+        "basis": "derived",
+        "note": "half of Heathrow's 10-min average T2 ↔ T3 walk"
+      },
+      "via": "step-free underground walkway",
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-travel-between"
+      ]
+    },
+    {
+      "bidirectional": false,
+      "access": "public",
+      "practical": "practical",
+      "id": "w:lhr-t2land-t2a",
+      "from": "lhr-t2-land",
+      "to": "lhr-t2a",
+      "minutes": {
+        "min": 11,
+        "typical": 15,
+        "max": 22,
+        "basis": "published",
+        "note": "T2 departures tour: restricted items 3, eGates 2, security 2, upper lounge 2, T2A gates 2–10"
+      },
+      "controls": [
+        {
+          "kind": "boarding-pass",
+          "minutes": {
+            "min": 0,
+            "typical": 1,
+            "max": 3,
+            "basis": "published",
+            "note": "boarding-pass eGates before security: 2-min tour step (Heathrow virtual tours)"
+          }
+        },
+        {
+          "kind": "security",
+          "minutes": {
+            "min": 3,
+            "typical": 8,
+            "max": 20,
+            "basis": "assumed",
+            "note": "Heathrow MTI: central security queue < 5 min in 97.2–99.3 % of 15-min periods (Jul–Sep 2026, queue only); screening and repacking not published (assumed 2–8 min; CT scanners, liquids rule as signed)"
+          }
+        }
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-tour-t2"
+      ]
+    },
+    {
+      "bidirectional": false,
+      "access": "public",
+      "practical": "practical",
+      "id": "w:lhr-t2land-t2dom",
+      "from": "lhr-t2-land",
+      "to": "lhr-t2-dom",
+      "minutes": {
+        "min": 9,
+        "typical": 14,
+        "max": 22,
+        "basis": "assumed"
+      },
+      "controls": [
+        {
+          "kind": "boarding-pass",
+          "minutes": {
+            "min": 0,
+            "typical": 1,
+            "max": 3,
+            "basis": "assumed",
+            "note": "facial biometric image at the domestic security entry, checked again before the gate (Heathrow, flying within the UK and Ireland)"
+          },
+          "note": "boarding-pass eGates and facial biometric capture"
+        },
+        {
+          "kind": "security",
+          "minutes": {
+            "min": 3,
+            "typical": 8,
+            "max": 20,
+            "basis": "assumed",
+            "note": "Heathrow MTI: central security queue < 5 min in 97.2–99.3 % of 15-min periods (Jul–Sep 2026, queue only); screening and repacking not published (assumed 2–8 min; CT scanners, liquids rule as signed)"
+          }
+        }
+      ],
+      "confidence": "inferred",
+      "sources": [
+        "src:lhr-tour-t2",
+        "src:lhr-uk-ireland"
+      ]
+    },
+    {
+      "bidirectional": false,
+      "access": "public",
+      "practical": "practical",
+      "id": "w:lhr-t3land-t3",
+      "from": "lhr-t3-land",
+      "to": "lhr-t3",
+      "minutes": {
+        "min": 8,
+        "typical": 14,
+        "max": 22,
+        "basis": "assumed",
+        "note": "no T3 departures tour"
+      },
+      "controls": [
+        {
+          "kind": "security",
+          "minutes": {
+            "min": 3,
+            "typical": 8,
+            "max": 20,
+            "basis": "assumed",
+            "note": "Heathrow MTI: central security queue < 5 min in 97.2–99.3 % of 15-min periods (Jul–Sep 2026, queue only); screening and repacking not published (assumed 2–8 min; CT scanners, liquids rule as signed)"
+          }
+        }
+      ],
+      "confidence": "inferred",
+      "sources": [
+        "src:lhr-security"
+      ]
+    },
+    {
+      "bidirectional": false,
+      "access": "public",
+      "practical": "practical",
+      "id": "w:lhr-t4land-t4",
+      "from": "lhr-t4-land",
+      "to": "lhr-t4",
+      "minutes": {
+        "min": 6,
+        "typical": 12,
+        "max": 20,
+        "basis": "assumed",
+        "note": "gates \"very close to the check-in and security halls\" (Wikipedia)"
+      },
+      "controls": [
+        {
+          "kind": "security",
+          "minutes": {
+            "min": 3,
+            "typical": 8,
+            "max": 20,
+            "basis": "assumed",
+            "note": "Heathrow MTI: central security queue < 5 min in 97.2–99.3 % of 15-min periods (Jul–Sep 2026, queue only); screening and repacking not published (assumed 2–8 min; CT scanners, liquids rule as signed)"
+          }
+        }
+      ],
+      "confidence": "inferred",
+      "sources": [
+        "src:wiki-t4",
+        "src:lhr-security"
+      ]
+    },
+    {
+      "bidirectional": false,
+      "access": "public",
+      "practical": "practical",
+      "id": "w:lhr-t5land-t5a",
+      "from": "lhr-t5-land",
+      "to": "lhr-t5a",
+      "minutes": {
+        "min": 12,
+        "typical": 17,
+        "max": 25,
+        "basis": "published",
+        "note": "T5 departures tour after bag drop: restricted items 5, eGates 2, security 2, upper lounge 2, escalators 2, Level 2 retail 2, Gates 10–23 junction 2"
+      },
+      "controls": [
+        {
+          "kind": "boarding-pass",
+          "minutes": {
+            "min": 0,
+            "typical": 1,
+            "max": 3,
+            "basis": "published",
+            "note": "boarding-pass eGates before security: 2-min tour step (Heathrow virtual tours)"
+          }
+        },
+        {
+          "kind": "security",
+          "minutes": {
+            "min": 3,
+            "typical": 8,
+            "max": 20,
+            "basis": "assumed",
+            "note": "Heathrow MTI: central security queue < 5 min in 97.2–99.3 % of 15-min periods (Jul–Sep 2026, queue only); screening and repacking not published (assumed 2–8 min; CT scanners, liquids rule as signed)"
+          }
+        }
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-tour-t5-dep"
+      ]
+    },
+    {
+      "bidirectional": false,
+      "access": "public",
+      "practical": "practical",
+      "id": "w:lhr-t5land-t5dom",
+      "from": "lhr-t5-land",
+      "to": "lhr-t5-dom",
+      "minutes": {
+        "min": 10,
+        "typical": 15,
+        "max": 24,
+        "basis": "assumed"
+      },
+      "controls": [
+        {
+          "kind": "boarding-pass",
+          "minutes": {
+            "min": 0,
+            "typical": 1,
+            "max": 3,
+            "basis": "assumed",
+            "note": "facial biometric image at the domestic security entry, checked again before the gate (Heathrow, flying within the UK and Ireland)"
+          },
+          "note": "boarding-pass eGates and facial biometric capture"
+        },
+        {
+          "kind": "security",
+          "minutes": {
+            "min": 3,
+            "typical": 8,
+            "max": 20,
+            "basis": "assumed",
+            "note": "Heathrow MTI: central security queue < 5 min in 97.2–99.3 % of 15-min periods (Jul–Sep 2026, queue only); screening and repacking not published (assumed 2–8 min; CT scanners, liquids rule as signed)"
+          }
+        }
+      ],
+      "confidence": "inferred",
+      "sources": [
+        "src:lhr-tour-t5-dep",
+        "src:lhr-uk-ireland"
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "id": "lhr-rule-transfer-security",
+      "text": "All connecting passengers are screened again at Heathrow, whatever the origin (no one-stop security list). Liquids up to 2 l and large electrical items may stay in the cabin bag when connecting. A boarding pass is not required at connections security (an itinerary is enough, \"may take a little longer\").",
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-connecting",
+        "src:lhr-faq-connections",
+        "src:lhr-blog-connections"
+      ]
+    },
+    {
+      "id": "lhr-rule-one-stop-trial",
+      "text": "One Stop Security trial (2025): passengers from Dallas–Fort Worth (American) and Atlanta (Delta) connecting at T3 or T5 skip the re-screening. Its 2026 status is not confirmed, so the model applies transfer security to them too (conservative; the time is slightly overstated for them).",
+      "confidence": "probable",
+      "sources": [
+        "src:hfp-one-stop",
+        "src:timeout-one-stop"
+      ]
+    },
+    {
+      "id": "lhr-rule-zones",
+      "text": "Zones: international (every gate area) and UK & Ireland (domestic: UK, Ireland, Channel Islands, Isle of Man flights, logical areas in the common departure lounges of T2 and T5). International → domestic passes UK immigration before security plus a facial biometric check; domestic → international has no passport control (no UK exit control). Crown Dependency handling is inferred from the Common Travel Area.",
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-connecting",
+        "src:lhr-blog-connections-guide",
+        "src:lhr-uk-ireland"
+      ]
+    },
+    {
+      "id": "lhr-rule-passport-entry",
+      "text": "Passing UK border control (self-transfer, leaving the airport, international → domestic) needs the right to enter: an ETA or visa for most nationalities (Israel, USA and EU/EEA/Swiss citizens are ETA nationals). An airside connection that does not pass border control needs no ETA. Never asserted to a traveller: the extension only warns.",
+      "confidence": "verified",
+      "sources": [
+        "src:govuk-eta",
+        "src:govuk-eta-list",
+        "src:lhr-connecting"
+      ]
+    },
+    {
+      "id": "lhr-rule-egates",
+      "text": "UK eGates: British, EU/EEA/Swiss (with digital status) and Australia, Canada, Japan, New Zealand, Singapore, South Korea and USA passports (age 8+); Israeli passports use the staffed desks (not on the list).",
+      "confidence": "probable",
+      "sources": [
+        "src:govuk-egates"
+      ]
+    },
+    {
+      "id": "lhr-rule-transfer-bus",
+      "text": "Between terminals the connection is a free airside Flight Connections bus \"every 10 minutes\" (BA: every 6–10 minutes). Hours, boarding points and ride times are not published, except Heathrow's 10-min T3 → T5 tour step; other pairs use derived ride times.",
+      "confidence": "verified",
+      "sources": [
+        "src:lhr-connecting",
+        "src:ba-connections-excerpt",
+        "src:lhr-tour-t3-t5"
+      ]
+    },
+    {
+      "id": "lhr-rule-mct",
+      "text": "Minimum connection times: Heathrow publishes none (\"your airline will generally quote a minimum connection time\"). BA material (search excerpt, undated) quotes about 90 min T3 → T5. Not used as a rule.",
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-connecting",
+        "src:ba-connections-excerpt"
+      ]
+    },
+    {
+      "id": "lhr-rule-baggage",
+      "text": "Through-checked bags are transferred by the airline; separately booked flights: collect the bags, exit through arrivals and check in again (self-connection = arrival + departure). Heathrow mentions no self-connection bag service.",
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-connecting",
+        "src:lhr-flight-details"
+      ]
+    },
+    {
+      "id": "lhr-rule-customs",
+      "text": "Customs: passed after baggage reclaim on the way out (self-transfer); not on airside connections.",
+      "confidence": "inferred",
+      "sources": [
+        "src:lhr-connecting",
+        "src:lhr-flight-details"
+      ]
+    },
+    {
+      "id": "lhr-rule-gates-late",
+      "text": "Gates are announced about 45 min before departure and shown only after security; Flight Connections screens show the terminal. The flight-data feed carries no LHR gates (0 %, measured 2026-11-02), so predictions are at terminal level only.",
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-checking-in",
+        "src:lhr-departure-lounge"
+      ]
+    },
+    {
+      "id": "lhr-rule-night",
+      "text": "No scheduled departures 22:40–06:00 and no scheduled arrivals 22:55–05:05 (night quota period 23:30–06:00).",
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-night"
+      ]
+    },
+    {
+      "id": "lhr-rule-terminals",
+      "text": "Terminal by airline (Heathrow terminal finder): BA T5 and T3 (37 destinations, by destination), El Al T4, BA Tel Aviv T5, Virgin Atlantic / American / Delta T3, Star Alliance T2, Air France / KLM / Qatar T4. 2028 moves (Delta, Finnair, JAL → T4; LATAM → T2; China Southern → T5) are provisional (secondary sources).",
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-which-terminal",
+        "src:insideflyer-2028",
+        "src:vs-lhr-guide"
+      ]
+    },
+    {
+      "id": "lhr-rule-deadlines",
+      "text": "Deadlines: BA boarding gate at least 20 min before departure (Heathrow quoting BA); BA (excerpt): clear Flight Connections and security at least 35 min before departure; BA check-in / bag drop 45 min short-haul, 60 min long-haul (secondary excerpt); Virgin Atlantic check-in closes 60 min before departure.",
+      "confidence": "probable",
+      "sources": [
+        "src:lhr-timing-blog",
+        "src:ba-connections-excerpt",
+        "src:bt-ba-checkin",
+        "src:vs-lhr-guide"
+      ]
+    }
+  ],
+  "openQuestions": [
+    {
+      "id": "q:lhr-t4-connections",
+      "question": "Where are the T4 Flight Connections and transfer security, and how long is the walk from a T4 gate to them and from them to the T4 gates?",
+      "impact": "Every connection to or from T4 (El Al, Air France / KLM, Qatar) contains an unestablished step.",
+      "howToResolve": "Owner capture: heathrow.com/connecting-flights/flight-details for a T4 pair (rendered step-by-step), or maps.heathrow.com T4; or a dated walkthrough video."
+    },
+    {
+      "id": "q:lhr-bus-pairs",
+      "question": "Which terminal pairs have a direct connections bus, where do they board, what are the ride times and the operating hours?",
+      "impact": "Ride times of five of six bus pairs are derived from distance; hours unknown (timed routes carry a warning).",
+      "howToResolve": "Owner capture: Heathrow flight-details pages for T2→T4, T4→T5, T2→T5; BA connection PDFs (ba.com blocked)."
+    },
+    {
+      "id": "q:lhr-transfer-security-time",
+      "question": "How long does connections security take (processing, not queue) at each terminal?",
+      "impact": "Transfer security is an assumed 3/8/20 min built on the MTI queue figures.",
+      "howToResolve": "Owner timing of 10 passages (capture F1 of TIMING_EVIDENCE_REVIEW.md)."
+    },
+    {
+      "id": "q:lhr-t3-t4-gates",
+      "question": "Full gate lists for T3 (piers 5/6/7) and T4.",
+      "impact": "T4 has only two named gates; T3 gates come from OpenStreetMap.",
+      "howToResolve": "maps.heathrow.com (JS app): owner capture of the T3 and T4 gate lists."
+    },
+    {
+      "id": "q:lhr-domestic-gates",
+      "question": "Which gates do UK & Ireland flights use in T2 and T5, and where exactly is the UK border for international → domestic connections?",
+      "impact": "Domestic flights are logical areas without gates; the UK border position is assumed.",
+      "howToResolve": "Heathrow flight-details page for an international → domestic pair (e.g. JFK → EDI on BA)."
+    },
+    {
+      "id": "q:lhr-one-stop-2026",
+      "question": "Is the One Stop Security trial (DFW / ATL → T3 / T5) still running in 2026, and for which flights?",
+      "impact": "Those passengers may skip re-screening; the model applies it (conservative).",
+      "howToResolve": "Heathrow / DfT / TSA statement; airline pages."
+    },
+    {
+      "id": "q:lhr-elal",
+      "question": "El Al at Heathrow T4: check-in and gate deadlines, and whether connecting passengers are questioned again.",
+      "impact": "El Al departures use a derived 50–120 min presence-deadline bound.",
+      "howToResolve": "Owner capture of the El Al London station page (elal.com is bot-protected)."
+    },
+    {
+      "id": "q:lhr-ba-deadlines",
+      "question": "BA check-in / bag-drop deadlines and the 35-min connections security deadline (official text).",
+      "impact": "BA deadlines rest on search excerpts.",
+      "howToResolve": "Owner capture of ba.com checking-in and flight-connections pages and the LHR connection PDFs."
+    },
+    {
+      "id": "q:lhr-transit-headway",
+      "question": "T5 Transit headway and hours; walking time on the A ↔ B ↔ C walkway.",
+      "impact": "Wait and ride on the Transit are assumed / derived.",
+      "howToResolve": "Dated T5 walkthrough video (storyboard method) or a Heathrow page."
+    },
+    {
+      "id": "q:lhr-cta",
+      "question": "How are Channel Islands and Isle of Man flights handled (domestic flow, customs)?",
+      "impact": "They are treated as domestic (Common Travel Area, inferred).",
+      "howToResolve": "Heathrow / Border Force page or the flight-details step-by-step for JER / IOM."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src:lhr-connecting",
+      "title": "Connecting flights at Heathrow",
+      "url": "https://www.heathrow.com/connecting-flights",
+      "publisher": "Heathrow Airport",
+      "kind": "official",
+      "group": "heathrow",
+      "accessed": "2026-11-02",
+      "notes": "All connecting passengers re-screened; free shuttle bus every 10 minutes; international → domestic passes UK immigration before security; biometrics; bags transferred on one ticket; self-connection = arrival + departure; 2 l liquids may stay in the bag when connecting."
+    },
+    {
+      "id": "src:lhr-flight-details",
+      "title": "Connecting flights: flight details (self-connecting, step-free)",
+      "url": "https://www.heathrow.com/connecting-flights/flight-details",
+      "publisher": "Heathrow Airport",
+      "kind": "official",
+      "group": "heathrow",
+      "accessed": "2026-11-02",
+      "notes": "Self-connection steps (yellow arrivals signs, immigration, bags, exit, public transport, check-in, security). The per-flight step-by-step text is loaded from an API that was not called (owner capture)."
+    },
+    {
+      "id": "src:lhr-faq-connections",
+      "title": "FAQ: connections",
+      "url": "https://www.heathrow.com/customer-support/faq/faq-connections",
+      "publisher": "Heathrow Airport",
+      "kind": "official",
+      "group": "heathrow",
+      "accessed": "2026-11-02"
+    },
+    {
+      "id": "src:lhr-blog-connections",
+      "title": "A guide to connections (blog)",
+      "url": "https://www.heathrow.com/heathrow-blog/a-guide-to-connections",
+      "publisher": "Heathrow Airport",
+      "kind": "official",
+      "group": "heathrow",
+      "accessed": "2026-11-02",
+      "published": "2024-08-23",
+      "notes": "Transfer bus \"runs regularly throughout the day\"; walk or free train within a terminal; UK immigration for domestic connections."
+    },
+    {
+      "id": "src:lhr-blog-connections-guide",
+      "title": "Connections guide (blog)",
+      "url": "https://www.heathrow.com/heathrow-blog/connections-guide",
+      "publisher": "Heathrow Airport",
+      "kind": "official",
+      "group": "heathrow",
+      "accessed": "2026-11-02",
+      "published": "2024-06-24",
+      "notes": "\"free shuttle bus that operates every 10 minutes\"; \"if you're connecting onto a domestic flight you will pass through UK immigration prior to Security\"; interdom passengers \"go through biometrics before reaching security\"."
+    },
+    {
+      "id": "src:lhr-travel-between",
+      "title": "Travel between terminals (per-pair guide)",
+      "url": "https://www.heathrow.com/at-the-airport/airport-maps/travel-between-terminals",
+      "publisher": "Heathrow Airport",
+      "kind": "official",
+      "group": "heathrow",
+      "accessed": "2026-11-02",
+      "notes": "Landside options and AVERAGE journey times for all 12 terminal pairs (page content fragments, e.g. /content/experience-fragments/heathrow/en/terminal-transfer/transfer-detail/t4/t5/...). T2↔T3 walkway 10; T2/3↔T4 20 (Elizabeth) / 30 (Piccadilly via Hatton Cross); T2/3↔T5 20; T4↔T5 25 (H30) / 30 (rail with a change)."
+    },
+    {
+      "id": "src:lhr-free-travel-map",
+      "title": "Heathrow free travel zone map and timetable (Version 7, 18 May 2025)",
+      "url": "https://www.heathrow.com/content/dam/heathrow/web/common/documents/transport/Heathrow-free-travel-map.pdf",
+      "publisher": "Heathrow Airport",
+      "kind": "official-pdf",
+      "group": "heathrow",
+      "accessed": "2026-11-02",
+      "published": "2025-05-18",
+      "notes": "First/last services and headways of the Piccadilly line, Elizabeth line / Heathrow Express and the free H30 bus between terminals. May be stale (dated May 2025)."
+    },
+    {
+      "id": "src:lhr-which-terminal",
+      "title": "Which terminal? (terminal finder data, 334 airline × destination rows)",
+      "url": "https://www.heathrow.com/bin/heathrow/terminalLanding.en.json",
+      "publisher": "Heathrow Airport",
+      "kind": "official",
+      "group": "heathrow",
+      "accessed": "2026-11-02",
+      "notes": "JSON behind https://www.heathrow.com/at-the-airport/terminal-guides/which-terminal. El Al T4; BA T5 (115 rows) and T3 (37 rows); BA TLV T5; Virgin/AA/DL T3; Star Alliance T2; AF/KL/QR T4; Aer Lingus and Loganair (UK / Ireland / Isle of Man) at T2."
+    },
+    {
+      "id": "src:lhr-uk-ireland",
+      "title": "Flying within the UK and Ireland",
+      "url": "https://www.heathrow.com/at-the-airport/security-and-baggage/flying-within-the-uk-and-ireland",
+      "publisher": "Heathrow Airport",
+      "kind": "official",
+      "group": "heathrow",
+      "accessed": "2026-11-02",
+      "notes": "Facial biometric image at security for domestic departures and international → UK/RoI transfers in common departure lounges, checked again before the gate; refusal = cannot board."
+    },
+    {
+      "id": "src:lhr-checking-in",
+      "title": "Checking in",
+      "url": "https://www.heathrow.com/departures/checking-in",
+      "publisher": "Heathrow Airport",
+      "kind": "official",
+      "group": "heathrow",
+      "accessed": "2026-11-02",
+      "notes": "Arrive 3 h before international, 2 h before domestic/Europe; the gate is announced about 45 min before departure."
+    },
+    {
+      "id": "src:lhr-departure-lounge",
+      "title": "Departure lounge and boarding",
+      "url": "https://www.heathrow.com/departures/departure-lounge-and-boarding",
+      "publisher": "Heathrow Airport",
+      "kind": "official",
+      "group": "heathrow",
+      "accessed": "2026-11-02",
+      "notes": "Gate usually shown around 45 min before departure."
+    },
+    {
+      "id": "src:lhr-assistance-guide",
+      "title": "Assistance: connections guide",
+      "url": "https://www.heathrow.com/at-the-airport/assistance-and-accessibility/assistance-connections-guide",
+      "publisher": "Heathrow Airport",
+      "kind": "official",
+      "group": "heathrow",
+      "accessed": "2026-11-02",
+      "notes": "T5 transit train to the B and C gates; gates named (T3 \"Opposite Gate 7\", T4 \"Near Gate 7\", \"By Gate 11A\", T5 A2/A4/B35/C53/Gate 21); \"may be up to 20 minutes away\"."
+    },
+    {
+      "id": "src:lhr-tour-t3-t5",
+      "title": "Virtual tour: Terminal 3 to Terminal 5 connection",
+      "url": "https://www.heathrow.com/at-the-airport/terminal-guides/virtual-tour?tour=terminal-3-to-5-connection&step=0",
+      "publisher": "Heathrow Airport",
+      "kind": "official",
+      "group": "heathrow",
+      "accessed": "2026-11-02",
+      "notes": "Step data in https://www.heathrow.com/etc.clientlibs/heathrow/clientlibs/clientlibs-virtual-tour.r145.js. \"Proceed N minutes\" per step (published nominal walking times, no queues): T3 gate → connections bus area 2+3+2+2; bus 10; T5 Level 0 → eGates Level 3: 3+3+2+3+3+2."
+    },
+    {
+      "id": "src:lhr-tour-t2",
+      "title": "Virtual tour: Terminal 2 departures",
+      "url": "https://www.heathrow.com/at-the-airport/terminal-guides/virtual-tour?tour=terminal-2&step=0",
+      "publisher": "Heathrow Airport",
+      "kind": "official",
+      "group": "heathrow",
+      "accessed": "2026-11-02",
+      "notes": "Restricted items 3, security eGates 2, security 2, upper lounge 2; T2A gates \"Proceed 2-10 minutes\"; B gates via the subway \"approximately 15 minutes\"."
+    },
+    {
+      "id": "src:lhr-tour-t2-arr",
+      "title": "Virtual tour: Terminal 2 arrivals (from T2B)",
+      "url": "https://www.heathrow.com/at-the-airport/terminal-guides/virtual-tour?tour=terminal-2-arrivals&step=0",
+      "publisher": "Heathrow Airport",
+      "kind": "official",
+      "group": "heathrow",
+      "accessed": "2026-11-02",
+      "notes": "T2B → lift → subway → lift → T2A arrivals level (5 + 5), border control 5, carousels, arrivals hall 5."
+    },
+    {
+      "id": "src:lhr-tour-t5-dep",
+      "title": "Virtual tour: Terminal 5 departures",
+      "url": "https://www.heathrow.com/at-the-airport/terminal-guides/virtual-tour?tour=terminal-5-departures&step=0",
+      "publisher": "Heathrow Airport",
+      "kind": "official",
+      "group": "heathrow",
+      "accessed": "2026-11-02",
+      "notes": "Train platform → ticket gates 2 → departures bridge 2 → entrance 2 → kiosks 2 → bag drop 5 → restricted items 5 → eGates 2 → security 2 → upper lounge 2 → escalators 2 → Level 2 retail 2 → \"Turn left for Gates 10–23. Continue ahead for the lifts and escalators to the B and C Gates\" 2."
+    },
+    {
+      "id": "src:lhr-tour-t3-arr",
+      "title": "Virtual tour: Terminal 3 arrivals",
+      "url": "https://www.heathrow.com/at-the-airport/terminal-guides/virtual-tour?tour=terminal-3-arrivals&step=0",
+      "publisher": "Heathrow Airport",
+      "kind": "official",
+      "group": "heathrow",
+      "accessed": "2026-11-02",
+      "notes": "Aircraft → gate area 2 → arrivals walkway 4 → walkway / Flight Connections split 3 → passport control 5 → eGates 2 → exit 3 → reclaim 5 → arrivals hall 5 (about 29 min, no queues, no bag wait)."
+    },
+    {
+      "id": "src:lhr-immigration",
+      "title": "Immigration and passports",
+      "url": "https://www.heathrow.com/arrivals/immigration-and-passports",
+      "publisher": "Heathrow Airport",
+      "kind": "official",
+      "group": "heathrow",
+      "accessed": "2026-11-02"
+    },
+    {
+      "id": "src:lhr-night",
+      "title": "Night flights",
+      "url": "https://www.heathrow.com/company/local-community/noise/operations/night-flights",
+      "publisher": "Heathrow Airport",
+      "kind": "official",
+      "group": "heathrow",
+      "accessed": "2026-11-02",
+      "notes": "No scheduled departures 22:40–06:00, no scheduled arrivals 22:55–05:05 (night quota period 23:30–06:00)."
+    },
+    {
+      "id": "src:lhr-timing-blog",
+      "title": "Top tips for timing your airport journey (blog)",
+      "url": "https://www.heathrow.com/heathrow-blog/top-tips-for-timing-your-airport-journey",
+      "publisher": "Heathrow Airport",
+      "kind": "official",
+      "group": "heathrow",
+      "accessed": "2026-11-02",
+      "published": "2026-09-22",
+      "notes": "BA: \"at least 20 minutes before departure, after which boarding may close\" (Heathrow quoting BA)."
+    },
+    {
+      "id": "src:lhr-security",
+      "title": "Security and baggage",
+      "url": "https://www.heathrow.com/at-the-airport/security-and-baggage",
+      "publisher": "Heathrow Airport",
+      "kind": "official",
+      "group": "heathrow",
+      "accessed": "2026-11-02"
+    },
+    {
+      "id": "src:lhr-mti",
+      "title": "Measures, Targets and Incentives (MTI) monthly reports, July–September 2026",
+      "url": "https://www.heathrow.com/content/dam/heathrow/web/common/documents/company/about/performance/mti/2026/July-2026-MTI-Report.pdf",
+      "publisher": "Heathrow Airport",
+      "kind": "official-pdf",
+      "group": "heathrow",
+      "accessed": "2026-11-02",
+      "notes": "Immigration EEA % of passengers < 25 min (99.1–100 %); non-EEA % < 45 min (82–98 %); transfer security queue < 10 min in 97.6–100 % of 15-min periods; central security < 5 min in 97.2–99.3 %. Queue only, no processing time. Also Aug_2026_MTI_Report.pdf and MTI_Report_September_2026.pdf (docs/research/calibration/TIMING_EVIDENCE_REVIEW.md §E)."
+    },
+    {
+      "id": "src:govuk-eta",
+      "title": "Electronic travel authorisation (ETA)",
+      "url": "https://www.gov.uk/eta",
+      "publisher": "UK Government",
+      "kind": "official",
+      "group": "govuk",
+      "accessed": "2026-11-02",
+      "notes": "No ETA for airside transit without passing border control; an ETA is needed when passing UK border control (updated 2025-05-28)."
+    },
+    {
+      "id": "src:govuk-eta-list",
+      "title": "Immigration Rules Appendix ETA National List",
+      "url": "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-eta-national-list",
+      "publisher": "UK Government",
+      "kind": "official",
+      "group": "govuk",
+      "accessed": "2026-11-02",
+      "notes": "Israel, US and others: ETA nationals from 8 Jan 2025; EU/EEA/CH from 2 Apr 2025 (updated 2026-03-05)."
+    },
+    {
+      "id": "src:govuk-transit-visa",
+      "title": "Transit visa",
+      "url": "https://www.gov.uk/transit-visa",
+      "publisher": "UK Government",
+      "kind": "official",
+      "group": "govuk",
+      "accessed": "2026-11-02"
+    },
+    {
+      "id": "src:govuk-egates",
+      "title": "UK border control: before you leave for the UK (eGates)",
+      "url": "https://www.gov.uk/uk-border-control/before-you-leave-for-the-uk",
+      "publisher": "UK Government",
+      "kind": "official",
+      "group": "govuk",
+      "accessed": "2026-11-02",
+      "notes": "eGates: British citizens; EU/EEA/CH with digital status; and passports of Australia, Canada, Japan, New Zealand, Singapore, South Korea, USA (age 8+, 120 cm). Israel is not on the list (read via the gov.uk Content API)."
+    },
+    {
+      "id": "src:wiki-t5",
+      "title": "Heathrow Terminal 5 (rev 1370745183)",
+      "url": "https://en.wikipedia.org/wiki/Heathrow_Terminal_5",
+      "publisher": "Wikipedia",
+      "kind": "wiki",
+      "group": "wikipedia",
+      "accessed": "2026-11-02",
+      "notes": "Gate ranges A1–A23, B32–B48, C52–C66; A4 and A10 coaching gates; pedestrian walkway below the transit (2015)."
+    },
+    {
+      "id": "src:wiki-t5-transit",
+      "title": "Heathrow Terminal 5 Transit (rev 1376206623)",
+      "url": "https://en.wikipedia.org/wiki/Heathrow_Terminal_5_Transit",
+      "publisher": "Wikipedia",
+      "kind": "wiki",
+      "group": "wikipedia",
+      "accessed": "2026-11-02",
+      "notes": "Airside APM, three stations (5A A1–A23, 5B B32–B48, 5C C52–C66), dual-lane tunnel 0.67 km, 10 Innovia APM 200 cars, > 6,500 passengers per hour per direction. No headway published."
+    },
+    {
+      "id": "src:wiki-t2",
+      "title": "Heathrow Terminal 2 (rev 1376462812)",
+      "url": "https://en.wikipedia.org/wiki/Heathrow_Terminal_2",
+      "publisher": "Wikipedia",
+      "kind": "wiki",
+      "group": "wikipedia",
+      "accessed": "2026-11-02",
+      "notes": "Concourse A gates 1–26, concourse B (satellite) gates 28–49."
+    },
+    {
+      "id": "src:wiki-t3",
+      "title": "Heathrow Terminal 3 (rev 1382618542)",
+      "url": "https://en.wikipedia.org/wiki/Heathrow_Terminal_3",
+      "publisher": "Wikipedia",
+      "kind": "wiki",
+      "group": "wikipedia",
+      "accessed": "2026-11-02",
+      "notes": "Pier 6 (2006, A380). No gate list."
+    },
+    {
+      "id": "src:wiki-t4",
+      "title": "Heathrow Terminal 4 (rev 1377912465)",
+      "url": "https://en.wikipedia.org/wiki/Heathrow_Terminal_4",
+      "publisher": "Wikipedia",
+      "kind": "wiki",
+      "group": "wikipedia",
+      "accessed": "2026-11-02",
+      "notes": "\"passenger boarding gates very close to the check-in and security halls\". No gate list."
+    },
+    {
+      "id": "src:wiki-lhr",
+      "title": "Heathrow Airport (rev 1382426405)",
+      "url": "https://en.wikipedia.org/wiki/Heathrow_Airport",
+      "publisher": "Wikipedia",
+      "kind": "wiki",
+      "group": "wikipedia",
+      "accessed": "2026-11-02",
+      "notes": "Airside road tunnels: Heathrow Cargo Tunnel (T2/3 ↔ T4) and Airside Road Tunnel (T2/3 ↔ T5)."
+    },
+    {
+      "id": "src:lhr-osm",
+      "title": "OpenStreetMap: aeroway=gate and aeroway=terminal at EGLL (Overpass API)",
+      "url": "https://overpass-api.de/api/interpreter",
+      "publisher": "OpenStreetMap contributors (ODbL)",
+      "kind": "osm",
+      "group": "osm",
+      "accessed": "2026-11-02",
+      "notes": "Queried 2026-11-02 for the bounding box 51.455,-0.50,51.482,-0.42: 148 gate nodes. T5 A1–A23 (A10a–e), B32–B48, C52–C66; T2 A16–A26, B31–B49; T3 (terminal=3) 1–42 incl. 24a–e; T4 nodes are numbered 401–432 (stand numbers, not the passenger gates Heathrow names, so not used as gates). Used for gate lists and approximate placement."
+    },
+    {
+      "id": "src:ba-connections-excerpt",
+      "title": "British Airways: Heathrow flight connections pages and PDFs (search excerpts only)",
+      "url": "https://www.britishairways.com/content/information/airport-information/flight-connections",
+      "publisher": "British Airways",
+      "kind": "airline",
+      "group": "ba",
+      "accessed": "2026-11-02",
+      "notes": "ba.com served a \"high demand\" holding page to every direct request (2026-11-02), including the PDFs …/lhr-connections/LHR-Flight-connections_Terminal-3-to-Terminal-5.pdf. Search excerpts: Flight Connections buses T3 ↔ T5 \"run every 6-10 minutes\"; \"clear Flight Connections and Security and be ready to fly at least 35 minutes before your onward departure time\", \"at the gate 20 minutes before\"; T3→T5 MCT \"approx. 90 minutes\" (undated). Excerpts only: owner capture requested."
+    },
+    {
+      "id": "src:bt-ba-checkin",
+      "title": "Business Traveller: BA brings in standardised check-in / bag drop times (search excerpt)",
+      "url": "https://www.businesstraveller.com/news/ba-brings-in-standardised-check-inbag-drop-times/",
+      "publisher": "Business Traveller",
+      "kind": "news",
+      "group": "businesstraveller",
+      "accessed": "2026-11-02",
+      "notes": "Excerpt: UK domestic and short-haul check-in and bag drop up to 45 min before departure, long-haul up to 60 min. Undated in the excerpt; the page returned HTTP 403."
+    },
+    {
+      "id": "src:vs-lhr-guide",
+      "title": "Virgin Atlantic: London Heathrow airport guide",
+      "url": "https://www.virginatlantic.com/where-we-fly/europe/uk/london/london-heathrow-airport-guide",
+      "publisher": "Virgin Atlantic",
+      "kind": "airline",
+      "group": "virgin",
+      "accessed": "2026-11-02",
+      "notes": "\"Check in starts from four hours before departure and closes one hour before departure\"; \"All flights depart from Terminal 3\"; gate information about 60 min before departure. No gate-close time."
+    },
+    {
+      "id": "src:bt-elal-review",
+      "title": "Business Traveller: El Al B747-400 economy class plus (review, Heathrow T1 era)",
+      "url": "https://www.businesstraveller.com/tried-tested/el-al-b747-400-economy-class-plus/",
+      "publisher": "Business Traveller",
+      "kind": "news",
+      "group": "businesstraveller",
+      "accessed": "2026-11-02",
+      "notes": "First-hand: the El Al check-in queue at Heathrow was a security check with detailed questioning (dated; El Al moved from T1 to T4 in 2015). Search excerpt only."
+    },
+    {
+      "id": "src:hfp-one-stop",
+      "title": "Head for Points: AA and Delta introduce One Stop Security",
+      "url": "https://www.headforpoints.com/2025/08/14/aa-and-delta-introduce-one-stop-security",
+      "publisher": "Head for Points",
+      "kind": "news",
+      "group": "headforpoints",
+      "accessed": "2026-11-02",
+      "published": "2025-08-14",
+      "notes": "Trial: passengers from DFW (AA) and ATL (DL) connecting at Heathrow T3/T5 skip re-screening; \"likely to be a long process\". 2026 status not found."
+    },
+    {
+      "id": "src:timeout-one-stop",
+      "title": "Time Out: skip the security recheck at Heathrow from these US cities",
+      "url": "https://www.timeout.com/usa/news/you-can-now-skip-the-security-recheck-line-at-heathrow-if-youre-flying-from-these-u-s-cities-032425",
+      "publisher": "Time Out",
+      "kind": "news",
+      "group": "timeout",
+      "accessed": "2026-11-02"
+    },
+    {
+      "id": "src:insideflyer-2028",
+      "title": "InsideFlyer: Heathrow moves five airlines between terminals",
+      "url": "https://www.insideflyer.com/posts/heathrow-moves-five-airlines-between-terminals/",
+      "publisher": "InsideFlyer",
+      "kind": "news",
+      "group": "insideflyer",
+      "accessed": "2026-11-02",
+      "notes": "2028: Delta, Finnair, JAL T3 → T4; LATAM T3 → T2; China Southern T4 → T5 (no month; Virgin Atlantic objects). Heathrow primary text not found."
+    },
+    {
+      "id": "src:yt-otr-t3-t5",
+      "title": "London Heathrow (LHR) Transfer Experience Terminal 3 to Terminal 5 (video)",
+      "url": "https://www.youtube.com/watch?v=JsacJBmYFbo",
+      "publisher": "On Time Reports (YouTube)",
+      "kind": "video",
+      "group": "yt-ontimereports",
+      "accessed": "2026-11-02",
+      "published": "2023-05-10",
+      "notes": "Title/description only (no chapters); not timed."
+    },
+    {
+      "id": "src:yt-windowseat-t4-t2",
+      "title": "How to get from T4 to T2 at London Heathrow in 20 minutes flat! (video)",
+      "url": "https://www.youtube.com/watch?v=gq02dwjJ86E",
+      "publisher": "The Window Seat (YouTube)",
+      "kind": "video",
+      "group": "yt-windowseat",
+      "accessed": "2026-11-02",
+      "notes": "Title/description: an airside bus from T4 to T2; not timed. Supports the existence of a T4 → T2 airside connection only."
+    }
+  ],
+  "openBorders": [
+    {
+      "from": "domestic",
+      "to": "international",
+      "note": "UK: no exit passport control, so a UK / Ireland arrival connecting to an international flight passes security only. International → domestic passes UK immigration (Heathrow).",
+      "sources": [
+        "src:lhr-connecting",
+        "src:lhr-blog-connections-guide"
+      ]
+    }
+  ],
+  "specialScreening": [
+    {
+      "id": "ss:lhr-elal-t4",
+      "appliesTo": {
+        "airlines": [
+          "LY"
+        ]
+      },
+      "areas": [
+        "lhr-t4"
+      ],
+      "certainty": "probable",
+      "text": "El Al (Terminal 4) runs its own security questioning for its passengers (reported at Heathrow check-in); no Heathrow deadline or duration is published and elal.com could not be read.",
+      "sources": [
+        "src:bt-elal-review",
+        "src:lhr-which-terminal"
+      ]
+    },
+    {
+      "id": "ss:lhr-israel",
+      "appliesTo": {
+        "destinationCountries": [
+          "IL"
+        ]
+      },
+      "certainty": "unknown",
+      "text": "Flights to Israel (El Al T4, British Airways T5): whether Heathrow or the airline adds a check at the gate is not established (no Heathrow page mentions one).",
+      "sources": [
+        "src:lhr-security",
+        "src:lhr-which-terminal"
+      ],
+      "issueLevel": "secondary"
+    }
+  ],
+  "feedTerminals": {
+    "arrival": {
+      "2": [
+        "lhr-t2a",
+        "lhr-t2b",
+        "lhr-t2-dom"
+      ],
+      "3": [
+        "lhr-t3"
+      ],
+      "4": [
+        "lhr-t4"
+      ],
+      "5": [
+        "lhr-t5a",
+        "lhr-t5b",
+        "lhr-t5c",
+        "lhr-t5-dom"
+      ],
+      "T2": [
+        "lhr-t2a",
+        "lhr-t2b",
+        "lhr-t2-dom"
+      ],
+      "T3": [
+        "lhr-t3"
+      ],
+      "T4": [
+        "lhr-t4"
+      ],
+      "T5": [
+        "lhr-t5a",
+        "lhr-t5b",
+        "lhr-t5c",
+        "lhr-t5-dom"
+      ]
+    },
+    "departure": {
+      "2": [
+        "lhr-t2a",
+        "lhr-t2b",
+        "lhr-t2-dom"
+      ],
+      "3": [
+        "lhr-t3"
+      ],
+      "4": [
+        "lhr-t4"
+      ],
+      "5": [
+        "lhr-t5a",
+        "lhr-t5b",
+        "lhr-t5c",
+        "lhr-t5-dom"
+      ],
+      "T2": [
+        "lhr-t2a",
+        "lhr-t2b",
+        "lhr-t2-dom"
+      ],
+      "T3": [
+        "lhr-t3"
+      ],
+      "T4": [
+        "lhr-t4"
+      ],
+      "T5": [
+        "lhr-t5a",
+        "lhr-t5b",
+        "lhr-t5c",
+        "lhr-t5-dom"
+      ]
+    }
+  },
+  "airlineTerminals": {
+    "defaults": {
+      "BA": "5",
+      "LY": "4",
+      "VS": "3",
+      "AA": "3",
+      "DL": "3",
+      "IB": "5",
+      "QR": "4",
+      "AF": "4",
+      "KL": "4",
+      "UA": "2",
+      "LH": "2",
+      "LX": "2",
+      "TK": "2",
+      "EI": "2",
+      "LM": "2"
+    },
+    "byDestination": [
+      {
+        "airline": "BA",
+        "terminal": "3",
+        "airports": [
+          "ATL",
+          "AUS",
+          "BAH",
+          "BWI",
+          "BDA",
+          "OTP",
+          "BUD",
+          "DFW",
+          "FSC",
+          "GIB",
+          "GOT",
+          "GCM",
+          "HAJ",
+          "KRK",
+          "LUX",
+          "LYS",
+          "MRS",
+          "NAP",
+          "OLB",
+          "OSL",
+          "PMI",
+          "PEG",
+          "PHX",
+          "PLS",
+          "PRG",
+          "RIX",
+          "RMI",
+          "GRU",
+          "SOF",
+          "STR",
+          "TIA",
+          "TIV",
+          "TLS",
+          "VLC",
+          "YVR",
+          "VIE"
+        ]
+      }
+    ],
+    "asOf": "2026-11-02",
+    "confidence": "verified",
+    "sources": [
+      "src:lhr-which-terminal"
+    ],
+    "note": "Heathrow terminal finder (official data, 334 airline x destination rows), consistent with the AeroDataBox probe of 2026-10-25 / 11-01 (BA T5 with the listed destinations at T3, El Al T4, VS/AA/DL T3, UA/LH/LX/TK/EI T2, KL/QR/AF T4). Dated 2028 moves (DL/AY/JL to T4, LA to T2, CZ to T5) are provisional and NOT applied."
+  }
+}

@@ -1,0 +1,3375 @@
+{
+  "iata": "MAD",
+  "icao": "LEMD",
+  "name": "Adolfo Suárez Madrid-Barajas Airport",
+  "city": "Madrid",
+  "asOf": "2026-10-31",
+  "schematic": {
+    "width": 1000,
+    "height": 640,
+    "northDeg": 90,
+    "background": [
+      {
+        "kind": "runway",
+        "label": "14R/32L",
+        "shape": {
+          "type": "poly",
+          "points": [
+            [
+              329,
+              640
+            ],
+            [
+              634,
+              402
+            ],
+            [
+              642,
+              410
+            ],
+            [
+              341,
+              640
+            ]
+          ]
+        }
+      },
+      {
+        "kind": "runway",
+        "label": "18R/36L",
+        "shape": {
+          "type": "poly",
+          "points": [
+            [
+              700,
+              420
+            ],
+            [
+              1000,
+              420
+            ],
+            [
+              1000,
+              428
+            ],
+            [
+              700,
+              428
+            ]
+          ]
+        }
+      },
+      {
+        "kind": "apron",
+        "label": "T1–T3 apron",
+        "shape": {
+          "type": "poly",
+          "points": [
+            [
+              60,
+              400
+            ],
+            [
+              130,
+              520
+            ],
+            [
+              320,
+              545
+            ],
+            [
+              390,
+              500
+            ],
+            [
+              390,
+              530
+            ],
+            [
+              320,
+              570
+            ],
+            [
+              130,
+              560
+            ],
+            [
+              55,
+              430
+            ]
+          ]
+        }
+      }
+    ],
+    "labels": [
+      {
+        "text": "T1–T2–T3 complex",
+        "at": [
+          190,
+          420
+        ],
+        "kind": "district"
+      },
+      {
+        "text": "T4",
+        "at": [
+          700,
+          70
+        ],
+        "kind": "district"
+      },
+      {
+        "text": "T4 Satellite (T4S)",
+        "at": [
+          760,
+          615
+        ],
+        "kind": "district"
+      },
+      {
+        "text": "18R/36L (APM tunnel underneath)",
+        "at": [
+          880,
+          412
+        ],
+        "kind": "runway"
+      },
+      {
+        "text": "14R/32L",
+        "at": [
+          470,
+          520
+        ],
+        "kind": "runway",
+        "rotate": -38
+      },
+      {
+        "text": "Free shuttle bus T1 ↔ T4 (landside, ~4 km)",
+        "at": [
+          470,
+          300
+        ],
+        "kind": "note",
+        "rotate": -45
+      },
+      {
+        "text": "North points right; OSM-derived geometry © OpenStreetMap contributors (ODbL); schematic, not survey-accurate",
+        "at": [
+          20,
+          630
+        ],
+        "kind": "note"
+      }
+    ]
+  },
+  "feedTerminals": { "arrival": { "1": ["mad-t1-ab", "mad-t2-cd", "mad-t3-e"], "2": ["mad-t2-cd", "mad-t3-e"], "3": ["mad-t3-e", "mad-t2-cd"], "4": ["mad-t4-hjk", "mad-t4s-m", "mad-t4s-s"], "4S": ["mad-t4s-m", "mad-t4s-s"]}, "departure": { "1": ["mad-t1-ab", "mad-t2-cd", "mad-t3-e"], "2": ["mad-t2-cd", "mad-t3-e"], "4": ["mad-t4-hjk", "mad-t4s-m", "mad-t4s-s"], "4S": ["mad-t4s-m", "mad-t4s-s"]}},
+  "specialScreening": [{ "id": "ss:mad-elal-t4s", "appliesTo": { "airlines": ["LY"]}, "areas": ["mad-t4s-s"], "certainty": "verified", "issueLevel": "material", "text": "El Al: check-in T4 floor 2 (desks 986–989), connecting passengers to T4S floor 1, boarding area S (Aena); feed TLV departures of LY use S31 / S34. El Al security questioning is reported by travellers (anecdotal); its time is not published.", "sources": ["src:aena-airline-elal", "src:fd-feed-terminals-2026-11-01"]},{ "id": "ss:mad-iberia-tlv", "appliesTo": { "destinationCountries": ["IL"], "airlines": ["IB"]}, "certainty": "probable", "issueLevel": "material", "deadline": { "minutesBeforeDeparture": 90, "basis": "published", "text": "Iberia, flights to Israel: be at the boarding gate at least 90 min before departure (additional mandatory controls at the gate; Iberia time-limit page, owner capture 2026-11-02). A gate-arrival deadline, not the duration of the check" }, "text": "Iberia flights to Tel Aviv (Madrid T4 Satellite): Iberia states additional mandatory security controls at the boarding gate and asks passengers to be at the gate at least 90 min before departure; check-in closes 55 min before departure (T4S). How long the gate control takes is not published. Applies to Iberia-marketed and operated flights per the Iberia page; other airlines are not covered by it.", "sources": ["src:iberia-time-limit"]},{ "id": "ss:mad-israel-other", "appliesTo": { "destinationCountries": ["IL"]}, "certainty": "unknown", "issueLevel": "material", "text": "Flights to Israel: whether this airline has an additional document check, interview or separate screening at Madrid-Barajas (only El Al and Iberia are documented) is not established by any source we could read. Allow extra time and check with the airline.", "sources": ["src:aena-airline-elal"]},{ "id": "ss:mad-us-enhanced", "appliesTo": { "destinationCountries": ["US"]}, "certainty": "unknown", "issueLevel": "secondary", "text": "US-bound flights: TSA / DHS enhanced security measures for all last-point-of-departure airports (2017, still the baseline as far as known) may add checks at check-in or at the gate (interviews, document checks, separate screening of electronics). The procedures are not public; no time is known.", "sources": ["src:dhs-tsa-2017-enhanced"]}],
+  "areas": [
+    {
+      "id": "mad-t1-land",
+      "checkIn": { "serves": ["mad-t1-ab", "mad-t2-cd", "mad-t3-e"], "sources": ["src:fd-feed-terminals-2026-11-01"], "note": "T1 check-in: non-Schengen carriers, Ryanair and easyJet; feed: T1 departures board at A–E gates" },
+      "name": "Terminal 1 · check-in (floor 1) and arrivals (floor 0), public side",
+      "short": "T1",
+      "kind": "landside-hall",
+      "terminal": "T1",
+      "side": "landside",
+      "zone": "n/a",
+      "matrix": true,
+      "anchor": [
+        158,
+        470
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            118,
+            452
+          ],
+          [
+            206,
+            486
+          ],
+          [
+            202,
+            500
+          ],
+          [
+            164,
+            495
+          ],
+          [
+            127,
+            467
+          ]
+        ]
+      },
+      "level": "Floor 1 departures (check-in, security, bus stop), floor 0 arrivals",
+      "description": "Check-in hall of T1 (non-Schengen carriers, also Ryanair/easyJet), the T1 security checkpoint, and the arrivals halls. Free shuttle bus stop on the floor-1 departures road.",
+      "confidence": "verified",
+      "sources": [
+        "src:aena-connecting",
+        "src:aena-transport",
+        "src:yt-airportwalker-t4t1",
+        "src:osm-mad"
+      ]
+    },
+    {
+      "id": "mad-t1-ab",
+      "intraWalk": { "min": 1, "typical": 4.5, "max": 11, "basis": "derived", "note": "Derived (R-02): pier length ≈ 800 m (A pier tip to B ≈ 0.8 km (area description)); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Terminal 1 · gates A and B (non-Schengen)",
+      "short": "A/B",
+      "kind": "concourse",
+      "terminal": "T1",
+      "side": "airside",
+      "zone": "non-schengen",
+      "matrix": true,
+      "arrivals": "segregated",
+      "anchor": [
+        112,
+        445
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            66,
+            389
+          ],
+          [
+            86,
+            385
+          ],
+          [
+            124,
+            421
+          ],
+          [
+            118,
+            437
+          ],
+          [
+            140,
+            490
+          ],
+          [
+            168,
+            512
+          ],
+          [
+            168,
+            522
+          ],
+          [
+            158,
+            522
+          ],
+          [
+            132,
+            505
+          ],
+          [
+            114,
+            488
+          ],
+          [
+            106,
+            440
+          ]
+        ]
+      },
+      "level": "International boarding level",
+      "description": "Non-Schengen boarding area of T1: pier A (south dock, A1–A14) and the B gates up to the B/C swing positions near the T1/T2 junction. Reached from T1 check-in through security and then passport control to the right.",
+      "confidence": "verified",
+      "sources": [
+        "src:aena-connecting",
+        "src:pointsanalyst-mad",
+        "src:yt-tripsflicks-t1",
+        "src:osm-mad"
+      ],
+      "notes": "One area for A and B: both non-Schengen, walking only between them (A pier tip to B ≈ 0.8 km). arrivals: segregated — Aena sends arriving passengers along the connections corridor (blue signs) and the 2026 video shows a separate glazed arrivals corridor and escalator, apart from the departure hall."
+    },
+    {
+      "id": "mad-t1-conn",
+      "name": "Terminal 1 · connections hallway and baggage hall 1 transit desk (non-Schengen, before passport control)",
+      "short": "T1-X",
+      "kind": "transfer-hub",
+      "terminal": "T1",
+      "side": "airside",
+      "zone": "non-schengen",
+      "matrix": false,
+      "anchor": [
+        140,
+        488
+      ],
+      "level": "Floor −1 connections hallway / floor 0 baggage reclaim hall 1",
+      "description": "Where arriving non-Schengen passengers choose: international connections security to A/B, passport control towards C/D/E or the exit, or (with a boarding card and checked-through bags) the Green Jackets desk for the on-request transfer bus to T4S.",
+      "confidence": "probable",
+      "sources": [
+        "src:aena-connecting",
+        "src:aena-transport",
+        "src:aena-categories",
+        "src:yt-tripsflicks-t1"
+      ],
+      "notes": "Aena places the transfer-desk hallway on floor −1 and the transfer-bus stop in baggage reclaim hall 1 (floor 0); drawn as one node."
+    },
+    {
+      "id": "mad-t1-hall1",
+      "name": "Terminal 1 · baggage reclaim hall 1, transfer-bus stand to T4S (non-Schengen transit)",
+      "short": "T1-H1",
+      "kind": "transfer-hub",
+      "terminal": "T1",
+      "side": "airside",
+      "zone": "non-schengen",
+      "matrix": false,
+      "anchor": [
+        146,
+        508
+      ],
+      "level": "Floor 0",
+      "description": "Stand of the on-request transfer bus to T4S (boarding card and checked-through bags). Reached from the arrivals flow via the Green Jackets desk; arriving from T4S, passengers go up one level to the connections hallway and its security to A/B.",
+      "confidence": "probable",
+      "sources": [
+        "src:aena-transport",
+        "src:aena-connecting"
+      ],
+      "notes": "Kept apart from the connections hallway so that the transfer bus only links to A/B (its eligibility), not to the passport control towards C/D/E."
+    },
+    {
+      "id": "mad-t2-cd",
+      "intraWalk": { "min": 1, "typical": 4, "max": 10, "basis": "derived", "note": "Derived (R-02): pier length ≈ 680 m (gate path × 5.3 m/unit); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Terminals 1–2 · gates C and D (Schengen)",
+      "short": "C/D",
+      "kind": "concourse",
+      "terminal": "T2",
+      "side": "airside",
+      "zone": "schengen",
+      "matrix": true,
+      "anchor": [
+        245,
+        522
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            172,
+            514
+          ],
+          [
+            205,
+            506
+          ],
+          [
+            240,
+            512
+          ],
+          [
+            285,
+            500
+          ],
+          [
+            312,
+            496
+          ],
+          [
+            318,
+            505
+          ],
+          [
+            275,
+            537
+          ],
+          [
+            243,
+            535
+          ],
+          [
+            230,
+            525
+          ],
+          [
+            174,
+            526
+          ]
+        ]
+      },
+      "level": "Boarding level (floor 1)",
+      "description": "Schengen boarding area from C30–C38 at the T1/T2 junction through T2 (C39–C50, D53–D66). Reached through the T2 security checkpoint (floor 1) or the T1 checkpoint; continues airside into T3 (E).",
+      "confidence": "verified",
+      "sources": [
+        "src:aena-connecting",
+        "src:pointsanalyst-mad",
+        "src:osm-mad"
+      ]
+    },
+    {
+      "id": "mad-t3-e",
+      "intraWalk": { "min": 1, "typical": 2, "max": 5, "basis": "derived", "note": "Derived (R-02): pier length ≈ 260 m (gate path × 5.3 m/unit); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Terminal 3 · gates E (Schengen)",
+      "short": "E",
+      "kind": "pier",
+      "terminal": "T3",
+      "side": "airside",
+      "zone": "schengen",
+      "matrix": true,
+      "anchor": [
+        350,
+        488
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            318,
+            494
+          ],
+          [
+            330,
+            479
+          ],
+          [
+            380,
+            482
+          ],
+          [
+            380,
+            497
+          ],
+          [
+            330,
+            499
+          ]
+        ]
+      },
+      "level": "Floor 1 boarding area E",
+      "description": "Former north dock; Schengen gates E. Shares the airside zone with T2 (no own check-in).",
+      "confidence": "verified",
+      "sources": [
+        "src:aena-categories",
+        "src:pointsanalyst-mad",
+        "src:osm-mad",
+        "src:aena-connecting"
+      ]
+    },
+    {
+      "id": "mad-t2-land",
+      "checkIn": { "serves": ["mad-t2-cd", "mad-t3-e"], "sources": ["src:fd-feed-terminals-2026-11-01"], "note": "T2 check-in (Schengen); feed: D and E gates" },
+      "name": "Terminal 2 · check-in (floor 2) and arrivals (floor 0), public side",
+      "short": "T2",
+      "kind": "landside-hall",
+      "terminal": "T2",
+      "side": "landside",
+      "zone": "n/a",
+      "matrix": true,
+      "anchor": [
+        262,
+        492
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            206,
+            486
+          ],
+          [
+            302,
+            484
+          ],
+          [
+            308,
+            494
+          ],
+          [
+            286,
+            499
+          ],
+          [
+            240,
+            508
+          ],
+          [
+            206,
+            500
+          ]
+        ]
+      },
+      "level": "Floor 2 check-in and bus (departures road), floor 1 security and Metro, floor 0 arrivals and bus",
+      "description": "T2 check-in hall (Schengen), the security checkpoint one floor down, arrivals halls, the Metro L8 station (floor 1) and both shuttle-bus stops.",
+      "confidence": "verified",
+      "sources": [
+        "src:aena-connecting",
+        "src:aena-transport",
+        "src:aena-metro-rail",
+        "src:osm-mad"
+      ]
+    },
+    {
+      "id": "mad-t3-land",
+      "name": "Terminal 3 · arrivals (floor 0), public side",
+      "short": "T3",
+      "kind": "landside-hall",
+      "terminal": "T3",
+      "side": "landside",
+      "zone": "n/a",
+      "matrix": false,
+      "anchor": [
+        318,
+        470
+      ],
+      "shape": {
+        "type": "rect",
+        "x": 300,
+        "y": 462,
+        "w": 34,
+        "h": 14
+      },
+      "level": "Floor 0 arrivals",
+      "description": "T3 arrivals hall with the stop of the T4 → T3 → T2 → T1 shuttle bus. No active check-in (passengers check in at T2).",
+      "confidence": "probable",
+      "sources": [
+        "src:aena-transport",
+        "src:pointsanalyst-mad"
+      ]
+    },
+    {
+      "id": "mad-metro-t123",
+      "name": "Metro L8 · Aeropuerto T1-T2-T3 (in T2, floor 1)",
+      "short": "M T2",
+      "kind": "station",
+      "terminal": "T2",
+      "side": "landside",
+      "zone": "n/a",
+      "matrix": false,
+      "anchor": [
+        255,
+        473
+      ],
+      "description": "Metro Line 8 station (airport supplement €3). Landside node only; the metro is not modelled as a transfer line.",
+      "confidence": "verified",
+      "sources": [
+        "src:aena-metro-rail",
+        "src:osm-mad"
+      ]
+    },
+    {
+      "id": "mad-t4-land",
+      "checkIn": { "serves": ["mad-t4-hjk", "mad-t4s-m", "mad-t4s-s"], "sources": ["src:fd-feed-terminals-2026-11-01"], "note": "T4 check-in for T4 and T4S departures (El Al: T4 desks 986–989, boarding at T4S S; Aena)" },
+      "name": "Terminal 4 · check-in and security (floor 2), arrivals (floor 0), public side",
+      "short": "T4",
+      "kind": "landside-hall",
+      "terminal": "T4",
+      "side": "landside",
+      "zone": "n/a",
+      "matrix": true,
+      "anchor": [
+        786,
+        98
+      ],
+      "shape": {
+        "type": "rect",
+        "x": 746,
+        "y": 86,
+        "w": 80,
+        "h": 24
+      },
+      "level": "Floor 2 check-in + central security, floor 0 arrivals (hall 10 exit), floor −1 rail",
+      "description": "Landside processor of T4 (Iberia/oneworld): check-in and the central security filter on floor 2 (fully reopened July 2026), arrivals on floor 0, shuttle buses at the floor-2 departures road and floor-0 arrivals road.",
+      "confidence": "verified",
+      "sources": [
+        "src:aena-connecting",
+        "src:aena-transport",
+        "src:aena-press-260730",
+        "src:yt-airportwalker-t4t1",
+        "src:osm-mad"
+      ]
+    },
+    {
+      "id": "mad-rail-t4",
+      "name": "Metro L8 + Cercanías · Aeropuerto T4 (floor −1)",
+      "short": "Rail",
+      "kind": "station",
+      "terminal": "T4",
+      "side": "landside",
+      "zone": "n/a",
+      "matrix": false,
+      "anchor": [
+        810,
+        78
+      ],
+      "description": "Metro L8 and Renfe Cercanías (C1/C10) stations under T4, floor −1. Landside node only.",
+      "confidence": "verified",
+      "sources": [
+        "src:aena-metro-rail",
+        "src:osm-mad"
+      ]
+    },
+    {
+      "id": "mad-t4-hjk",
+      "intraWalk": { "min": 1, "typical": 6.5, "max": 15.5, "basis": "derived", "note": "Derived (R-02): pier length ≈ 1200 m (1.2 km T4 pier (area description)); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Terminal 4 · gates H, J, K (Schengen)",
+      "short": "HJK",
+      "kind": "concourse",
+      "terminal": "T4",
+      "side": "airside",
+      "zone": "schengen",
+      "matrix": true,
+      "anchor": [
+        790,
+        144
+      ],
+      "shape": {
+        "type": "rect",
+        "x": 666,
+        "y": 128,
+        "w": 246,
+        "h": 32
+      },
+      "level": "Floor 1 boarding; APM platform floor −2",
+      "description": "The 1.2 km T4 boarding pier: H (south), J (centre), K (north). Domestic and Schengen. The APM to T4S leaves from floor −2 near the centre.",
+      "confidence": "verified",
+      "sources": [
+        "src:aena-connecting",
+        "src:aena-transport",
+        "src:pointsanalyst-mad",
+        "src:valetbarajas-t4",
+        "src:yt-mattdrones-tour",
+        "src:osm-mad"
+      ]
+    },
+    {
+      "id": "mad-t4-arr",
+      "name": "Terminal 4 · baggage reclaim hall 10 (floor 0, after border control)",
+      "short": "T4-B",
+      "kind": "transfer-hub",
+      "terminal": "T4",
+      "side": "airside",
+      "zone": "schengen",
+      "matrix": false,
+      "anchor": [
+        800,
+        118
+      ],
+      "level": "Floor 0",
+      "description": "Arrivals flow: passengers from H/J/K and from the APM (T4S arrivals) reach baggage hall 10; exit to the public arrivals hall, or follow the blue connection signs through security back up to H/J/K.",
+      "confidence": "verified",
+      "sources": [
+        "src:aena-connecting",
+        "src:yt-cienciudades-t4st4",
+        "src:yt-airportwalker-t4t1"
+      ]
+    },
+    {
+      "id": "mad-t4s-m",
+      "intraWalk": { "min": 1, "typical": 4.5, "max": 10.5, "basis": "derived", "note": "Derived (R-02): pier length ≈ 750 m (gate path × 5.3 m/unit); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "T4 Satellite · gates M (Schengen, floor 0)",
+      "short": "M",
+      "kind": "satellite",
+      "terminal": "T4S",
+      "side": "airside",
+      "zone": "schengen",
+      "matrix": true,
+      "anchor": [
+        858,
+        546
+      ],
+      "shape": {
+        "type": "rect",
+        "x": 760,
+        "y": 537,
+        "w": 198,
+        "h": 30
+      },
+      "level": "Floor 0",
+      "stack": {
+        "group": "mad-t4s",
+        "order": 0,
+        "label": "L0"
+      },
+      "description": "Schengen level of T4S (exceptional Schengen/domestic flights, mainly Iberia group / Air Nostrum). The APM platform (floor −2) opens into this zone; passport control towards S is on floor −1.",
+      "confidence": "probable",
+      "sources": [
+        "src:aena-connecting",
+        "src:aena-transport",
+        "src:iberia-mgates",
+        "src:yt-waystogo-t4s"
+      ],
+      "notes": "Same footprint as the S level (floor 1); drawn stacked."
+    },
+    {
+      "id": "mad-t4s-s",
+      "intraWalk": { "min": 1, "typical": 5, "max": 12, "basis": "derived", "note": "Derived (R-02): pier length ≈ 880 m (gate path × 5.3 m/unit); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "T4 Satellite · gates R, S, U (non-Schengen, floor 1)",
+      "short": "S",
+      "kind": "satellite",
+      "terminal": "T4S",
+      "side": "airside",
+      "zone": "non-schengen",
+      "matrix": true,
+      "arrivals": "segregated",
+      "anchor": [
+        858,
+        546
+      ],
+      "shape": {
+        "type": "rect",
+        "x": 760,
+        "y": 537,
+        "w": 198,
+        "h": 30
+      },
+      "level": "Floor 1 boarding; floor 2 arrivals corridor",
+      "stack": {
+        "group": "mad-t4s",
+        "order": 1,
+        "label": "L1"
+      },
+      "notes": "arrivals: segregated — arrivals use the floor-2 corridor and passport control (Aena; 2024 videos), departures board on floor 1.",
+      "description": "Non-Schengen level of T4S, signed S (Aena), with R and U letters at the south and north ends in OSM and guides. Reached from T4 by the APM and passport control on floor −1.",
+      "confidence": "verified",
+      "sources": [
+        "src:aena-connecting",
+        "src:aena-transport",
+        "src:valetbarajas-t4",
+        "src:pointsanalyst-mad",
+        "src:yt-mattdrones-tour",
+        "src:osm-mad"
+      ]
+    },
+    {
+      "id": "mad-t4s-arr",
+      "name": "T4 Satellite · arrivals after passport control (floor 2 → APM)",
+      "short": "S-arr",
+      "kind": "transfer-hub",
+      "terminal": "T4S",
+      "side": "airside",
+      "zone": "schengen",
+      "matrix": false,
+      "anchor": [
+        878,
+        588
+      ],
+      "level": "Floor 2 passport control, then down to the APM (floor −2)",
+      "description": "Arrivals flow of T4S: non-Schengen arrivals pass passport control on floor 2; M arrivals join directly. From here the APM to T4 (baggage hall 10), or security on floor 0 to the M gates.",
+      "confidence": "verified",
+      "sources": [
+        "src:aena-connecting",
+        "src:yt-cienciudades-t4st4",
+        "src:yt-mattdrones-tour"
+      ]
+    },
+    {
+      "id": "mad-t4s-remote",
+      "name": "T4 Satellite · international remote hall (floor 0, non-Schengen transit)",
+      "short": "S-X",
+      "kind": "transfer-hub",
+      "terminal": "T4S",
+      "side": "airside",
+      "zone": "non-schengen",
+      "matrix": false,
+      "anchor": [
+        936,
+        588
+      ],
+      "level": "Floor 0",
+      "description": "Stop of the on-request transfer bus from/to T1 hall 1; international connections security to the S gates (floor 1).",
+      "confidence": "probable",
+      "sources": [
+        "src:aena-connecting",
+        "src:aena-transport"
+      ]
+    }
+  ],
+  "gateGroups": [
+    {
+      "id": "mad-gates-a1-a14",
+      "area": "mad-t1-ab",
+      "label": "A1–A14",
+      "gates": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "A10",
+        "A11",
+        "A12",
+        "A13",
+        "A14"
+      ],
+      "path": [
+        [
+          68,
+          393
+        ],
+        [
+          109,
+          433
+        ]
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:osm-mad",
+        "src:aena-connecting"
+      ],
+      "notes": "Pier A (south dock). OSM gate nodes A1/A2 … A13/A14; non-Schengen per Aena (\"gates A or B in Terminal T1\"). A15+ not attested."
+    },
+    {
+      "id": "mad-gates-b18-b29",
+      "area": "mad-t1-ab",
+      "label": "B18–B29",
+      "gates": [
+        "B18",
+        "B19",
+        "B20",
+        "B21",
+        "B22",
+        "B23",
+        "B24",
+        "B25",
+        "B26",
+        "B27",
+        "B28",
+        "B29"
+      ],
+      "path": [
+        [
+          122,
+          490
+        ],
+        [
+          147,
+          510
+        ]
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:osm-mad",
+        "src:aena-connecting",
+        "src:yt-tripsflicks-t1"
+      ],
+      "notes": "OSM refs \"B18-B20\", \"B21-B25\", \"B26-B29\" are single nodes carrying ranges (possibly bus-gate lounges; not marked bus without evidence). B1–B17 not attested. Trips & Flicks (2026) caption \"Portas 30–32\" on the way to the B gates."
+    },
+    {
+      "id": "mad-gates-b30-b33",
+      "area": "mad-t1-ab",
+      "label": "B30–B33 (= C30–C33)",
+      "gates": [
+        "B30",
+        "B31",
+        "B32",
+        "B33"
+      ],
+      "zone": "non-schengen",
+      "path": [
+        [
+          158,
+          516
+        ],
+        [
+          166,
+          520
+        ]
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:osm-mad",
+        "src:yt-tripsflicks-t1"
+      ],
+      "notes": "Swing positions: OSM ref \"B/C30-B/C33\" — the same positions are numbered B (non-Schengen) or C (Schengen)."
+    },
+    {
+      "id": "mad-gates-c30-c33",
+      "area": "mad-t2-cd",
+      "label": "C30–C33 (= B30–B33)",
+      "gates": [
+        "C30",
+        "C31",
+        "C32",
+        "C33"
+      ],
+      "zone": "schengen",
+      "path": [
+        [
+          166,
+          520
+        ],
+        [
+          172,
+          521
+        ]
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:osm-mad"
+      ],
+      "notes": "Schengen numbering of the B/C swing positions."
+    },
+    {
+      "id": "mad-gates-c34-c50",
+      "area": "mad-t2-cd",
+      "label": "C34–C50",
+      "gates": [
+        "C34",
+        "C35",
+        "C36",
+        "C37",
+        "C38",
+        "C39",
+        "C40",
+        "C41",
+        "C42",
+        "C43",
+        "C44",
+        "C45",
+        "C46",
+        "C47",
+        "C48",
+        "C49",
+        "C50"
+      ],
+      "path": [
+        [
+          179,
+          522
+        ],
+        [
+          195,
+          523
+        ],
+        [
+          248,
+          532
+        ]
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:osm-mad",
+        "src:aena-connecting"
+      ],
+      "notes": "Aena names gates C34–C38 as the place of the Schengen → non-Schengen passport control towards A/B. OSM: C34-C38, C39-C42, C43/C44 … C49/C50."
+    },
+    {
+      "id": "mad-gates-d53-d66",
+      "area": "mad-t2-cd",
+      "label": "D53–D66",
+      "gates": [
+        "D53",
+        "D54",
+        "D55",
+        "D56",
+        "D57",
+        "D58",
+        "D59",
+        "D60",
+        "D61",
+        "D62",
+        "D63",
+        "D64",
+        "D65",
+        "D66"
+      ],
+      "path": [
+        [
+          272,
+          533
+        ],
+        [
+          292,
+          521
+        ],
+        [
+          315,
+          504
+        ]
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:osm-mad",
+        "src:aena-connecting"
+      ],
+      "notes": "OSM pairs D53/D54 … D65/D66. D51–D52 not attested."
+    },
+    {
+      "id": "mad-gates-e67-e83",
+      "area": "mad-t3-e",
+      "label": "E67–E83",
+      "gates": [
+        "E67",
+        "E68",
+        "E69",
+        "E70",
+        "E71",
+        "E72",
+        "E73",
+        "E74",
+        "E75",
+        "E76",
+        "E77",
+        "E78",
+        "E80",
+        "E81",
+        "E82",
+        "E83"
+      ],
+      "path": [
+        [
+          328,
+          487
+        ],
+        [
+          348,
+          487
+        ],
+        [
+          376,
+          489
+        ]
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:osm-mad",
+        "src:aena-categories"
+      ],
+      "notes": "OSM; E79 and E84–E89 not attested (Wikipedia gives A1–E89 as the T1–T3 range)."
+    },
+    {
+      "id": "mad-gates-h",
+      "area": "mad-t4-hjk",
+      "label": "H1–H37",
+      "gates": [
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H6",
+        "H7",
+        "H8",
+        "H9",
+        "H11",
+        "H13",
+        "H15",
+        "H16",
+        "H18",
+        "H19",
+        "H21",
+        "H22",
+        "H24",
+        "H25",
+        "H27",
+        "H28",
+        "H30",
+        "H31",
+        "H33",
+        "H35",
+        "H37"
+      ],
+      "path": [
+        [
+          668,
+          144
+        ],
+        [
+          731,
+          144
+        ]
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:osm-mad",
+        "src:aena-connecting"
+      ],
+      "notes": "OSM stand nodes carry two numbers (H1/H3 west side, H2/H4 east side …). H10, H12, H14, H17, H20, H23, H26, H29, H32, H34, H36 not attested."
+    },
+    {
+      "id": "mad-gates-j",
+      "area": "mad-t4-hjk",
+      "label": "J40–J59",
+      "gates": [
+        "J40",
+        "J41",
+        "J42",
+        "J43",
+        "J44",
+        "J45",
+        "J46",
+        "J47",
+        "J48",
+        "J49",
+        "J50",
+        "J51",
+        "J52",
+        "J53",
+        "J54",
+        "J55",
+        "J56",
+        "J57",
+        "J58",
+        "J59"
+      ],
+      "path": [
+        [
+          740,
+          144
+        ],
+        [
+          830,
+          144
+        ]
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:osm-mad",
+        "src:yt-mattdrones-tour",
+        "src:yt-waystogo-t4s"
+      ],
+      "notes": "Sign \"J50–J59 · K\" (Matt Drones 2024, 10:30); J54–J57 in Iberia’s animation."
+    },
+    {
+      "id": "mad-gates-k",
+      "area": "mad-t4-hjk",
+      "label": "K62–K98",
+      "gates": [
+        "K62",
+        "K64",
+        "K66",
+        "K68",
+        "K69",
+        "K71",
+        "K72",
+        "K73",
+        "K74",
+        "K75",
+        "K77",
+        "K79",
+        "K80",
+        "K81",
+        "K82",
+        "K83",
+        "K84",
+        "K85",
+        "K86",
+        "K87",
+        "K88",
+        "K89",
+        "K90",
+        "K91",
+        "K92",
+        "K93",
+        "K94",
+        "K95",
+        "K96",
+        "K98"
+      ],
+      "path": [
+        [
+          844,
+          144
+        ],
+        [
+          910,
+          144
+        ]
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:osm-mad",
+        "src:aena-connecting"
+      ],
+      "notes": "OSM; K92–K98 at the north head of the pier. K60, K61, K63, K65, K67, K70, K76, K78, K97 not attested."
+    },
+    {
+      "id": "mad-gates-m",
+      "area": "mad-t4s-m",
+      "label": "M22–M51",
+      "gates": [
+        "M22",
+        "M28",
+        "M51"
+      ],
+      "path": [
+        [
+          790,
+          546
+        ],
+        [
+          930,
+          546
+        ]
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:iberia-mgates",
+        "src:yt-waystogo-t4s"
+      ],
+      "notes": "M22 and M51 are the range ends quoted from Iberia (search excerpt; iberia.com 403); M28 seen in Iberia’s animation. Other M numbers not attested; OSM has no M gates."
+    },
+    {
+      "id": "mad-gates-r",
+      "area": "mad-t4s-s",
+      "label": "R1–R18",
+      "gates": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6",
+        "R7",
+        "R8",
+        "R12",
+        "R14",
+        "R16",
+        "R18"
+      ],
+      "path": [
+        [
+          761,
+          546
+        ],
+        [
+          798,
+          546
+        ]
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:osm-mad",
+        "src:valetbarajas-t4",
+        "src:wiki-mad-en"
+      ],
+      "notes": "OSM stand nodes at the south end of T4S. Aena signs this level \"S\" and lists transfer desks at \"gates S15–S16\": whether the south-end gates are signed R or S today is an open question."
+    },
+    {
+      "id": "mad-gates-s",
+      "area": "mad-t4s-s",
+      "label": "S20–S51",
+      "gates": [
+        "S20",
+        "S22",
+        "S23",
+        "S25",
+        "S26",
+        "S28",
+        "S29",
+        "S31",
+        "S33",
+        "S35",
+        "S37",
+        "S39",
+        "S40",
+        "S42",
+        "S43",
+        "S45",
+        "S46",
+        "S48",
+        "S49",
+        "S51"
+      ],
+      "path": [
+        [
+          820,
+          546
+        ],
+        [
+          895,
+          546
+        ]
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:osm-mad",
+        "src:aena-categories",
+        "src:yt-mattdrones-tour",
+        "src:yt-waystogo-t4s"
+      ],
+      "notes": "S46 and S37 seen from the arrivals corridor (2024); S20 in Iberia’s animation; S39–S40 Iberia desk (Aena)."
+    },
+    {
+      "id": "mad-gates-s15-s16",
+      "area": "mad-t4s-s",
+      "label": "S15–S16",
+      "gates": [
+        "S15",
+        "S16"
+      ],
+      "path": [
+        [
+          792,
+          546
+        ],
+        [
+          796,
+          546
+        ]
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:aena-categories"
+      ],
+      "notes": "Aena: Iberia transfer desk \"Terminal T4 Satellite. Floor 1. Boarding gates S15-S16\". Placement inferred (OSM shows R12–R18 there)."
+    },
+    {
+      "id": "mad-gates-u",
+      "area": "mad-t4s-s",
+      "label": "U55–U74",
+      "gates": [
+        "U55",
+        "U57",
+        "U58",
+        "U59",
+        "U60",
+        "U61",
+        "U62",
+        "U63",
+        "U64",
+        "U65",
+        "U67",
+        "U68",
+        "U69",
+        "U70",
+        "U72",
+        "U74"
+      ],
+      "path": [
+        [
+          908,
+          546
+        ],
+        [
+          957,
+          546
+        ]
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:osm-mad",
+        "src:valetbarajas-t4",
+        "src:wiki-mad-en"
+      ],
+      "notes": "North end of T4S (OSM). Non-Schengen per guides (\"S, R or U … passport control\")."
+    }
+  ],
+  "stops": [
+    {
+      "id": "s:mad-bus1-t1",
+      "name": "Free bus T1-T2-T4 · Terminal 1, floor 1 (departures road)",
+      "area": "mad-t1-land",
+      "side": "landside",
+      "anchor": [
+        148,
+        452
+      ],
+      "accessMinutes": {
+        "min": 1,
+        "typical": 2,
+        "max": 4,
+        "basis": "assumed"
+      },
+      "where": "Outside T1 departures, floor 1",
+      "confidence": "probable",
+      "sources": [
+        "src:aena-transport",
+        "src:aena-connecting",
+        "src:aena-categories"
+      ]
+    },
+    {
+      "id": "s:mad-bus1-t2",
+      "name": "Free bus T1-T2-T4 · Terminal 2, floor 2 (departures)",
+      "area": "mad-t2-land",
+      "side": "landside",
+      "anchor": [
+        262,
+        478
+      ],
+      "accessMinutes": {
+        "min": 1,
+        "typical": 2,
+        "max": 4,
+        "basis": "assumed"
+      },
+      "where": "Pavement outside T2 departures, floor 2",
+      "confidence": "probable",
+      "sources": [
+        "src:aena-transport",
+        "src:aena-connecting",
+        "src:aena-categories"
+      ]
+    },
+    {
+      "id": "s:mad-bus1-t4",
+      "name": "Free bus T1-T2-T4 · Terminal 4, floor 2 (departures road, last stop)",
+      "area": "mad-t4-land",
+      "side": "landside",
+      "anchor": [
+        770,
+        80
+      ],
+      "accessMinutes": {
+        "min": 1,
+        "typical": 2,
+        "max": 4,
+        "basis": "assumed"
+      },
+      "where": "T4 departures road, floor 2, next to check-in",
+      "confidence": "probable",
+      "sources": [
+        "src:aena-transport",
+        "src:aena-connecting"
+      ]
+    },
+    {
+      "id": "s:mad-bus2-t4",
+      "name": "Free bus T4-T3-T2-T1 · Terminal 4, floor 0 (arrivals road)",
+      "area": "mad-t4-land",
+      "side": "landside",
+      "anchor": [
+        800,
+        80
+      ],
+      "accessMinutes": {
+        "min": 2,
+        "typical": 3,
+        "max": 6,
+        "basis": "observed"
+      },
+      "where": "Outside the T4 arrivals hall, floor 0",
+      "confidence": "verified",
+      "sources": [
+        "src:aena-transport",
+        "src:aena-categories",
+        "src:yt-airportwalker-t4t1"
+      ],
+      "notes": "Video _mup5fBPb9U: baggage hall → arrivals hall → road crossing → bus bay."
+    },
+    {
+      "id": "s:mad-bus2-t3",
+      "name": "Free bus T4-T3-T2-T1 · Terminal 3, floor 0 (arrivals)",
+      "area": "mad-t3-land",
+      "side": "landside",
+      "anchor": [
+        305,
+        458
+      ],
+      "accessMinutes": {
+        "min": 1,
+        "typical": 2,
+        "max": 4,
+        "basis": "assumed"
+      },
+      "confidence": "probable",
+      "sources": [
+        "src:aena-transport",
+        "src:aena-categories"
+      ]
+    },
+    {
+      "id": "s:mad-bus2-t2",
+      "name": "Free bus T4-T3-T2-T1 · Terminal 2, floor 0 (arrivals)",
+      "area": "mad-t2-land",
+      "side": "landside",
+      "anchor": [
+        250,
+        480
+      ],
+      "accessMinutes": {
+        "min": 1,
+        "typical": 2,
+        "max": 4,
+        "basis": "assumed"
+      },
+      "confidence": "probable",
+      "sources": [
+        "src:aena-transport",
+        "src:aena-categories",
+        "src:aena-connecting"
+      ]
+    },
+    {
+      "id": "s:mad-bus2-t1",
+      "name": "Free bus T4-T3-T2-T1 · Terminal 1, floor 1 (last stop)",
+      "area": "mad-t1-land",
+      "side": "landside",
+      "anchor": [
+        140,
+        450
+      ],
+      "accessMinutes": {
+        "min": 1,
+        "typical": 2,
+        "max": 4,
+        "basis": "assumed"
+      },
+      "confidence": "verified",
+      "sources": [
+        "src:aena-transport",
+        "src:aena-connecting",
+        "src:yt-airportwalker-t4t1"
+      ],
+      "notes": "Aena: 4th stop after T3, T2 and the T1-T2-T3 low-cost car park (South Dock)."
+    },
+    {
+      "id": "s:mad-apm-t4",
+      "name": "APM · Terminal 4 (floor −2, gates H J K)",
+      "area": "mad-t4-hjk",
+      "side": "airside",
+      "anchor": [
+        786,
+        124
+      ],
+      "accessMinutes": {
+        "min": 2,
+        "typical": 4,
+        "max": 10,
+        "basis": "derived"
+      },
+      "where": "Floor −2 below the boarding level, centre of the pier; signed T4S / gates M S",
+      "confidence": "verified",
+      "sources": [
+        "src:aena-transport",
+        "src:aena-connecting",
+        "src:valetbarajas-t4",
+        "src:osm-mad"
+      ],
+      "notes": "OSM: APM station \"T4\" at 40.4913, −3.5915, under the middle of the 1.17 km boarding building (H1 40.4862 … K98 40.4967): pier centre ≈ 100 m plus 3 levels; ends ≈ 520–550 m ≈ 8–10 min."
+    },
+    {
+      "id": "s:mad-apm-t4s",
+      "name": "APM · T4 Satellite (floor −2, gates M and S)",
+      "area": "mad-t4s-m",
+      "side": "airside",
+      "anchor": [
+        858,
+        556
+      ],
+      "accessMinutes": {
+        "min": 1,
+        "typical": 3,
+        "max": 8,
+        "basis": "derived"
+      },
+      "where": "Floor −2; up to floor 0 for M, to floor −1 passport control for S",
+      "confidence": "verified",
+      "sources": [
+        "src:aena-transport",
+        "src:aena-connecting",
+        "src:osm-mad"
+      ],
+      "notes": "OSM: APM station \"T4S\" at 40.4945, −3.5672, at the centre of the 0.96 km satellite (R1 40.4902 … U72 40.4988): ends ≈ 430–480 m."
+    },
+    {
+      "id": "s:mad-apm-t4s-arr",
+      "name": "APM · T4 Satellite, arrivals side (floor −2)",
+      "area": "mad-t4s-arr",
+      "side": "airside",
+      "anchor": [
+        866,
+        572
+      ],
+      "accessMinutes": {
+        "min": 1,
+        "typical": 2,
+        "max": 4,
+        "basis": "observed"
+      },
+      "confidence": "verified",
+      "sources": [
+        "src:aena-connecting",
+        "src:yt-cienciudades-t4st4",
+        "src:yt-mattdrones-tour"
+      ],
+      "notes": "After passport control: escalators down to the platform; display \"Próximo tren en 2 min\" (CienCiudades 2024)."
+    },
+    {
+      "id": "s:mad-apm-t4-arr",
+      "name": "APM · Terminal 4, arrivals side (floor −2)",
+      "area": "mad-t4-arr",
+      "side": "airside",
+      "anchor": [
+        796,
+        116
+      ],
+      "accessMinutes": {
+        "min": 2,
+        "typical": 3,
+        "max": 5,
+        "basis": "observed"
+      },
+      "where": "Escalators up signed \"Baggage and exit / Equipajes y salida\" and \"Gates / Puertas H J K\"",
+      "confidence": "verified",
+      "sources": [
+        "src:aena-connecting",
+        "src:yt-cienciudades-t4st4",
+        "src:yt-mattdrones-tour"
+      ]
+    },
+    {
+      "id": "s:mad-tbus-t1",
+      "name": "Transfer bus (boarding card) · T1 baggage reclaim hall 1 (floor 0)",
+      "area": "mad-t1-hall1",
+      "side": "airside",
+      "anchor": [
+        150,
+        512
+      ],
+      "accessMinutes": {
+        "min": 1,
+        "typical": 2,
+        "max": 5,
+        "basis": "assumed"
+      },
+      "where": "Ask the Green Jackets information desk; the bus is called on request",
+      "confidence": "verified",
+      "sources": [
+        "src:aena-transport",
+        "src:aena-connecting",
+        "src:aena-categories",
+        "src:yt-brandon-bus"
+      ]
+    },
+    {
+      "id": "s:mad-tbus-t4s",
+      "name": "Transfer bus (boarding card) · T4 Satellite (floor 0)",
+      "area": "mad-t4s-remote",
+      "side": "airside",
+      "anchor": [
+        930,
+        576
+      ],
+      "accessMinutes": {
+        "min": 1,
+        "typical": 2,
+        "max": 5,
+        "basis": "assumed"
+      },
+      "where": "International remote hall, floor 0",
+      "confidence": "verified",
+      "sources": [
+        "src:aena-transport",
+        "src:aena-connecting",
+        "src:yt-brandon-bus"
+      ]
+    }
+  ],
+  "lines": [
+    {
+      "id": "l:mad-bus-t1-t4",
+      "name": "Free transit bus T1 → T2 → T4 (departure levels)",
+      "mode": "shuttle-bus",
+      "operator": "Aena",
+      "colour": "#2e8b3e",
+      "access": "public",
+      "side": "landside",
+      "stops": [
+        "s:mad-bus1-t1",
+        "s:mad-bus1-t2",
+        "s:mad-bus1-t4"
+      ],
+      "direction": "one-way",
+      "rideMin": [
+        2,
+        8
+      ],
+      "service": [
+        {
+          "hours": "06:00–22:00",
+          "windows": [
+            {
+              "from": "06:00",
+              "until": "22:00"
+            }
+          ],
+          "headwayMin": {
+            "min": 5,
+            "max": 5
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 2.5,
+            "max": 5,
+            "basis": "derived",
+            "note": "half the published 5-min headway"
+          },
+          "sources": [
+            "src:aena-transport"
+          ],
+          "notes": "Runs 24 h, every day including public holidays; every 5 min 06:00–22:00 (Aena transport page)."
+        },
+        {
+          "hours": "22:00–06:00",
+          "windows": [
+            {
+              "from": "22:00",
+              "until": "06:00"
+            }
+          ],
+          "headwayMin": {
+            "min": 20,
+            "max": 20
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 10,
+            "max": 20,
+            "basis": "derived",
+            "note": "half the published 20-min headway"
+          },
+          "sources": [
+            "src:aena-transport"
+          ],
+          "notes": "Night: every 20 min 22:00–06:00 (Aena transport page)."
+        }
+      ],
+      "eligibility": "Everyone, free (landside; no boarding card needed). Arriving at T4 you must pass T4 security again (floor 2).",
+      "path": [
+        [
+          148,
+          452
+        ],
+        [
+          200,
+          470
+        ],
+        [
+          262,
+          478
+        ],
+        [
+          420,
+          380
+        ],
+        [
+          600,
+          200
+        ],
+        [
+          700,
+          110
+        ],
+        [
+          770,
+          80
+        ]
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:aena-transport",
+        "src:aena-categories",
+        "src:aena-connecting",
+        "src:pointsanalyst-mad"
+      ],
+      "notes": "Published: T1→T2 2 min, T1→T4 10 min, T2→T4 8 min (Aena categories page); \"The route from Terminal T1 does not stop at Terminal T3\". Guides 7–10 min (Points Analyst). Stops as signed on the Aena transport page: \"Terminal T1. Floor 1\", \"Terminal T2. Floor 2. Departures\", \"Terminal T4. Floor 2. Departures\".",
+      "ride": [
+        {
+          "min": 2,
+          "typical": 2,
+          "max": 4,
+          "basis": "published",
+          "note": "Aena: T1 departures → T2 departures 2 min; max allows kerb traffic"
+        },
+        {
+          "min": 7,
+          "typical": 8,
+          "max": 12,
+          "basis": "published",
+          "note": "Aena: T2 → T4 departures 8 min (T1 → T4 10 min); guides 7–10 min; max allows road traffic"
+        }
+      ]
+    },
+    {
+      "id": "l:mad-bus-t4-t1",
+      "name": "Free transit bus T4 → T3 → T2 → T1 (arrival levels)",
+      "mode": "shuttle-bus",
+      "operator": "Aena",
+      "colour": "#6abf4b",
+      "access": "public",
+      "side": "landside",
+      "stops": [
+        "s:mad-bus2-t4",
+        "s:mad-bus2-t3",
+        "s:mad-bus2-t2",
+        "s:mad-bus2-t1"
+      ],
+      "direction": "one-way",
+      "rideMin": [
+        8,
+        2,
+        5
+      ],
+      "service": [
+        {
+          "hours": "06:00–22:00",
+          "windows": [
+            {
+              "from": "06:00",
+              "until": "22:00"
+            }
+          ],
+          "headwayMin": {
+            "min": 5,
+            "max": 5
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 2.5,
+            "max": 5,
+            "basis": "derived",
+            "note": "half the published 5-min headway"
+          },
+          "sources": [
+            "src:aena-transport"
+          ],
+          "notes": "Runs 24 h, every day including public holidays; every 5 min 06:00–22:00 (Aena transport page). Also stops at the T1-T2-T3 low-cost car park (South Dock) between T2 and T1 (not modelled as a stop)."
+        },
+        {
+          "hours": "22:00–06:00",
+          "windows": [
+            {
+              "from": "22:00",
+              "until": "06:00"
+            }
+          ],
+          "headwayMin": {
+            "min": 20,
+            "max": 20
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 10,
+            "max": 20,
+            "basis": "derived",
+            "note": "half the published 20-min headway"
+          },
+          "sources": [
+            "src:aena-transport"
+          ],
+          "notes": "Night: every 20 min 22:00–06:00 (Aena transport page)."
+        }
+      ],
+      "eligibility": "Everyone, free (landside). From T1 the onward Schengen/non-Schengen gates need security (and passport control for A/B).",
+      "path": [
+        [
+          800,
+          80
+        ],
+        [
+          700,
+          120
+        ],
+        [
+          600,
+          220
+        ],
+        [
+          420,
+          400
+        ],
+        [
+          305,
+          458
+        ],
+        [
+          250,
+          480
+        ],
+        [
+          190,
+          468
+        ],
+        [
+          140,
+          450
+        ]
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:aena-transport",
+        "src:aena-categories",
+        "src:aena-connecting",
+        "src:yt-airportwalker-t4t1"
+      ],
+      "notes": "Published: T4→T3 8 min, →T2 10 min, →South Dock car park 12 min, →T1 15 min (Aena categories page); T2 arrivals → T1 5 min. Airport Walker 2025: 10–15 min T4→T1.",
+      "ride": [
+        {
+          "min": 7,
+          "typical": 8,
+          "max": 12,
+          "basis": "published",
+          "note": "Aena: T4 arrivals → T3 arrivals 8 min"
+        },
+        {
+          "min": 2,
+          "typical": 2,
+          "max": 4,
+          "basis": "published",
+          "note": "Aena: T4 → T2 arrivals 10 min, i.e. 2 min after T3"
+        },
+        {
+          "min": 4,
+          "typical": 5,
+          "max": 8,
+          "basis": "published",
+          "note": "Aena: T2 arrivals → T1 departures 5 min, via the South Dock car-park stop (T4 → T1 15 min in total)"
+        }
+      ]
+    },
+    {
+      "id": "l:mad-apm",
+      "name": "APM T4 ↔ T4S (automated people mover, departures/transfer side)",
+      "mode": "people-mover",
+      "operator": "Aena (Bombardier/Alstom Innovia APM 100)",
+      "colour": "#e3a200",
+      "access": "airside",
+      "side": "airside",
+      "stops": [
+        "s:mad-apm-t4",
+        "s:mad-apm-t4s"
+      ],
+      "direction": "both",
+      "rideMin": [
+        4
+      ],
+      "service": [
+        {
+          "hours": "00:00–24:00",
+          "windows": [
+            {
+              "from": "00:00",
+              "until": "24:00"
+            }
+          ],
+          "headwayMin": {
+            "min": 4,
+            "max": 12
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 3,
+            "max": 12,
+            "basis": "derived",
+            "note": "between half the 4-min peak and half the 12-min off-peak headway; displays \"next train in 2 min\" seen (2024 video)"
+          },
+          "sources": [
+            "src:aena-transport"
+          ],
+          "notes": "\"Uninterrupted, 365 days a year\"; every 4 min at rush hour up to 12 min off-peak (Aena transport page). Iberia excerpt: about every 2 min at busy times."
+        }
+      ],
+      "eligibility": "Passengers already airside in T4 (after security) or in the T4S Schengen zone; the only link between T4 and T4S.",
+      "path": [
+        [
+          786,
+          124
+        ],
+        [
+          786,
+          133
+        ],
+        [
+          787,
+          224
+        ],
+        [
+          798,
+          237
+        ],
+        [
+          831,
+          250
+        ],
+        [
+          854,
+          268
+        ],
+        [
+          856,
+          285
+        ],
+        [
+          858,
+          556
+        ]
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:aena-transport",
+        "src:aena-categories",
+        "src:aena-connecting",
+        "src:wiki-mad-en",
+        "src:yt-cienciudades-t4st4",
+        "src:osm-mad",
+        "src:yt-fuentes-apm",
+        "src:iberia-connections"
+      ],
+      "notes": "Underground, 2.32 km (OSM way 133882076, layer −2) under runway 18R/36L; stations \"T4\" (40.4913, −3.5915) and \"T4S\" (40.4945, −3.5672), both floor −2. Ride measured 3.6 min moving / ≈4 min door to door from an uncut front-window video (2014; line unchanged since 2006), consistent with an edited 2016 ride (≈205 s) and Iberia (\"just over 4 minutes\"). Aena publishes both \"approximately 5 minutes\" (transport page, platform signage \"Journey time approximately 5 minutes · One stop only\") and 3 min (connections page). The T4S → T4 direction for departing (not arriving) passengers is inferred from Aena listing both stops by gate letters.",
+      "ride": [
+        {
+          "min": 3,
+          "typical": 4,
+          "max": 5,
+          "basis": "measured",
+          "note": "Uncut front-window ride (lgXWMLM2JbM): moving ≈ 3.6 min (t≈8–≈222 s, ± 2 s); door-to-door ≈ 4 min. Aena gives \"approximately 5\" (transport page, platform sign) and 3 min (connections page); Iberia excerpt \"just over 4 minutes\"."
+        }
+      ]
+    },
+    {
+      "id": "l:mad-apm-arr",
+      "name": "APM T4S → T4 (arrivals side, to baggage hall 10)",
+      "mode": "people-mover",
+      "operator": "Aena",
+      "colour": "#b98400",
+      "access": "airside",
+      "side": "airside",
+      "stops": [
+        "s:mad-apm-t4s-arr",
+        "s:mad-apm-t4-arr"
+      ],
+      "direction": "one-way",
+      "rideMin": [
+        4
+      ],
+      "service": [
+        {
+          "hours": "00:00–24:00",
+          "windows": [
+            {
+              "from": "00:00",
+              "until": "24:00"
+            }
+          ],
+          "headwayMin": {
+            "min": 4,
+            "max": 12
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 3,
+            "max": 12,
+            "basis": "derived",
+            "note": "as l:mad-apm; one observed platform wait ≈ 85 s (Matt Drones 2024, t≈450–535 s)"
+          },
+          "sources": [
+            "src:aena-transport"
+          ],
+          "notes": "Same trains as the APM; separate arrivals flow."
+        }
+      ],
+      "eligibility": "Arriving T4S passengers after border control (S arrivals) or directly (M arrivals).",
+      "path": [
+        [
+          866,
+          572
+        ],
+        [
+          862,
+          300
+        ],
+        [
+          834,
+          254
+        ],
+        [
+          800,
+          236
+        ],
+        [
+          796,
+          116
+        ]
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:aena-connecting",
+        "src:yt-cienciudades-t4st4",
+        "src:yt-mattdrones-tour",
+        "src:yt-fuentes-apm"
+      ],
+      "notes": "Modelled as a separate one-way line because arriving passengers end in the arrivals flow at T4 (baggage hall 10 / connection security), not in the departure gates. Whether the arrivals and departures flows use separate platforms is not established (open question).",
+      "ride": [
+        {
+          "min": 3,
+          "typical": 4,
+          "max": 5,
+          "basis": "measured",
+          "note": "Same trains and tunnel as l:mad-apm (ride measured T4 → T4S; the reverse runs on the same 2.3 km guideway)"
+        }
+      ]
+    },
+    {
+      "id": "l:mad-tbus-t1-t4s",
+      "name": "Free transit bus with boarding card T1 hall 1 ↔ T4S (non-Schengen connections)",
+      "mode": "bus",
+      "operator": "Aena",
+      "colour": "#7b3fa0",
+      "access": "transfer",
+      "side": "airside",
+      "stops": [
+        "s:mad-tbus-t1",
+        "s:mad-tbus-t4s"
+      ],
+      "direction": "both",
+      "rideMin": [
+        12
+      ],
+      "service": [
+        {
+          "hours": "00:00–24:00 (on request)",
+          "windows": [
+            {
+              "from": "00:00",
+              "until": "24:00"
+            }
+          ],
+          "headwayMin": {
+            "min": 5,
+            "max": 30
+          },
+          "headwayBasis": "assumed",
+          "waitMin": {
+            "min": 5,
+            "typical": 15,
+            "max": 30,
+            "basis": "assumed",
+            "note": "no frequency published: \"upon request\" (Aena), \"frequency upon demand\" (Iberia excerpt)"
+          },
+          "sources": [
+            "src:aena-transport",
+            "src:iberia-connections"
+          ],
+          "notes": "Aena transport page: \"24 hours\" then \"Upon request\"; Iberia excerpt: 24 hours, frequency upon demand; stops T1 level 0 hall 1 and T4S level 0. Called by the Green Jackets desk (Aena connecting page). Wait assumed."
+        }
+      ],
+      "eligibility": "Connecting passengers with an onward boarding card and baggage checked to destination, non-Schengen ↔ non-Schengen (T1 A/B ↔ T4S S), without passing passport control.",
+      "path": [
+        [
+          150,
+          512
+        ],
+        [
+          220,
+          560
+        ],
+        [
+          420,
+          590
+        ],
+        [
+          650,
+          600
+        ],
+        [
+          860,
+          600
+        ],
+        [
+          930,
+          576
+        ]
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:aena-transport",
+        "src:aena-connecting",
+        "src:aena-categories",
+        "src:yt-brandon-bus",
+        "src:yt-waystogo-t1t4s",
+        "src:iberia-connections"
+      ],
+      "notes": "Airside route across the T1/T2 aprons, a service road/highway section and a road tunnel to the T4S apron (2022 video). Ride ≈ 12 min observed (≥ 11.5 min of continuous driving on screen; boarding and alighting not shown). A third-party guide (airport.online) claims a 2–4 min frequency without source; not used.",
+      "ride": [
+        {
+          "min": 10,
+          "typical": 12,
+          "max": 15,
+          "basis": "observed",
+          "note": "BrandonJohnson10K 2022: bus moving on screen from t≈0 to ≈700 s (T1/T2 aprons → service road → highway → tunnel → T4S apron), no cut seen but door-close/door-open not shown: ≥ 11.5 min"
+        }
+      ]
+    }
+  ],
+  "walks": [
+    {
+      "id": "w:mad-t1land-t2land",
+      "from": "mad-t1-land",
+      "to": "mad-t2-land",
+      "bidirectional": true,
+      "access": "public",
+      "minutes": {
+        "min": 3,
+        "typical": 4,
+        "max": 8,
+        "basis": "published"
+      },
+      "practical": "practical",
+      "via": "Public halls, departures level",
+      "confidence": "verified",
+      "sources": [
+        "src:aena-categories",
+        "src:pointsanalyst-mad",
+        "src:aena-connecting"
+      ],
+      "notes": "Aena: T1 departures → T2 departures walking 4 min."
+    },
+    {
+      "id": "w:mad-t2land-t3land",
+      "from": "mad-t2-land",
+      "to": "mad-t3-land",
+      "bidirectional": true,
+      "access": "public",
+      "minutes": {
+        "min": 3,
+        "typical": 4,
+        "max": 7,
+        "basis": "derived"
+      },
+      "distanceM": 300,
+      "practical": "practical",
+      "via": "Public halls T2 → T3",
+      "confidence": "probable",
+      "sources": [
+        "src:aena-categories",
+        "src:osm-mad"
+      ],
+      "notes": "Aena: \"You can also walk between terminals T1, T2 and T3\". Distance from OSM ≈ 300 m at 4.5 km/h."
+    },
+    {
+      "id": "w:mad-metro-t2land",
+      "from": "mad-metro-t123",
+      "to": "mad-t2-land",
+      "bidirectional": true,
+      "access": "public",
+      "minutes": {
+        "min": 2,
+        "typical": 3,
+        "max": 5,
+        "basis": "derived",
+        "note": "OSM: Metro L8 station Aeropuerto T1-T2-T3 (40.4679, −3.5718) ≈ 200 m from the T2 building centre, plus one level (floor 1)"
+      },
+      "practical": "practical",
+      "via": "Metro station is in T2, floor 1",
+      "confidence": "verified",
+      "sources": [
+        "src:aena-metro-rail",
+        "src:osm-mad"
+      ],
+      "distanceM": 200
+    },
+    {
+      "id": "w:mad-rail-t4land",
+      "from": "mad-rail-t4",
+      "to": "mad-t4-land",
+      "bidirectional": true,
+      "access": "public",
+      "minutes": {
+        "min": 2,
+        "typical": 3,
+        "max": 6,
+        "basis": "derived",
+        "note": "OSM: Metro/Cercanías Aeropuerto T4 (40.4923–40.4924, −3.5928/−3.5936) under the T4 processor, floor −1; ≈ 100–200 m plus 1–3 levels to floors 0/2"
+      },
+      "practical": "practical",
+      "via": "Floor −1 to floor 0 / 2",
+      "confidence": "verified",
+      "sources": [
+        "src:aena-metro-rail",
+        "src:osm-mad"
+      ],
+      "distanceM": 150
+    },
+    {
+      "id": "w:mad-t1land-ab",
+      "from": "mad-t1-land",
+      "to": "mad-t1-ab",
+      "bidirectional": false,
+      "access": "public",
+      "minutes": {
+        "min": 3,
+        "typical": 5,
+        "max": 10,
+        "basis": "derived"
+      },
+      "distanceM": 350,
+      "controls": [
+        {
+          "kind": "security",
+          "minutes": {
+            "min": 5,
+            "typical": 15,
+            "max": 40,
+            "basis": "assumed"
+          },
+          "note": "T1 security checkpoint, floor 1"
+        },
+        {
+          "kind": "passport",
+          "minutes": {
+            "min": 5,
+            "typical": 15,
+            "max": 40,
+            "basis": "assumed"
+          },
+          "note": "Exit passport control \"to the right of the security checkpoint\" (Aena)"
+        }
+      ],
+      "practical": "practical",
+      "via": "Check-in floor 1 → security → passport control → international boarding level",
+      "confidence": "verified",
+      "sources": [
+        "src:aena-connecting",
+        "src:pointsanalyst-mad",
+        "src:yt-morenazocu-t2t1"
+      ],
+      "notes": "One-way: leaving A/B is the arrivals flow (connections hallway / passport control into Spain)."
+    },
+    {
+      "id": "w:mad-t1land-cd",
+      "from": "mad-t1-land",
+      "to": "mad-t2-cd",
+      "bidirectional": false,
+      "access": "public",
+      "minutes": {
+        "min": 3,
+        "typical": 6,
+        "max": 10,
+        "basis": "derived"
+      },
+      "distanceM": 450,
+      "controls": [
+        {
+          "kind": "security",
+          "minutes": {
+            "min": 5,
+            "typical": 15,
+            "max": 40,
+            "basis": "assumed"
+          },
+          "note": "T1 security checkpoint, floor 1 (Schengen side, towards C34–C38)"
+        }
+      ],
+      "practical": "practical",
+      "via": "T1 security → Schengen C gates",
+      "confidence": "probable",
+      "sources": [
+        "src:aena-connecting"
+      ],
+      "notes": "Inferred from Aena: after T1 security, non-Schengen passengers turn right to passport control and the Schengen → non-Schengen passport control lies near C34–C38, so the T1 checkpoint opens into the Schengen zone. Ryanair/easyJet check in at T1 floor 1."
+    },
+    {
+      "id": "w:mad-t2land-cd",
+      "from": "mad-t2-land",
+      "to": "mad-t2-cd",
+      "bidirectional": true,
+      "access": "public",
+      "minutes": {
+        "min": 2,
+        "typical": 3,
+        "max": 6,
+        "basis": "derived"
+      },
+      "controls": [
+        {
+          "kind": "security",
+          "minutes": {
+            "min": 5,
+            "typical": 15,
+            "max": 40,
+            "basis": "assumed"
+          },
+          "note": "T2 security checkpoint, floor 1 (one floor below check-in)"
+        }
+      ],
+      "reverseControls": [],
+      "practical": "practical",
+      "via": "Check-in floor 2 → security floor 1 → boarding area",
+      "confidence": "verified",
+      "sources": [
+        "src:aena-connecting",
+        "src:pointsanalyst-mad",
+        "src:osm-mad"
+      ],
+      "notes": "Reverse = Schengen arrivals exit through the T2 baggage halls (no control)."
+    },
+    {
+      "id": "w:mad-cd-e",
+      "from": "mad-t2-cd",
+      "to": "mad-t3-e",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": {
+        "min": 4,
+        "typical": 7,
+        "max": 12,
+        "basis": "derived"
+      },
+      "distanceM": 560,
+      "practical": "practical",
+      "via": "Schengen boarding level, D gates → E gates",
+      "confidence": "verified",
+      "sources": [
+        "src:pointsanalyst-mad",
+        "src:aena-connecting",
+        "src:osm-mad"
+      ],
+      "notes": "Same airside zone (Points Analyst: T3 boarding areas share the T2 airside zone; Aena lists C, D, E together as Schengen gates). Distance C/D centre → E centre ≈ 560 m (OSM)."
+    },
+    {
+      "id": "w:mad-e-t3land",
+      "from": "mad-t3-e",
+      "to": "mad-t3-land",
+      "bidirectional": false,
+      "access": "airside",
+      "minutes": {
+        "min": 2,
+        "typical": 4,
+        "max": 7,
+        "basis": "derived",
+        "note": "OSM: E gates (E67 40.4712 … E81 40.4733) vs T3 building centre (40.4715, −3.5709): ≈ 50–250 m plus one level down to the floor-0 reclaim"
+      },
+      "flow": "arrivals",
+      "practical": "practical",
+      "via": "Baggage reclaim, T3 floor 0 arrivals",
+      "confidence": "probable",
+      "sources": [
+        "src:aena-transport",
+        "src:pointsanalyst-mad"
+      ],
+      "distanceM": 150
+    },
+    {
+      "id": "w:mad-cd-ab",
+      "from": "mad-t2-cd",
+      "to": "mad-t1-ab",
+      "bidirectional": false,
+      "access": "airside",
+      "minutes": {
+        "min": 5,
+        "typical": 10,
+        "max": 18,
+        "basis": "derived"
+      },
+      "distanceM": 820,
+      "controls": [
+        {
+          "kind": "passport",
+          "minutes": {
+            "min": 5,
+            "typical": 15,
+            "max": 40,
+            "basis": "assumed"
+          },
+          "note": "Exit passport control near gates C34–C38 (Aena)"
+        }
+      ],
+      "practical": "practical",
+      "via": "C gates → passport control near C34–C38 → B and A gates",
+      "confidence": "probable",
+      "sources": [
+        "src:aena-connecting",
+        "src:osm-mad"
+      ],
+      "notes": "Aena: Schengen arrival at C/D/E → departure at A/B \"passing through passport control in Terminal T1, which is located near gates C34 to C38\". The reverse (A/B → C/D) is the arrivals flow via baggage hall 2."
+    },
+    {
+      "id": "w:mad-ab-conn",
+      "from": "mad-t1-ab",
+      "to": "mad-t1-conn",
+      "bidirectional": false,
+      "access": "airside",
+      "minutes": {
+        "min": 3,
+        "typical": 5,
+        "max": 10,
+        "basis": "observed"
+      },
+      "flow": "arrivals",
+      "practical": "practical",
+      "via": "Arrivals corridor following the blue connection signs (\"Bienvenido a España\" escalator)",
+      "confidence": "verified",
+      "sources": [
+        "src:aena-connecting",
+        "src:yt-tripsflicks-t1"
+      ]
+    },
+    {
+      "id": "w:mad-conn-ab",
+      "from": "mad-t1-conn",
+      "to": "mad-t1-ab",
+      "bidirectional": false,
+      "access": "transfer",
+      "minutes": {
+        "min": 2,
+        "typical": 4,
+        "max": 8,
+        "basis": "assumed"
+      },
+      "controls": [
+        {
+          "kind": "transfer-security",
+          "minutes": {
+            "min": 5,
+            "typical": 10,
+            "max": 30,
+            "basis": "assumed"
+          },
+          "note": "Security checkpoint for international connections to gates A and B"
+        }
+      ],
+      "practical": "practical",
+      "via": "Connections hallway → up to the international boarding level",
+      "confidence": "verified",
+      "sources": [
+        "src:aena-connecting",
+        "src:yt-tripsflicks-t1"
+      ],
+      "notes": "Trips & Flicks (2026): \"no immigration needed for connections\" — transfer without passport control."
+    },
+    {
+      "id": "w:mad-conn-hall1",
+      "from": "mad-t1-conn",
+      "to": "mad-t1-hall1",
+      "bidirectional": false,
+      "access": "transfer",
+      "minutes": {
+        "min": 2,
+        "typical": 3,
+        "max": 6,
+        "basis": "assumed"
+      },
+      "practical": "practical",
+      "via": "Down to baggage reclaim hall 1 without passing passport control; Green Jackets desk calls the bus",
+      "confidence": "probable",
+      "sources": [
+        "src:aena-connecting",
+        "src:aena-transport"
+      ]
+    },
+    {
+      "id": "w:mad-hall1-ab",
+      "from": "mad-t1-hall1",
+      "to": "mad-t1-ab",
+      "bidirectional": false,
+      "access": "transfer",
+      "minutes": {
+        "min": 2,
+        "typical": 4,
+        "max": 8,
+        "basis": "assumed"
+      },
+      "controls": [
+        {
+          "kind": "transfer-security",
+          "minutes": {
+            "min": 5,
+            "typical": 10,
+            "max": 30,
+            "basis": "assumed"
+          },
+          "note": "Security checkpoint for international connections to gates A and B (connections hallway, one level up)"
+        }
+      ],
+      "practical": "practical",
+      "via": "Hall 1 → up one level to the connections hallway → security → international boarding level",
+      "confidence": "probable",
+      "sources": [
+        "src:aena-connecting"
+      ]
+    },
+    {
+      "id": "w:mad-conn-cd",
+      "from": "mad-t1-conn",
+      "to": "mad-t2-cd",
+      "bidirectional": false,
+      "access": "transfer",
+      "minutes": {
+        "min": 6,
+        "typical": 10,
+        "max": 15,
+        "basis": "assumed"
+      },
+      "controls": [
+        {
+          "kind": "passport",
+          "minutes": {
+            "min": 5,
+            "typical": 20,
+            "max": 60,
+            "basis": "assumed"
+          },
+          "note": "Passport control in baggage claim hall 2"
+        },
+        {
+          "kind": "transfer-security",
+          "minutes": {
+            "min": 5,
+            "typical": 10,
+            "max": 30,
+            "basis": "assumed"
+          },
+          "note": "Security checkpoint at the far end of baggage claim hall 2"
+        }
+      ],
+      "practical": "practical",
+      "via": "Down to baggage claim hall 2 → passport control → through the hall → security → up to the boarding level (blue connection signs)",
+      "confidence": "probable",
+      "sources": [
+        "src:aena-connecting"
+      ]
+    },
+    {
+      "id": "w:mad-conn-t1land",
+      "from": "mad-t1-conn",
+      "to": "mad-t1-land",
+      "bidirectional": false,
+      "access": "airside",
+      "minutes": {
+        "min": 3,
+        "typical": 6,
+        "max": 12,
+        "basis": "assumed"
+      },
+      "controls": [
+        {
+          "kind": "passport",
+          "minutes": {
+            "min": 5,
+            "typical": 20,
+            "max": 60,
+            "basis": "assumed"
+          },
+          "note": "Entry passport control in the baggage claim hall"
+        },
+        {
+          "kind": "customs",
+          "minutes": {
+            "min": 0,
+            "typical": 1,
+            "max": 5,
+            "basis": "assumed"
+          },
+          "note": "Customs exit after baggage reclaim (cabin baggage is customs-controlled at the first international EU airport); planning value, excludes waiting at the belt"
+        }
+      ],
+      "practical": "practical",
+      "via": "Baggage claim hall → arrivals hall, floor 0",
+      "confidence": "verified",
+      "sources": [
+        "src:aena-connecting",
+        "src:yt-tripsflicks-t1",
+        "src:eu-2015-2447-art39"
+      ]
+    },
+    {
+      "id": "w:mad-t4land-hjk",
+      "from": "mad-t4-land",
+      "to": "mad-t4-hjk",
+      "bidirectional": false,
+      "access": "public",
+      "minutes": {
+        "min": 2,
+        "typical": 4,
+        "max": 8,
+        "basis": "derived"
+      },
+      "controls": [
+        {
+          "kind": "security",
+          "minutes": {
+            "min": 5,
+            "typical": 15,
+            "max": 40,
+            "basis": "assumed"
+          },
+          "note": "T4 central security filter, floor 2 (renewed; fully open since late July 2026)"
+        }
+      ],
+      "practical": "practical",
+      "via": "Check-in floor 2 → central security → down one level to the boarding area",
+      "status": [
+        {
+          "state": "active",
+          "from": "2026-07-30",
+          "note": "New central security filter fully open (6,500 m², 31 EDS-CB lanes + 5 Fast Track; liquids and electronics stay in the bag). Phased works over the previous 36 months.",
+          "confidence": "probable",
+          "sources": [
+            "src:aena-press-260730"
+          ]
+        }
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:aena-connecting",
+        "src:aena-press-260730",
+        "src:valetbarajas-t4"
+      ]
+    },
+    {
+      "id": "w:mad-hjk-t4arr",
+      "from": "mad-t4-hjk",
+      "to": "mad-t4-arr",
+      "bidirectional": false,
+      "access": "airside",
+      "minutes": {
+        "min": 3,
+        "typical": 6,
+        "max": 12,
+        "basis": "derived",
+        "note": "OSM: gate line of the T4 boarding building at lon −3.5902/−3.5915 (H1 40.4862 … K98 40.4967, 1.17 km); processor and rail stations at lon ≈ −3.593: pier centre → floor-0 reclaim ≈ 300 m + levels ≈ 5–6 min; from H1 or K98 ≈ 850 m ≈ 12 min"
+      },
+      "flow": "arrivals",
+      "practical": "practical",
+      "via": "Arrivals level down to baggage claim hall 10 (floor 0)",
+      "confidence": "verified",
+      "sources": [
+        "src:aena-connecting",
+        "src:yt-airportwalker-t4t1"
+      ],
+      "distanceM": 300
+    },
+    {
+      "id": "w:mad-t4arr-t4land",
+      "from": "mad-t4-arr",
+      "to": "mad-t4-land",
+      "bidirectional": false,
+      "access": "airside",
+      "minutes": {
+        "min": 2,
+        "typical": 3,
+        "max": 6,
+        "basis": "observed"
+      },
+      "controls": [{ "kind": "customs", "minutes": { "min": 0, "typical": 1, "max": 5, "basis": "assumed" }, "note": "Customs exit of baggage hall 10 (audit 2026-11-02; every arrival leaving landside passes it, intra-EU arrivals by the blue channel)" }],
+      "practical": "practical",
+      "via": "Baggage hall 10 → arrivals hall (floor 0)",
+      "confidence": "verified",
+      "sources": [
+        "src:aena-connecting",
+        "src:yt-airportwalker-t4t1",
+        "src:yt-cienciudades-t4st4"
+      ]
+    },
+    {
+      "id": "w:mad-t4arr-hjk",
+      "from": "mad-t4-arr",
+      "to": "mad-t4-hjk",
+      "bidirectional": false,
+      "access": "transfer",
+      "minutes": {
+        "min": 3,
+        "typical": 5,
+        "max": 11,
+        "basis": "derived",
+        "note": "Same geometry as w:mad-hjk-t4arr (≈ 300 m to the pier centre, up two levels); connection security allowance on the control"
+      },
+      "controls": [
+        {
+          "kind": "transfer-security",
+          "minutes": {
+            "min": 5,
+            "typical": 10,
+            "max": 30,
+            "basis": "assumed"
+          },
+          "note": "Connection security from baggage hall 10 (blue connection signs)"
+        }
+      ],
+      "practical": "practical",
+      "via": "Blue connection signs → security → up to floor 1 (departures)",
+      "confidence": "probable",
+      "sources": [
+        "src:aena-connecting",
+        "src:yt-cienciudades-t4st4",
+        "src:yt-waystogo-t4s"
+      ],
+      "notes": "Aena (S → H/J/K): \"go up to baggage claim hall 10 … follow the blue connection signs, go through the security checkpoint, go up to level 1\". Platform signage at T4 shows \"Gates / Puertas H J K\" next to \"Baggage and exit\"; whether every flow passes this security is an open question.",
+      "distanceM": 300
+    },
+    {
+      "id": "w:mad-m-s",
+      "from": "mad-t4s-m",
+      "to": "mad-t4s-s",
+      "bidirectional": false,
+      "access": "airside",
+      "minutes": {
+        "min": 2,
+        "typical": 4,
+        "max": 10,
+        "basis": "derived"
+      },
+      "controls": [
+        {
+          "kind": "passport",
+          "minutes": {
+            "min": 5,
+            "typical": 15,
+            "max": 40,
+            "basis": "assumed"
+          },
+          "note": "Exit passport control, T4S floor −1"
+        }
+      ],
+      "practical": "practical",
+      "via": "Floor −2/0 → passport control floor −1 → S gates floor 1",
+      "confidence": "verified",
+      "sources": [
+        "src:aena-connecting",
+        "src:valetbarajas-t4",
+        "src:yt-waystogo-t4s"
+      ],
+      "notes": "Points Analyst: T4S departure passport control can take 20–30 min at peak. The walk to the far S/U gates adds up to ~480 m."
+    },
+    {
+      "id": "w:mad-s-arr",
+      "from": "mad-t4s-s",
+      "to": "mad-t4s-arr",
+      "bidirectional": false,
+      "access": "airside",
+      "minutes": {
+        "min": 3,
+        "typical": 4,
+        "max": 8,
+        "basis": "measured",
+        "note": "Matt Drones 2024 t≈180–405 s: floor-2 arrivals corridor from beyond S46 past S37 (moving walkways) → escalators → passport hall queue, ≈ 3.75 min (± 10 s), same companions in every frame, no cut seen; started near the far end, so the pier centre is shorter and the U/R ends longer"
+      },
+      "flow": "arrivals",
+      "controls": [
+        {
+          "kind": "passport",
+          "minutes": {
+            "min": 5,
+            "typical": 20,
+            "max": 60,
+            "basis": "assumed"
+          },
+          "note": "Entry passport control, T4S floor 2 (arrivals)"
+        }
+      ],
+      "practical": "practical",
+      "via": "Floor-2 arrivals corridor with moving walkways (past S46, S37) → escalators → passport control",
+      "confidence": "verified",
+      "sources": [
+        "src:aena-connecting",
+        "src:yt-mattdrones-tour",
+        "src:yt-cienciudades-t4st4"
+      ],
+      "notes": "Points Analyst (2026) places this passport control in T4 — contradicted by Aena and two videos."
+    },
+    {
+      "id": "w:mad-m-arr",
+      "from": "mad-t4s-m",
+      "to": "mad-t4s-arr",
+      "bidirectional": false,
+      "access": "airside",
+      "minutes": {
+        "min": 2,
+        "typical": 3,
+        "max": 6,
+        "basis": "assumed"
+      },
+      "flow": "arrivals",
+      "practical": "practical",
+      "via": "M arrivals straight to the APM (no control)",
+      "confidence": "probable",
+      "sources": [
+        "src:aena-connecting"
+      ]
+    },
+    {
+      "id": "w:mad-arr-m",
+      "from": "mad-t4s-arr",
+      "to": "mad-t4s-m",
+      "bidirectional": false,
+      "access": "transfer",
+      "minutes": {
+        "min": 2,
+        "typical": 4,
+        "max": 8,
+        "basis": "assumed"
+      },
+      "controls": [
+        {
+          "kind": "transfer-security",
+          "minutes": {
+            "min": 5,
+            "typical": 10,
+            "max": 30,
+            "basis": "assumed"
+          },
+          "note": "Security checkpoint on floor 0 before the M gates"
+        }
+      ],
+      "practical": "practical",
+      "via": "From floor-2 passport control down to floor 0 → security → M gates",
+      "confidence": "verified",
+      "sources": [
+        "src:aena-connecting",
+        "src:yt-waystogo-t4s"
+      ],
+      "notes": "Aena (S → M): \"pass through passport control on level 2 of T4 Satellite, go down to level 0 to go through the security checkpoint\". Iberia animation: passport control → security → M28."
+    },
+    {
+      "id": "w:mad-s-remote",
+      "from": "mad-t4s-s",
+      "to": "mad-t4s-remote",
+      "bidirectional": false,
+      "access": "transfer",
+      "minutes": {
+        "min": 3,
+        "typical": 5,
+        "max": 10,
+        "basis": "assumed"
+      },
+      "flow": "arrivals",
+      "practical": "practical",
+      "via": "Blue signs \"International connection passengers\" → down to floor 0 (international remote hall), no checkpoint",
+      "confidence": "probable",
+      "sources": [
+        "src:aena-connecting"
+      ]
+    },
+    {
+      "id": "w:mad-remote-s",
+      "from": "mad-t4s-remote",
+      "to": "mad-t4s-s",
+      "bidirectional": false,
+      "access": "transfer",
+      "minutes": {
+        "min": 2,
+        "typical": 4,
+        "max": 8,
+        "basis": "assumed"
+      },
+      "controls": [
+        {
+          "kind": "transfer-security",
+          "minutes": {
+            "min": 5,
+            "typical": 10,
+            "max": 30,
+            "basis": "assumed"
+          },
+          "note": "International connections security (to the right of the hall, T4S floor 0/1)"
+        }
+      ],
+      "practical": "practical",
+      "via": "Security → up to floor 1 (boarding)",
+      "confidence": "verified",
+      "sources": [
+        "src:aena-connecting",
+        "src:yt-waystogo-t4s"
+      ],
+      "notes": "Iberia animation: \"Conexión puertas T4S · Gates S\" security, then S20."
+    }
+  ],
+  "rules": [
+    {
+      "id": "r:mad-zones",
+      "text": "Border zones: T1 gates A and B are non-Schengen; gates C and D (T1–T2) and E (T3) are Schengen/domestic; T4 gates H, J and K are Schengen/domestic; T4 Satellite has the non-Schengen S gates (with R and U letters at the ends) on floor 1 and a few Schengen M gates on floor 0 (exceptional Iberia / Iberia Express / Air Nostrum Schengen flights).",
+      "confidence": "verified",
+      "sources": [
+        "src:aena-connecting",
+        "src:pointsanalyst-mad",
+        "src:valetbarajas-t4",
+        "src:iberia-mgates",
+        "src:wiki-mad-en"
+      ]
+    },
+    {
+      "id": "r:mad-two-complexes",
+      "text": "Two separate hubs: T1–T2–T3 (walkable, landside and airside) and T4–T4S (linked only by the APM), about 4 km apart. Between them, passengers go landside on the free 24-h shuttle bus and pass security again — except non-Schengen ↔ non-Schengen connections with a boarding card and bags checked through, which use the on-request airside bus between T1 baggage hall 1 and T4S floor 0.",
+      "confidence": "verified",
+      "sources": [
+        "src:aena-connecting",
+        "src:aena-transport",
+        "src:aena-categories",
+        "src:yt-brandon-bus",
+        "src:pointsanalyst-mad"
+      ]
+    },
+    {
+      "id": "r:mad-t4s-passport",
+      "text": "T4S passport control: departing passengers to S gates pass it on floor −1 after the APM; arriving S passengers pass it on floor 2 before the APM to T4 (baggage hall 10). Non-Schengen ↔ non-Schengen transfers in T4S use the international connections security without passport control.",
+      "confidence": "verified",
+      "sources": [
+        "src:aena-connecting",
+        "src:yt-cienciudades-t4st4",
+        "src:yt-mattdrones-tour",
+        "src:valetbarajas-t4"
+      ]
+    },
+    {
+      "id": "r:mad-mct",
+      "text": "No minimum connection time is published on the Aena pages read (they refer to airline information and, for PRM passengers, the Barrier Free service). Iberia (search excerpt of its connection-times page, not fetched: 403) gives 45 min within one building and 55 min between T4 and T4S for Iberia/Air Nostrum connections, 75–90 min when other airlines are involved. Guides quote 45–60 min for a T1/T2 ↔ T4 transfer with re-screening (Points Analyst, 2026). Not used for routing.",
+      "confidence": "inferred",
+      "sources": [
+        "src:aena-connecting",
+        "src:pointsanalyst-mad",
+        "src:iberia-connections"
+      ]
+    },
+    {
+      "id": "r:mad-expansion",
+      "text": "Expansion programme (DORA 2027–2031, > €4 bn): T4 central security filter fully reopened late July 2026; tenders approved July 2026 for the T4S south pier (+36 m, 3 contact positions, 24 months) and the T4 north apron (remote stands, 35 months); later a new processor and renewed boarding areas in T1–T3. No passenger-area closure dated for autumn 2026 was found. Metro L5 extension to T1-T2-T3 is under construction (OSM).",
+      "confidence": "probable",
+      "sources": [
+        "src:aena-press-260730",
+        "src:osm-mad"
+      ]
+    },
+    {
+      "id": "r:mad-baggage",
+      "text": "Baggage (Aena connecting page, re-read 2026-11-01): Aena gives separate instructions for passengers who do NOT have to collect baggage or check in (bags checked through) and those who do. With bags checked through, only T1 A/B ↔ T4S S (non-Schengen ↔ non-Schengen) stays airside, on the transfer bus called by the Green Jackets desk; every other T1/T2/T3 ↔ T4/T4S connection leaves the transit zone (\"access Spanish territory\") and re-enters through security. With bags to collect (separate tickets, bags not through), the passenger reclaims them (Ryanair and easyJet arrivals in hall 5), checks in again (Ryanair and easyJet departures at T1 level 1, others at T2 level 2, T1 level 1 or T4 level 2) and passes security and passport control again, even for S → S in T4S (APM to hall 10 and back). EU law: hold baggage from a non-EU airport transferred onto an intra-EU flight is customs-controlled at the last international EU airport of arrival, unless the Member State applies the control at MAD for an onward flight to another Spanish international airport (not settled by any source read); cabin baggage at MAD. The model has no reclaim or check-in step: self-transfer times exclude the belt wait and bag drop.",
+      "confidence": "probable",
+      "sources": [
+        "src:aena-connecting",
+        "src:eu-2015-2447-art39"
+      ]
+    }
+  ],
+  "openQuestions": [
+    {
+      "id": "q:mad-m-gates",
+      "question": "Which M gate numbers exist in T4S today (M22–M51 per an Iberia document), and which stands they share with the S/R/U gates?",
+      "impact": "Only M22, M28 and M51 are listed; a flight at another M gate maps to the M area only by its letter.",
+      "howToResolve": "Owner capture of Iberia’s \"More on T4\" page (iberia.com is 403 to automated fetches) or a dated photo of the T4S floor-0 gate signs."
+    },
+    {
+      "id": "q:mad-r-vs-s",
+      "question": "Are the south-end T4S gates signed R (OSM, Wikipedia, guides) or S (Aena lists Iberia desks at \"gates S15–S16\")? Are the U gates still signed U?",
+      "impact": "Gate lookup for R1–R18 / S15–S16 / U55–U74; zone is non-Schengen either way.",
+      "howToResolve": "Photo of the T4S floor-1 directory or the Aena interactive map (owner capture)."
+    },
+    {
+      "id": "q:mad-apm-flows",
+      "question": "Does the APM keep arriving and departing passengers on separate platforms/cars, and can a departing passenger in T4S (M zone) ride back to T4 H/J/K?",
+      "impact": "Routes M → H/J/K use the departures side in reverse (inferred); arrivals are routed through baggage hall 10 and connection security.",
+      "howToResolve": "Walkthrough video of the T4 −2 level showing both platforms, or Aena confirmation."
+    },
+    {
+      "id": "q:mad-t4-arr-security",
+      "question": "Do S-arrival passengers connecting to H/J/K always pass the connection security at baggage hall 10 (Aena text), or can they go up directly from the APM (\"Gates / Puertas H J K\" sign)? A 2024 walking tour (Matt Drones, t≈540–560 s) goes from the T4 APM platform up the escalators straight into the T4 duty-free and J gates within ~20 s of footage; the APM ride is cut, so a security checkpoint may have been edited out.",
+      "impact": "One transfer-security allowance on S → H/J/K routes.",
+      "howToResolve": "Dated video of the T4 APM arrival platform following the \"Gates H J K\" signs."
+    },
+    {
+      "id": "q:mad-t1-sides",
+      "question": "Exact layout of the T1 checkpoint: does T1 security open into the Schengen C zone (inferred) and where precisely is the passport control \"to the right\"? Are there B gates B1–B17 and A15+?",
+      "impact": "T1 landside → C/D route is inferred; gate coverage of T1 is partial.",
+      "howToResolve": "Aena terminal map (owner capture) or a 2025–2026 T1 departures walkthrough with readable signs."
+    },
+    {
+      "id": "q:mad-tbus-time",
+      "question": "Typical wait of the on-request transfer bus T1 hall 1 ↔ T4S (no frequency published; \"upon request\" at Aena, \"frequency upon demand\" at Iberia), and its door-to-door ride (≈ 12 min observed, 2022). Aena: the Green Jackets information desk in the T1 baggage hall calls the internal shuttle (re-read 2026-11-01). Iberia search excerpts (pages not fetched, 403) say passengers can use the interphones if a shuttle wait exceeds 10 minutes, but it is unclear which shuttle (T4 connection centre or T1/T2/T3 arrivals stops) the sentence refers to, so the assumed wait is not changed.",
+      "impact": "Wait (15 min) is assumed; ride (10 min) from a 2022 video.",
+      "howToResolve": "Recent first-hand report or Aena/Iberia transfer guidance."
+    },
+    {
+      "id": "q:mad-bus-gates",
+      "question": "Which T1–T4S gates are bus (remote) gates? OSM range nodes (B18–B20, B21–B25, B26–B29) and a 2025 video (stairs to an apron bus in T1) suggest bus boarding, but no gate number is attested.",
+      "impact": "No gate is marked bus: true.",
+      "howToResolve": "Gate-level photos or the Aena map."
+    },
+    {
+      "id": "q:mad-night-security",
+      "question": "Are the T1, T2 and T4 security checkpoints (and the T1 connections security) open all night? Aena publishes 24-h bus and APM service but no checkpoint hours. Update 2026-11-01: a commercial guide (Valet Barajas, Apr 2026) says the T4 checkpoints are open 24 h with reduced capacity 01:00–04:00; nothing found for T1, T2 or the T1 connections security; the Aena security page lists police and weapons-office hours only.",
+      "impact": "Night (00:00–05:00) routes landside → airside and T1/T2 ↔ T4 transfers assume the checkpoints are open; if a checkpoint closes, those cells become unroutable at night.",
+      "howToResolve": "Aena terminal information or an owner/field check at night; add Walk.hours to the security walks."
+    },
+    {
+      "id": "q:mad-domestic-bags",
+      "question": "Non-Schengen arrival at MAD connecting on one ticket to a Spanish domestic flight (including the Canary Islands, outside the EU VAT area): are checked bags customs-controlled at MAD (EU 2015/2447 Art. 39(2) option for the same Member State) or at the destination?",
+      "impact": "If the control is at MAD, those passengers reclaim bags at MAD and the airside or \"no bags\" route modelled today is wrong for them.",
+      "howToResolve": "Iberia connection pages (iberia.com / help.iberia.com HTTP 403: owner capture) or Agencia Tributaria / Aena guidance."
+    },
+    {
+      "id": "q:mad-reclaim-time",
+      "question": "How long do baggage reclaim and re-check-in take for a self-transfer at MAD (T1 halls 1/2/5, T4 hall 10)?",
+      "impact": "Self-transfer routes leave through the arrivals exit and re-enter through security, but the belt wait and bag drop are not modelled (no schema field), so these routes are too short.",
+      "howToResolve": "Schema: a reclaim/bag-drop step or profile flag; data: Aena or uncut video timing."
+    }
+  ],
+  "sources": [
+    { "id": "src:aena-airline-elal", "title": "Aena Madrid-Barajas airline page: EL AL (T4 floor 2 desks 986–989; connections: T4S floor 1, boarding area S)", "url": "https://www.aena.es/en/madrid-barajas-adolfo-suarez/airlines/el-al.html", "publisher": "Aena", "kind": "official", "group": "aena", "accessed": "2026-11-01" },
+    { "id": "src:iberia-time-limit", "title": "Iberia: check-in time limits (\"additional mandatory control\" for Tel Aviv)", "url": "https://www.iberia.com/il/time-limit/", "publisher": "Iberia", "kind": "airline", "group": "iberia", "accessed": "2026-11-01", "notes": "Blocked for automated access (not fetched by us). Owner capture 2026-11-02 of the official page: T4 check-in closes 45 min before short/medium-haul flights; T4 Satellite international flights incl. Tel Aviv 55 min; additional mandatory security controls at the boarding gate for flights to Israel; be at the gate at least 90 min before departure." },
+    { "id": "src:dhs-tsa-2017-enhanced", "title": "DHS / TSA: enhanced security measures for all commercial flights to the United States (June 2017; >280 last-point-of-departure airports, security directives and emergency amendments)", "url": "https://www.dhs.gov/", "publisher": "U.S. Department of Homeland Security", "kind": "official", "group": "dhs", "accessed": "2026-11-01", "published": "2017-06", "notes": "Read through the DHS 2017 testimony by the research pass of 2026-11-01; exact page URL not recorded. Procedures themselves are not public." },
+    { "id": "src:fd-feed-terminals-2026-11-01", "title": "CDG Navigator flight-data server: terminal / gate strings observed in the collected feed (2026-10-30 – 2026-11-01), read-only GET /fd-api/stats/distribution and /fd-api/flights", "url": "http://127.0.0.1:8790/fd-api/stats/summary", "publisher": "CDG Navigator (local flight-data collection, AeroDataBox-derived)", "kind": "other", "group": "fd-feed", "accessed": "2026-11-01", "notes": "Cross-tabulated by the other airport's Schengen zone and by gate letter; counts in docs/research/AIRPORT_DATA_REMEDIATION.md. Local research data, not for display." },
+    {
+      "id": "src:aena-connecting",
+      "title": "Connecting flights (route-by-route transfer instructions)",
+      "url": "https://www.aena.es/en/adolfo-suarez-madrid-barajas/airport-services/connecting-flights.html",
+      "publisher": "Aena (aena.es)",
+      "kind": "official",
+      "group": "aena",
+      "accessed": "2026-10-31",
+      "notes": "Read 2026-10-31 (plain fetch, public page, robots allows). Gate letters per terminal, passport-control and security locations, levels, APM, shuttle-bus stops for every terminal pair, with and without bags. No date on page (© 2026)."
+    },
+    {
+      "id": "src:aena-transport",
+      "title": "Transport between terminals",
+      "url": "https://www.aena.es/en/adolfo-suarez-madrid-barajas/airport-services/transport-between-terminals.html",
+      "publisher": "Aena (aena.es)",
+      "kind": "official",
+      "group": "aena",
+      "accessed": "2026-10-31",
+      "notes": "Free transit bus T1-T2-T4 and T4-T3-T2-T1 (24 h; every 5 min 06:00–22:00, every 20 min 22:00–06:00; stops and floors), free transit bus with boarding card T1 hall 1 ↔ T4S floor 0 (24 h, on request), car-park microbuses, APM T4–T4S (uninterrupted, ~5 min trip, every 4–12 min, floor −2)."
+    },
+    {
+      "id": "src:aena-categories",
+      "title": "Connecting flights (categories and terminals): time between terminals, bus and APM stops, airline transfer desks",
+      "url": "https://www.aena.es/en/adolfo-suarez-madrid-barajas/airport-services/categories-and-terminals/connecting-flights.html",
+      "publisher": "Aena (aena.es)",
+      "kind": "official",
+      "group": "aena",
+      "accessed": "2026-10-31",
+      "notes": "Published times: T1→T2 bus 2 min / walk 4 min; T1→T4 bus 10 min (route from T1 does not stop at T3); T2 dep→T4 8 min; T4 arr→T3 8, →T2 10, →low-cost car park 12, →T1 15 min; APM 3 min. Transfer desks: T1 floor −1 connections hallway; T3 floor 1 boarding area E; T4S floor 1 gates S15–S16 and S39–S40; T4 floor 1 areas H and K."
+    },
+    {
+      "id": "src:aena-metro-rail",
+      "title": "Getting there: underground and trains",
+      "url": "https://www.aena.es/en/adolfo-suarez-madrid-barajas/getting-there/underground.html",
+      "publisher": "Aena (aena.es)",
+      "kind": "official",
+      "group": "aena",
+      "accessed": "2026-10-31",
+      "notes": "Metro L8 stations: \"Airport T1-T2-T3\", Terminal 2 floor 1; \"Airport T4\", T4 floor −1. Cercanías (trains page): Airport T4, T4 floor −1."
+    },
+    {
+      "id": "src:aena-press-260730",
+      "title": "Aena avanza en la ampliación del Aeropuerto AS Madrid-Barajas con la apertura total del nuevo filtro de seguridad y con proyectos en T4 y T4S (press release, 30 Jul 2026)",
+      "url": "https://www.aena.es/doc/detalleprensa/260730-mad-licitacion-obras-ampliacion-dique-sur-t4s-y-plataforma-t4-y-apertura-filtro-seguridad-t4.pdf",
+      "publisher": "Aena (press office)",
+      "kind": "official-pdf",
+      "group": "aena",
+      "accessed": "2026-10-31",
+      "published": "2026-07-30",
+      "notes": "T4 central security filter on floor +2 fully open (phased works, 36 months; 6,500 m², 31 + 5 EDS-CB lanes, liquids/electronics stay in bags). Tenders: T4S south pier +36 m with 3 contact positions (24 months), T4 north apron remote stands (35 months). DORA 2027–2031: T4/T4S expansion, new processor and renewed boarding in T123."
+    },
+    {
+      "id": "src:osm-mad",
+      "title": "OpenStreetMap: aeroway=gate|terminal|runway, railway=* around LEMD (Overpass, 2026-10-31 12:59Z snapshot)",
+      "url": "https://www.openstreetmap.org/#map=14/40.478/-3.578",
+      "publisher": "OpenStreetMap contributors",
+      "kind": "osm",
+      "group": "osm",
+      "accessed": "2026-10-31",
+      "notes": "© OpenStreetMap contributors, ODbL. 102 gate nodes (refs such as \"H1/H3\", \"B21-B25\", \"B/C30-B/C33\"), terminal outlines T1–T4S, APM monorail way 133882076 (2.3 km, layer −2), Metro L8 / Cercanías stations, Metro L5 extension to T1-T2-T3 tagged construction. Placement source; one group."
+    },
+    {
+      "id": "src:wiki-mad-en",
+      "title": "Madrid–Barajas Airport (English Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Adolfo_Su%C3%A1rez_Madrid%E2%80%93Barajas_Airport",
+      "publisher": "Wikipedia",
+      "kind": "wiki",
+      "group": "wikipedia",
+      "accessed": "2026-10-31",
+      "notes": "Low weight. \"Gate numbers are continuous in terminals 1, 2 and 3 (A1 to E89) ... terminal 4 (H, J, K and M, R, S, U in satellite building)\" (uncited); APM: 2 stations, 2.7 km, underground, Bombardier; 2019 €750 m T123 plan."
+    },
+    {
+      "id": "src:pointsanalyst-mad",
+      "title": "Madrid-Barajas Airport (MAD) guide",
+      "url": "https://www.thepointsanalyst.com/madrid-barajas-airport-mad/",
+      "publisher": "The Points Analyst",
+      "kind": "guide",
+      "group": "pointsanalyst",
+      "accessed": "2026-10-31",
+      "published": "2026-03-26",
+      "notes": "Dated 26 Mar 2026. T1 non-Schengen for most carriers; T2/T3 Schengen and domestic, T3 has no active check-in; T4 H/J/K Schengen; T4S M and S, non-Schengen; bus every 5 / 20 min, 7–10 min ride; T1–T3 walk ~10–15 min end to end. Contradicts Aena on where T4S arrivals pass passport control (says T4) — not used for that."
+    },
+    {
+      "id": "src:valetbarajas-t4",
+      "title": "Madrid airport Iberia Terminal T4 / T4S guide",
+      "url": "https://valetbarajas.com/madrid-airport-iberia-terminal-t4-t4s-guide/",
+      "publisher": "Valet Barajas (parking operator blog)",
+      "kind": "guide",
+      "group": "valetbarajas",
+      "accessed": "2026-10-31",
+      "published": "2026-04-06",
+      "notes": "Dated 6 Apr 2026. H/J/K domestic + Schengen; gates S, R, U in T4S need passport control, which is at T4S after the APM; APM platform level −2; T4 security behind check-in on level 2."
+    },
+    {
+      "id": "src:iberia-mgates",
+      "title": "Iberia: More on T4 / connection time (M gates M22–M51)",
+      "url": "https://www.iberia.com/es/vuela-con-iberia/conexiones-madrid/",
+      "publisher": "Iberia",
+      "kind": "airline",
+      "group": "iberia",
+      "accessed": "2026-10-31",
+      "notes": "iberia.com returns HTTP 403 to automated fetches (not circumvented). Used only via web-search excerpts of Iberia pages / an Iberia document copy: T4S handles a very small number of Schengen operations at M gates, numbered M22 to M51; the vast majority of domestic/Schengen flights use T4. Owner capture wanted."
+    },
+    {
+      "id": "src:yt-tripsflicks-t1",
+      "title": "Desembarque em MAD + conexão internacional: como NÃO passar pela imigração (YouTube GHcGcbNh0WY)",
+      "url": "https://www.youtube.com/watch?v=GHcGcbNh0WY",
+      "publisher": "Trips & Flicks",
+      "kind": "video",
+      "group": "tripsflicks",
+      "accessed": "2026-10-31",
+      "published": "2026-01-10",
+      "notes": "Non-Schengen arrival at T1, international transfer without immigration via the connections corridor (blue signs), T1 non-Schengen shopping hall, B gates. Storyboard 320×180 every 5 s, read in full."
+    },
+    {
+      "id": "src:yt-waystogo-t4s",
+      "title": "TERMINAL T4S de MADRID BARAJAS: Cómo moverse y hacer conexiones de vuelos (YouTube dtueEh5i_0c)",
+      "url": "https://www.youtube.com/watch?v=dtueEh5i_0c",
+      "publisher": "Ways to go",
+      "kind": "video",
+      "group": "waystogo",
+      "accessed": "2026-10-31",
+      "published": "2024-07-23",
+      "notes": "Embeds Iberia’s animated T4S connection guide: flight-connection boards with M / J K / S; non-Schengen: connection security \"Conexión puertas T4S Gates S\" → S20; Schengen: passport control → security → M28; APM to T4 with signs \"Gates/Puertas H J K\" and \"Equipajes y salida\"; J54–J57. Storyboard 422×180 every 5 s."
+    },
+    {
+      "id": "src:yt-waystogo-t1t4s",
+      "title": "El SECRETO de MADRID BARAJAS para hacer una CONEXIÓN (ESCALA) (YouTube lAhgY1pxFEo)",
+      "url": "https://www.youtube.com/watch?v=lAhgY1pxFEo",
+      "publisher": "Ways to go",
+      "kind": "video",
+      "group": "waystogo",
+      "accessed": "2026-10-31",
+      "published": "2023-02-17",
+      "notes": "Description: little-known transit service between T1 and T4S. Storyboard (211×90) read: mostly talking head and aerial maps; no sign text readable."
+    },
+    {
+      "id": "src:yt-cienciudades-t4st4",
+      "title": "Cómo ir de la T4S a la T4 AEROPUERTO MADRID BARAJAS. Paso a paso (YouTube wG7-x7AnoSs)",
+      "url": "https://www.youtube.com/watch?v=wG7-x7AnoSs",
+      "publisher": "CienCiudades",
+      "kind": "video",
+      "group": "cienciudades",
+      "accessed": "2026-10-31",
+      "published": "2024-06-05",
+      "notes": "T4S arrival → passport control (EU/EEA/CH lanes) in T4S → down to the APM; platform signs \"Journey time approximately 5 minutes · One stop only / Única parada\", map T4S (M, S) → T4 (H J K, baggage), \"Próximo tren en 2 min\"; at T4 escalators signed \"Baggage and exit / Equipajes y salida\" and \"Gates / Puertas H J K\"; baggage hall and arrivals exit. Storyboard 320×180 every 5 s."
+    },
+    {
+      "id": "src:yt-mattdrones-tour",
+      "title": "A Walking Tour of Adolfo Suárez Madrid–Barajas Airport – 4K (2024) (YouTube n_S6qw37ruU)",
+      "url": "https://www.youtube.com/watch?v=n_S6qw37ruU",
+      "publisher": "Matt Drones On Travel Channel",
+      "kind": "video",
+      "group": "mattdrones",
+      "accessed": "2026-10-31",
+      "published": "2024-06-14",
+      "notes": "Arrival from MIA at T4S (jet bridge), upper arrivals corridor with moving walkways past gates S46, S37, 35, blue \"Conexión de vuelos\" sign, escalators down, queue hall, APM platform (signs H J K / Baggage / Salida), APM, T4 duty-free, sign \"J50–J59 · K\", walk to J gates. Storyboard 320×180 every 5 s, read in full."
+    },
+    {
+      "id": "src:yt-airportwalker-t4t1",
+      "title": "How to Get from Terminal 4 to Terminal 1 – Madrid Barajas Airport (YouTube _mup5fBPb9U)",
+      "url": "https://www.youtube.com/watch?v=_mup5fBPb9U",
+      "publisher": "Airport Walker",
+      "kind": "video",
+      "group": "airportwalker",
+      "accessed": "2026-10-31",
+      "published": "2025-11-10",
+      "notes": "T4 baggage hall (level 0) → arrivals hall → outside to the bus bays → green free shuttle bus → arrival at T1. Description: free, 24 h, every 5–10 min, ride 10–15 min. Storyboard 320×180 every 5 s, read in full."
+    },
+    {
+      "id": "src:yt-brandon-bus",
+      "title": "Terminal Bus Connector – Madrid International Airport (YouTube EatEj95YWGo)",
+      "url": "https://www.youtube.com/watch?v=EatEj95YWGo",
+      "publisher": "BrandonJohnson10K",
+      "kind": "video",
+      "group": "brandonjohnson",
+      "accessed": "2026-10-31",
+      "published": "2022-01-20",
+      "notes": "Transfer bus T1 → T4S (description). Storyboard (160×90): the bus drives across the T1/T2 aprons, through a long tunnel and arrives at the T4S aprons — an airside route; ride footage ≈ 01:15–11:20 (≈10 min, editing unknown)."
+    },
+    {
+      "id": "src:yt-morenazocu-t2t1",
+      "title": "Vuelo de Madrid a Punta Cana: recorriendo el aeropuerto de la T2 a la T1 (YouTube 1NJsp_rLN4g)",
+      "url": "https://www.youtube.com/watch?v=1NJsp_rLN4g",
+      "publisher": "@morenazocu",
+      "kind": "video",
+      "group": "morenazocu",
+      "accessed": "2026-10-31",
+      "published": "2025-11-19",
+      "notes": "Sept 2025: T2 → T1 departures, Iberojet check-in, airside shops, boarding by stairs and apron bus to an Air Europa 787 (T1 bus boarding). Gate numbers not readable. Storyboard 320×180 every 10 s."
+    },
+    {
+      "id": "src:yt-roadtrip-connect",
+      "title": "How to catch your connecting flight at Madrid airport (YouTube a0_-PL3nLes)",
+      "url": "https://www.youtube.com/watch?v=a0_-PL3nLes",
+      "publisher": "ROAD TRIP Spain and Portugal",
+      "kind": "video",
+      "group": "roadtrip",
+      "accessed": "2026-10-31",
+      "published": "2022-05-29",
+      "notes": "Chapters (terminals, boarding gates, T1–T2/T3, T4–T4S, T1/T2–T4/T4S). Storyboard 160×90: maps of T1/T2/T3 zones; caption \"T1-T4S: Africa, The Americas, Asia, United Kingdom\". Low resolution; context only."
+    },
+    {
+      "id": "src:yt-fuentes-apm",
+      "title": "APM (Automatic People Mover): Trayecto T4-T4S Aeropuerto Adolfo Suárez Madrid-Barajas",
+      "url": "https://www.youtube.com/watch?v=lgXWMLM2JbM",
+      "publisher": "fuentesf1 (YouTube)",
+      "kind": "video",
+      "group": "fuentesf1",
+      "accessed": "2026-10-31",
+      "published": "2014-04-10",
+      "notes": "Front-window ride T4 → T4S, 224 s, one continuous take (storyboard 2 s). Old video, but the APM line, tunnel and stations are unchanged since 2006. Used for the ride time."
+    },
+    {
+      "id": "src:yt-acc84-apm",
+      "title": "APM Aeropuerto Madrid-Barajas: Terminal 4 - Terminal 4S (Bombardier Innovia APM 100)",
+      "url": "https://www.youtube.com/watch?v=PhfHbwL8Ikg",
+      "publisher": "ACC84 Metro & Trains (YouTube)",
+      "kind": "video",
+      "group": "acc84",
+      "accessed": "2026-10-31",
+      "published": "2016-11-12",
+      "notes": "Edited ride T4 → T4S with platform shots (cuts between the platform scenes). Ride portion ≈ 205 s, cross-check only (observed)."
+    },
+    {
+      "id": "src:yt-vasquez-t4s",
+      "title": "Cómo es la llegada a la T4 del Aeropuerto de Madrid paso a paso (desde la T4S hasta la salida)",
+      "url": "https://www.youtube.com/watch?v=rh0F-FIYl1I",
+      "publisher": "Enrique Vásquez (YouTube)",
+      "kind": "video",
+      "group": "vasquez",
+      "accessed": "2026-10-31",
+      "published": "2025-08-07",
+      "notes": "Vertical, 101×180 storyboard, heavily cut (captions on every scene). Sequence only, no timing."
+    },
+    {
+      "id": "src:iberia-connections",
+      "title": "Iberia: connections Madrid / Madrid airport access and connection times (search-engine excerpts only)",
+      "url": "https://www.iberia.com/us/fly-with-iberia/connections-madrid/",
+      "publisher": "Iberia",
+      "kind": "airline",
+      "group": "iberia",
+      "accessed": "2026-10-31",
+      "notes": "iberia.com and help.iberia.com answer HTTP 403 to automated fetches: only search-result excerpts were read (not circumvented). Owner capture wanted."
+    },
+    {
+      "id": "src:eu-2015-2447-art39",
+      "title": "Commission Implementing Regulation (EU) 2015/2447, Article 39 (baggage on flights transferring at a Union airport)",
+      "url": "https://eur-lex.europa.eu/eli/reg_impl/2015/2447/oj",
+      "publisher": "European Union (EUR-Lex)",
+      "kind": "official",
+      "group": "eu-law",
+      "accessed": "2026-11-01",
+      "notes": "EUR-Lex returned an empty page to the automated fetch; the article text was read on the lawplayer.com mirror (https://lawplayer.com/eu/article/32015R2447/art_39). Hold baggage: customs at the last international Union airport of arrival, or at the transfer airport when the onward flight goes to another international Union airport of the same Member State; cabin baggage at the first international Union airport."
+    },
+    {
+      "id": "src:valetbarajas-security",
+      "title": "Mejor hora para pasar el control de seguridad en Madrid-Barajas T4",
+      "url": "https://valetbarajas.com/mejor-hora-control-seguridad-madrid-barajas-t4/",
+      "publisher": "Valet Barajas",
+      "kind": "guide",
+      "group": "valetbarajas",
+      "accessed": "2026-11-01",
+      "published": "2026-04-07",
+      "notes": "Commercial parking operator guide (same group as src:valetbarajas-t4). T4 checkpoints 24 h with reduced capacity 01:00–04:00. Nothing on T1/T2 hours."
+    }
+  ]
+}

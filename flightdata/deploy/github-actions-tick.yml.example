@@ -1,0 +1,23 @@
+# TEMPLATE — not active (it is not in .github/workflows). Alternative scheduler: GitHub Actions cron + an external
+# PostgreSQL. Copy to .github/workflows/flightdata-tick.yml only after owner approval; set the secrets in the repository.
+# Note: GitHub cron is best-effort (delays of 5–30 min are common); the 6-hour grace window absorbs that.
+name: flightdata-tick
+on:
+  schedule: [{ cron: '*/30 * * * *' }]
+  workflow_dispatch: {}
+concurrency: { group: flightdata-tick, cancel-in-progress: false }
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - run: npm run fd -- tick
+        env:
+          FD_DATABASE_URL: ${{ secrets.FD_DATABASE_URL }}
+          FD_ASSIGNMENTS: ${{ vars.FD_ASSIGNMENTS }}
+          FD_AERODATABOX_KEY: ${{ secrets.FD_AERODATABOX_KEY }}
+          FD_SWEDAVIA_KEY: ${{ secrets.FD_SWEDAVIA_KEY }}

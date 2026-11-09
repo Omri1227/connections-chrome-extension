@@ -1,0 +1,1478 @@
+{
+  "iata": "FRA",
+  "icao": "EDDF",
+  "name": "Frankfurt am Main Airport",
+  "city": "Frankfurt am Main",
+  "asOf": "2026-10-31",
+  "schematic": {
+    "width": 1000,
+    "height": 640,
+    "northDeg": 0,
+    "background": [
+      { "kind": "runway", "label": "07C/25C", "shape": { "type": "poly", "points": [[0, 446], [637, 210], [640, 217], [0, 454]] } },
+      { "kind": "runway", "label": "07R/25L", "shape": { "type": "poly", "points": [[0, 564], [631, 331], [634, 338], [0, 572]] } },
+      { "kind": "road", "label": "A5", "shape": { "type": "poly", "points": [[868, 90], [876, 92], [790, 360], [712, 470], [704, 466], [782, 356]] } },
+      { "kind": "other", "label": "Lufthansa First Class Terminal", "shape": { "type": "poly", "points": [[289, 91], [287, 108], [297, 105]] } }
+    ],
+    "labels": [
+      { "text": "Terminal 1", "at": [300, 70], "kind": "district" },
+      { "text": "Terminal 3", "at": [640, 600], "kind": "district" },
+      { "text": "07C/25C", "at": [180, 375], "kind": "runway", "rotate": -20 },
+      { "text": "07R/25L", "at": [180, 492], "kind": "runway", "rotate": -20 },
+      { "text": "A5 motorway (Sky Line runs alongside)", "at": [835, 250], "kind": "road", "rotate": -72 },
+      { "text": "Terminal 2 closed (renovation, reopening mid-2030s)", "at": [700, 120], "kind": "note" },
+      { "text": "OSM-derived geometry © OpenStreetMap contributors (ODbL); schematic, not survey-accurate", "at": [20, 630], "kind": "note" }
+    ]
+  },
+  "feedTerminals": { "arrival": { "1": ["fra-t1-a", "fra-t1-z", "fra-t1-b-s", "fra-t1-b-n", "fra-t1-c"], "2": [], "3": ["fra-t3-h", "fra-t3-j", "fra-t3-g"]}, "departure": { "1": ["fra-t1-a", "fra-t1-z", "fra-t1-b-s", "fra-t1-b-n", "fra-t1-c"], "2": [], "3": ["fra-t3-h", "fra-t3-j", "fra-t3-g"]}},
+  "oneStopSecurity": { "countries": ["AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IE", "IT", "LV", "LT", "LU", "MT", "NL", "PL", "PT", "RO", "SK", "SI", "ES", "SE", "IS", "NO", "LI", "CH", "CA", "US", "GB", "ME", "SG"], "airports": ["FAE", "BEG"], "excludedAirports": ["TLV"], "asOf": "2026-11-01", "sources": ["src:fra-official-transfer", "src:eu-oss-2025-920", "src:eu-oss-2019-413"], "note": "Fraport: whether a connecting passenger is screened depends on the origin. EU one-stop security (Reg. 2015/1998 Attachment 4-B as amended by Reg. 2019/413 and 2025/920): passengers from EU / EEA / Swiss airports and from the recognised third countries are not re-screened on transfer. Ben Gurion (TLV) was removed by Reg. 2025/920, Kangerlussuaq, Guernsey, Isle of Man and Jersey too. Belgrade (BEG) was added by Reg. 2020/111 and not removed since (consolidated text reconstructed from mirrors, likely: docs/research/EVIDENCE_2026-11-02.md); Reg. 2025/920 applies from 21 May 2025. The official consolidated Attachment 4-B was not read (EUR-Lex: owner capture)." },
+  "specialScreening": [{ "id": "ss:fra-israel-c", "appliesTo": { "destinationCountries": ["IL"]}, "areas": ["fra-t1-c"], "certainty": "probable", "issueLevel": "material", "text": "Tel Aviv departures (Lufthansa, El Al, Condor) board at Terminal 1 concourse C: all 13 TLV departures with a gate in the feed (2026-10-30 – 11-01) used C4 or C6; El Al checks in at Hall C (Fraport). No official Fraport text on additional screening for Israel flights was found, so its time is not known.", "sources": ["src:fra-airline-ly", "src:fd-feed-terminals-2026-11-01"]},{ "id": "ss:fra-us-documents", "appliesTo": { "destinationCountries": ["US"], "airlines": ["LH"]}, "certainty": "probable", "issueLevel": "secondary", "text": "Lufthansa to the USA: the required USA entry-data verification is done at check-in / Fast Bag Drop (biometric consent online). Gate-level US measures (TSA 2017 enhanced screening) are not public: time not known.", "sources": ["src:fra-airline-lh"]},{ "id": "ss:fra-us-enhanced", "appliesTo": { "destinationCountries": ["US"]}, "certainty": "unknown", "issueLevel": "secondary", "text": "US-bound flights: TSA / DHS enhanced security measures for all last-point-of-departure airports (2017, still the baseline as far as known) may add checks at check-in or at the gate (interviews, document checks, separate screening of electronics). The procedures are not public; no time is known.", "sources": ["src:dhs-tsa-2017-enhanced"]}],
+  "areas": [
+    {
+      "id": "fra-t1-hall",
+      "checkIn": { "serves": ["fra-t1-a", "fra-t1-z", "fra-t1-b-s", "fra-t1-b-n", "fra-t1-c"], "sources": ["src:fd-feed-terminals-2026-11-01"], "note": "T1 check-in halls A, B and C (one node). El Al checks in at Hall C (Fraport airline page)" },
+      "name": "Terminal 1 · Departure halls A, B, C (public side)",
+      "short": "T1",
+      "kind": "landside-hall",
+      "terminal": "T1",
+      "side": "landside",
+      "zone": "n/a",
+      "matrix": true,
+      "anchor": [405, 66],
+      "shape": { "type": "poly", "points": [[352, 64], [470, 40], [478, 54], [360, 80]] },
+      "level": "Levels 1–3 (arrivals 1, departures 2/3)",
+      "description": "Check-in halls A, B and C of Terminal 1 with security checkpoints into concourses A, B, C and passport control towards Z and B non-Schengen. Hall B links to the regional station and, via a walkway, to the long-distance station.",
+      "confidence": "verified",
+      "sources": ["src:fra-official-locations", "src:osm-fra", "src:yt-travelwalk-t1t3"],
+      "notes": "Drawn as one strip along the north side of T1; hall C lies at the west end of the C building."
+    },
+    {
+      "id": "fra-rail-regional",
+      "name": "Regional station (Regionalbahnhof, S8/S9) and Sky Line station Terminal 1",
+      "short": "Rail R",
+      "kind": "station",
+      "terminal": "T1",
+      "side": "landside",
+      "zone": "n/a",
+      "matrix": false,
+      "anchor": [430, 46],
+      "description": "DB regional station beneath Terminal 1 (hall B side). The new Sky Line 'Terminal 1' station sits above it at the rail-station access and is signed 'Terminal 3 G, H, J' from the station concourse.",
+      "confidence": "verified",
+      "sources": ["src:osm-fra", "src:yt-travelwalk-t1t3", "src:wiki-skyline-de"]
+    },
+    {
+      "id": "fra-rail-long",
+      "name": "Long-distance station (Fernbahnhof, AIRail)",
+      "short": "Rail F",
+      "kind": "station",
+      "terminal": "T1",
+      "side": "landside",
+      "zone": "n/a",
+      "matrix": true,
+      "anchor": [377, 22],
+      "shape": { "type": "rect", "x": 364, "y": 12, "w": 28, "h": 20 },
+      "description": "DB long-distance station (ICE/IC) north-west of Terminal 1, reached from hall B by a walkway over the road; the new Sky Line T1 station lies between it and the regional station.",
+      "confidence": "verified",
+      "sources": ["src:osm-fra", "src:fra-official-locations", "src:yt-travelwalk-t1t3"]
+    },
+    {
+      "id": "fra-t1-a",
+      "intraControls": [{ "kind": "transfer-security", "when": "origin-not-one-stop", "minutes": { "min": 0, "typical": 10, "max": 30, "basis": "assumed" }, "note": "Transfer security for passengers arriving from outside one-stop security (EU common rules; Fraport transfer checkpoints Hall A L4/L2, Hall B L3, Hall J L3). Position along the path not verified (inferred placement on the area boundary); same allowance as the Hall J checkpoint." }],
+      "entryControls": [{ "kind": "transfer-security", "when": "origin-not-one-stop", "minutes": { "min": 0, "typical": 10, "max": 30, "basis": "assumed" }, "note": "Transfer security for passengers arriving from outside one-stop security (EU common rules; Fraport transfer checkpoints Hall A L4/L2, Hall B L3, Hall J L3). Position along the path not verified (inferred placement on the area boundary); same allowance as the Hall J checkpoint.", "exceptFrom": ["fra-t1-hall", "fra-rail-regional", "fra-rail-long", "fra-t2-land", "fra-t3-hall", "s:fra-sl2-t1", "s:fra-sl2-t2-land", "s:fra-sl2-t3", "s:fra-sl1-b-land", "s:fra-sl1-t2-land", "s:fra-nightbus-t1", "s:fra-nightbus-t3", "s:fra-replbus-t1", "s:fra-replbus-t3"]}],
+      "intraWalk": { "min": 1, "typical": 5.5, "max": 13.5, "basis": "derived", "note": "Derived (R-02): pier length ≈ 1000 m (A1–A40 plus A-Plus, gate path × 5.1 m/unit); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Terminal 1 · Concourse A (Schengen, incl. A-Plus lower level)",
+      "short": "A",
+      "kind": "concourse",
+      "terminal": "T1",
+      "side": "airside",
+      "zone": "schengen",
+      "matrix": true,
+      "anchor": [338, 186],
+      "shape": { "type": "poly", "points": [[380, 84], [398, 90], [396, 106], [372, 116], [364, 132], [333, 215], [252, 246], [248, 238], [322, 208], [345, 145], [207, 174], [203, 165], [349, 112], [358, 95]] },
+      "level": "Level 2 (Schengen departures)",
+      "description": "Pier A (A1–A40) and the lower (Schengen) level of the A-Plus extension (A50–A69). Linked to B Schengen by the passenger tunnel between A15 and B19.",
+      "confidence": "verified",
+      "sources": ["src:fra-official-transfer", "src:fra-official-locations", "src:pointsanalyst-fra", "src:kayak-fra", "src:yt-airportwalker-z-a", "src:osm-fra"],
+      "notes": "Stacked with Concourse Z (level 3) on one footprint: pier A (A1–A40) plus the A-Plus extension (A50–A69). The viewer draws Z offset by one level. A1–A5 and A28–A40 have no Z gates above them (none attested).",
+      "stack": { "group": "fra-a-z", "order": 0, "label": "L2" }
+    },
+    {
+      "id": "fra-t1-z",
+      "intraControls": [{ "kind": "transfer-security", "when": "origin-not-one-stop", "minutes": { "min": 0, "typical": 10, "max": 30, "basis": "assumed" }, "note": "Transfer security for passengers arriving from outside one-stop security (EU common rules; Fraport transfer checkpoints Hall A L4/L2, Hall B L3, Hall J L3). Position along the path not verified (inferred placement on the area boundary); same allowance as the Hall J checkpoint." }],
+      "entryControls": [{ "kind": "transfer-security", "when": "origin-not-one-stop", "minutes": { "min": 0, "typical": 10, "max": 30, "basis": "assumed" }, "note": "Transfer security for passengers arriving from outside one-stop security (EU common rules; Fraport transfer checkpoints Hall A L4/L2, Hall B L3, Hall J L3). Position along the path not verified (inferred placement on the area boundary); same allowance as the Hall J checkpoint.", "exceptFrom": ["fra-t1-hall", "fra-rail-regional", "fra-rail-long", "fra-t2-land", "fra-t3-hall", "s:fra-sl2-t1", "s:fra-sl2-t2-land", "s:fra-sl2-t3", "s:fra-sl1-b-land", "s:fra-sl1-t2-land", "s:fra-nightbus-t1", "s:fra-nightbus-t3", "s:fra-replbus-t1", "s:fra-replbus-t3"]}],
+      "intraWalk": { "min": 1, "typical": 4, "max": 9.5, "basis": "derived", "note": "Derived (R-02): pier length ≈ 650 m (gate path × 5.1 m/unit); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Terminal 1 · Concourse Z (non-Schengen, level 3 above A / A-Plus)",
+      "short": "Z",
+      "kind": "concourse",
+      "terminal": "T1",
+      "side": "airside",
+      "zone": "non-schengen",
+      "matrix": true,
+      "anchor": [290, 145],
+      "shape": { "type": "poly", "points": [[380, 84], [398, 90], [396, 106], [372, 116], [364, 132], [333, 215], [252, 246], [248, 238], [322, 208], [345, 145], [207, 174], [203, 165], [349, 112], [358, 95]] },
+      "level": "Level 3 (non-Schengen departures)",
+      "description": "Non-Schengen level stacked above pier A: Z11–Z25 above the middle of pier A and Z50–Z69 on the upper level of A-Plus. Same aircraft stands as A (dual-level gates).",
+      "confidence": "verified",
+      "sources": ["src:fra-official-locations", "src:pointsanalyst-fra", "src:kayak-fra", "src:yt-airportwalker-z-a", "src:osm-fra"],
+      "notes": "Same footprint as Concourse A (stack fra-a-z, level 3). Z11–Z25 sit above A11–A25 and Z50–Z69 above A50–A69 (dual-level stands); no Z gates are attested above A1–A5 or A28–A40.",
+      "stack": { "group": "fra-a-z", "order": 1, "label": "L3" }
+    },
+    {
+      "id": "fra-t1-b-s",
+      "intraControls": [{ "kind": "transfer-security", "when": "origin-not-one-stop", "minutes": { "min": 0, "typical": 10, "max": 30, "basis": "assumed" }, "note": "Transfer security for passengers arriving from outside one-stop security (EU common rules; Fraport transfer checkpoints Hall A L4/L2, Hall B L3, Hall J L3). Position along the path not verified (inferred placement on the area boundary); same allowance as the Hall J checkpoint." }],
+      "entryControls": [{ "kind": "transfer-security", "when": "origin-not-one-stop", "minutes": { "min": 0, "typical": 10, "max": 30, "basis": "assumed" }, "note": "Transfer security for passengers arriving from outside one-stop security (EU common rules; Fraport transfer checkpoints Hall A L4/L2, Hall B L3, Hall J L3). Position along the path not verified (inferred placement on the area boundary); same allowance as the Hall J checkpoint.", "exceptFrom": ["fra-t1-hall", "fra-rail-regional", "fra-rail-long", "fra-t2-land", "fra-t3-hall", "s:fra-sl2-t1", "s:fra-sl2-t2-land", "s:fra-sl2-t3", "s:fra-sl1-b-land", "s:fra-sl1-t2-land", "s:fra-nightbus-t1", "s:fra-nightbus-t3", "s:fra-replbus-t1", "s:fra-replbus-t3"]}],
+      "intraWalk": { "min": 1, "typical": 2.5, "max": 5.5, "basis": "derived", "note": "Derived (R-02): pier length ≈ 300 m (gate path × 5.1 m/unit); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Terminal 1 · Concourse B Schengen (B1–B19)",
+      "short": "B-S",
+      "kind": "concourse",
+      "terminal": "T1",
+      "side": "airside",
+      "zone": "schengen",
+      "matrix": true,
+      "anchor": [421, 116],
+      "shape": { "type": "rect", "x": 400, "y": 98, "w": 46, "h": 40 },
+      "level": "Level 2",
+      "description": "Inner (Schengen) part of pier B next to hall B; end of the A15–B19 Schengen tunnel.",
+      "confidence": "probable",
+      "sources": ["src:kayak-fra", "src:pointsanalyst-fra", "src:fra-official-transfer", "src:yt-airportwalker-z-a"],
+      "notes": "Schengen range B1–B19 rests on guides (Kayak 2026-07, Points Analyst 2026-03) plus the official tunnel statement (Schengen area between A15 and B19) and the 'A / B 1–19' sign after passport control in the Z→A video. No official gate-by-gate list was reachable."
+    },
+    {
+      "id": "fra-t1-b-n",
+      "intraControls": [{ "kind": "transfer-security", "when": "origin-not-one-stop", "minutes": { "min": 0, "typical": 10, "max": 30, "basis": "assumed" }, "note": "Transfer security for passengers arriving from outside one-stop security (EU common rules; Fraport transfer checkpoints Hall A L4/L2, Hall B L3, Hall J L3). Position along the path not verified (inferred placement on the area boundary); same allowance as the Hall J checkpoint." }],
+      "entryControls": [{ "kind": "transfer-security", "when": "origin-not-one-stop", "minutes": { "min": 0, "typical": 10, "max": 30, "basis": "assumed" }, "note": "Transfer security for passengers arriving from outside one-stop security (EU common rules; Fraport transfer checkpoints Hall A L4/L2, Hall B L3, Hall J L3). Position along the path not verified (inferred placement on the area boundary); same allowance as the Hall J checkpoint.", "exceptFrom": ["fra-t1-hall", "fra-rail-regional", "fra-rail-long", "fra-t2-land", "fra-t3-hall", "s:fra-sl2-t1", "s:fra-sl2-t2-land", "s:fra-sl2-t3", "s:fra-sl1-b-land", "s:fra-sl1-t2-land", "s:fra-nightbus-t1", "s:fra-nightbus-t3", "s:fra-replbus-t1", "s:fra-replbus-t3"]}],
+      "intraWalk": { "min": 1, "typical": 4, "max": 10, "basis": "derived", "note": "Derived (R-02): pier length ≈ 700 m (gate path × 5.1 m/unit); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Terminal 1 · Concourse B non-Schengen (B20–B63)",
+      "short": "B-N",
+      "kind": "concourse",
+      "terminal": "T1",
+      "side": "airside",
+      "zone": "non-schengen",
+      "matrix": true,
+      "anchor": [446, 160],
+      "shape": { "type": "poly", "points": [[396, 140], [446, 128], [486, 148], [470, 164], [446, 148], [416, 158], [404, 190], [386, 176]] },
+      "level": "Level 2/3",
+      "description": "Outer part of pier B (B20–B28 ring, B41–B48 east) and B bus gates in the 30s/50s/60s, non-Schengen.",
+      "confidence": "verified",
+      "sources": ["src:kayak-fra", "src:amex-lounges", "src:fra-official-locations", "src:yt-airportwalker-bn-a", "src:osm-fra"]
+    },
+    {
+      "id": "fra-t1-c",
+      "intraControls": [{ "kind": "transfer-security", "when": "origin-not-one-stop", "minutes": { "min": 0, "typical": 10, "max": 30, "basis": "assumed" }, "note": "Transfer security for passengers arriving from outside one-stop security (EU common rules; Fraport transfer checkpoints Hall A L4/L2, Hall B L3, Hall J L3). Position along the path not verified (inferred placement on the area boundary); same allowance as the Hall J checkpoint." }],
+      "entryControls": [{ "kind": "transfer-security", "when": "origin-not-one-stop", "minutes": { "min": 0, "typical": 10, "max": 30, "basis": "assumed" }, "note": "Transfer security for passengers arriving from outside one-stop security (EU common rules; Fraport transfer checkpoints Hall A L4/L2, Hall B L3, Hall J L3). Position along the path not verified (inferred placement on the area boundary); same allowance as the Hall J checkpoint.", "exceptFrom": ["fra-t1-hall", "fra-rail-regional", "fra-rail-long", "fra-t2-land", "fra-t3-hall", "s:fra-sl2-t1", "s:fra-sl2-t2-land", "s:fra-sl2-t3", "s:fra-sl1-b-land", "s:fra-sl1-t2-land", "s:fra-nightbus-t1", "s:fra-nightbus-t3", "s:fra-replbus-t1", "s:fra-replbus-t3"]}],
+      "intraWalk": { "min": 1, "typical": 4, "max": 10, "basis": "derived", "note": "Derived (R-02): pier length ≈ 700 m (gate path × 5.1 m/unit); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Terminal 1 · Concourse C (non-Schengen)",
+      "short": "C",
+      "kind": "concourse",
+      "terminal": "T1",
+      "side": "airside",
+      "zone": "non-schengen",
+      "matrix": true,
+      "anchor": [500, 94],
+      "shape": { "type": "poly", "points": [[440, 72], [468, 62], [531, 86], [508, 110], [440, 88]] },
+      "level": "Level 3 (departures C)",
+      "description": "Pier C east of hall C (C2–C20 non-Schengen; C1 status unclear). Old SkyLine station 'Terminal 1 C' (non-Schengen platform only).",
+      "confidence": "probable",
+      "sources": ["src:kayak-fra", "src:pointsanalyst-fra", "src:wiki-skyline-de", "src:fra-official-locations", "src:osm-fra"]
+    },
+    {
+      "id": "fra-t2",
+      "intraControls": [{ "kind": "transfer-security", "when": "origin-not-one-stop", "minutes": { "min": 0, "typical": 10, "max": 30, "basis": "assumed" }, "note": "Transfer security for passengers arriving from outside one-stop security (EU common rules; Fraport transfer checkpoints Hall A L4/L2, Hall B L3, Hall J L3). Position along the path not verified (inferred placement on the area boundary); same allowance as the Hall J checkpoint." }],
+      "entryControls": [{ "kind": "transfer-security", "when": "origin-not-one-stop", "minutes": { "min": 0, "typical": 10, "max": 30, "basis": "assumed" }, "note": "Transfer security for passengers arriving from outside one-stop security (EU common rules; Fraport transfer checkpoints Hall A L4/L2, Hall B L3, Hall J L3). Position along the path not verified (inferred placement on the area boundary); same allowance as the Hall J checkpoint.", "exceptFrom": ["fra-t1-hall", "fra-rail-regional", "fra-rail-long", "fra-t2-land", "fra-t3-hall", "s:fra-sl2-t1", "s:fra-sl2-t2-land", "s:fra-sl2-t3", "s:fra-sl1-b-land", "s:fra-sl1-t2-land", "s:fra-nightbus-t1", "s:fra-nightbus-t3", "s:fra-replbus-t1", "s:fra-replbus-t3"]}],
+      "name": "Terminal 2 · Piers D and E (closed for refurbishment)",
+      "short": "T2 D/E",
+      "kind": "terminal",
+      "terminal": "T2",
+      "side": "airside",
+      "zone": "mixed",
+      "matrix": false,
+      "anchor": [670, 80],
+      "shape": { "type": "rect", "x": 620, "y": 55, "w": 100, "h": 50 },
+      "status": [
+        { "state": "closed", "from": "2026-06-09", "note": "Closed to passengers after the last airlines moved to Terminal 3; main works from 2030, reopening planned mid-2030s. The Sky Line stations at T2 stay open as interchange.", "confidence": "verified", "sources": ["src:fraport-press-t2", "src:reisetopia-skyline", "src:wiki-skyline-en"] }
+      ],
+      "description": "Former Terminal 2 (piers D and E). Kept so the closure is visible; no D/E gates or walks are modelled (the model starts after T3 opened and is not meant for routing before 9 June 2026).",
+      "confidence": "verified",
+      "sources": ["src:fraport-press-t2", "src:reisetopia-skyline", "src:wiki-skyline-en"]
+    },
+    {
+      "id": "fra-t2-land",
+      "name": "Terminal 2 · Sky Line station (public platforms)",
+      "short": "T2",
+      "kind": "station",
+      "terminal": "T2",
+      "side": "landside",
+      "zone": "n/a",
+      "matrix": false,
+      "anchor": [648, 28],
+      "description": "Intermediate stop of the new Sky Line and terminus of the old SkyLine. Terminal 2 itself (piers D/E) has been closed to passengers since 9 June 2026; the station remains in use as interchange.",
+      "confidence": "probable",
+      "sources": ["src:fraport-press-t2", "src:wiki-skyline-en", "src:yt-railherbie", "src:yt-travelwalk-t3t1"]
+    },
+    {
+      "id": "fra-t2-air",
+      "intraControls": [{ "kind": "transfer-security", "when": "origin-not-one-stop", "minutes": { "min": 0, "typical": 10, "max": 30, "basis": "assumed" }, "note": "Transfer security for passengers arriving from outside one-stop security (EU common rules; Fraport transfer checkpoints Hall A L4/L2, Hall B L3, Hall J L3). Position along the path not verified (inferred placement on the area boundary); same allowance as the Hall J checkpoint." }],
+      "entryControls": [{ "kind": "transfer-security", "when": "origin-not-one-stop", "minutes": { "min": 0, "typical": 10, "max": 30, "basis": "assumed" }, "note": "Transfer security for passengers arriving from outside one-stop security (EU common rules; Fraport transfer checkpoints Hall A L4/L2, Hall B L3, Hall J L3). Position along the path not verified (inferred placement on the area boundary); same allowance as the Hall J checkpoint.", "exceptFrom": ["fra-t1-hall", "fra-rail-regional", "fra-rail-long", "fra-t2-land", "fra-t3-hall", "s:fra-sl2-t1", "s:fra-sl2-t2-land", "s:fra-sl2-t3", "s:fra-sl1-b-land", "s:fra-sl1-t2-land", "s:fra-nightbus-t1", "s:fra-nightbus-t3", "s:fra-replbus-t1", "s:fra-replbus-t3"]}],
+      "name": "Terminal 2 · Sky Line interchange (non-Schengen transfer platforms)",
+      "short": "T2-X",
+      "kind": "transfer-hub",
+      "terminal": "T2",
+      "side": "airside",
+      "zone": "non-schengen",
+      "matrix": false,
+      "anchor": [652, 60],
+      "description": "Platforms where non-Schengen transfer passengers change between the old SkyLine (to T1 A/Z, B, C) and the new Sky Line (to T3) without entering the public side.",
+      "confidence": "probable",
+      "sources": ["src:yt-loungerocker", "src:aviationdirect-skyline", "src:wiki-skyline-de", "src:yt-railherbie"],
+      "notes": "The video shows an airside passenger changing at T2 and the restricted car of the new line; that the change stays non-Schengen is inferred from the car designation (aviation.direct) and the old-line car split (Wikipedia)."
+    },
+    {
+      "id": "fra-t3-hall",
+      "checkIn": { "serves": ["fra-t3-h", "fra-t3-j", "fra-t3-g"], "sources": ["src:fd-feed-terminals-2026-11-01"], "note": "T3 check-in hall (opened 23 April 2026)" },
+      "name": "Terminal 3 · Main hall (check-in, arrivals, Sky Line, bus station)",
+      "short": "T3",
+      "kind": "landside-hall",
+      "terminal": "T3",
+      "side": "landside",
+      "zone": "n/a",
+      "matrix": true,
+      "anchor": [556, 582],
+      "shape": { "type": "poly", "points": [[509, 577], [543, 545], [584, 546], [596, 566], [575, 581], [546, 614]] },
+      "level": "Departures level 3 (check-in), arrivals lowest public level",
+      "description": "Opened 23 April 2026. Check-in hall followed by security that splits into Schengen and non-Schengen lanes; Sky Line station at the bridge to the T3 car park; bus station on the arrivals level.",
+      "confidence": "verified",
+      "sources": ["src:fra-official-t3", "src:fraport-t3-ops", "src:hessenschau-t3", "src:flyctory-t3", "src:yt-travelwalk-t1t3", "src:osm-fra"],
+      "status": [
+        { "state": "planned", "until": "2026-04-22", "note": "Terminal 3 opened for flights on 23 April 2026 (ceremony 22 April).", "confidence": "verified", "sources": ["src:fraport-t3-ops", "src:hessenschau-t3"] }
+      ]
+    },
+    {
+      "id": "fra-t3-h",
+      "intraControls": [{ "kind": "transfer-security", "when": "origin-not-one-stop", "minutes": { "min": 0, "typical": 10, "max": 30, "basis": "assumed" }, "note": "Transfer security for passengers arriving from outside one-stop security (EU common rules; Fraport transfer checkpoints Hall A L4/L2, Hall B L3, Hall J L3). Position along the path not verified (inferred placement on the area boundary); same allowance as the Hall J checkpoint." }],
+      "entryControls": [{ "kind": "transfer-security", "when": "origin-not-one-stop", "minutes": { "min": 0, "typical": 10, "max": 30, "basis": "assumed" }, "note": "Transfer security for passengers arriving from outside one-stop security (EU common rules; Fraport transfer checkpoints Hall A L4/L2, Hall B L3, Hall J L3). Position along the path not verified (inferred placement on the area boundary); same allowance as the Hall J checkpoint.", "exceptFrom": ["fra-t1-hall", "fra-rail-regional", "fra-rail-long", "fra-t2-land", "fra-t3-hall", "s:fra-sl2-t1", "s:fra-sl2-t2-land", "s:fra-sl2-t3", "s:fra-sl1-b-land", "s:fra-sl1-t2-land", "s:fra-nightbus-t1", "s:fra-nightbus-t3", "s:fra-replbus-t1", "s:fra-replbus-t3"]}],
+      "intraWalk": { "min": 1, "typical": 3, "max": 7, "basis": "derived", "note": "Derived (R-02): pier length ≈ 450 m (gate path × 5.1 m/unit); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Terminal 3 · Schengen area and Pier H",
+      "short": "H",
+      "kind": "pier",
+      "terminal": "T3",
+      "side": "airside",
+      "zone": "schengen",
+      "matrix": true,
+      "anchor": [527, 500],
+      "shape": { "type": "poly", "points": [[502, 458], [512, 456], [549, 530], [540, 546], [523, 530]] },
+      "level": "Marketplace after security, pier H one level down (2 levels)",
+      "description": "Schengen marketplace behind the Schengen security lanes and pier H (10 aircraft positions, two levels).",
+      "confidence": "verified",
+      "sources": ["src:hessenschau-t3", "src:flyctory-t3", "src:osm-fra"],
+      "status": [
+        { "state": "planned", "until": "2026-04-22", "note": "Terminal 3 opened for flights on 23 April 2026 (ceremony 22 April).", "confidence": "verified", "sources": ["src:fraport-t3-ops", "src:hessenschau-t3"] }
+      ]
+    },
+    {
+      "id": "fra-t3-j",
+      "intraControls": [{ "kind": "transfer-security", "when": "origin-not-one-stop", "minutes": { "min": 0, "typical": 10, "max": 30, "basis": "assumed" }, "note": "Transfer security for passengers arriving from outside one-stop security (EU common rules; Fraport transfer checkpoints Hall A L4/L2, Hall B L3, Hall J L3). Position along the path not verified (inferred placement on the area boundary); same allowance as the Hall J checkpoint." }],
+      "entryControls": [{ "kind": "transfer-security", "when": "origin-not-one-stop", "minutes": { "min": 0, "typical": 10, "max": 30, "basis": "assumed" }, "note": "Transfer security for passengers arriving from outside one-stop security (EU common rules; Fraport transfer checkpoints Hall A L4/L2, Hall B L3, Hall J L3). Position along the path not verified (inferred placement on the area boundary); same allowance as the Hall J checkpoint.", "exceptFrom": ["fra-t1-hall", "fra-rail-regional", "fra-rail-long", "fra-t2-land", "fra-t3-hall", "s:fra-sl2-t1", "s:fra-sl2-t2-land", "s:fra-sl2-t3", "s:fra-sl1-b-land", "s:fra-sl1-t2-land", "s:fra-nightbus-t1", "s:fra-nightbus-t3", "s:fra-replbus-t1", "s:fra-replbus-t3"]}],
+      "intraWalk": { "min": 1, "typical": 4, "max": 9, "basis": "derived", "note": "Derived (R-02): pier length ≈ 600 m (area description); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Terminal 3 · Non-Schengen area and Pier J",
+      "short": "J",
+      "kind": "pier",
+      "terminal": "T3",
+      "side": "airside",
+      "zone": "non-schengen",
+      "matrix": true,
+      "anchor": [446, 538],
+      "shape": { "type": "poly", "points": [[386, 512], [392, 500], [508, 565], [502, 579]] },
+      "level": "Level 3 departures (level 2 arrivals = fra-t3-j-arr; level 1 bus gates)",
+      "description": "Non-Schengen pier J (14 aircraft positions, ~600 m). First T3 flight handled at gate J3 on 23 April 2026.",
+      "confidence": "verified",
+      "sources": ["src:hessenschau-t3", "src:flyctory-t3", "src:fraport-t3-ops", "src:osm-fra", "src:wiki-t3-de", "src:meilenoptimieren-t3"],
+      "stack": { "group": "fra-t3-j", "order": 1, "label": "L3" },
+      "arrivals": "segregated",
+      "notes": "Departures level of pier J. The separate non-Schengen arrivals level is modelled as fra-t3-j-arr (stack fra-t3-j). Lounges (incl. Emirates, SkyTeam) are on levels 4/5 in area J.",
+      "status": [
+        { "state": "planned", "until": "2026-04-22", "note": "Terminal 3 opened for flights on 23 April 2026 (ceremony 22 April).", "confidence": "verified", "sources": ["src:fraport-t3-ops", "src:hessenschau-t3"] }
+      ]
+    },
+    {
+      "id": "fra-t3-j-arr",
+      "name": "Terminal 3 · Pier J arrivals level (non-Schengen, level 2)",
+      "short": "J arr",
+      "kind": "pier",
+      "terminal": "T3",
+      "side": "airside",
+      "zone": "non-schengen",
+      "matrix": false,
+      "anchor": [446, 538],
+      "shape": { "type": "poly", "points": [[386, 512], [392, 500], [508, 565], [502, 579]] },
+      "level": "Level 2 (non-Schengen arrivals)",
+      "stack": { "group": "fra-t3-j", "order": 0, "label": "L2" },
+      "description": "Separate level for passengers arriving from outside the Schengen area. Leads to entry passport control and baggage reclaim, and by a walkway to the airside Sky Line connecting-flights car.",
+      "confidence": "probable",
+      "sources": ["src:hessenschau-t3", "src:wiki-t3-de", "src:yt-loungerocker"],
+      "notes": "hessenschau: pier J has an additional level for arriving non-Schengen passengers; de.wikipedia: level 1 bus gates, level 2 arrivals, level 3 departures, walkway from level 2 to the airside Sky Line transfer vehicle. Not observed in a dated video.",
+      "status": [
+        { "state": "planned", "until": "2026-04-22", "note": "Terminal 3 opened for flights on 23 April 2026 (ceremony 22 April).", "confidence": "verified", "sources": ["src:fraport-t3-ops", "src:hessenschau-t3"] }
+      ]
+    },
+    {
+      "id": "fra-t3-g",
+      "intraControls": [{ "kind": "transfer-security", "when": "origin-not-one-stop", "minutes": { "min": 0, "typical": 10, "max": 30, "basis": "assumed" }, "note": "Transfer security for passengers arriving from outside one-stop security (EU common rules; Fraport transfer checkpoints Hall A L4/L2, Hall B L3, Hall J L3). Position along the path not verified (inferred placement on the area boundary); same allowance as the Hall J checkpoint." }],
+      "entryControls": [{ "kind": "transfer-security", "when": "origin-not-one-stop", "minutes": { "min": 0, "typical": 10, "max": 30, "basis": "assumed" }, "note": "Transfer security for passengers arriving from outside one-stop security (EU common rules; Fraport transfer checkpoints Hall A L4/L2, Hall B L3, Hall J L3). Position along the path not verified (inferred placement on the area boundary); same allowance as the Hall J checkpoint.", "exceptFrom": ["fra-t1-hall", "fra-rail-regional", "fra-rail-long", "fra-t2-land", "fra-t3-hall", "s:fra-sl2-t1", "s:fra-sl2-t2-land", "s:fra-sl2-t3", "s:fra-sl1-b-land", "s:fra-sl1-t2-land", "s:fra-nightbus-t1", "s:fra-nightbus-t3", "s:fra-replbus-t1", "s:fra-replbus-t3"]}],
+      "name": "Terminal 3 · Pier G (bus-gate pier, Schengen / non-Schengen capable)",
+      "short": "G",
+      "kind": "pier",
+      "terminal": "T3",
+      "side": "airside",
+      "zone": "mixed",
+      "matrix": false,
+      "anchor": [606, 512],
+      "shape": { "type": "poly", "points": [[584, 546], [616, 476], [623, 479], [595, 540]] },
+      "description": "Completed 2022, opened with T3. Own small check-in/arrivals hall north-east of the main hall; 14 near-building bus gates without jet bridges (de.wikipedia, Meilenoptimieren); can serve Schengen and non-Schengen flights. No gate number attested.",
+      "confidence": "probable",
+      "sources": ["src:hessenschau-t3", "src:fraport-t3-ops", "src:flyctory-t3", "src:osm-fra", "src:wiki-t3-de", "src:meilenoptimieren-t3", "src:aerode-t3-2025", "src:yt-losticebear-t3"],
+      "notes": "Phase 3: aviation.direct (opening day, 23 Apr 2026): pier G stays dormant as far as its boarding gates are concerned until 2027 (full use tied to Condor's move); only its check-in area is used from the start. This matches the Fraport CEO (Mar 2025: no aircraft at G at first, mainly check-in/landside use) and hessenschau (Apr 2026: \"only partly used at first\"). Flyctory (Sept 2026) names gate areas G and H for Schengen flights, which may refer to signage; no G gate number or G departure was found anywhere. Pier G is therefore modelled as planned (boarding gates not in use) from 23 Apr 2026 until further notice; the G check-in hall is landside and not modelled separately.",
+      "status": [
+        { "state": "planned", "until": "2026-04-22", "note": "Terminal 3 opened for flights on 23 April 2026 (ceremony 22 April).", "confidence": "verified", "sources": ["src:fraport-t3-ops", "src:hessenschau-t3"] },
+        { "state": "planned", "from": "2026-04-23", "note": "Boarding gates of pier G not in use (\"Dornröschenschlaf\" until 2027, aviation.direct 23 Apr 2026; Fraport CEO Mar 2025: no aircraft at G at first); only the G check-in hall operates. No dated opening of the gates published.", "confidence": "probable", "sources": ["src:aviationdirect-t3-opening", "src:aerode-t3-2025", "src:hessenschau-t3"] }
+      ]
+    }
+  ],
+  "gateGroups": [
+    {
+      "id": "fra-gates-a1-a5",
+      "area": "fra-t1-a",
+      "label": "A1–A5",
+      "gates": ["A1", "A2", "A3", "A4", "A5"],
+      "path": [[389, 108], [372, 114]],
+      "confidence": "probable",
+      "sources": ["src:osm-fra"],
+      "notes": "Head of pier A. OSM tags A1–A3 'level 1' (apron level) — possibly bus/walk-out gates; not confirmed. A6–A10 and A12 not attested."
+    },
+    {
+      "id": "fra-gates-a11-a26",
+      "area": "fra-t1-a",
+      "label": "A11–A26",
+      "gates": ["A11", "A13", "A14", "A15", "A16", "A17", "A18", "A19", "A20", "A21", "A22", "A23", "A24", "A25", "A26"],
+      "path": [[367, 126], [352, 162], [336, 200], [312, 220]],
+      "confidence": "verified",
+      "sources": ["src:osm-fra", "src:fra-official-transfer", "src:fra-official-locations", "src:pointsanalyst-fra"],
+      "notes": "Contact (jet-bridge) gates along both sides of pier A. Official pages name A14/A15 (InfoGate) and A15 (tunnel to B19). A12 not attested."
+    },
+    {
+      "id": "fra-gates-a28-a40",
+      "area": "fra-t1-a",
+      "label": "A28–A40",
+      "gates": ["A28", "A30", "A32", "A34", "A36", "A38", "A40"],
+      "path": [[302, 224], [254, 242]],
+      "confidence": "probable",
+      "sources": ["src:osm-fra"],
+      "notes": "Even-numbered contact gates along the south-west tail of pier A (OSM, level 2). Odd numbers in this range not attested."
+    },
+    {
+      "id": "fra-gates-a50-a69",
+      "area": "fra-t1-a",
+      "label": "A50–A69 (A-Plus, lower level)",
+      "gates": ["A50", "A52", "A54", "A56", "A58", "A60", "A62", "A64", "A66", "A68", "A69"],
+      "path": [[304, 136], [208, 171]],
+      "confidence": "verified",
+      "sources": ["src:osm-fra", "src:kayak-fra", "src:yt-airportwalker-z-a"],
+      "notes": "OSM maps paired refs (A54/A56, A58/A60, A62/A64, A66/A68) to one stand each — wide-body stands with two gate numbers. Same stands as Z50–Z69 on the level above."
+    },
+    {
+      "id": "fra-gates-z11-z25",
+      "area": "fra-t1-z",
+      "label": "Z11–Z25 (attested: Z22, Z23)",
+      "gates": ["Z22", "Z23"],
+      "path": [[345, 168], [330, 196]],
+      "confidence": "probable",
+      "sources": ["src:pointsanalyst-fra", "src:yt-bachling-z23", "src:yt-airportwalker-z-a"],
+      "notes": "Direction sign 'Z 11–25' seen in the Z→A video (2023); only Z22 (guide, 2026-03) and Z23 (arrival video, 2022) are attested individually. Z above A11–A25 (dual-level stands); exact list unknown."
+    },
+    {
+      "id": "fra-gates-z50-z69",
+      "area": "fra-t1-z",
+      "label": "Z50–Z69 (A-Plus, upper level)",
+      "gates": ["Z50", "Z52", "Z54", "Z56", "Z58", "Z60", "Z66", "Z68", "Z69"],
+      "path": [[304, 136], [208, 171]],
+      "confidence": "verified",
+      "sources": ["src:osm-fra", "src:yt-kurmann-z69", "src:yt-airportwalker-z-a"],
+      "notes": "Z62/Z64 not tagged in OSM although A62/A64 are; listed only as attested. Z69 also attested by a 2012 transfer video (historical)."
+    },
+    {
+      "id": "fra-gates-b-schengen",
+      "area": "fra-t1-b-s",
+      "label": "B1–B19",
+      "gates": ["B1", "B10", "B11", "B12", "B13", "B19"],
+      "path": [[433, 123], [409, 120], [412, 131], [414, 135]],
+      "confidence": "probable",
+      "sources": ["src:osm-fra", "src:kayak-fra", "src:fra-official-transfer"],
+      "notes": "B19 is the B end of the official Schengen tunnel A15–B19. B1 tagged level 1 in OSM (apron level). B2–B9, B17–B18 not attested."
+    },
+    {
+      "id": "fra-gates-b14-b16-bus",
+      "area": "fra-t1-b-s",
+      "label": "B14–B16 (bus, Schengen)",
+      "gates": ["B14", "B15", "B16"],
+      "path": [[436, 106], [440, 115]],
+      "bus": true,
+      "confidence": "probable",
+      "sources": ["src:osm-fra"],
+      "notes": "OSM: aeroway:gate:type=bus, level 0, refs 'B14;B60', 'B15;B61', 'B16;B62' — the same bus gate is numbered B14–B16 for Schengen and B60–B62 for non-Schengen use."
+    },
+    {
+      "id": "fra-gates-b20-b28",
+      "area": "fra-t1-b-n",
+      "label": "B20–B28",
+      "gates": ["B20", "B22", "B23", "B24", "B25", "B26", "B27", "B28"],
+      "path": [[413, 137], [405, 153], [393, 175], [408, 182]],
+      "confidence": "verified",
+      "sources": ["src:osm-fra", "src:kayak-fra", "src:amex-lounges", "src:pointsanalyst-fra"],
+      "notes": "Non-Schengen per Kayak (B20–B63) and the Lufthansa 'non-Schengen gates B24–B28' lounge listing. B21 not attested."
+    },
+    {
+      "id": "fra-gates-b41-b48",
+      "area": "fra-t1-b-n",
+      "label": "B41–B48",
+      "gates": ["B41", "B42", "B43", "B44", "B45", "B46", "B47", "B48"],
+      "path": [[444, 129], [451, 146], [460, 137], [475, 142], [480, 150], [468, 158]],
+      "confidence": "verified",
+      "sources": ["src:osm-fra", "src:amex-lounges", "src:yt-airportwalker-bn-a", "src:kayak-fra"],
+      "notes": "Gate sign B43 visible at the start of the 2025 'non-Schengen B to Schengen A' video; Lufthansa lounge 'non-Schengen gates B44–B48'."
+    },
+    {
+      "id": "fra-gates-b-bus-ns",
+      "area": "fra-t1-b-n",
+      "label": "B30–B32, B58–B62 (bus, non-Schengen)",
+      "gates": ["B30", "B32", "B58", "B59", "B60", "B61", "B62"],
+      "path": [[428, 150], [436, 148], [438, 133]],
+      "bus": true,
+      "confidence": "probable",
+      "sources": ["src:osm-fra", "src:kayak-fra"],
+      "notes": "B58–B62 tagged as bus gates (level 0) in OSM; B30/B32 carry the OSM note 'Bustransfer'. B60–B62 share the physical gate with B14–B16 (Schengen numbering)."
+    },
+    {
+      "id": "fra-gates-c1",
+      "area": "fra-t1-c",
+      "label": "C1 (zone unclear)",
+      "gates": ["C1"],
+      "zone": "mixed",
+      "path": [[439, 83], [441, 84]],
+      "confidence": "unknown",
+      "sources": ["src:osm-fra", "src:kayak-fra"],
+      "notes": "Attested in OSM. Kayak (2026-07) lists C1 among Schengen gates, which conflicts with C being non-Schengen; not resolved."
+    },
+    {
+      "id": "fra-gates-c2-c20",
+      "area": "fra-t1-c",
+      "label": "C2–C20",
+      "gates": ["C2", "C4", "C5", "C6", "C8", "C11", "C13", "C14", "C15", "C15A", "C15B", "C16", "C16A", "C16B", "C17", "C18", "C20"],
+      "path": [[443, 86], [477, 94], [508, 107], [534, 112], [567, 100], [557, 94], [565, 88]],
+      "confidence": "probable",
+      "sources": ["src:osm-fra", "src:kayak-fra"],
+      "notes": "C15/C16 are A380 stands with sub-gates A/B (OSM refs 'C15/C15A+C15B', 'C16/C16A + C16B'). Non-Schengen per Kayak and Points Analyst; C3, C7, C9, C10, C12, C19 not attested."
+    },
+    {
+      "id": "fra-gates-h-contact",
+      "area": "fra-t3-h",
+      "label": "H1–H13",
+      "gates": ["H1", "H2", "H3", "H4", "H5", "H6", "H8", "H9", "H12", "H13"],
+      "path": [[541, 534], [532, 526], [522, 498], [514, 479], [513, 466]],
+      "confidence": "probable",
+      "sources": ["src:osm-fra", "src:flyctory-t3"],
+      "notes": "OSM level 1. Flyctory (Air Europa MAD, Sept 2026) departed and arrived at H gates without giving numbers. H7, H10, H11 not attested."
+    },
+    {
+      "id": "fra-gates-h50s",
+      "area": "fra-t3-h",
+      "label": "H51–H56 (apron level)",
+      "gates": ["H51", "H52", "H54", "H55", "H56"],
+      "path": [[530, 517], [525, 503]],
+      "bus": true,
+      "confidence": "probable",
+      "sources": ["src:osm-fra", "src:wiki-t3-de"],
+      "notes": "OSM level 0 below the H contact gates: H51, H52, H54, H55, H56 (H53 not attested). de.wikipedia: pier H has 5 bus gates on level 1 in addition to the 10 jet-bridge positions, matching the five attested numbers. Bus use rests on Wikipedia (low weight) and the OSM level; no signage seen."
+    },
+    {
+      "id": "fra-gates-j-contact",
+      "area": "fra-t3-j",
+      "label": "J1–J14",
+      "gates": ["J1", "J2", "J3", "J4", "J5", "J6", "J7", "J8", "J9", "J10", "J11", "J12", "J13", "J14"],
+      "path": [[496, 566], [465, 551], [443, 547], [425, 539], [399, 524]],
+      "confidence": "verified",
+      "sources": ["src:osm-fra", "src:fraport-t3-ops", "src:wiki-t3-de"],
+      "notes": "OSM level 2; 14 numbers match the 14 aircraft positions of pier J (hessenschau). Gate J3 named by Fraport for the first T3 flight (CZ8021)."
+    },
+    {
+      "id": "fra-gates-j50s",
+      "area": "fra-t3-j",
+      "label": "J50–J58 (apron level)",
+      "gates": ["J50", "J51", "J53", "J54", "J55", "J56", "J57", "J58"],
+      "path": [[499, 571], [474, 557]],
+      "bus": true,
+      "confidence": "probable",
+      "sources": ["src:osm-fra", "src:wiki-t3-de", "src:yt-jebbrooks-t3"],
+      "notes": "OSM level 0 at the root of pier J: J50, J51, J53–J58 (8 numbers; J52 not attested). de.wikipedia: pier J has 8 bus gates on level 1, matching the count. Direction sign \"J 1–2 / J 51–58\" seen in pier J during the Dec 2025 ORAT trial (Jeb Brooks). Bus use rests on Wikipedia and the level; not seen in live operation."
+    }
+  ],
+  "stops": [
+    {
+      "id": "s:fra-sl2-t1",
+      "name": "Sky Line · Terminal 1 (at the rail stations)",
+      "area": "fra-rail-regional",
+      "side": "landside",
+      "anchor": [412, 59],
+      "accessMinutes": { "min": 2, "typical": 3, "max": 5, "basis": "measured", "note": "Platform → regional-station concourse ≈3.7 min (myY-BV5iVJQ t≈555–775 s, 5-s frames, no cut seen; via the glazed bridge and escalators); concourse → platform ≈2 min the other way (j13GVD6zE-o, observed)" },
+      "where": "Elevated station above the Terminal 1 arrivals curbside, with access to the Airport City Mall and the regional station below (Fraport fact sheet); follow 'Terminal 3 G, H, J'",
+      "confidence": "verified",
+      "sources": ["src:yt-travelwalk-t1t3", "src:wiki-skyline-de", "src:osm-fra", "src:fra-official-t3", "src:fraport-factsheet-skyline"],
+      "notes": "Measured (June 2026): from the Sky Line platform over glazed bridges past the long-distance station signage ('4–7'), escalators down past the 'Terminal 1' sign to the regional-station concourse (Reisezentrum) ≈220 s, platform level ≈275 s. Video j13GVD6zE-o: regional-station concourse to the Sky Line platform ≈2 min (00:55–03:00 incl. escalators)."
+    },
+    {
+      "id": "s:fra-sl2-t2-land",
+      "name": "Sky Line · Terminal 2 (public platform)",
+      "area": "fra-t2-land",
+      "side": "landside",
+      "anchor": [634, 38],
+      "accessMinutes": { "min": 0, "typical": 1, "max": 2, "basis": "assumed", "note": "Platform change inside the enlarged T2 Sky Line station (4 tracks, five platforms; Fraport fact sheet). Seen in the Loungerocker video (cut), not timed" },
+      "confidence": "probable",
+      "sources": ["src:wiki-skyline-de", "src:yt-travelwalk-t3t1", "src:yt-railherbie", "src:fraport-factsheet-skyline"]
+    },
+    {
+      "id": "s:fra-sl2-t3",
+      "name": "Sky Line · Terminal 3 (public platform)",
+      "area": "fra-t3-hall",
+      "side": "landside",
+      "anchor": [570, 610],
+      "accessMinutes": { "min": 3, "typical": 4, "max": 6, "basis": "derived" },
+      "where": "In the passageway between the T3 car park and the terminal, one level above arrivals; 150 m × 30 m station used by Schengen and non-Schengen travellers and visitors (Fraport fact sheet)",
+      "confidence": "verified",
+      "sources": ["src:fra-official-t3", "src:flyctory-t3", "src:yt-travelwalk-t1t3", "src:osm-fra", "src:fraport-factsheet-skyline"]
+    },
+    {
+      "id": "s:fra-sl2-t2-air",
+      "name": "Sky Line · Terminal 2 (connecting-flights car platform)",
+      "area": "fra-t2-air",
+      "side": "airside",
+      "anchor": [640, 52],
+      "accessMinutes": { "min": 0, "typical": 1, "max": 2, "basis": "assumed", "note": "Platform change inside the enlarged T2 Sky Line station (4 tracks, five platforms; Fraport fact sheet). Seen in the Loungerocker video (cut), not timed" },
+      "confidence": "probable",
+      "sources": ["src:yt-loungerocker", "src:aviationdirect-skyline", "src:fraport-factsheet-skyline"]
+    },
+    {
+      "id": "s:fra-sl2-t3-air",
+      "name": "Sky Line · Terminal 3 (connecting-flights car platform)",
+      "area": "fra-t3-j-arr",
+      "side": "airside",
+      "anchor": [563, 604],
+      "accessMinutes": { "min": 4, "typical": 6, "max": 9, "basis": "observed" },
+      "where": "Walkway from the pier J arrivals level (level 2) to the airside Sky Line platform; long glazed bridge",
+      "confidence": "probable",
+      "sources": ["src:yt-loungerocker", "src:aviationdirect-skyline", "src:wiki-t3-de", "src:meilenoptimieren-t3"],
+      "notes": "de.wikipedia: a walkway from level 2 of pier J (non-Schengen arrivals) leads to the airside Sky Line transfer vehicle. Loungerocker (2026-04-29, ≈05:25–07:40) walks from the airside platform over a long glazed bridge with revolving doors into the T3 airside marketplace, where a sign points to the Emirates and SkyTeam lounges (levels 4/5, which are in area J): so the car arrives on the non-Schengen side. The possible transfer security check is modelled on the walk fra-t3-j-arr → fra-t3-j."
+    },
+    {
+      "id": "s:fra-sl1-z",
+      "name": "SkyLine (old line) · Terminal 1 A/Z (non-Schengen side platform)",
+      "area": "fra-t1-z",
+      "side": "airside",
+      "anchor": [351, 148],
+      "accessMinutes": { "min": 2, "typical": 4, "max": 6, "basis": "derived" },
+      "where": "SkyLine station A/Z in the transit area (Meilenoptimieren), level 4; follow 'G, H, J' signs airside",
+      "egressControls": [
+        { "kind": "transfer-security", "when": "origin-not-one-stop", "minutes": { "min": 0, "typical": 10, "max": 30, "basis": "assumed" }, "note": "Phase 3: Fraport's checkpoint list (via Qsensor, 2026-11-01) names a 'Hall A, Level 4, Transfer security checkpoint' for concourse A/Z, gates Z11–Z69, on the level of this station. Applied to passengers leaving the transit car here (e.g. arriving at T3 J and connecting in T1); whether it applies depends on the origin (EU one-stop security)" }
+      ],
+      "confidence": "probable",
+      "sources": ["src:wiki-skyline-de", "src:yt-loungerocker", "src:osm-fra", "src:meilenoptimieren-skyline", "src:qsensor-fra"],
+      "notes": "de.wikipedia: A/Z has an island platform for Schengen exits and side platforms for non-Schengen exits. Loungerocker boards airside at T1 A/Z following 'G,H,J' signs. Phase 3: a transfer security checkpoint for A/Z sits on level 4 (Fraport checkpoint data via Qsensor); a 2026 travel guide (MoonandMoron, Jul 2026) tells T3 arrivals connecting to Schengen in T1 to take the Sky Line to T2 and then be screened again. The exact position of the checkpoint relative to the platform is not documented."
+    },
+    {
+      "id": "s:fra-sl1-c",
+      "name": "SkyLine (old line) · Terminal 1 C (non-Schengen only)",
+      "area": "fra-t1-c",
+      "side": "airside",
+      "anchor": [513, 75],
+      "accessMinutes": { "min": 1, "typical": 3, "max": 5, "basis": "assumed" },
+      "confidence": "probable",
+      "sources": ["src:wiki-skyline-de", "src:osm-fra", "src:meilenoptimieren-skyline"],
+      "notes": "Opened 21 June 2017; island platform for non-Schengen exits, no Schengen exit (de.wikipedia).",
+      "where": "SkyLine station C in the transit area (Meilenoptimieren); non-Schengen exits only (de.wikipedia)"
+    },
+    {
+      "id": "s:fra-sl1-t2-air",
+      "name": "SkyLine (old line) · Terminal 2 (non-Schengen platform)",
+      "area": "fra-t2-air",
+      "side": "airside",
+      "anchor": [628, 50],
+      "accessMinutes": { "min": 0, "typical": 1, "max": 2, "basis": "assumed", "note": "Platform change inside the enlarged T2 Sky Line station (4 tracks, five platforms; Fraport fact sheet). Seen in the Loungerocker video (cut), not timed" },
+      "confidence": "probable",
+      "sources": ["src:yt-loungerocker", "src:wiki-skyline-de", "src:fraport-factsheet-skyline"]
+    },
+    {
+      "id": "s:fra-sl1-b-land",
+      "name": "SkyLine (old line) · Terminal 1 B (public platform)",
+      "area": "fra-t1-hall",
+      "side": "landside",
+      "anchor": [424, 92],
+      "accessMinutes": { "min": 2, "typical": 4, "max": 6, "basis": "assumed" },
+      "where": "Level 4 above departure hall B",
+      "confidence": "inferred",
+      "sources": ["src:wiki-skyline-de", "src:osm-fra"],
+      "notes": "Station B is \"before security\" (Meilenoptimieren). Public use ended with the T3 opening (line status)."
+    },
+    {
+      "id": "s:fra-sl1-t2-land",
+      "name": "SkyLine (old line) · Terminal 2 (public platform)",
+      "area": "fra-t2-land",
+      "side": "landside",
+      "anchor": [624, 42],
+      "accessMinutes": { "min": 0, "typical": 1, "max": 2, "basis": "assumed", "note": "Platform change inside the enlarged T2 Sky Line station (4 tracks, five platforms; Fraport fact sheet). Seen in the Loungerocker video (cut), not timed" },
+      "confidence": "inferred",
+      "sources": ["src:wiki-skyline-de", "src:yt-railherbie", "src:fraport-factsheet-skyline"]
+    },
+    {
+      "id": "s:fra-nightbus-t1",
+      "name": "Night shuttle bus · Terminal 1 arrivals forecourt",
+      "area": "fra-t1-hall",
+      "side": "landside",
+      "anchor": [380, 56],
+      "accessMinutes": { "min": 3, "typical": 5, "max": 8, "basis": "assumed" },
+      "where": "In front of the terminal building, arrivals forecourt",
+      "confidence": "probable",
+      "sources": ["src:fra-official-orientation"]
+    },
+    {
+      "id": "s:fra-nightbus-t3",
+      "name": "Night shuttle bus · Terminal 3 arrivals forecourt",
+      "area": "fra-t3-hall",
+      "side": "landside",
+      "anchor": [540, 604],
+      "accessMinutes": { "min": 2, "typical": 3, "max": 6, "basis": "assumed" },
+      "where": "In front of the terminal building, arrivals forecourt",
+      "confidence": "probable",
+      "sources": ["src:fra-official-orientation"]
+    },
+    {
+      "id": "s:fra-bus-bn",
+      "name": "Apron transfer bus · B non-Schengen (towards A)",
+      "area": "fra-t1-b-n",
+      "side": "airside",
+      "anchor": [432, 146],
+      "accessMinutes": { "min": 2, "typical": 3, "max": 5, "basis": "observed" },
+      "where": "Bus-gate area of pier B near B43 (follow 'A, Z')",
+      "confidence": "probable",
+      "sources": ["src:yt-airportwalker-bn-a"]
+    },
+    {
+      "id": "s:fra-bus-a",
+      "name": "Apron transfer bus · Pier A arrival (passport control into A)",
+      "area": "fra-t1-a",
+      "side": "airside",
+      "anchor": [372, 120],
+      "accessMinutes": { "min": 1, "typical": 2, "max": 4, "basis": "observed" },
+      "egressControls": [{ "kind": "passport", "minutes": { "min": 3, "typical": 10, "max": 45, "basis": "assumed" }, "note": "Entry into the Schengen area at pier A after the bus" }],
+      "confidence": "probable",
+      "sources": ["src:yt-airportwalker-bn-a"]
+    },
+    {
+      "id": "s:fra-replbus-t1",
+      "name": "Sky Line replacement bus · Terminal 1 arrivals forecourt",
+      "area": "fra-t1-hall",
+      "side": "landside",
+      "anchor": [384, 62],
+      "accessMinutes": { "min": 3, "typical": 5, "max": 8, "basis": "assumed", "note": "From the T1 departure halls down to the arrivals forecourt" },
+      "where": "In front of the terminal building at the arrivals level (Fraport, May 2026)",
+      "confidence": "verified",
+      "sources": ["src:fraport-press-skyline-suspension", "src:aerotelegraph-skyline"]
+    },
+    {
+      "id": "s:fra-replbus-t3",
+      "name": "Sky Line replacement bus · Terminal 3 arrivals forecourt",
+      "area": "fra-t3-hall",
+      "side": "landside",
+      "anchor": [546, 606],
+      "accessMinutes": { "min": 2, "typical": 3, "max": 6, "basis": "assumed" },
+      "where": "In front of the terminal building at the arrivals level (Fraport, May 2026)",
+      "confidence": "verified",
+      "sources": ["src:fraport-press-skyline-suspension", "src:aerotelegraph-skyline"]
+    }
+  ],
+  "lines": [
+    {
+      "id": "l:fra-skyline2-public",
+      "name": "Sky Line (new line) · public car",
+      "mode": "people-mover",
+      "operator": "Fraport AG",
+      "colour": "#f2b800",
+      "access": "public",
+      "side": "landside",
+      "stops": ["s:fra-sl2-t1", "s:fra-sl2-t2-land", "s:fra-sl2-t3"],
+      "direction": "both",
+      "rideMin": [2.5, 4.5],
+      "service": [
+        {
+          "hours": "04:00–23:00",
+          "windows": [{ "from": "04:00", "until": "23:00" }],
+          "headwayMin": { "min": 2, "max": 3 },
+          "headwayBasis": "published",
+          "waitMin": { "min": 0, "typical": 1.5, "max": 3, "basis": "derived" },
+          "sources": ["src:fra-official-orientation", "src:fra-official-t3", "src:fraport-press-skyline-restart", "src:hessenschau-skyline-restart"],
+          "notes": "Official: every 2–3 min, 04:00–23:00 (orientation and T3 pages, read 2026-10-31). Since the 15 June 2026 restart Fraport pauses the Sky Line every night 23:00–04:00 \"until further notice\" (inspections by Siemens Mobility; shuttle buses instead) and runs up to 8 vehicles at max. 50 km/h. Wait = half the headway."
+        }
+      ],
+      "eligibility": "Everyone, free of charge (public car: Schengen passengers, origin/destination passengers, visitors, staff). Luggage carts not allowed.",
+      "path": [[412, 59], [435, 52], [488, 32], [506, 66], [535, 78], [627, 44], [685, 25], [824, 33], [854, 54], [863, 88], [851, 133], [774, 357], [696, 459], [649, 549], [579, 603], [570, 610]],
+      "confidence": "verified",
+      "sources": ["src:fra-official-orientation", "src:fra-official-t3", "src:fraport-t3-ops", "src:hessenschau-t3", "src:aviationdirect-skyline", "src:yt-travelwalk-t1t3", "src:yt-travelwalk-t3t1", "src:yt-frankfurtonfoot", "src:osm-fra", "src:fraport-press-skyline-restart", "src:meilenoptimieren-t3", "src:yt-for91days-skyline", "src:fraport-factsheet-skyline", "src:hessenschau-skyline-restart", "src:fraport-press-skyline-suspension"],
+      "notes": "5.6 km; official \"eight minutes or less\" T1–T3 incl. the T2 stop (Fraport fact sheet), hessenschau and Meilenoptimieren 8–10 min, OMAAT/InsideFlyer \"roughly 10 minutes\". Measured T3 → T1 (Travel & Walk for you, published 23 Jun 2026, after the restart at 50 km/h): leaves T3 ≈140 s, stops at T2 ≈400–410 s, arrives at T1 ≈555 s → ≈4.3 + 0.2 + 2.4 ≈ 6.9 min door to door. Ride segments are therefore measured; the 4 → 6 min range on T2–T3 covers the reported 8–10 min totals. Each two-car vehicle is divided into a public (Schengen/landside) part and a non-Schengen transfer part (fact sheet).",
+      "status": [
+        { "state": "planned", "until": "2026-04-22", "note": "Opened to the public with Terminal 3 on 23 April 2026.", "confidence": "verified", "sources": ["src:fraport-t3-ops", "src:wiki-t3-de"] },
+        { "state": "suspended", "from": "2026-05-28", "until": "2026-06-14", "note": "New Sky Line out of service after recurring technical faults; replacement shuttle buses between the terminals. Restarted 15 June 2026 with up to 8 vehicles at max. 50 km/h.", "confidence": "verified", "sources": ["src:fraport-press-skyline-restart", "src:reisetopia-skyline", "src:aviationdirect-skyline"] }
+      ],
+      "ride": [
+        { "min": 2, "typical": 2.5, "max": 3.5, "basis": "measured", "note": "T2 → T1 measured ≈2.4 min (myY-BV5iVJQ t≈410–555 s, 5-s frames, June 2026, after the 50 km/h restart); Meilenoptimieren (Fraport test operation) T1–T2 2 min" },
+        { "min": 4, "typical": 4.5, "max": 6, "basis": "measured", "note": "T3 → T2 measured ≈4.3 min (myY-BV5iVJQ t≈140–400 s, 5-s frames, no cut seen) + T2 dwell ≈0.2 min; max covers the 8–10 min T1–T3 reported by hessenschau/Meilenoptimieren" }
+      ]
+    },
+    {
+      "id": "l:fra-skyline2-transfer",
+      "name": "Sky Line (new line) · connecting-flights car (non-Schengen)",
+      "mode": "people-mover",
+      "operator": "Fraport AG",
+      "colour": "#c24d00",
+      "access": "transfer",
+      "side": "airside",
+      "stops": ["s:fra-sl2-t2-air", "s:fra-sl2-t3-air"],
+      "direction": "both",
+      "rideMin": [4.5],
+      "service": [
+        {
+          "hours": "04:00–23:00",
+          "windows": [{ "from": "04:00", "until": "23:00" }],
+          "headwayMin": { "min": 2, "max": 3 },
+          "headwayBasis": "published",
+          "waitMin": { "min": 0, "typical": 1.5, "max": 3, "basis": "derived" },
+          "sources": ["src:fra-official-orientation", "src:fraport-press-skyline-restart", "src:fraport-factsheet-skyline"],
+          "notes": "The transfer part travels in every vehicle (fact sheet), so the published 2–3 min headway and the nightly 23:00–04:00 pause apply. Night transfers airside: see q:fra-night-airside."
+        }
+      ],
+      "eligibility": "Non-Schengen transfer passengers only (the second of the two coupled cars, reserved for customs reasons). No stop at the public T1 Sky Line station: from T1 airside use the old SkyLine to T2 and change there.",
+      "path": [[637, 44], [685, 27], [824, 35], [852, 56], [860, 88], [849, 133], [772, 357], [694, 459], [647, 549], [577, 603], [563, 604]],
+      "confidence": "verified",
+      "sources": ["src:aviationdirect-skyline", "src:yt-loungerocker", "src:yt-frankfurtonfoot", "src:fraport-press-skyline-restart", "src:fraport-factsheet-skyline", "src:jal-fra-transit"],
+      "notes": "Car split confirmed by the operator (fact sheet: \"Each of them is divided into separate parts for Schengen and non-Schengen passengers\"), a news report and two first-hand videos (\"CONNECTING FL…\" label on the partitioned car; \"airside and landside in the same train, not the same car\"). JAL tells T3 ↔ T1 transfer passengers who do not pass immigration to change to the other SkyLine at Terminal 2 (search excerpt). At T3 the car serves the pier J arrivals level (de.wikipedia) and leads into the non-Schengen marketplace (Loungerocker lounge signs). During the 28 May – 14 June 2026 suspension Fraport ran a separate airside shuttle with up to five buses for transfer passengers (stops not published; not routed, see r:fra-suspension-buses).",
+      "status": [
+        { "state": "planned", "until": "2026-04-22", "note": "Opened to the public with Terminal 3 on 23 April 2026.", "confidence": "verified", "sources": ["src:fraport-t3-ops", "src:wiki-t3-de"] },
+        { "state": "suspended", "from": "2026-05-28", "until": "2026-06-14", "note": "New Sky Line out of service after recurring technical faults; replacement shuttle buses between the terminals. Restarted 15 June 2026 with up to 8 vehicles at max. 50 km/h.", "confidence": "verified", "sources": ["src:fraport-press-skyline-restart", "src:reisetopia-skyline", "src:aviationdirect-skyline"] }
+      ],
+      "ride": [
+        { "min": 4, "typical": 4.5, "max": 6, "basis": "measured", "note": "Same vehicles as the public car (Fraport fact sheet: each vehicle divided into Schengen and non-Schengen parts); T3 → T2 measured ≈4.3 min (myY-BV5iVJQ)" }
+      ]
+    },
+    {
+      "id": "l:fra-skyline1-transfer",
+      "name": "SkyLine (old line) · transfer car (non-Schengen)",
+      "mode": "people-mover",
+      "operator": "Fraport AG",
+      "colour": "#2e7d32",
+      "access": "transfer",
+      "side": "airside",
+      "stops": ["s:fra-sl1-z", "s:fra-sl1-c", "s:fra-sl1-t2-air"],
+      "direction": "both",
+      "rideMin": [2.5, 1.5],
+      "service": [
+        {
+          "hours": "05:00–23:00 (secondary sources; Meilenoptimieren says round the clock)",
+          "windows": [{ "from": "05:00", "until": "23:00" }],
+          "headwayMin": { "min": 1.5, "max": 5 },
+          "headwayBasis": "observed",
+          "waitMin": { "min": 0, "typical": 1.5, "max": 5, "basis": "derived" },
+          "sources": ["src:wiki-skyline-en", "src:wiki-skyline-de", "src:meilenoptimieren-skyline"],
+          "notes": "No operator timetable found. en.wikipedia: 05:00–23:00, bus shuttle during the night break; de.wikipedia and Meilenoptimieren: 90 s at peak, up to 5 min off-peak. Meilenoptimieren (Feb 2026) states \"rund um die Uhr\" (contradiction kept open; the conservative 05:00–23:00 window is used, so night routes walk within T1)."
+        }
+      ],
+      "eligibility": "Non-Schengen transfer passengers only (the transit car of each train): boards in the transit areas at A/Z and C; at T2 change to the connecting-flights part of the new Sky Line. After the T3 opening the old line carries only transit passengers (Fraport via Meilenoptimieren).",
+      "path": [[351, 148], [356, 141], [375, 110], [411, 100], [420, 98], [454, 80], [489, 70], [513, 75], [538, 83], [628, 50]],
+      "confidence": "probable",
+      "sources": ["src:wiki-skyline-de", "src:wiki-skyline-en", "src:yt-loungerocker", "src:yt-wanderlust-skyline", "src:osm-fra", "src:meilenoptimieren-skyline", "src:jal-fra-transit", "src:fraport-press-skyline-suspension"],
+      "notes": "Running on 2026-10-31: Fraport (May 2026) \"the existing Sky Line people mover between Terminal 1 and Terminal 2 remains fully operational\"; Fraport (9 Jun 2026) the Sky Line keeps operating during the T2 closure; JAL tells T3 ↔ T1 transfer passengers to change SkyLine at T2. Station B is passed without a stop for this car in the model: Meilenoptimieren lists B as \"before security\" and no source shows a transit platform there (q:fra-b-skyline-platform). Ride times observed in a 2024 ride (pre-T3; includes dwell).",
+      "ride": [
+        { "min": 2, "typical": 2.5, "max": 3.5, "basis": "observed", "note": "A/Z → C incl. the pass through station B: ≈1.5 + 1 min in a 2024 front-window ride (w3JSmiYT7YY, possibly edited)" },
+        { "min": 1, "typical": 1.5, "max": 2.5, "basis": "observed", "note": "C → T2 ≈1.5 min in the same 2024 ride" }
+      ]
+    },
+    {
+      "id": "l:fra-skyline1-public",
+      "name": "SkyLine (old line) · public car",
+      "mode": "people-mover",
+      "operator": "Fraport AG",
+      "colour": "#66bb6a",
+      "access": "public",
+      "side": "landside",
+      "stops": ["s:fra-sl1-b-land", "s:fra-sl1-t2-land"],
+      "direction": "both",
+      "rideMin": [2.5],
+      "service": [
+        {
+          "hours": "05:00–23:00 until 22 Apr 2026 (secondary sources)",
+          "headwayMin": { "min": 1.5, "max": 5 },
+          "waitMin": { "min": 0, "typical": 2, "max": 5, "basis": "assumed" },
+          "windows": [{ "from": "05:00", "until": "23:00" }],
+          "headwayBasis": "observed",
+          "sources": ["src:wiki-skyline-en", "src:wiki-skyline-de"]
+        }
+      ],
+      "eligibility": "Public car (visitors, origin/destination and Schengen passengers) until the T3 opening; since 23 April 2026 the old line is reserved for transit passengers (Fraport plan, via Meilenoptimieren).",
+      "path": [[424, 92], [454, 76], [489, 66], [538, 79], [624, 42]],
+      "confidence": "inferred",
+      "sources": ["src:wiki-skyline-de", "src:yt-railherbie", "src:fraport-press-t2", "src:meilenoptimieren-skyline"],
+      "notes": "Kept for past dates and so that the change is visible. Ride ≈2.5 min T1 B → T2 observed in the 2024 front-window ride (w3JSmiYT7YY).",
+      "status": [
+        { "state": "closed", "from": "2026-04-23", "note": "Per Fraport (quoted by Meilenoptimieren, Feb 2026) the old line carries only transit passengers between T1 and T2 once T3 operates; the public uses the new line from the T1 station at the rail stations. Not confirmed by a post-opening observation.", "confidence": "probable", "sources": ["src:meilenoptimieren-skyline"] }
+      ],
+      "rideBasis": "observed"
+    },
+    {
+      "id": "l:fra-nightbus",
+      "name": "Terminal shuttle bus (night)",
+      "mode": "shuttle-bus",
+      "operator": "Fraport AG",
+      "colour": "#5c6bc0",
+      "access": "public",
+      "side": "landside",
+      "stops": ["s:fra-nightbus-t1", "s:fra-nightbus-t3"],
+      "direction": "both",
+      "rideMin": [11],
+      "service": [
+        {
+          "hours": "22:00–05:00",
+          "windows": [{ "from": "22:00", "until": "05:00" }],
+          "headwayMin": { "min": 10, "max": 20 },
+          "headwayBasis": "assumed",
+          "waitMin": { "min": 0, "typical": 7, "max": 20, "basis": "assumed" },
+          "sources": ["src:fra-official-orientation", "src:fraport-press-skyline-restart"],
+          "notes": "Official: \"Between 10:00 p.m. and 5:00 a.m., a shuttle bus is available for transfers between the terminals … at regular intervals\" (interval not published). Fraport (15 Jun 2026): shuttle buses run during the nightly Sky Line pause 23:00–04:00. During the May–June suspension Fraport ran night buses every 10 min (r:fra-suspension-buses); the regular night interval is assumed 10–20 min."
+        }
+      ],
+      "eligibility": "Everyone; public side (arrivals forecourts).",
+      "path": [[380, 56], [470, 30], [700, 22], [870, 90], [780, 360], [700, 470], [600, 590], [540, 604]],
+      "confidence": "probable",
+      "sources": ["src:fra-official-orientation", "src:wiki-skyline-en", "src:fraport-press-skyline-restart", "src:fraport-press-skyline-suspension"],
+      "notes": "Landside only (stops in front of the terminal buildings, arrivals forecourts; DE page: 'im Bereich der Ankunftsvorfahrten', rechecked 2026-11-01). Ride time and interval assumed (not published; a secondary lead of ≈12 min ride and a T1 stop at the car drop-off area could not be confirmed in any readable source). On 28 May – 14 June 2026 the daytime and night replacement buses are modelled as l:fra-skyline-replacement-bus.",
+      "ride": [
+        { "min": 8, "typical": 11, "max": 15, "basis": "assumed", "note": "No published ride time; planning value for a road trip between the T1 and T3 arrival forecourts (estimated 6–7 km round the airport roads at 30–40 km/h). Not measured" }
+      ]
+    },
+    {
+      "id": "l:fra-skyline-replacement-bus",
+      "name": "Sky Line replacement shuttle bus (28 May – 14 June 2026)",
+      "mode": "shuttle-bus",
+      "operator": "Fraport AG",
+      "colour": "#7e57c2",
+      "access": "public",
+      "side": "landside",
+      "stops": ["s:fra-replbus-t1", "s:fra-replbus-t3"],
+      "direction": "both",
+      "rideMin": [11],
+      "ride": [
+        { "min": 8, "typical": 11, "max": 15, "basis": "assumed", "note": "Same road trip as the night bus (no published ride time); also served T2 until 9 June (not modelled: T2 is not a matrix area)" }
+      ],
+      "replaces": "l:fra-skyline2-public",
+      "service": [
+        {
+          "hours": "05:00–23:00",
+          "windows": [{ "from": "05:00", "until": "23:00" }],
+          "headwayMin": { "min": 2, "max": 3 },
+          "headwayBasis": "published",
+          "waitMin": { "min": 0, "typical": 1.5, "max": 3, "basis": "derived" },
+          "sources": ["src:fraport-press-skyline-suspension", "src:aerotelegraph-skyline", "src:wiki-skyline-en"],
+          "notes": "Up to 20 buses every 2–3 min (Fraport)."
+        },
+        {
+          "hours": "23:00–05:00",
+          "windows": [{ "from": "23:00", "until": "05:00" }],
+          "headwayMin": { "min": 10, "max": 10 },
+          "headwayBasis": "published",
+          "waitMin": { "min": 0, "typical": 5, "max": 10, "basis": "derived" },
+          "sources": ["src:fraport-press-skyline-suspension", "src:wiki-skyline-en"],
+          "notes": "Every 10 minutes 23:00–05:00 (Fraport)."
+        }
+      ],
+      "eligibility": "Everyone; landside (the buses do not enter the security area, aeroTELEGRAPH). Transfer passengers had a separate airside shuttle (not routed: stops not published).",
+      "path": [[384, 62], [470, 30], [700, 22], [860, 60], [780, 360], [650, 560], [546, 606]],
+      "status": [
+        { "state": "planned", "until": "2026-05-27", "note": "Introduced when the new Sky Line was taken out of service on 28 May 2026.", "confidence": "verified", "sources": ["src:reisetopia-skyline", "src:fraport-press-skyline-suspension"] },
+        { "state": "closed", "from": "2026-06-15", "note": "Withdrawn when the Sky Line restarted on 15 June 2026 (\"The regular shuttle bus services … have been halted\").", "confidence": "verified", "sources": ["src:fraport-press-skyline-restart", "src:hessenschau-skyline-restart"] }
+      ],
+      "confidence": "verified",
+      "sources": ["src:fraport-press-skyline-suspension", "src:aerotelegraph-skyline", "src:wiki-skyline-en", "src:fraport-press-skyline-restart"],
+      "notes": "Replacement for the public Sky Line during its suspension. Stops at the arrival forecourts of T1, T2 and T3 (T2 omitted here)."
+    },
+    {
+      "id": "l:fra-bus-bn-a",
+      "name": "Apron transfer bus B non-Schengen → A (mornings)",
+      "mode": "bus",
+      "operator": "Fraport AG",
+      "colour": "#8d6e63",
+      "access": "transfer",
+      "side": "airside",
+      "stops": ["s:fra-bus-bn", "s:fra-bus-a"],
+      "direction": "one-way",
+      "rideMin": [3],
+      "service": [
+        {
+          "hours": "until about 14:00 (start time unknown)",
+          "headwayMin": { "min": 5, "max": 15 },
+          "waitMin": { "min": 0, "typical": 5, "max": 15, "basis": "assumed" },
+          "notes": "On-screen note in the 2025 video: 'this bus option is available until 2 PM'."
+        }
+      ],
+      "eligibility": "Transfer passengers from non-Schengen B (B40s) to Schengen A; passport control at pier A after the bus.",
+      "path": [[432, 146], [400, 150], [372, 120]],
+      "confidence": "probable",
+      "sources": ["src:yt-airportwalker-bn-a"],
+      "notes": "Single first-hand source (Airport Walker, published 2025-08-22). Direction B→A only observed; reverse not inferred.",
+      "notRouted": "Seen once (Airport Walker, published Aug 2025, before T3 opened): hours only partly known (\"available until 2 PM\"), start time, direction(s) and current operation not verified. Walking via passport control in B remains the routed path.",
+      "rideBasis": "observed"
+    }
+  ],
+  "walks": [
+    {
+      "id": "w:fra-hall-a",
+      "from": "fra-t1-hall",
+      "to": "fra-t1-a",
+      "bidirectional": true,
+      "access": "public",
+      "minutes": { "min": 2, "typical": 4, "max": 6, "basis": "derived" },
+      "controls": [{ "kind": "security", "minutes": { "min": 5, "typical": 15, "max": 40, "basis": "assumed" }, "note": "Departure security A" }],
+      "reverseControls": [],
+      "practical": "practical",
+      "via": "Departure hall A, level 2",
+      "confidence": "verified",
+      "sources": ["src:fra-official-locations", "src:yt-airportwalker-bn-a", "src:pointsanalyst-fra"]
+    },
+    {
+      "id": "w:fra-hall-bs",
+      "from": "fra-t1-hall",
+      "to": "fra-t1-b-s",
+      "bidirectional": true,
+      "access": "public",
+      "minutes": { "min": 2, "typical": 3, "max": 5, "basis": "derived" },
+      "controls": [{ "kind": "security", "minutes": { "min": 5, "typical": 15, "max": 40, "basis": "assumed" }, "note": "Departure security B" }],
+      "reverseControls": [],
+      "practical": "practical",
+      "via": "Departure hall B, level 2",
+      "confidence": "probable",
+      "sources": ["src:fra-official-locations", "src:pointsanalyst-fra"]
+    },
+    {
+      "id": "w:fra-hall-z",
+      "from": "fra-t1-hall",
+      "to": "fra-t1-z",
+      "bidirectional": false,
+      "access": "public",
+      "minutes": { "min": 4, "typical": 7, "max": 10, "basis": "derived" },
+      "controls": [
+        { "kind": "security", "minutes": { "min": 5, "typical": 15, "max": 40, "basis": "assumed" } },
+        { "kind": "passport", "minutes": { "min": 3, "typical": 10, "max": 45, "basis": "assumed" }, "note": "Exit control, level 3" }
+      ],
+      "practical": "practical",
+      "via": "Hall A → security → passport control → level 3",
+      "confidence": "probable",
+      "sources": ["src:pointsanalyst-fra", "src:fra-official-locations", "src:yt-bachling-z23"],
+      "notes": "Departure direction only; the arriving direction is the arrivals flow w:fra-z-hall-arr."
+    },
+    {
+      "id": "w:fra-z-hall-arr",
+      "from": "fra-t1-z",
+      "to": "fra-t1-hall",
+      "bidirectional": false,
+      "access": "airside",
+      "minutes": { "min": 4, "typical": 7, "max": 10, "basis": "derived" },
+      "controls": [{ "kind": "passport", "minutes": { "min": 5, "typical": 15, "max": 60, "basis": "assumed" }, "note": "Entry control (EES/EasyPASS) for arrivals leaving the airside" }, { "kind": "customs", "minutes": { "min": 0, "typical": 1, "max": 5, "basis": "assumed" }, "note": "Customs exit (green / red channel) after baggage reclaim (audit 2026-11-02)" }],
+      "practical": "practical",
+      "flow": "arrivals",
+      "via": "Arrival at a Z gate → entry passport control → baggage reclaim → arrivals hall",
+      "confidence": "probable",
+      "sources": ["src:yt-bachling-z23", "src:pointsanalyst-fra", "src:fra-official-locations"],
+      "notes": "Arriving non-Schengen passengers leave Z through entry passport control (2022 arrival video Z23 → passport control → baggage claim 6). Usable only at the start of a route from an arriving flight."
+    },
+    {
+      "id": "w:fra-hall-bn",
+      "from": "fra-t1-hall",
+      "to": "fra-t1-b-n",
+      "bidirectional": false,
+      "access": "public",
+      "minutes": { "min": 3, "typical": 6, "max": 9, "basis": "derived" },
+      "controls": [
+        { "kind": "security", "minutes": { "min": 5, "typical": 15, "max": 40, "basis": "assumed" } },
+        { "kind": "passport", "minutes": { "min": 3, "typical": 10, "max": 45, "basis": "assumed" }, "note": "Exit control in pier B" }
+      ],
+      "practical": "practical",
+      "via": "Hall B → security (Schengen B) → passport control",
+      "confidence": "probable",
+      "sources": ["src:pointsanalyst-fra", "src:kayak-fra"],
+      "notes": "Access to B20+ via the Schengen part of B is reported by guides; the exact checkpoint sequence is not modelled. Departure direction only; the arriving direction is the arrivals flow w:fra-bn-hall-arr."
+    },
+    {
+      "id": "w:fra-bn-hall-arr",
+      "from": "fra-t1-b-n",
+      "to": "fra-t1-hall",
+      "bidirectional": false,
+      "access": "airside",
+      "minutes": { "min": 3, "typical": 6, "max": 9, "basis": "derived" },
+      "controls": [{ "kind": "passport", "minutes": { "min": 5, "typical": 15, "max": 60, "basis": "assumed" }, "note": "Entry control" }, { "kind": "customs", "minutes": { "min": 0, "typical": 1, "max": 5, "basis": "assumed" }, "note": "Customs exit (green / red channel) after baggage reclaim (audit 2026-11-02)" }],
+      "practical": "practical",
+      "flow": "arrivals",
+      "via": "Arrival at a B20+ gate → entry passport control → baggage reclaim → arrivals hall",
+      "confidence": "probable",
+      "sources": ["src:pointsanalyst-fra", "src:kayak-fra"],
+      "notes": "Arrivals flow; the checkpoint location is not documented."
+    },
+    {
+      "id": "w:fra-hall-c",
+      "from": "fra-t1-hall",
+      "to": "fra-t1-c",
+      "bidirectional": false,
+      "access": "public",
+      "minutes": { "min": 3, "typical": 6, "max": 9, "basis": "derived" },
+      "controls": [
+        { "kind": "security", "minutes": { "min": 5, "typical": 15, "max": 40, "basis": "assumed" } },
+        { "kind": "passport", "minutes": { "min": 3, "typical": 10, "max": 45, "basis": "assumed" }, "note": "Exit control" }
+      ],
+      "practical": "practical",
+      "via": "Departure hall C (level 2/3)",
+      "confidence": "inferred",
+      "sources": ["src:fra-official-locations"],
+      "notes": "Official pages place an InfoGate in hall C (level 2) and in departure C (level 3); the checkpoint order is not documented. Departure direction only; the arriving direction is the arrivals flow w:fra-c-hall-arr."
+    },
+    {
+      "id": "w:fra-c-hall-arr",
+      "from": "fra-t1-c",
+      "to": "fra-t1-hall",
+      "bidirectional": false,
+      "access": "airside",
+      "minutes": { "min": 3, "typical": 6, "max": 9, "basis": "derived" },
+      "controls": [{ "kind": "passport", "minutes": { "min": 5, "typical": 15, "max": 60, "basis": "assumed" }, "note": "Entry control" }, { "kind": "customs", "minutes": { "min": 0, "typical": 1, "max": 5, "basis": "assumed" }, "note": "Customs exit (green / red channel) after baggage reclaim (audit 2026-11-02)" }],
+      "practical": "practical",
+      "flow": "arrivals",
+      "via": "Arrival at a C gate → entry passport control → baggage reclaim → arrivals hall",
+      "confidence": "inferred",
+      "sources": ["src:fra-official-locations"],
+      "notes": "Arrivals flow; the checkpoint order is not documented."
+    },
+    {
+      "id": "w:fra-a-bs",
+      "from": "fra-t1-a",
+      "to": "fra-t1-b-s",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": { "min": 5, "typical": 8, "max": 12, "basis": "derived" },
+      "distanceM": 550,
+      "practical": "practical",
+      "via": "Schengen passenger tunnel between A15 and B19 (moving walkways, light art by Martin Liebscher)",
+      "confidence": "verified",
+      "sources": ["src:fra-official-transfer", "src:yt-kurmann-z69", "src:pointsanalyst-fra"]
+    },
+    {
+      "id": "w:fra-a-z",
+      "from": "fra-t1-a",
+      "to": "fra-t1-z",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": { "min": 3, "typical": 6, "max": 10, "basis": "derived" },
+      "controls": [{ "kind": "passport", "minutes": { "min": 3, "typical": 10, "max": 45, "basis": "assumed" }, "note": "Between levels 2 and 3 at the root of pier A, both directions" }],
+      "practical": "practical",
+      "via": "Escalators between level 2 (A) and level 3 (Z) via passport control",
+      "confidence": "verified",
+      "sources": ["src:yt-airportwalker-z-a", "src:pointsanalyst-fra", "src:yt-kurmann-z69"]
+    },
+    {
+      "id": "w:fra-bs-bn",
+      "from": "fra-t1-b-s",
+      "to": "fra-t1-b-n",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": { "min": 3, "typical": 5, "max": 8, "basis": "derived" },
+      "controls": [{ "kind": "passport", "minutes": { "min": 3, "typical": 10, "max": 45, "basis": "assumed" } }],
+      "reverseControls": [
+        { "kind": "passport", "minutes": { "min": 3, "typical": 10, "max": 45, "basis": "assumed" } },
+        { "kind": "transfer-security", "when": "origin-not-one-stop", "minutes": { "min": 0, "typical": 10, "max": 30, "basis": "assumed" }, "note": "Reported for non-Schengen → Schengen in forum posts; applies depending on origin" }
+      ],
+      "practical": "practical",
+      "confidence": "probable",
+      "sources": ["src:kayak-fra", "src:pointsanalyst-fra", "src:yt-airportwalker-bn-a"]
+    },
+    {
+      "id": "w:fra-bn-c",
+      "from": "fra-t1-b-n",
+      "to": "fra-t1-c",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": { "min": 5, "typical": 8, "max": 12, "basis": "derived" },
+      "distanceM": 520,
+      "practical": "practical",
+      "confidence": "inferred",
+      "sources": ["src:pointsanalyst-fra", "src:osm-fra"],
+      "notes": "B and C are contiguous non-Schengen piers; an airside walk is reported by guides ('A to C can exceed 15 minutes') but not observed in a dated video."
+    },
+    {
+      "id": "w:fra-z-bn",
+      "from": "fra-t1-z",
+      "to": "fra-t1-b-n",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": { "min": 8, "typical": 12, "max": 16, "basis": "derived" },
+      "distanceM": 800,
+      "practical": "long",
+      "via": "Non-Schengen connection between Z and B (level 3)",
+      "confidence": "probable",
+      "sources": ["src:yt-airportwalker-b-z", "src:pointsanalyst-fra"],
+      "notes": "2022 real-time walk 'B gates to Z gates (non-Schengen connection)', ≈9 min of footage; security on this path not established."
+    },
+    {
+      "id": "w:fra-hall-regional",
+      "from": "fra-t1-hall",
+      "to": "fra-rail-regional",
+      "bidirectional": true,
+      "access": "public",
+      "minutes": { "min": 2, "typical": 4, "max": 6, "basis": "observed" },
+      "practical": "practical",
+      "via": "Escalators from hall B down to the regional station",
+      "confidence": "verified",
+      "sources": ["src:yt-travelwalk-t1t3", "src:fra-official-locations", "src:osm-fra"]
+    },
+    {
+      "id": "w:fra-hall-long",
+      "from": "fra-t1-hall",
+      "to": "fra-rail-long",
+      "bidirectional": true,
+      "access": "public",
+      "minutes": { "min": 5, "typical": 7, "max": 10, "basis": "derived" },
+      "practical": "practical",
+      "via": "Walkway from hall B (level 3) to the long-distance station",
+      "confidence": "verified",
+      "sources": ["src:fra-official-locations", "src:osm-fra"]
+    },
+    {
+      "id": "w:fra-regional-long",
+      "from": "fra-rail-regional",
+      "to": "fra-rail-long",
+      "bidirectional": true,
+      "access": "public",
+      "minutes": { "min": 3, "typical": 5, "max": 8, "basis": "derived" },
+      "practical": "practical",
+      "via": "Signed 'Fernbahnhof 4–7' past the Sky Line T1 station",
+      "confidence": "probable",
+      "sources": ["src:yt-travelwalk-t1t3", "src:osm-fra"]
+    },
+    {
+      "id": "w:fra-t3hall-h",
+      "from": "fra-t3-hall",
+      "to": "fra-t3-h",
+      "bidirectional": true,
+      "access": "public",
+      "minutes": { "min": 3, "typical": 5, "max": 8, "basis": "derived" },
+      "controls": [{ "kind": "security", "minutes": { "min": 5, "typical": 12, "max": 40, "basis": "assumed" }, "note": "Schengen security lanes (CT scanners)" }],
+      "reverseControls": [],
+      "practical": "practical",
+      "via": "Security right after check-in; pier H one level down by escalator",
+      "confidence": "verified",
+      "sources": ["src:flyctory-t3", "src:hessenschau-t3", "src:fra-official-t3"]
+    },
+    {
+      "id": "w:fra-t3hall-j",
+      "from": "fra-t3-hall",
+      "to": "fra-t3-j",
+      "bidirectional": false,
+      "access": "public",
+      "minutes": { "min": 5, "typical": 9, "max": 14, "basis": "derived" },
+      "controls": [
+        { "kind": "security", "minutes": { "min": 5, "typical": 12, "max": 40, "basis": "assumed" }, "note": "Non-Schengen security lanes" },
+        { "kind": "passport", "minutes": { "min": 3, "typical": 10, "max": 45, "basis": "assumed" }, "note": "Exit control" }
+      ],
+      "practical": "practical",
+      "via": "Pier J is ~600 m long; moving walkways with gaps",
+      "confidence": "probable",
+      "sources": ["src:flyctory-t3", "src:omaat-t3", "src:hessenschau-t3"],
+      "notes": "Departure direction only (level 3). Arriving passengers use the arrivals level: w:fra-t3-j-arr then w:fra-t3-jarr-hall."
+    },
+    {
+      "id": "w:fra-t3-j-arr",
+      "from": "fra-t3-j",
+      "to": "fra-t3-j-arr",
+      "bidirectional": false,
+      "access": "airside",
+      "minutes": { "min": 1, "typical": 3, "max": 6, "basis": "assumed" },
+      "practical": "practical",
+      "flow": "arrivals",
+      "via": "From the aircraft down to the separate non-Schengen arrivals level (level 2)",
+      "confidence": "probable",
+      "sources": ["src:hessenschau-t3", "src:wiki-t3-de"],
+      "notes": "Arrivals flow: arriving non-Schengen passengers are kept on level 2, separate from departing passengers on level 3. Minutes assumed (level change near the gate; the walk along the 600 m pier is in the next step)."
+    },
+    {
+      "id": "w:fra-t3-jarr-hall",
+      "from": "fra-t3-j-arr",
+      "to": "fra-t3-hall",
+      "bidirectional": false,
+      "access": "airside",
+      "minutes": { "min": 4, "typical": 6, "max": 10, "basis": "derived" },
+      "controls": [{ "kind": "passport", "minutes": { "min": 5, "typical": 20, "max": 60, "basis": "assumed" }, "note": "Entry control; long queues reported by arriving passengers" }, { "kind": "customs", "minutes": { "min": 0, "typical": 1, "max": 5, "basis": "assumed" }, "note": "Customs exit (green / red channel) after baggage reclaim (audit 2026-11-02)" }],
+      "practical": "practical",
+      "flow": "arrivals",
+      "via": "Arrivals level 2 → entry passport control → baggage reclaim → arrivals hall",
+      "confidence": "probable",
+      "sources": ["src:hessenschau-t3", "src:wiki-t3-de", "src:omaat-t3"],
+      "notes": "Minutes derived from the former two-way hall ↔ J walk (9 min) less the level change. Arrivals flow."
+    },
+    {
+      "id": "w:fra-t3-jarr-j",
+      "from": "fra-t3-j-arr",
+      "to": "fra-t3-j",
+      "bidirectional": false,
+      "access": "transfer",
+      "minutes": { "min": 1, "typical": 2, "max": 4, "basis": "assumed" },
+      "controls": [
+        { "kind": "transfer-security", "when": "origin-not-one-stop", "minutes": { "min": 0, "typical": 10, "max": 30, "basis": "assumed" }, "note": "Phase 3: the checkpoint exists. Fraport's checkpoint list (via Qsensor) names 'Hall J, Level 3, Transfer security checkpoint' for concourses G, H, J (gates J1–58, H1–56). Minutes stay assumed; whether a given passenger is screened depends on the origin (EU one-stop security)" }
+      ],
+      "practical": "practical",
+      "via": "From the Sky Line bridge / arrivals level up to the departures marketplace (level 3) through the Hall J level-3 transfer security checkpoint",
+      "confidence": "probable",
+      "sources": ["src:yt-loungerocker", "src:wiki-t3-de", "src:meilenoptimieren-t3", "src:qsensor-fra"],
+      "notes": "Loungerocker (2026-04-29) walks from the airside Sky Line platform over the bridge into the airside marketplace with lounge signs for Emirates/SkyTeam (area J). Transfer passengers only. Phase 3: a transfer security checkpoint on Hall J level 3 serving G, H and J is listed in Fraport's waiting-time data (via Qsensor, 2026-11-01); its exact position on this path is not documented."
+    },
+    {
+      "id": "w:fra-t3-h-j",
+      "from": "fra-t3-h",
+      "to": "fra-t3-j",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": { "min": 4, "typical": 7, "max": 11, "basis": "derived" },
+      "controls": [{ "kind": "passport", "minutes": { "min": 3, "typical": 10, "max": 45, "basis": "assumed" } }],
+      "reverseControls": [
+        { "kind": "passport", "minutes": { "min": 3, "typical": 10, "max": 45, "basis": "assumed" }, "note": "J → H: entry into the Schengen area. A passenger arriving at J gets the transfer security check on the arrivals flow (w:fra-t3-jarr-j), not again here" }
+      ],
+      "practical": "practical",
+      "via": "Transfer passport controls on level 3: 'Hall H, Level 3' towards concourse J and 'Hall J, Level 3' towards concourse H (Fraport checkpoint data via Qsensor)",
+      "confidence": "probable",
+      "sources": ["src:flyctory-t3", "src:qsensor-fra"],
+      "notes": "First-hand blog states passengers can transfer between H/G and J with passport checks. Phase 3: Fraport's checkpoint list names one transfer passport control per direction on level 3 (Hall H → concourse J, gates J1–58; Hall J → concourse H, gates H1–56). Phase 2: the transfer-security allowance on J → H was removed because arriving J passengers already pass it on w:fra-t3-jarr-j (it was counted twice), and a departing passenger in J has already been screened at T3 security."
+    },
+    {
+      "id": "w:fra-t3-h-g",
+      "from": "fra-t3-h",
+      "to": "fra-t3-g",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": { "min": 4, "typical": 6, "max": 9, "basis": "derived" },
+      "practical": "practical",
+      "confidence": "inferred",
+      "sources": ["src:flyctory-t3", "src:osm-fra"],
+      "notes": "Flyctory groups G with H for Schengen flights; the connection itself is not observed. Non-Schengen use of G is not modelled."
+    }
+  ],
+  "rules": [
+    {
+      "id": "r:fra-t2-closed",
+      "text": "Terminal 2 (piers D and E) has been closed to passengers since 9 June 2026 for a multi-year refurbishment (reopening planned mid-2030s). All former T2 airlines moved to Terminal 3 in four waves (23 Apr, 5 May, 19 May, 9 Jun 2026). The T2 Sky Line station stays in use as interchange.",
+      "confidence": "verified",
+      "sources": ["src:fraport-press-t2", "src:hessenschau-t3", "src:wiki-skyline-en"]
+    },
+    {
+      "id": "r:fra-skyline-2026-ops",
+      "text": "New Sky Line in 2026: opened with T3 on 23 April; suspended 28 May – 14 June after recurring technical faults (replacement shuttle buses between the terminals, every 2 min by day and every 10 min at night per Wikipedia); restarted 15 June with up to 8 vehicles at max. 50 km/h; paused every night 23:00–04:00 until further notice, with shuttle buses instead. No later suspension found in news up to October 2026.",
+      "confidence": "verified",
+      "sources": ["src:fraport-press-skyline-restart", "src:reisetopia-skyline", "src:aviationdirect-skyline", "src:wiki-skyline-en"]
+    },
+    {
+      "id": "r:fra-suspension-buses",
+      "text": "During the 28 May – 14 June 2026 suspension of the new Sky Line, Fraport ran landside shuttle buses (up to 20 buses, every 2–3 min by day and every 10 min 23:00–05:00, stops at the arrival forecourts) and a separate airside shuttle with up to five buses between the terminals for transfer passengers; the existing T1–T2 Sky Line stayed in operation. The airside buses are not routed (stops not published).",
+      "confidence": "verified",
+      "sources": ["src:fraport-press-skyline-suspension", "src:aerotelegraph-skyline", "src:wiki-skyline-en"]
+    },
+    {
+      "id": "r:fra-t3-open",
+      "text": "Terminal 3 (piers G, H, J) opened on 23 April 2026 (ceremony 22 April). Pier H = Schengen (10 jet-bridge positions + 5 bus gates), pier J = non-Schengen (14 jet-bridge positions + 8 bus gates, separate arrivals level 2), pier G = 14 near-building bus gates, Schengen and non-Schengen capable, initially only partly used. Lufthansa Group and Star Alliance stay in Terminal 1; Condor moves to T3 in 2027.",
+      "confidence": "verified",
+      "sources": ["src:fraport-t3-ops", "src:hessenschau-t3", "src:flyctory-t3", "src:fra-official-t3", "src:wiki-t3-de", "src:meilenoptimieren-t3"]
+    },
+    {
+      "id": "r:fra-t1-levels",
+      "text": "Terminal 1 separates Schengen and non-Schengen by level and pier section: A (level 2) Schengen and Z (level 3, same stands) non-Schengen; B1–B19 Schengen and B20–B63 non-Schengen; C non-Schengen. Some B bus gates carry two numbers (B14–B16 Schengen = B60–B62 non-Schengen).",
+      "confidence": "probable",
+      "sources": ["src:kayak-fra", "src:pointsanalyst-fra", "src:fra-official-locations", "src:osm-fra"]
+    },
+    {
+      "id": "r:fra-t1-t3-transfer",
+      "text": "T1 ↔ T3: the free Sky Line runs 04:00–23:00 every 2–3 min (≈8–10 min T1–T3 via T2); shuttle buses run at night (official 22:00–05:00; Sky Line pause 23:00–04:00). Each Sky Line train has a public car and a car reserved for non-Schengen transfer passengers; airside non-Schengen passengers from T1 reach it by the old SkyLine to T2, and at T3 it serves the pier J arrivals level. Schengen passengers change landside and pass security again in T3. Airside non-Schengen T1 ↔ T3 transfers change from the old SkyLine to the new line at T2 (JAL; Loungerocker video).",
+      "confidence": "probable",
+      "sources": ["src:fra-official-orientation", "src:aviationdirect-skyline", "src:yt-loungerocker", "src:flyctory-t3", "src:hessenschau-t3", "src:fraport-press-skyline-restart", "src:wiki-t3-de", "src:jal-fra-transit"]
+    },
+    {
+      "id": "r:fra-security-recheck",
+      "text": "Fraport: transfer passengers may have to pass a security check again; Short Transfer Lanes exist at most border and security checkpoints in Terminal 1. T3 uses CT scanners (liquids up to 2 l per container may stay in the bag in T3).",
+      "confidence": "probable",
+      "sources": ["src:fra-official-transfer", "src:hessenschau-t3", "src:fra-official-t3"]
+    },
+    {
+      "id": "r:fra-mct",
+      "text": "Lufthansa minimum connecting time at FRA: 60 min since the summer 2025 schedule (previously 45 min; no split by Schengen status or terminal reported). Guides advise 75–120 min for T1 ↔ T3 connections; Fraport says ~45 min T1 ↔ T3 transfers are achievable. JAL publishes MCT 90 min for T3 → T1 and 55 min for T3 → T3 (search excerpt of its transit page). No Fraport-published MCT table was found.",
+      "confidence": "probable",
+      "sources": ["src:kayak-fra", "src:pointsanalyst-fra", "src:hessenschau-t3", "src:jal-fra-transit", "src:frankfurtflyer-mct"]
+    },
+    {
+      "id": "r:fra-baggage",
+      "text": "Baggage on connections (Fraport): \"In most cases, your checked baggage will be automatically checked through to your destination airport.\" Otherwise passengers collect it at baggage reclaim and check it in again with the airline; this also applies to separately booked connections (self-transfer), which therefore leave through entry control and reclaim and re-enter through check-in and security. The model has no baggage-reclaim or re-check-in time; customs handling of checked-through bags on a non-Schengen → Schengen/domestic connection is not established from an official source (q:fra-customs-transfer).",
+      "confidence": "verified",
+      "sources": ["src:fra-official-transfer", "src:aviationdirect-t3-opening"]
+    },
+    {
+      "id": "r:fra-transfer-checkpoints",
+      "text": "Transfer checkpoints in Fraport's waiting-time data (via Qsensor, read 2026-11-01). T1: Hall A L2 transfer passport control (into A, A1–A69); Hall A L4 transfer security checkpoint (A/Z, Z11–Z69); Hall B L3 transfer security checkpoint (B non-Schengen, B20–B63). T3: Hall J L3 transfer security checkpoint (G, H, J); Hall H L3 transfer passport control (to J); Hall J L3 transfer passport control (to H). No transfer checkpoint is listed for concourse C. Whether a connecting passenger is screened depends on the origin (EU one-stop security); opening hours are not published.",
+      "confidence": "probable",
+      "sources": ["src:qsensor-fra", "src:fra-official-transfer"]
+    }
+  ],
+  "openQuestions": [
+    {
+      "id": "q:fra-g-gates",
+      "question": "Which gate numbers does pier G use (14 bus gates per de.wikipedia / Meilenoptimieren), and when do its boarding gates open (aviation.direct: dormant until 2027, with Condor's move)?",
+      "impact": "Phase 3: pier G is modelled as planned (gates not in use) from 23 Apr 2026, so the H ↔ G walk is not routed. If G boards flights before 2027 (Flyctory names G for Schengen flights), the status period must end and gates must be added.",
+      "howToResolve": "Owner capture of the official airport map (map.frankfurt-airport.com, robots-blocked for query URLs), terminal3.frankfurt-airport.com (TLS mismatch), a dated photo of pier G gate signs, or airline gate info (easyJet, Ryanair, Wizz Air, Pegasus)."
+    },
+    {
+      "id": "q:fra-transfer-car-zone",
+      "question": "At T3 the connecting-flights car serves the pier J arrivals level (de.wikipedia) and leads into the non-Schengen marketplace (Loungerocker). Is there a transfer security check on that way, and can Schengen-bound transfer passengers use the car (Fraport T3 site excerpt: \"regardless of whether coming from or heading to Schengen or non-Schengen\")?",
+      "impact": "Decides the transfer-security allowance on T1 non-Schengen → T3 J (assumed 0–30 min), and whether T1 Schengen → T3 H could stay airside (currently landside). Phase 3: the checkpoint itself is now attested (Hall J L3 transfer security for G, H, J; Fraport data via Qsensor); open are its position on the bridge path, who must pass it, and the Schengen-bound use of the car.",
+      "howToResolve": "terminal3.frankfurt-airport.com Sky Line pages (TLS mismatch, owner capture); a dated video walking from the T3 airside platform with readable signs; field check."
+    },
+    {
+      "id": "q:fra-old-skyline-public",
+      "question": "Confirm on site that the old SkyLine no longer carries the public since the T3 opening (Fraport plan quoted by Meilenoptimieren) and whether its Schengen/landside platforms (A/Z island platform, B, T2) are closed.",
+      "impact": "Modelled as closed from 23 Apr 2026; only affects alternatives (the new line from the rail stations is the public route).",
+      "howToResolve": "Recent ride video (after 9 June 2026) showing the old-line platforms and car signage; Fraport orientation page capture."
+    },
+    {
+      "id": "q:fra-b-skyline-platform",
+      "question": "Does the transit car of the old SkyLine open at Terminal 1 B for B20–B63 (station B is described as \"before security\")?",
+      "impact": "Phase 2 removed the inferred B transit stop: B non-Schengen → T3 J now walks to C (8 min) or Z for the SkyLine.",
+      "howToResolve": "Video from the B station platforms or the official map (owner capture)."
+    },
+    {
+      "id": "q:fra-night-airside",
+      "question": "How do non-Schengen transfer passengers move between T1 and T3 airside 23:00–04:00 while the Sky Line pauses (aviation.direct mentions a bus service for transit passengers and staff), and does the old SkyLine run at night (Meilenoptimieren: round the clock; Wikipedia: 05:00–23:00)? Where exactly does the night shuttle stop, how often and how long is the ride?",
+      "impact": "At 23:30 and 03:00 the model routes T1 ↔ T3 only by the landside night bus, so non-Schengen T1 ↔ T3 J transfers cross passport control twice; within T1, non-Schengen moves walk. Night-bus interval (10–20 min) and ride (8–15 min) stay assumed.",
+      "howToResolve": "Fraport statement or a dated night-time video; owner capture of the transfer page. Phase 3 (2026-11-01): Fraport's EN and DE orientation pages still say only 'at regular intervals', stops 'in the arrivals forecourt areas' (Ankunftsvorfahrten) of T1 and T3; aviation.direct (16 Jun 2026) limits the night closure to the new line to T3 ('Neubaustrecke zum Terminal 3'), which hints that the old T1–T2 line is not part of the pause, but says nothing about hours. A secondary lead (night bus stopping at the T1 car drop-off area, ride ≈12 min, no change to the old SkyLine at T2) was searched for and not found in any readable source; not modelled. The 10-min night interval was published only for the 28 May – 14 June 2026 suspension."
+    },
+    {
+      "id": "q:fra-transfer-security-t1",
+      "question": "Which transfer flows pass the T1 transfer security checkpoints (Hall A L4 for A/Z, Hall B L3 for B20–B63), where exactly do they sit relative to the old SkyLine platforms and the B ↔ Z corridor, and is there one for concourse C?",
+      "impact": "Phase 3 adds an assumed transfer-security allowance when leaving the old SkyLine transit car at A/Z (so T3 J arrivals → Z/A pass one check). Walks B-N ↔ Z, B-N ↔ C and the old-line C stop carry none; an arriving passenger from a non-one-stop-security origin may in reality be screened there.",
+      "howToResolve": "Owner capture of map.frankfurt-airport.com (T1 levels 3 and 4), or a dated transfer video showing the checkpoint after the SkyLine A/Z platform."
+    },
+    {
+      "id": "q:fra-customs-transfer",
+      "question": "On a single-ticket connection from outside the EU to a Schengen or German domestic flight, is checked baggage cleared by customs at FRA (reclaim and re-check) or at the final destination?",
+      "impact": "If bags must be reclaimed at FRA, the airside non-Schengen → Schengen routes (e.g. J → H, Z → A) are wrong for those passengers; they would need arrival → reclaim → customs → re-check → security. The model assumes checked-through bags (Fraport: 'in most cases').",
+      "howToResolve": "zoll.de or Fraport baggage page stating the rule for transfer baggage; airline transfer pages (Lufthansa, Condor)."
+    },
+    {
+      "id": "q:fra-rmv-buses-night",
+      "question": "RMV lines 61 and 62 stop at both T1 and T3 (Fraport 'Mit dem Bus' page). What are their hours and night service, and are they a landside alternative to the night shuttle?",
+      "impact": "Not modelled; the night shuttle is the only landside T1 ↔ T3 link at night in the model.",
+      "howToResolve": "RMV timetable (GTFS or rmv.de) for lines 61/62 at Flughafen Terminal 1 and Terminal 3."
+    },
+    {
+      "id": "q:fra-z-gates",
+      "question": "Full list of Z gates in the Z11–Z25 range and of A6–A10/A12, B2–B9, C3–C19 gaps.",
+      "impact": "Gate lookup coverage only.",
+      "howToResolve": "Official map capture or gate-sign photos/videos; OSM mapping is incomplete for Z11–Z25."
+    },
+    {
+      "id": "q:fra-c1-zone",
+      "question": "Is gate C1 Schengen (as one guide lists) or non-Schengen like the rest of C?",
+      "impact": "Zone of a single gate.",
+      "howToResolve": "Gate signage photo or official map."
+    },
+    {
+      "id": "q:fra-skyline-segments",
+      "question": "Ride times of the old SkyLine after 2024 and of the new line once the 50 km/h limit is lifted.",
+      "impact": "New-line segments are measured (June 2026, 50 km/h); old-line segments are observed in a 2024 ride that may be edited.",
+      "howToResolve": "Timed field ride or Fraport technical publication."
+    },
+    {
+      "id": "q:fra-bn-a-bus",
+      "question": "Is the morning apron bus from B non-Schengen to pier A (seen 2025) still operated, at what hours, and in which direction(s)?",
+      "impact": "Line drawn but not routed (notRouted) until a current source confirms hours and direction.",
+      "howToResolve": "Recent video or Fraport transfer information."
+    },
+    {
+      "id": "q:fra-suspension-transfer",
+      "question": "Where did the airside transfer shuttle (up to five buses, Fraport) stop during the 28 May – 14 June 2026 suspension, and could it recur?",
+      "impact": "On those dates the model offers only landside routes for T1 ↔ T3 non-Schengen transfers (two passport crossings); the airside buses are recorded as a rule, not routed.",
+      "howToResolve": "Airline notices from that period or a dated video; owner capture of the Fraport transfer page during any future suspension."
+    },
+    {
+      "id": "q:fra-j-arrivals-level",
+      "question": "Exact layout of the pier J arrivals level: where entry passport control sits, and how a passenger arriving at J and connecting to another J flight reaches level 3 (transfer desk, security)?",
+      "impact": "J → J-arr → J and J-arr → hall timings are assumed/derived.",
+      "howToResolve": "Dated arrival video at T3 J; official map capture."
+    }
+  ],
+  "sources": [
+    { "id": "src:fra-airline-ly", "title": "Frankfurt Airport airline page: EL AL (check-in Terminal 1, Hall C)", "url": "https://www.frankfurt-airport.com/en/airlines/E/ly.html", "publisher": "Fraport AG", "kind": "official", "group": "fra-official", "accessed": "2026-11-01" },
+    { "id": "src:fra-airline-lh", "title": "Frankfurt Airport airline page: Lufthansa (USA entry data verification at the Fast Bag Drop)", "url": "https://www.frankfurt-airport.com/en/airlines/L/lh.html", "publisher": "Fraport AG", "kind": "official", "group": "fra-official", "accessed": "2026-11-01" },
+    { "id": "src:dhs-tsa-2017-enhanced", "title": "DHS / TSA: enhanced security measures for all commercial flights to the United States (June 2017; >280 last-point-of-departure airports, security directives and emergency amendments)", "url": "https://www.dhs.gov/", "publisher": "U.S. Department of Homeland Security", "kind": "official", "group": "dhs", "accessed": "2026-11-01", "published": "2017-06", "notes": "Read through the DHS 2017 testimony by the research pass of 2026-11-01; exact page URL not recorded. Procedures themselves are not public." },
+    { "id": "src:fd-feed-terminals-2026-11-01", "title": "CDG Navigator flight-data server: terminal / gate strings observed in the collected feed (2026-10-30 – 2026-11-01), read-only GET /fd-api/stats/distribution and /fd-api/flights", "url": "http://127.0.0.1:8790/fd-api/stats/summary", "publisher": "CDG Navigator (local flight-data collection, AeroDataBox-derived)", "kind": "other", "group": "fd-feed", "accessed": "2026-11-01", "notes": "Cross-tabulated by the other airport's Schengen zone and by gate letter; counts in docs/research/AIRPORT_DATA_REMEDIATION.md. Local research data, not for display." },
+    { "id": "src:eu-oss-2025-920", "title": "Commission Implementing Regulation (EU) 2025/920 amending Reg. (EU) 2015/1998 (one-stop security lists: Ben Gurion removed from Attachments 3-B / 4-B; Kangerlussuaq, Guernsey, Isle of Man, Jersey removed)", "url": "https://eur-lex.europa.eu/eli/reg_impl/2025/920/oj", "publisher": "European Commission", "kind": "official", "group": "eu-law", "accessed": "2026-11-01", "published": "2025-05-20", "notes": "Recitals read from the umwelt-online.de text (EUR-Lex HTML returned empty). The consolidated Attachment 4-B list was NOT read: owner capture. Baseline list: Reg. (EU) 2019/413 (Canada, Faroe Islands Vagar, Greenland Kangerlussuaq, Guernsey, Isle of Man, Jersey, Montenegro, Singapore Changi, United Kingdom, United States)." },
+    { "id": "src:eu-oss-2019-413", "title": "Commission Implementing Regulation (EU) 2019/413 (Attachments 3-B, 4-B, 5-A of Reg. 2015/1998)", "url": "https://www.legislation.gov.uk/eur/2019/413/data.html", "publisher": "European Commission (UK legislation mirror)", "kind": "official", "group": "eu-law", "accessed": "2026-11-01", "published": "2019-03-14" },
+    { "id": "src:fra-official-t3", "title": "Terminal 3 – Everything at a glance", "url": "https://www.frankfurt-airport.com/en/flights-and-transfer/terminal-3.html", "publisher": "Fraport AG (frankfurt-airport.com)", "kind": "official", "group": "fraport", "accessed": "2026-10-31", "notes": "SkyLine 04:00–23:00 every 2–3 min, shuttle bus otherwise; all former T2 airlines now in T3; Sky Line station between T3 car park and terminal (search excerpt). No gate numbers." },
+    { "id": "src:fra-official-orientation", "title": "Orientation at the airport / Terminal change", "url": "https://www.frankfurt-airport.com/en/at-the-airport/orientation.html", "publisher": "Fraport AG (frankfurt-airport.com)", "kind": "official", "group": "fraport", "accessed": "2026-10-31", "notes": "Also /en/airport-guide/orientation/terminalchange.html: SkyLine T1–T3 04:00–23:00 every 2–3 min; shuttle bus 22:00–05:00 from arrivals forecourts T1/T3." },
+    { "id": "src:fra-official-transfer", "title": "Transferring at FRA / Umsteigen am Flughafen Frankfurt", "url": "https://www.frankfurt-airport.com/en/flights-and-transfer/transferring-at-fra.html", "publisher": "Fraport AG (frankfurt-airport.com)", "kind": "official", "group": "fraport", "accessed": "2026-10-31", "notes": "Schengen passenger tunnel A15–B19; renewed security check possible; Short Transfer Lanes in T1; walking-time displays behind checkpoints." },
+    { "id": "src:fra-official-locations", "title": "InfoGate and lounge location pages", "url": "https://www.frankfurt-airport.com/en/locations/i/infogate.html", "publisher": "Fraport AG (frankfurt-airport.com)", "kind": "official", "group": "fraport", "accessed": "2026-10-31", "notes": "Locations: Departure A near A14/A15 (L2), Departure Z (L3), Hall B walkway to long-distance station (L3), Hall C (L2), Departure C (L3), T3 J (L1/L3), T3 H (L2); Lufthansa lounges T1 A L2/L3, Z L3, B L2." },
+    { "id": "src:fraport-press-t2", "title": "Terminal 2 closed for refurbishment starting today", "url": "https://www.fraport.com/en/newsroom/press-releases/2026/q2/terminal-2-closed-for-refurbishment-starting-today.html", "publisher": "Fraport AG", "kind": "official", "group": "fraport", "accessed": "2026-10-31", "published": "2026-06-09", "notes": "All passenger operations at T2 halted 9 Jun 2026; Sky Line people mover and connections among terminals remain." },
+    { "id": "src:fraport-t3-ops", "title": "Terminal 3 (business areas)", "url": "https://www.fraport.com/en/business-areas/operations/airside-and-terminal-operations/terminal-3.html", "publisher": "Fraport AG", "kind": "official", "group": "fraport", "accessed": "2026-10-31", "notes": "Ceremony 22 Apr, operations 23 Apr 2026, first flight CZ8021 at gate J3; ≥33 positions along piers; Sky Line T1→T3 via T2 about 8 min." },
+    { "id": "src:hessenschau-t3", "title": "Terminal 3 startet: Was sich für Reisende am Flughafen Frankfurt ändert", "url": "https://www.hessenschau.de/wirtschaft/terminal-3-startet-was-sich-fuer-reisende-am-flughafen-frankfurt-aendert-v2,terminal-3-fragen-antworten-100.html", "publisher": "hessenschau (hr)", "kind": "news", "group": "hessenschau", "accessed": "2026-10-31", "published": "2026-04-19", "notes": "Pier H Schengen 2 levels 10 positions; pier J non-Schengen 3 levels 14 positions; G partly used; airline move waves; Sky Line 8–10 min every ~2 min; Fraport: ~45 min transfers achievable." },
+    { "id": "src:aviationdirect-skyline", "title": "Sky Line-Bahn in Frankfurt nach technischer Zwangspause reaktiviert", "url": "https://aviation.direct/sky-line-bahn-in-frankfurt-nach-technischer-zwangspause-reaktiviert", "publisher": "aviation.direct", "kind": "news", "group": "aviation.direct", "accessed": "2026-10-31", "published": "2026-06-16", "notes": "Restart June 2026 with ≤8 of 12 trains and 50 km/h; one of two coupled cars reserved for non-Schengen transfer passengers (customs), the other for public Schengen traffic and staff; night pause 23:00–04:00 with bus service for transit passengers and staff." },
+    { "id": "src:wiki-skyline-en", "title": "SkyLine (Frankfurt)", "url": "https://en.wikipedia.org/wiki/SkyLine_(Frankfurt)", "publisher": "Wikipedia", "kind": "wiki", "group": "wikipedia", "accessed": "2026-10-31", "notes": "Low weight. Old line car split (western public/Schengen, eastern non-Schengen transfer); suspension May–15 Jun 2026 with replacement buses (2 min day / 10 min night)." },
+    { "id": "src:wiki-skyline-de", "title": "SkyLine (Flughafen Frankfurt)", "url": "https://de.wikipedia.org/wiki/SkyLine", "publisher": "Wikipedia (de)", "kind": "wiki", "group": "wikipedia", "accessed": "2026-10-31", "notes": "Low weight. Old line stations A/Z, B, C (2017, non-Schengen only), T2; platform types; headway 90–150 s peak / 3–5 min; new line Fernbahnhof (above the regional station) – T2 – T3, interchange at T2." },
+    { "id": "src:osm-fra", "title": "OpenStreetMap data via Overpass API (aeroway=gate/terminal/runway, railway=monorail/station)", "url": "https://www.openstreetmap.org/#map=15/50.041/8.570", "publisher": "OpenStreetMap contributors", "kind": "osm", "group": "osm", "accessed": "2026-10-31", "notes": "Data timestamp 2026-10-31T08:47Z. © OpenStreetMap contributors, ODbL 1.0. 122 aeroway=gate nodes (no D/E/G gates mapped); terminal and Sky Line geometry projected into the schematic." },
+    { "id": "src:flyctory-t3", "title": "Flying from Frankfurt Airport (FRA) Terminal 3", "url": "https://flyctory.com/2026/10/05/frankfurt-airport-terminal-3/", "publisher": "Flyctory", "kind": "guide", "group": "flyctory", "accessed": "2026-10-31", "published": "2026-10-05", "notes": "First-hand (Air Europa MAD, end Sept 2026): security splits into Schengen/non-Schengen lanes after check-in; G and H Schengen, J non-Schengen; transfer between them with passport (and possibly security); H gates one escalator down; T1–T3 transfers usually landside." },
+    { "id": "src:omaat-t3", "title": "I Flew Out Of The New Frankfurt Airport Terminal 3", "url": "https://onemileatatime.com/insights/new-frankfurt-airport-terminal-3/", "publisher": "One Mile at a Time", "kind": "guide", "group": "omaat", "accessed": "2026-10-31", "published": "2026-07-17", "notes": "First-hand: ~10-min SkyLine ride from T1; long walk to the last gate, moving walkways with gaps; Lufthansa not in T3." },
+    { "id": "src:pointsanalyst-fra", "title": "Frankfurt Airport [FRA] Guide: Terminals, Lounges, Food, Transit, And Connections", "url": "https://www.thepointsanalyst.com/frankfurt-airport-fra/", "publisher": "The Points Analyst", "kind": "guide", "group": "thepointsanalyst", "accessed": "2026-10-31", "published": "2026-03-27", "notes": "Pre-T3 (historical for T1–T3 statements). A Schengen L2, Z non-Schengen L3 above A sharing stands; B mixed; C non-Schengen; passport control between A and Z both ways; Z22, A13, A26, B22, B43 named; walking times." },
+    { "id": "src:kayak-fra", "title": "Frankfurt am Main Frankfurt Airport (FRA) guide", "url": "https://kayak.co.uk/Frankfurt-am-Main-Frankfurt-Airport.FRA.ap.html", "publisher": "KAYAK", "kind": "guide", "group": "kayak", "accessed": "2026-10-31", "published": "2026-07-31", "notes": "Schengen: A, B1–B19, C1; non-Schengen: Z, B20–B63, C2–C20; SkyLine 04:00–23:00 every 2–3 min; LH MCT 60 min. Contains a garbled statement on passport control (ignored)." },
+    { "id": "src:amex-lounges", "title": "Lufthansa Business Lounge (Non-Schengen, Gates B44-B48) / (Non-Schengen, Gates B24-B28)", "url": "https://www.americanexpress.com/en-us/travel/lounges/the-platinum-card/FRA/Lufthansa-Business-Lounge-Non-Schengen-Gates-B44-B48-1-B--Scs6vJhZGM/", "publisher": "American Express", "kind": "other", "group": "amex", "accessed": "2026-10-31", "notes": "Lounge listings naming non-Schengen gate ranges B44–B48 and B24–B28 (access after passport control). Read via search excerpts." },
+    { "id": "src:yt-travelwalk-t1t3", "title": "FRA New Terminal 3 - How do you get from T1 to T3 by new Skyline train?", "url": "https://www.youtube.com/watch?v=j13GVD6zE-o", "publisher": "YouTube · Travel & Walk for you", "kind": "video", "group": "yt:TravelWalkForYou", "accessed": "2026-10-31", "published": "2026-06-13", "notes": "Storyboards 00:45–07:30 analysed (frames not stored)." },
+    { "id": "src:yt-travelwalk-t3t1", "title": "Frankfurt airport Terminal 3 to train station in Terminal 1 per Skyline train", "url": "https://www.youtube.com/watch?v=myY-BV5iVJQ", "publisher": "YouTube · Travel & Walk for you", "kind": "video", "group": "yt:TravelWalkForYou", "accessed": "2026-10-31", "published": "2026-06-23", "notes": "Storyboards 01:40–09:20 analysed: ride timing T3→T2→T1." },
+    { "id": "src:yt-loungerocker", "title": "Frankfurt Flughafen Terminal 1 zu Terminal 3 Airside So geht's!", "url": "https://www.youtube.com/watch?v=txrbGXrQz1Y", "publisher": "YouTube · Loungerocker", "kind": "video", "group": "yt:Loungerocker", "accessed": "2026-10-31", "published": "2026-04-29", "notes": "Chapters + storyboards 00:00–15:00 analysed: airside T1 A/Z → old SkyLine → T2 → new Sky Line restricted car → T3 airside." },
+    { "id": "src:yt-frankfurtonfoot", "title": "Frankfurt Airport, New Terminal 3", "url": "https://www.youtube.com/watch?v=1qKzK4OUaQE", "publisher": "YouTube · Frankfurt on Foot Tours", "kind": "video", "group": "yt:FrankfurtOnFoot", "accessed": "2026-10-31", "published": "2026-04-23", "notes": "Opening day. Description + storyboards 00:45–05:00: train in two sections (airside / not), ride 7–8 min, no luggage carts, inter-terminal buses not running that day." },
+    { "id": "src:yt-railherbie", "title": "#158: Deutschland - Brandnew Skyline Frankfurt Airport to Terminal 3", "url": "https://www.youtube.com/watch?v=OJmW5ywiehs", "publisher": "YouTube · Railherbie World of Railways", "kind": "video", "group": "yt:Railherbie", "accessed": "2026-10-31", "published": "2026-04-30", "notes": "Description only: new line T3–T2–T1 public; interchange at T2 to the old line for T1 A/Z, B, C; platform screen doors." },
+    { "id": "src:yt-daniel103", "title": "Mitfahrt in neuer Frankfurt Flughafen Skylinebahn vom Terminal 1 zum neuen Terminal 3", "url": "https://www.youtube.com/watch?v=X9SMYKvIUgc", "publisher": "YouTube · Trainspotter Daniel103", "kind": "video", "group": "yt:Daniel103", "accessed": "2026-10-31", "published": "2026-04-11", "notes": "Description only (pre-opening ride 11 Apr 2026): T1 → T2 → T3, autonomous Siemens trains, double traction possible." },
+    { "id": "src:yt-airportwalker-bn-a", "title": "Frankfurt Airport Transfer: Easy & Fast Way from Non-Schengen B to Schengen A till 2pm", "url": "https://www.youtube.com/watch?v=GOxL9_g3Wg4", "publisher": "YouTube · Airport Walker", "kind": "video", "group": "yt:AirportWalker", "accessed": "2026-10-31", "published": "2025-08-22", "notes": "Full storyboards analysed: B43 area → apron bus → pier A → passport control → Schengen duty free (A, B signs)." },
+    { "id": "src:yt-airportwalker-z-a", "title": "Fastest Route at Frankfurt Airport T1: Z-Gates → A-Gates in Minutes", "url": "https://www.youtube.com/watch?v=FGMGiTcdryA", "publisher": "YouTube · Airport Walker", "kind": "video", "group": "yt:AirportWalker", "accessed": "2026-10-31", "published": "2023-11-03", "notes": "Storyboards analysed: signs 'Z 11–25 / A,B,C,D,E', escalators down, sign 'A / B 1–19', passport control, Schengen duty free. Pre-T3 (D/E references historical)." },
+    { "id": "src:yt-airportwalker-b-z", "title": "How to Transfer at Frankfurt Airport | Walking from B Gates to Z Gates (Non-Schengen Connection)", "url": "https://www.youtube.com/watch?v=t-hzwBzeEO4", "publisher": "YouTube · Airport Walker", "kind": "video", "group": "yt:AirportWalker", "accessed": "2026-10-31", "published": "2022-12-11", "notes": "Description only (storyboards max 160×90): real-time non-Schengen walk B → Z, ~9 min footage." },
+    { "id": "src:yt-wanderlust-skyline", "title": "Frankfurt Train (SkyLine) Ride: Gates Z,A to B to C to D,E", "url": "https://www.youtube.com/watch?v=w3JSmiYT7YY", "publisher": "YouTube · Wanderlust Watermelon", "kind": "video", "group": "yt:WanderlustWatermelon", "accessed": "2026-10-31", "published": "2024-02-27", "notes": "Historical (T2 open). Storyboards analysed for old-line stop order A/Z → B → C → T2 and approximate ride times." },
+    { "id": "src:yt-losticebear-t3", "title": "TERMINAL 3 Frankfurter Flughafen Komplette Tour", "url": "https://www.youtube.com/watch?v=LZ16luJGv40", "publisher": "YouTube · Lost Icebear", "kind": "video", "group": "yt:LostIcebear", "accessed": "2026-10-31", "published": "2026-05-12", "notes": "Recorded 11 May 2026. Chapter 'Departure Hall G' (41:49–50:06) analysed: a separate landside check-in hall reached by glazed bridges, almost unused; no G gate numbers readable." },
+    { "id": "src:yt-bachling-z23", "title": "Landing at Frankfurt Airport T1 and Arrival Walk from Gate Z23 to Baggage Claim 6", "url": "https://www.youtube.com/watch?v=khkD4E28joY", "publisher": "YouTube · Bach Ling", "kind": "video", "group": "yt:BachLing", "accessed": "2026-10-31", "published": "2022-06-14", "notes": "Title/description only: arrival at gate Z23 from the USA, passport control, baggage claim 6 (historical)." },
+    { "id": "src:yt-kurmann-z69", "title": "How to Connect at Frankfurt Airport from Terminal 1B Bus to Gate Z69 - Walkthrough", "url": "https://www.youtube.com/watch?v=jPEP_TMSIMg", "publisher": "YouTube · Reto Kurmann", "kind": "video", "group": "yt:RetoKurmann", "accessed": "2026-10-31", "published": "2012-11-22", "notes": "Description only, historical (travel 1 Nov 2012): bus arrival B → transfer tunnel to pier A → passport control → A-Plus gate Z69." },
+    { "id": "src:fraport-press-skyline-restart", "title": "New Sky Line people mover at Frankfurt Airport now running again", "url": "https://www.fraport.com/en/newsroom/press-releases/2026/q2/new-sky-line-people-mover-now-running-again.html", "publisher": "Fraport AG", "kind": "official", "group": "fraport", "accessed": "2026-10-31", "published": "2026-06-15", "notes": "Restart 15 Jun 2026 with up to 8 vehicles at max. 50 km/h; nightly pause 23:00–04:00 until further notice with shuttle buses; regular replacement buses withdrawn; operation halted in late May." },
+    { "id": "src:reisetopia-skyline", "title": "Sky Line-Bahn: Betrieb wieder aufgenommen", "url": "https://reisetopia.de/news/sky-line-bahn-betrieb-wiederaufnahme/", "publisher": "reisetopia", "kind": "news", "group": "reisetopia", "accessed": "2026-10-31", "published": "2026-06-18", "notes": "Suspension from 28 May 2026 (shuttle buses), restart 15 Jun 2026 with 8 vehicles at 50 km/h; no service 23:00–04:00 until further notice. A reader comment (28 Jun) about a new outage is unconfirmed and not used." },
+    { "id": "src:wiki-t3-de", "title": "Frankfurt Terminal 3 (de.wikipedia)", "url": "https://de.wikipedia.org/wiki/Frankfurt_Terminal_3", "publisher": "Wikipedia", "kind": "wiki", "group": "wikipedia", "accessed": "2026-10-31", "notes": "Last edited 2026-10-16. Pier levels: J level 1 bus gates, level 2 arrivals, level 3 departures, walkway from level 2 to the airside Sky Line transfer vehicle; J 14 jet-bridge positions + 8 bus gates; H 10 jet-bridge positions + 5 bus gates on level 1; G 14 bus gates near the building, own check-in hall. Low weight (same group as the other Wikipedia pages)." },
+    { "id": "src:meilenoptimieren-t3", "title": "Frankfurt Flughafen Terminal 3", "url": "https://meilenoptimieren.com/frankfurt-flughafen-terminal-3/", "publisher": "Meilenoptimieren", "kind": "guide", "group": "meilenoptimieren", "accessed": "2026-10-31", "published": "2026-07-01", "notes": "Piers G (14 near-building bus gates, Schengen and non-Schengen), H (10 positions, Schengen), J (14 positions, non-Schengen) available at opening; lounges on levels 4/5 in area J; Sky Line every 2–3 min 04:00–23:00, T1–T3 8–10 min." },
+    { "id": "src:aerode-t3-2025", "title": "Fraport startet T3-Betrieb mit zwei aktiven Flugsteigen", "url": "https://www.aero.de/news-49534/Fraport-startet-T3-Betrieb-mit-zwei-aktiven-Flugsteigen.html", "publisher": "aero.de", "kind": "news", "group": "aero.de", "accessed": "2026-10-31", "published": "2025-03-26", "notes": "Pre-opening (Mar 2025): Fraport CEO said pier G opens with T3 but is used mainly for check-in and landside at first, with no aircraft docking \"from today's perspective\"." },
+    { "id": "src:yt-jebbrooks-t3", "title": "INSIDE the World’s Newest $4.6B Airport Terminal (Jeb Brooks)", "url": "https://www.youtube.com/watch?v=hvwdwLwGhX0", "publisher": "Jeb Brooks (YouTube)", "kind": "video", "group": "yt:JebBrooks", "accessed": "2026-10-31", "published": "2026-03-14", "notes": "Filmed December 2025 during an ORAT trial (operational readiness rehearsal, not live operations). Storyboard sheets read 05:15–11:15 and deleted." },
+    { "id": "src:yt-for91days-skyline", "title": "Frankfurt Airport Unveils the New SkyLine People Mover for Terminal 3 (For 91 Days)", "url": "https://www.youtube.com/watch?v=4YoJDkDmGmM", "publisher": "For 91 Days (YouTube)", "kind": "video", "group": "yt:For91Days", "accessed": "2026-10-31", "published": "2026-08-22", "notes": "Front-window rides (summer 2026, exact date unknown); edited footage. Storyboard sheets 0–15:18 read and deleted." },
+    { "id": "src:fraport-press-skyline-suspension", "title": "Temporary Suspension of the New Sky Line People Mover at Frankfurt Airport", "url": "https://www.fraport.com/en/newsroom/press-releases/2026/q2/temporarily-suspension-of-the-sky-line-people-mover.html", "publisher": "Fraport AG", "kind": "official", "group": "fraport", "accessed": "2026-10-31", "published": "2026-05", "notes": "Read 2026-10-31. New Sky Line out of service for \"the next couple of weeks\"; landside shuttle with up to 20 buses every 2–3 min by day and every 10 min 23:00–05:00, stops in front of the terminal buildings at the arrivals level; a separate airside shuttle with up to five buses between the terminals for transfer passengers (stops not given); the existing Sky Line between T1 and T2 \"remains fully operational\"." },
+    { "id": "src:fraport-factsheet-skyline", "title": "Fact sheet: The New Sky Line People Mover – Terminal 3 (Faktenblatt Neue Sky Line-Bahn, 23 Feb 2026, EN)", "url": "https://www.fraport.com/content/dam/fraport-company/images/newsroom/pressemappe/er%C3%B6ffnung-und-festakt-terminal-3/eng/Faktenblatt_Neue%20Sky%20Line-Bahn_20260223_EN%20(1).pdf/_jcr_content/renditions/original.media_file.download_attachment.file/Faktenblatt_Neue%20Sky%20Line-Bahn_20260223_EN%20(1).pdf", "publisher": "Fraport AG (press kit T3 opening)", "kind": "official-pdf", "group": "fraport", "accessed": "2026-10-31", "published": "2026-02-23", "notes": "T1–T3 \"in eight minutes or less, 365 days a year\"; 5.6 km; 12 two-car vehicles \"divided into separate parts for Schengen and non-Schengen passengers\"; up to 80 km/h; T1 station elevated above the T1 arrivals curbside with access to the Airport City Mall and the regional station below; T2: existing station enlarged, 4 tracks, five platforms, change between the existing and the new system; T3: 150 m × 30 m station for Schengen and non-Schengen travellers and visitors." },
+    { "id": "src:meilenoptimieren-skyline", "title": "Sky Line Flughafen Frankfurt (Sky Train Frankfurt Fahrt)", "url": "https://meilenoptimieren.com/sky-line-flughafen-frankfurt/", "publisher": "Meilenoptimieren", "kind": "guide", "group": "meilenoptimieren", "accessed": "2026-10-31", "published": "2026-02-25", "notes": "Old line stations: T1 A/Z (transit area), T1 B (before security), T1 C (transit area), T2 D/E (before security); one of the two cars is the transit car (non-Schengen to non-Schengen only); per Fraport, once T3 operates the old line carries only transit passengers between T1 and T2. New line: T1 (long-distance station) – T2 – T3, 2-min headway, T1–T2 2 min, T1–T3 8 min; test operation from 23 Feb 2026. States the old line runs \"rund um die Uhr\" (contradicts Wikipedia 05:00–23:00)." },
+    { "id": "src:jal-fra-transit", "title": "JAL · Frankfurt Airport transit information", "url": "https://www.jal.co.jp/en/inter/airport/fra/transit/", "publisher": "Japan Airlines", "kind": "airline", "group": "jal", "accessed": "2026-10-31", "notes": "Read only through search-engine excerpts (jal.co.jp answered HTTP 403 to automated fetching in phase 1; not retried). Excerpts: JAL operates from Terminal 3; \"Passengers transferring between Terminal 3 and Terminal 1 without passing through immigration, please kindly change to the other SkyLine at Terminal 2\"; Schengen/domestic connections clear immigration first; JAL MCT T3 → T1 90 min, T3 → T3 55 min." },
+    { "id": "src:aerotelegraph-skyline", "title": "Neue Skyline-Bahn am Flughafen Frankfurt schon wieder außer Betrieb / … wieder in Betrieb – macht aber täglich nachts Pause", "url": "https://www.aerotelegraph.com/flughaefen/neue-skyline-bahn-am-flughafen-frankfurt-schon-wieder-ausser-betrieb/dhkhy9q", "publisher": "aeroTELEGRAPH", "kind": "news", "group": "aerotelegraph", "accessed": "2026-10-31", "published": "2026-05-26", "notes": "26 May 2026: Sky Line out of service \"bis auf Weiteres\"; shuttle buses every 2–3 min by day between T1, T2 and T3, stops at the arrival forecourts, buses do not enter the security area; buses also at night at longer intervals. Ticker 15 Jun 2026 (https://www.aerotelegraph.com/ticker/neue-skyline-bahn-am-flughafen-frankfurt-wieder-in-betrieb-macht-aber-taeglich-nachts/zp8e0rt): restart, nightly pause 23:00–04:00 with buses." },
+    { "id": "src:qsensor-fra", "title": "Frankfurt Airport security wait times: Terminal 1 and Terminal 3 checkpoint lists", "url": "https://qsensor.co/airports/frankfurt-airport-security-wait-times/terminal-3/", "publisher": "Qsensor (third-party wait-time site; states 'Data from airport' / 'makes use of data from Frankfurt Airport')", "kind": "other", "group": "qsensor", "accessed": "2026-11-01", "notes": "Also /terminal-1/. Checkpoint names with hall, level, concourse and gate ranges, apparently mirrored from Fraport's waiting-time feed (not affiliated with Fraport). T1: Hall A L2 family security, security (A1–A69), transfer passport control (A); Hall A L3 security (Z11–Z69); Hall A L4 transfer security (A/Z, Z11–Z69); Hall B L2 security East/West (B1–B63); Hall B L3 transfer security (B non-Schengen, B20–B63); Hall C L2 security (C/D, C13–C20). T3: Hall H L3 transfer passport control (J1–58); Hall J L3 security (H & J), transfer passport control (H1–56), transfer security (G, H, J). Wait values not used." },
+    { "id": "src:aviationdirect-t3-opening", "title": "Inbetriebnahme des Terminals 3: Ein neues Kapitel für den Luftfahrtstandort Frankfurt", "url": "https://aviation.direct/inbetriebnahme-des-terminals-3-ein-neues-kapitel-fuer-den-luftfahrtstandort-frankfurt", "publisher": "aviation.direct", "kind": "news", "group": "aviation.direct", "accessed": "2026-11-01", "published": "2026-04-23", "notes": "Pier G boarding gates dormant until 2027 (tied to Condor's move), only its check-in area used from the start; H 400 m, 10 positions, mainly Schengen; J 600 m, 14 positions, long-haul; baggage system built for transfers between airlines in different terminals; strict separation of cabins and platforms on the people mover (public and already-screened transit passengers)." },
+    { "id": "src:frankfurtflyer-mct", "title": "Mehr Zeit für den Anschluss: Lufthansa erhöht Mindestumsteigezeit in Frankfurt", "url": "https://frankfurtflyer.de/mehr-zeit-fuer-den-anschluss-lufthansa-erhoeht-mindestumsteigezeit-in-frankfurt/", "publisher": "Frankfurt Flyer", "kind": "news", "group": "frankfurtflyer", "accessed": "2026-11-01", "published": "2024-09-19", "notes": "General MCT 45 min (no domestic/international difference); Lufthansa raises it to 60 min from the summer 2025 schedule, short- and long-haul; no terminal split." },
+    { "id": "src:fra-official-bus", "title": "Mit dem Bus (An- und Abreise)", "url": "https://www.frankfurt-airport.com/de/anreise-parken/an-und-abreise/mit-dem-bus.html", "publisher": "Fraport AG (frankfurt-airport.com)", "kind": "official", "group": "fraport", "accessed": "2026-11-01", "notes": "Bus stops in front of T1 and T3 on the arrivals level; bus station near T1; lines 61 (Südbahnhof) and 62 (Schwanheim) stop at both terminals. No night information." },
+    { "id": "src:rmv-t3-buses", "title": "Neues Terminal 3 am Flughafen Frankfurt wird ins Liniennetz eingebunden (traffiQ / RMV press release)", "url": "https://www.rmv.de/c/fileadmin/lno/kvgof/Dokumente/Pressemitteilungen_2026/Neues_Terminal_3_am_Flughafen_Frankfurt_wird_ins_Liniennetz_eingebunden.pdf", "publisher": "traffiQ / Rhein-Main-Verkehrsverbund", "kind": "official-pdf", "group": "rmv", "accessed": "2026-11-01", "published": "2026-04-14", "notes": "From 23 Apr 2026 lines X14, X18, 65 and X77 serve T3 (X77 every 15 min Gateway Gardens – T3); rail passengers use the Sky Line from T1; new bus station on the arrivals-level forecourt directly west of the building next to the exit of Hall H/J, with transfer to the Sky Line. Read with pdftotext." },
+    { "id": "src:yt-moonandmoron-t3", "title": "法蘭克福機場第三航廈完整攻略｜轉機、退稅、交通、EES (Frankfurt Airport Terminal 3 complete guide)", "url": "https://www.youtube.com/watch?v=YyEjAIAhsdk", "publisher": "YouTube · MoonandMoron", "kind": "video", "group": "yt:MoonandMoron", "accessed": "2026-11-01", "published": "2026-07-15", "notes": "Storyboards 360–630 s read and deleted (10-s frames). Chapter 'arrival and transfer' (07:42–08:57): China Airlines/Cathay land at T3; to connect to a Schengen flight in T1 take the Sky Line from T3 to T2, then pass security again to enter the Schengen area (captions; illustrated with Fraport images)." },
+    { "id": "src:hessenschau-skyline-restart", "title": "Nach Pannen-Start: Skyline-Bahn am Flughafen Frankfurt fährt (langsam) wieder", "url": "https://www.hessenschau.de/panorama/rechtzeitig-vor-sommerferien-skyline-bahn-am-flughafen-frankfurt-faehrt-wieder-v2,skyline-bahn-flughafen-100.html", "publisher": "hessenschau (hr)", "kind": "news", "group": "hessenschau", "accessed": "2026-10-31", "published": "2026-06-15", "notes": "Restart Monday 15 Jun 2026 with up to 8 vehicles at 50 km/h (previously up to 70 km/h); about eight minutes over the 5.6 km line; daily pause 23:00–04:00 until further notice with a bus shuttle." }
+  ]
+}

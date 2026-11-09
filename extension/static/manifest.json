@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Connections Analyst (pilot)",
+  "short_name": "Connections Analyst",
+  "version": "0.1.0",
+  "description": "Pilot. On Skyscanner, analyse a flight connection: likely terminals or gate areas from earlier flights, a schematic airport map, the route between them and an indicative transfer time.",
+  "minimum_chrome_version": "116",
+  "permissions": ["storage"],
+  "content_security_policy": { "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'" },
+  "optional_host_permissions": ["http://127.0.0.1/*", "http://localhost/*"],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "action": { "default_popup": "popup.html", "default_title": "Analyze a connection" },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.skyscanner.net/*", "https://www.skyscanner.com/*", "https://www.skyscanner.co.il/*", "https://www.skyscanner.de/*",
+        "https://www.skyscanner.fr/*", "https://www.skyscanner.it/*", "https://www.skyscanner.es/*", "https://www.skyscanner.nl/*",
+        "https://www.skyscanner.ch/*", "https://www.skyscanner.at/*", "https://www.skyscanner.com.tr/*", "https://www.skyscanner.pt/*",
+        "https://www.skyscanner.ie/*", "https://www.skyscanner.ca/*", "https://www.skyscanner.com.au/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

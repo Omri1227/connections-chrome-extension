@@ -1,0 +1,1294 @@
+{
+  "iata": "IST",
+  "icao": "LTFM",
+  "name": "Istanbul Airport (iGA İstanbul Havalimanı)",
+  "city": "Istanbul (Arnavutköy)",
+  "asOf": "2026-10-31",
+  "schematic": {
+    "width": 1000,
+    "height": 640,
+    "northDeg": 0,
+    "background": [
+      { "kind": "parking", "label": "Multi-storey car parks (P1–P6) and Airport City", "shape": { "type": "rect", "x": 410, "y": 520, "w": 180, "h": 60 } },
+      { "kind": "rail", "label": "M11 metro (underground)", "shape": { "type": "rect", "x": 496, "y": 586, "w": 12, "h": 50 } },
+      { "kind": "other", "label": "JETEX-iGA premium passenger terminal (separate, not modelled)", "shape": { "type": "rect", "x": 900, "y": 600, "w": 60, "h": 30 } }
+    ],
+    "labels": [
+      { "text": "International piers A, B, D, F", "at": [360, 30], "kind": "district" },
+      { "text": "Domestic pier G", "at": [780, 470], "kind": "district" },
+      { "text": "Runways 17L/35R and 17R/35L lie west, 18/36 east of the terminal (outside the drawing)", "at": [20, 618], "kind": "runway" },
+      { "text": "Main terminal: departures level above the arrivals / transfer level (stacked)", "at": [330, 498], "kind": "note" },
+      { "text": "OSM-derived geometry © OpenStreetMap contributors (ODbL); schematic, not survey-accurate (1 unit ≈ 2.3 m)", "at": [20, 634], "kind": "note" }
+    ]
+  },
+  "specialScreening": [{ "id": "ss:ist-tk-special-security", "appliesTo": { "destinationCountries": ["US", "CA", "GB"], "airlines": ["TK"]}, "certainty": "unknown", "issueLevel": "secondary", "text": "Turkish Airlines (search excerpts only): flights needing \"special security\" (USA, Canada, UK) use dedicated check-in islands and a special security control by the authorities; arrive earlier. Matters for self-transfer check-in; time not known. No IST–TLV flights in the feed (TK suspended Tel Aviv after October 2023).", "sources": ["src:tk-faq-special-security"]},{ "id": "ss:ist-israel-other", "appliesTo": { "destinationCountries": ["IL"]}, "certainty": "unknown", "issueLevel": "material", "text": "Flights to Israel: whether this airline has an additional document check, interview or separate screening at Istanbul (no IST–Tel Aviv flights in the collected feed) is not established by any source we could read. Allow extra time and check with the airline.", "sources": ["src:tk-faq-special-security"]},{ "id": "ss:ist-us-enhanced", "appliesTo": { "destinationCountries": ["US"]}, "certainty": "unknown", "issueLevel": "secondary", "text": "US-bound flights: TSA / DHS enhanced security measures for all last-point-of-departure airports (2017, still the baseline as far as known) may add checks at check-in or at the gate (interviews, document checks, separate screening of electronics). The procedures are not public; no time is known.", "sources": ["src:dhs-tsa-2017-enhanced"]}],
+  "areas": [
+    {
+      "id": "ist-metro",
+      "name": "M11 metro station İstanbul Havalimanı",
+      "short": "M11",
+      "kind": "station",
+      "side": "landside",
+      "zone": "n/a",
+      "matrix": true,
+      "anchor": [502, 612],
+      "shape": { "type": "rect", "x": 488, "y": 600, "w": 28, "h": 20 },
+      "level": "Underground; lifts to floor 1 ('Istanbul Airport level'), then to the departures floor",
+      "description": "M11 Gayrettepe – İstanbul Havalimanı – Halkalı line (Halkalı–Arnavutköy section opened 20 June 2026). About 300 m south of the terminal, linked by footbridges and moving walkways; arriving passengers follow the red 'U' metro signs from exit gates 9 or 13.",
+      "confidence": "verified",
+      "sources": ["src:ist-official-transport", "src:ist-official-departing-guide", "src:ist-official-arrival-guide", "src:wikivoyage-ist", "src:osm-ist"]
+    },
+    {
+      "id": "ist-landside",
+      "checkIn": { "serves": ["ist-intl-hub", "ist-pier-a", "ist-pier-b", "ist-pier-d", "ist-pier-f", "ist-pier-g"], "sources": ["src:fd-feed-terminals-2026-11-01"], "note": "Check-in islands B–S after the entrance screening" },
+      "name": "Main terminal · Departures floor, check-in hall (public side)",
+      "short": "Hall",
+      "kind": "landside-hall",
+      "terminal": "Main terminal",
+      "side": "landside",
+      "zone": "n/a",
+      "matrix": true,
+      "anchor": [470, 428],
+      "shape": { "type": "rect", "x": 360, "y": 392, "w": 230, "h": 70 },
+      "level": "Departures floor (P6 car-park level)",
+      "description": "Entrance gates 1–7 (each with an entrance security screening), check-in islands B–S (domestic islands B, C, D near gate 1), then passport control and the second security for international departures, or the domestic second security (east section).",
+      "confidence": "verified",
+      "sources": ["src:ist-official-departing-guide", "src:wikivoyage-ist", "src:yt-mydelicioustrips-2026", "src:osm-ist"],
+      "notes": "Drawn as one strip south of the airside centre; the real check-in hall is wider."
+    },
+    {
+      "id": "ist-arr-hall",
+      "name": "Main terminal · Arrivals hall (public side, exits 9–13)",
+      "short": "Arr",
+      "kind": "landside-hall",
+      "terminal": "Main terminal",
+      "side": "landside",
+      "zone": "n/a",
+      "matrix": false,
+      "anchor": [430, 478],
+      "description": "Welcome area after baggage claim (and customs for international arrivals). Taxi rank and car parks via exit gates 9 and 13; Havaist/IETT buses on transportation floor −2; metro via gates 9/13 and the moving walkways opposite gate 11.",
+      "confidence": "verified",
+      "sources": ["src:ist-official-arrival-guide", "src:ist-official-transport", "src:wikivoyage-ist"]
+    },
+    {
+      "id": "ist-intl-hub",
+      "arrivals": "segregated",
+      "intraWalk": { "min": 1, "typical": 2.5, "max": 5.5, "basis": "derived", "note": "Derived (R-02): pier length ≈ 300 m (C1–C4 / E1–E4 at the hall, gate path × 2.5 m/unit); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "International departures · Central airside hall (duty free, food court, gates C and E)",
+      "short": "Intl",
+      "kind": "transfer-hub",
+      "terminal": "Main terminal",
+      "side": "airside",
+      "zone": "international",
+      "matrix": true,
+      "anchor": [500, 334],
+      "shape": { "type": "poly", "points": [[340, 300], [450, 284], [550, 284], [660, 300], [660, 380], [340, 380]] },
+      "level": "International departures floor (after passport control and the second security)",
+      "stack": { "group": "ist-centre", "order": 1, "label": "Dep" },
+      "description": "The departures marketplace reached after passport control and security (or, for connecting passengers, after the international transfer security and the escalators up). Gates C1–C4 (west face) and E1–E4 (east face) open directly off it; piers A, B, D and F branch from it. Buggy stations opposite gates C and E and at the start of D.",
+      "confidence": "verified",
+      "sources": ["src:ist-official-departing-guide", "src:ist-official-transfer-guide", "src:wikivoyage-ist", "src:yt-leann-2024", "src:yt-mjtravel-2026", "src:yt-bfree-2026", "src:osm-ist"]
+    },
+    {
+      "id": "ist-arr-intl",
+      "name": "International arrivals level · Transfer point (international transfer security, domestic transfers, passport control)",
+      "short": "Arr-X",
+      "kind": "transfer-hub",
+      "terminal": "Main terminal",
+      "side": "airside",
+      "zone": "international",
+      "matrix": false,
+      "anchor": [500, 356],
+      "shape": { "type": "poly", "points": [[340, 300], [450, 284], [550, 284], [660, 300], [660, 380], [340, 380]] },
+      "level": "Arrivals level below the departures hall",
+      "stack": { "group": "ist-centre", "order": 0, "label": "Arr" },
+      "description": "Where arriving international passengers reach the centre: three signed ways side by side — red 'Uluslararası Transfer / International Transfers' (transfer desks opposite, transfer security, escalators up to departures), purple 'İç Hatlar Transfer / Domestic Transfers', and blue 'Pasaport Kontrol – Bagaj Alım / Passport control – Baggage claim'.",
+      "confidence": "verified",
+      "sources": ["src:ist-official-transfer-guide", "src:ist-official-transfer-desks", "src:yt-leann-2024", "src:yt-mjtravel-2026", "src:tk-video-intl-dom"],
+      "notes": "Not a matrix node: it can only be reached through the one-way arrivals flows from the piers (a departing passenger cannot go down to it), so it cannot be a matrix destination. Piers A, B, D, F (and G for the domestic level) carry arrivals 'segregated', so routes from an arriving flight start with the arrivals flow to this level and then pass transfer security; with fromArrival:false (a passenger already waiting at a gate) the departure-level walk is used. Gates C/E (on the hub) are not marked segregated: their arrival path is not documented."
+    },
+    {
+      "id": "ist-pier-a",
+      "intraWalk": { "min": 1, "typical": 3.5, "max": 8.5, "basis": "derived", "note": "Derived (R-02): pier length ≈ 560 m (gate path × 2.5 m/unit); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Pier A (international, south-west)",
+      "short": "A",
+      "kind": "pier",
+      "terminal": "Main terminal",
+      "side": "airside",
+      "zone": "international",
+      "matrix": true,
+      "anchor": [276, 452],
+      "arrivals": "segregated",
+      "shape": { "type": "poly", "points": [[304, 345], [334, 352], [288, 528], [312, 530], [312, 546], [262, 546], [270, 520]] },
+      "level": "Gate level of the departures floor; arrivals walk on a separate glazed level",
+      "description": "Pier running south-west from the main building; gates A1–A11 (A11 is the far end). Buggy stop between A3 and A5; buggy call point after A10.",
+      "notes": "arrivals 'segregated': the official guides send arriving passengers from the gate along a separate route to the transfer point / passport control (arrival-side buggy stops A3–A5 and call point after A10, distinct from the departure-side buggy stations; 'no buggy service on the arrival floor'); the 2026 and 2024 transfer videos show a glazed arrivals level above the gate lounges. The pier of those videos is not identified, so per-pier segregation rests on the official arrival-floor description.",
+      "confidence": "verified",
+      "sources": ["src:osm-ist", "src:ist-official-fb-stores", "src:ist-official-transfer-guide", "src:wikivoyage-ist", "src:wikipedia-ist"]
+    },
+    {
+      "id": "ist-pier-b",
+      "intraWalk": { "min": 1, "typical": 4, "max": 9.5, "basis": "derived", "note": "Derived (R-02): pier length ≈ 650 m (gate path × 2.5 m/unit); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Pier B (international, north-west)",
+      "short": "B",
+      "kind": "pier",
+      "terminal": "Main terminal",
+      "side": "airside",
+      "zone": "international",
+      "matrix": true,
+      "anchor": [266, 176],
+      "arrivals": "segregated",
+      "shape": { "type": "poly", "points": [[300, 272], [240, 112], [250, 94], [300, 94], [300, 112], [268, 114], [322, 262]] },
+      "description": "Pier running north-west then east at its tip; gates B1–B18 (many signed as A/B pairs, e.g. B6A/B6B). Buggy stop between B5 and B7; buggy call point after B15.",
+      "notes": "arrivals 'segregated': as pier A (official arrival-side buggy stop B5–B7 and call point after B15 on the separate arrival route).",
+      "confidence": "verified",
+      "sources": ["src:osm-ist", "src:ist-official-fb-stores", "src:ist-official-transfer-guide", "src:wikivoyage-ist", "src:wikipedia-ist"]
+    },
+    {
+      "id": "ist-pier-d",
+      "intraWalk": { "min": 1, "typical": 3.5, "max": 7.5, "basis": "derived", "note": "Derived (R-02): pier length ≈ 500 m (D1–D17, mid-pier ≈ 410 m and D17 ≈ 640 m from the centre (w:ist-intl-d)); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Pier D (international, north)",
+      "short": "D",
+      "kind": "pier",
+      "terminal": "Main terminal",
+      "side": "airside",
+      "zone": "international",
+      "matrix": true,
+      "anchor": [500, 168],
+      "arrivals": "segregated",
+      "shape": { "type": "poly", "points": [[480, 282], [480, 60], [470, 46], [530, 58], [520, 70], [520, 282]] },
+      "level": "Reached by stairs/escalators down from the departures hall",
+      "description": "Central pier running north; gates D1–D17. Buggy station at the start of D and stop near D9; call point after D15. A turnstile line signed 'D1–D17' was filmed at the head of the pier in 2026 (purpose not established).",
+      "notes": "arrivals 'segregated': as pier A (official arrival-side buggy stop near D9 and call point after D15).",
+      "confidence": "verified",
+      "sources": ["src:osm-ist", "src:ist-official-fb-stores", "src:ist-official-transfer-guide", "src:yt-bfree-2026", "src:wikivoyage-ist", "src:wikipedia-ist"]
+    },
+    {
+      "id": "ist-pier-f",
+      "intraWalk": { "min": 1, "typical": 4, "max": 9, "basis": "derived", "note": "Derived (R-02): pier length ≈ 600 m (gate path × 2.5 m/unit); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Pier F (international, north-east)",
+      "short": "F",
+      "kind": "pier",
+      "terminal": "Main terminal",
+      "side": "airside",
+      "zone": "international",
+      "matrix": true,
+      "anchor": [714, 176],
+      "arrivals": "segregated",
+      "shape": { "type": "poly", "points": [[668, 300], [680, 195], [700, 88], [755, 88], [755, 104], [718, 104], [700, 200], [700, 300]] },
+      "description": "Pier running north-east; gates F2–F19 international (F1 and F3 at its root are reached from the domestic area, see pier G). Buggy stop between F5 and F6; call point after F14.",
+      "notes": "arrivals 'segregated': as pier A (official arrival-side buggy stop F5–F6, call point after F14); the 2022 F17 → D10 video follows a long separate moving-walkway corridor from F to the main building.",
+      "confidence": "verified",
+      "sources": ["src:osm-ist", "src:ist-official-fb-stores", "src:ist-official-transfer-guide", "src:yt-justin-f17-d10", "src:wikivoyage-ist", "src:wikipedia-ist"]
+    },
+    {
+      "id": "ist-dom-hub",
+      "name": "Domestic departures · Airside shopping street (after domestic security)",
+      "short": "Dom",
+      "kind": "transfer-hub",
+      "terminal": "Main terminal",
+      "side": "airside",
+      "zone": "domestic",
+      "matrix": false,
+      "anchor": [640, 418],
+      "shape": { "type": "rect", "x": 600, "y": 392, "w": 80, "h": 60 },
+      "level": "Departures floor; escalators/lift down to the G gate floor",
+      "stack": { "group": "ist-dom", "order": 1, "label": "Dep" },
+      "description": "Domestic airside shops after the domestic second security; the floor-change point (lift, escalator, stairs) leads down to the information desk and the G gates. Domestic buggy station at the entrance to gate G.",
+      "confidence": "verified",
+      "sources": ["src:ist-official-departing-guide", "src:yt-wanderingaround-dom", "src:yt-mydelicioustrips-2026", "src:wikivoyage-ist"]
+    },
+    {
+      "id": "ist-arr-dom",
+      "name": "Domestic arrivals level · Domestic transfer point",
+      "short": "Arr-D",
+      "kind": "transfer-hub",
+      "terminal": "Main terminal",
+      "side": "airside",
+      "zone": "domestic",
+      "matrix": false,
+      "anchor": [640, 440],
+      "shape": { "type": "rect", "x": 600, "y": 392, "w": 80, "h": 60 },
+      "stack": { "group": "ist-dom", "order": 0, "label": "Arr" },
+      "description": "Arrivals level for domestic flights: domestic baggage claim and exit, the domestic transfer point (to the domestic departures floor) and the 'International transfer' route via passport control.",
+      "confidence": "probable",
+      "sources": ["src:ist-official-transfer-guide", "src:ist-official-arrival-guide", "src:tk-video-dom-intl"],
+      "notes": "Placement inferred; the official domestic arrival guide does not say where the domestic arrivals level lies relative to the international one."
+    },
+    {
+      "id": "ist-pier-g",
+      "intraWalk": { "min": 1, "typical": 4, "max": 9.5, "basis": "derived", "note": "Derived (R-02): pier length ≈ 640 m (gate path × 2.5 m/unit); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Pier G (domestic, south-east) incl. F1/F3",
+      "short": "G",
+      "kind": "pier",
+      "terminal": "Main terminal",
+      "side": "airside",
+      "zone": "domestic",
+      "matrix": true,
+      "anchor": [742, 452],
+      "arrivals": "segregated",
+      "shape": { "type": "poly", "points": [[684, 360], [706, 360], [748, 500], [764, 534], [692, 548], [692, 522], [728, 518]] },
+      "level": "Gate floor one level below the domestic shopping street",
+      "description": "The domestic pier: gates G1–G11 (signed in A/B pairs, e.g. G5A/G5B) and remote gate G3; gates F1 and F3 at the root of pier F are reached from the same domestic information desk. iGA Lounge (domestic) near G11.",
+      "notes": "arrivals 'segregated' (probable): official domestic-arrival and domestic-to-domestic guides route arriving passengers from the gate to baggage claim or to 'the domestic transfer point', through which 'the Departures Floor can be accessed' — i.e. arriving passengers are not on the departures floor. No video of the domestic arrivals corridor was read. F1/F3 arrivals are assumed to follow the same flow.",
+      "confidence": "verified",
+      "sources": ["src:ist-official-departing-guide", "src:ist-official-fb-stores", "src:yt-wanderingaround-dom", "src:osm-ist", "src:wikivoyage-ist", "src:wikipedia-ist"]
+    }
+  ],
+  "gateGroups": [
+    {
+      "id": "ist-gates-a",
+      "area": "ist-pier-a",
+      "label": "A1–A11",
+      "gates": ["A1", "A2", "A3", "A5", "A6", "A7", "A8", "A9", "A10", "A11"],
+      "path": [[322, 345], [318, 359], [307, 395], [294, 435], [283, 471], [272, 507], [271, 534], [301, 539]],
+      "confidence": "verified",
+      "sources": ["src:osm-ist", "src:ist-official-fb-stores", "src:ist-official-transfer-guide", "src:wikivoyage-ist"],
+      "notes": "OSM (2026-10-31): A2, A3, A5–A11. Official pages: A1 (Jackie's 'gate A1'), A3–A5 (XpresSpa, buggy stop), A6 (duty free), A7 (Simit Sarayı), A10 (buggy call point), A11 (Via Kiosk). A11 = far end (Wikivoyage). A4 not attested (one search excerpt calls it a downstairs bus-gate area; unverified); A12+ not attested."
+    },
+    {
+      "id": "ist-gates-b",
+      "area": "ist-pier-b",
+      "label": "B1–B18",
+      "gates": ["B1", "B1A", "B1B", "B2", "B3", "B3A", "B3B", "B4", "B5", "B5A", "B5B", "B6", "B6A", "B6B", "B7", "B7A", "B7B", "B8", "B8A", "B8B", "B9", "B9A", "B9B", "B10", "B10A", "B10B", "B12", "B12A", "B12B", "B13", "B14", "B15", "B16", "B17", "B18", "B18A", "B18B"],
+      "path": [[328, 285], [310, 294], [297, 259], [284, 219], [272, 183], [260, 148], [248, 110], [263, 102], [289, 100], [293, 108]],
+      "confidence": "verified",
+      "sources": ["src:osm-ist", "src:ist-official-fb-stores", "src:ist-official-transfer-guide", "src:flightreport-b6b", "src:wikivoyage-ist"],
+      "notes": "Base numbers from official pages (B1, B3–B10, B15, B18) and OSM; A/B suffixed doors from OSM (two refs per stand) and a 2019 trip report ('gate B6b'). Whether 'B6' and 'B6A/B6B' are separate holdrooms is not established (open question). B11 not attested; B12–B17 OSM only (B15 also official)."
+    },
+    {
+      "id": "ist-gates-c",
+      "area": "ist-intl-hub",
+      "label": "C1–C4",
+      "gates": ["C1", "C2", "C3", "C4"],
+      "path": [[437, 300], [412, 300], [391, 300], [376, 300]],
+      "confidence": "verified",
+      "sources": ["src:osm-ist", "src:ist-official-fb-stores", "src:wikivoyage-ist"],
+      "notes": "Gates on the west face of the main building, opening directly off the departures hall (not a separate pier). OSM level 2. Official: Via Kiosk 'gate C1'; buggy station opposite gates C. Wikivoyage: lost and found in front of C3."
+    },
+    {
+      "id": "ist-gates-d",
+      "area": "ist-pier-d",
+      "label": "D1–D17",
+      "gates": ["D1", "D2", "D3", "D4", "D5", "D6", "D7", "D8", "D9", "D10", "D11", "D12", "D13", "D14", "D15", "D16", "D17"],
+      "path": [[486, 274], [517, 274], [491, 246], [511, 246], [490, 195], [510, 188], [489, 134], [509, 127], [488, 103], [509, 96], [483, 71], [514, 66], [490, 57]],
+      "confidence": "verified",
+      "sources": ["src:osm-ist", "src:ist-official-fb-stores", "src:ist-official-transfer-guide", "src:yt-bfree-2026", "src:yt-justin-f17-d10", "src:wikivoyage-ist"],
+      "notes": "Complete D1–D17 in OSM; official pages name D3, D4, D6, D7, D9, D11–D13, D15, D16; gate signs D13–D15 seen in a 2026 video; D10 is the destination of a 2022 transfer video; D17 = far end (Wikivoyage). Odd numbers on the west side, even on the east (OSM)."
+    },
+    {
+      "id": "ist-gates-e",
+      "area": "ist-intl-hub",
+      "label": "E1–E4",
+      "gates": ["E1", "E2", "E3", "E4"],
+      "path": [[565, 298], [581, 298], [606, 297], [627, 297]],
+      "confidence": "verified",
+      "sources": ["src:osm-ist", "src:ist-official-fb-stores", "src:tk-video-dom-intl", "src:wikivoyage-ist"],
+      "notes": "Gates on the east face of the main building. Official: duty free 'close to E1 gate'; buggy station opposite gates E. Turkish Airlines' domestic→international video shows a sign 'E1 E2 E3' / 'E4' right after the escalators up into departures."
+    },
+    {
+      "id": "ist-gates-f",
+      "area": "ist-pier-f",
+      "label": "F2–F19",
+      "gates": ["F2", "F4", "F5", "F6", "F7", "F8", "F9", "F12", "F13", "F14", "F15", "F16", "F17", "F18", "F19"],
+      "path": [[676, 274], [688, 236], [712, 228], [699, 202], [723, 192], [706, 151], [734, 157], [705, 115], [745, 120], [706, 91], [718, 91], [745, 96], [749, 97]],
+      "confidence": "verified",
+      "sources": ["src:osm-ist", "src:ist-official-fb-stores", "src:ist-official-transfer-guide", "src:yt-justin-f17-d10", "src:wikivoyage-ist"],
+      "notes": "OSM: F1–F9, F12–F19. Official: F2 (duty free), F5–F6 (buggy stop), F6, F7, F9, F12, F13, F14 (call point). F17 start of a 2022 transfer video; Wikivoyage names F16 as the far end. F10, F11 not attested."
+    },
+    {
+      "id": "ist-gates-f-dom",
+      "area": "ist-pier-g",
+      "label": "F1, F3 (domestic side)",
+      "gates": ["F1", "F3"],
+      "zone": "domestic",
+      "path": [[689, 301], [701, 262]],
+      "confidence": "probable",
+      "sources": ["src:ist-official-departing-guide", "src:yt-wanderingaround-dom", "src:osm-ist", "src:wikivoyage-ist"],
+      "notes": "Official domestic-departures description: on the gate floor 'Gates F1 and F3 are located to the left of the information desk'; a 2019 domestic walk has the chapter 'Towards F1 and F3' from the domestic information desk. Wikivoyage: three boarding bridges of pier F are allocated to domestic flights. Whether these stands swing to international use (and the third bridge, possibly F2) is not established."
+    },
+    {
+      "id": "ist-gates-g",
+      "area": "ist-pier-g",
+      "label": "G1–G11",
+      "gates": ["G1", "G2", "G2A", "G2B", "G4", "G4A", "G4B", "G5", "G5A", "G5B", "G6", "G6A", "G6B", "G7", "G7A", "G7B", "G8", "G8A", "G8B", "G9", "G9A", "G9B", "G10", "G10A", "G10B", "G11", "G11A", "G11B"],
+      "path": [[691, 366], [703, 400], [716, 438], [728, 472], [739, 506], [741, 524], [737, 526], [727, 529], [699, 525]],
+      "confidence": "verified",
+      "sources": ["src:ist-official-departing-guide", "src:ist-official-fb-stores", "src:osm-ist", "src:yt-wanderingaround-dom"],
+      "notes": "Official: G1 (information desk opposite), G2, G4, G5, G6, G9, G10, G11 (iGA Lounge near G11) and the list 'G2, G4 … G11'. A/B pairs from the 2019 domestic walk chapters (G2A/G2B … G11A/G11B). OSM: G2, G4–G11."
+    },
+    {
+      "id": "ist-gates-g3",
+      "area": "ist-pier-g",
+      "label": "G3 (remote / bus)",
+      "gates": ["G3"],
+      "bus": true,
+      "path": [[700, 384], [704, 392]],
+      "confidence": "verified",
+      "sources": ["src:ist-official-departing-guide", "src:ist-official-fb-stores", "src:yt-wanderingaround-dom"],
+      "notes": "Official text: 'the G3 remote flight gate' / 'remote aircraft G3 gate' (domestic). Exact position along the pier not known."
+    }
+  ],
+  "stops": [
+    {
+      "id": "s:ist-buggy-ce",
+      "name": "iGA Buggy desks C1 / E1",
+      "area": "ist-intl-hub",
+      "side": "airside",
+      "anchor": [500, 300],
+      "accessMinutes": { "min": 0, "typical": 1, "max": 3, "basis": "assumed", "note": "Desk/stop inside the area; distance not published." },
+      "where": "International departures floor: buggy desks at C1 and E1 (official FAQ); transfer guide also names a stop at the start of pier D.",
+      "confidence": "probable",
+      "sources": ["src:ist-official-buggy", "src:ist-official-buggy-faq", "src:ist-official-transfer-guide"]
+    },
+    {
+      "id": "s:ist-buggy-a",
+      "name": "Pier A buggy desk (next to A5)",
+      "area": "ist-pier-a",
+      "side": "airside",
+      "anchor": [296, 438],
+      "accessMinutes": { "min": 0, "typical": 1, "max": 3, "basis": "assumed", "note": "Desk/stop inside the area; distance not published." },
+      "where": "Pier A, next to gate A5 (arrivals-floor desk per the FAQ; the transfer guide says between A3–A5); call point opposite A11.",
+      "confidence": "probable",
+      "sources": ["src:ist-official-buggy", "src:ist-official-buggy-faq", "src:ist-official-transfer-guide"]
+    },
+    {
+      "id": "s:ist-buggy-b",
+      "name": "Pier B buggy desk (next to B5)",
+      "area": "ist-pier-b",
+      "side": "airside",
+      "anchor": [281, 210],
+      "accessMinutes": { "min": 0, "typical": 1, "max": 3, "basis": "assumed", "note": "Desk/stop inside the area; distance not published." },
+      "where": "Pier B, next to gate B5 (FAQ; transfer guide: between B5–B7); call point near B16–17.",
+      "confidence": "probable",
+      "sources": ["src:ist-official-buggy", "src:ist-official-buggy-faq", "src:ist-official-transfer-guide"]
+    },
+    {
+      "id": "s:ist-buggy-d",
+      "name": "Pier D buggy desk (near D9)",
+      "area": "ist-pier-d",
+      "side": "airside",
+      "anchor": [500, 160],
+      "accessMinutes": { "min": 0, "typical": 1, "max": 3, "basis": "assumed", "note": "Desk/stop inside the area; distance not published." },
+      "where": "Pier D, near gate D9; call point near D13–14.",
+      "confidence": "probable",
+      "sources": ["src:ist-official-buggy", "src:ist-official-buggy-faq", "src:ist-official-transfer-guide"]
+    },
+    {
+      "id": "s:ist-buggy-f",
+      "name": "Pier F buggy desk (next to F6)",
+      "area": "ist-pier-f",
+      "side": "airside",
+      "anchor": [712, 178],
+      "accessMinutes": { "min": 0, "typical": 1, "max": 3, "basis": "assumed", "note": "Desk/stop inside the area; distance not published." },
+      "where": "Pier F, next to gate F6 (transfer guide: between F5–F6); call point near F14–16.",
+      "confidence": "probable",
+      "sources": ["src:ist-official-buggy", "src:ist-official-buggy-faq", "src:ist-official-transfer-guide"]
+    },
+    {
+      "id": "s:ist-buggy-dom",
+      "name": "Buggy desk G (domestic departures floor)",
+      "area": "ist-dom-hub",
+      "side": "airside",
+      "anchor": [655, 405],
+      "accessMinutes": { "min": 0, "typical": 1, "max": 3, "basis": "assumed", "note": "Desk/stop inside the area; distance not published." },
+      "where": "Domestic departures floor, buggy desk G at the entrance to the G gates.",
+      "confidence": "probable",
+      "sources": ["src:ist-official-buggy", "src:ist-official-buggy-faq", "src:ist-official-transfer-guide"]
+    },
+    {
+      "id": "s:ist-buggy-g",
+      "name": "Pier G buggy desk G5 (between G5–G6)",
+      "area": "ist-pier-g",
+      "side": "airside",
+      "anchor": [722, 456],
+      "accessMinutes": { "min": 0, "typical": 1, "max": 3, "basis": "assumed", "note": "Desk/stop inside the area; distance not published." },
+      "where": "Pier G between G5 and G6 (domestic arrivals-area desk G5 per the FAQ).",
+      "confidence": "probable",
+      "sources": ["src:ist-official-buggy", "src:ist-official-buggy-faq", "src:ist-official-transfer-guide"]
+    }
+  ],
+  "lines": [
+    {
+      "id": "l:ist-buggy-a",
+      "name": "iGA Buggy (pier A)",
+      "mode": "other",
+      "operator": "iGA (iGA Pass premium services)",
+      "colour": "#8a8f98",
+      "access": "airside",
+      "side": "airside",
+      "stops": ["s:ist-buggy-ce", "s:ist-buggy-a"],
+      "direction": "both",
+      "rideMin": [4],
+      "ride": [
+        { "min": 3, "typical": 4, "max": 6, "basis": "assumed", "note": "≈ 660 m (OSM) at an assumed cart speed of 8–12 km/h plus boarding; no published ride time." }
+      ],
+      "notRouted": "On-demand electric carts (3–5 seats), not a scheduled service: paid for most passengers (international departures floor 18.75 EUR + VAT per adult, domestic 229.17 TRY + VAT), free only for iGA Pass members, Meet & Greet, guests 65+, pregnant guests, families with children 0–2 and contracted airlines; arrivals-floor rides only for those groups or a Taxi Buggy subject to availability. Availability and ride times are not published, so the walking route is the default; the buggy is shown for information only.",
+      "service": [
+        { "hours": "On demand; desk phones and call points 24/7 (official FAQ)", "windows": [{ "from": "00:00", "until": "24:00" }], "headwayMin": { "min": 1, "max": 15 }, "headwayBasis": "assumed", "waitMin": { "min": 0, "typical": 3, "max": 15, "basis": "assumed", "note": "On demand: no cart may be waiting at peaks (official FAQ); no published wait." }, "sources": ["src:ist-official-buggy-faq"] }
+      ],
+      "eligibility": "Departures floor: any passenger who buys the service (desks C1/E1/G, igapass.com, app) or the free groups. Arrivals floor (pier desk → passport control / transfer point): iGA Pass yearly members, Meet & Greet, 65+, pregnant guests, families with children 0–2; others only by Taxi Buggy subject to availability. The pier stop serves both the departures floor (outbound) and the arrivals floor (inbound to passport control).",
+      "confidence": "probable",
+      "sources": ["src:ist-official-buggy", "src:ist-official-buggy-faq", "src:ist-official-transfer-guide", "src:wikivoyage-ist"],
+      "notes": "Phase 2: modelled as a line marked notRouted (schema field added in phase 2). One line per pier because the carts run between a central desk and the gates, not along a fixed loop. Inbound rides on the arrivals floor end at passport control / the transfer point, not at the departures desk; the router never uses this line."
+    },
+    {
+      "id": "l:ist-buggy-b",
+      "name": "iGA Buggy (pier B)",
+      "mode": "other",
+      "operator": "iGA (iGA Pass premium services)",
+      "colour": "#8a8f98",
+      "access": "airside",
+      "side": "airside",
+      "stops": ["s:ist-buggy-ce", "s:ist-buggy-b"],
+      "direction": "both",
+      "rideMin": [4],
+      "ride": [
+        { "min": 3, "typical": 4, "max": 6, "basis": "assumed", "note": "≈ 670 m (OSM) at an assumed cart speed of 8–12 km/h plus boarding; no published ride time." }
+      ],
+      "notRouted": "On-demand electric carts (3–5 seats), not a scheduled service: paid for most passengers (international departures floor 18.75 EUR + VAT per adult, domestic 229.17 TRY + VAT), free only for iGA Pass members, Meet & Greet, guests 65+, pregnant guests, families with children 0–2 and contracted airlines; arrivals-floor rides only for those groups or a Taxi Buggy subject to availability. Availability and ride times are not published, so the walking route is the default; the buggy is shown for information only.",
+      "service": [
+        { "hours": "On demand; desk phones and call points 24/7 (official FAQ)", "windows": [{ "from": "00:00", "until": "24:00" }], "headwayMin": { "min": 1, "max": 15 }, "headwayBasis": "assumed", "waitMin": { "min": 0, "typical": 3, "max": 15, "basis": "assumed", "note": "On demand: no cart may be waiting at peaks (official FAQ); no published wait." }, "sources": ["src:ist-official-buggy-faq"] }
+      ],
+      "eligibility": "Departures floor: any passenger who buys the service (desks C1/E1/G, igapass.com, app) or the free groups. Arrivals floor (pier desk → passport control / transfer point): iGA Pass yearly members, Meet & Greet, 65+, pregnant guests, families with children 0–2; others only by Taxi Buggy subject to availability. The pier stop serves both the departures floor (outbound) and the arrivals floor (inbound to passport control).",
+      "confidence": "probable",
+      "sources": ["src:ist-official-buggy", "src:ist-official-buggy-faq", "src:ist-official-transfer-guide", "src:wikivoyage-ist"],
+      "notes": "Phase 2: modelled as a line marked notRouted (schema field added in phase 2). One line per pier because the carts run between a central desk and the gates, not along a fixed loop. Inbound rides on the arrivals floor end at passport control / the transfer point, not at the departures desk; the router never uses this line."
+    },
+    {
+      "id": "l:ist-buggy-d",
+      "name": "iGA Buggy (pier D)",
+      "mode": "other",
+      "operator": "iGA (iGA Pass premium services)",
+      "colour": "#8a8f98",
+      "access": "airside",
+      "side": "airside",
+      "stops": ["s:ist-buggy-ce", "s:ist-buggy-d"],
+      "direction": "both",
+      "rideMin": [3],
+      "ride": [
+        { "min": 2, "typical": 3, "max": 5, "basis": "assumed", "note": "≈ 410 m (OSM) at an assumed cart speed of 8–12 km/h plus boarding; no published ride time." }
+      ],
+      "notRouted": "On-demand electric carts (3–5 seats), not a scheduled service: paid for most passengers (international departures floor 18.75 EUR + VAT per adult, domestic 229.17 TRY + VAT), free only for iGA Pass members, Meet & Greet, guests 65+, pregnant guests, families with children 0–2 and contracted airlines; arrivals-floor rides only for those groups or a Taxi Buggy subject to availability. Availability and ride times are not published, so the walking route is the default; the buggy is shown for information only.",
+      "service": [
+        { "hours": "On demand; desk phones and call points 24/7 (official FAQ)", "windows": [{ "from": "00:00", "until": "24:00" }], "headwayMin": { "min": 1, "max": 15 }, "headwayBasis": "assumed", "waitMin": { "min": 0, "typical": 3, "max": 15, "basis": "assumed", "note": "On demand: no cart may be waiting at peaks (official FAQ); no published wait." }, "sources": ["src:ist-official-buggy-faq"] }
+      ],
+      "eligibility": "Departures floor: any passenger who buys the service (desks C1/E1/G, igapass.com, app) or the free groups. Arrivals floor (pier desk → passport control / transfer point): iGA Pass yearly members, Meet & Greet, 65+, pregnant guests, families with children 0–2; others only by Taxi Buggy subject to availability. The pier stop serves both the departures floor (outbound) and the arrivals floor (inbound to passport control).",
+      "confidence": "probable",
+      "sources": ["src:ist-official-buggy", "src:ist-official-buggy-faq", "src:ist-official-transfer-guide", "src:wikivoyage-ist"],
+      "notes": "Phase 2: modelled as a line marked notRouted (schema field added in phase 2). One line per pier because the carts run between a central desk and the gates, not along a fixed loop. Inbound rides on the arrivals floor end at passport control / the transfer point, not at the departures desk; the router never uses this line."
+    },
+    {
+      "id": "l:ist-buggy-f",
+      "name": "iGA Buggy (pier F)",
+      "mode": "other",
+      "operator": "iGA (iGA Pass premium services)",
+      "colour": "#8a8f98",
+      "access": "airside",
+      "side": "airside",
+      "stops": ["s:ist-buggy-ce", "s:ist-buggy-f"],
+      "direction": "both",
+      "rideMin": [4],
+      "ride": [
+        { "min": 3, "typical": 4, "max": 6, "basis": "assumed", "note": "≈ 725 m (OSM) at an assumed cart speed of 8–12 km/h plus boarding; no published ride time." }
+      ],
+      "notRouted": "On-demand electric carts (3–5 seats), not a scheduled service: paid for most passengers (international departures floor 18.75 EUR + VAT per adult, domestic 229.17 TRY + VAT), free only for iGA Pass members, Meet & Greet, guests 65+, pregnant guests, families with children 0–2 and contracted airlines; arrivals-floor rides only for those groups or a Taxi Buggy subject to availability. Availability and ride times are not published, so the walking route is the default; the buggy is shown for information only.",
+      "service": [
+        { "hours": "On demand; desk phones and call points 24/7 (official FAQ)", "windows": [{ "from": "00:00", "until": "24:00" }], "headwayMin": { "min": 1, "max": 15 }, "headwayBasis": "assumed", "waitMin": { "min": 0, "typical": 3, "max": 15, "basis": "assumed", "note": "On demand: no cart may be waiting at peaks (official FAQ); no published wait." }, "sources": ["src:ist-official-buggy-faq"] }
+      ],
+      "eligibility": "Departures floor: any passenger who buys the service (desks C1/E1/G, igapass.com, app) or the free groups. Arrivals floor (pier desk → passport control / transfer point): iGA Pass yearly members, Meet & Greet, 65+, pregnant guests, families with children 0–2; others only by Taxi Buggy subject to availability. The pier stop serves both the departures floor (outbound) and the arrivals floor (inbound to passport control).",
+      "confidence": "probable",
+      "sources": ["src:ist-official-buggy", "src:ist-official-buggy-faq", "src:ist-official-transfer-guide", "src:wikivoyage-ist"],
+      "notes": "Phase 2: modelled as a line marked notRouted (schema field added in phase 2). One line per pier because the carts run between a central desk and the gates, not along a fixed loop. Inbound rides on the arrivals floor end at passport control / the transfer point, not at the departures desk; the router never uses this line."
+    },
+    {
+      "id": "l:ist-buggy-g",
+      "name": "iGA Buggy (pier G, domestic)",
+      "mode": "other",
+      "operator": "iGA (iGA Pass premium services)",
+      "colour": "#8a8f98",
+      "access": "airside",
+      "side": "airside",
+      "stops": ["s:ist-buggy-dom", "s:ist-buggy-g"],
+      "direction": "both",
+      "rideMin": [3],
+      "ride": [
+        { "min": 2, "typical": 3, "max": 5, "basis": "assumed", "note": "≈ 330 m (OSM) at an assumed cart speed of 8–12 km/h plus boarding; no published ride time." }
+      ],
+      "notRouted": "On-demand electric carts (3–5 seats), not a scheduled service: paid for most passengers (international departures floor 18.75 EUR + VAT per adult, domestic 229.17 TRY + VAT), free only for iGA Pass members, Meet & Greet, guests 65+, pregnant guests, families with children 0–2 and contracted airlines; arrivals-floor rides only for those groups or a Taxi Buggy subject to availability. Availability and ride times are not published, so the walking route is the default; the buggy is shown for information only.",
+      "service": [
+        { "hours": "On demand; desk phones and call points 24/7 (official FAQ)", "windows": [{ "from": "00:00", "until": "24:00" }], "headwayMin": { "min": 1, "max": 15 }, "headwayBasis": "assumed", "waitMin": { "min": 0, "typical": 3, "max": 15, "basis": "assumed", "note": "On demand: no cart may be waiting at peaks (official FAQ); no published wait." }, "sources": ["src:ist-official-buggy-faq"] }
+      ],
+      "eligibility": "Departures floor: any passenger who buys the service (desks C1/E1/G, igapass.com, app) or the free groups. Arrivals floor (pier desk → passport control / transfer point): iGA Pass yearly members, Meet & Greet, 65+, pregnant guests, families with children 0–2; others only by Taxi Buggy subject to availability. The pier stop serves both the departures floor (outbound) and the arrivals floor (inbound to passport control).",
+      "confidence": "probable",
+      "sources": ["src:ist-official-buggy", "src:ist-official-buggy-faq", "src:ist-official-transfer-guide", "src:wikivoyage-ist"],
+      "notes": "Phase 2: modelled as a line marked notRouted (schema field added in phase 2). One line per pier because the carts run between a central desk and the gates, not along a fixed loop. Inbound rides on the arrivals floor end at passport control / the transfer point, not at the departures desk; the router never uses this line."
+    }
+  ],
+  "walks": [
+    {
+      "id": "w:ist-metro-hall",
+      "from": "ist-metro",
+      "to": "ist-landside",
+      "bidirectional": true,
+      "access": "public",
+      "minutes": { "min": 5, "typical": 8, "max": 12, "basis": "derived" },
+      "distanceM": 350,
+      "controls": [
+        { "kind": "security", "minutes": { "min": 2, "typical": 6, "max": 25, "basis": "assumed" }, "note": "Terminal entrance screening at the entrance gates (all persons entering the terminal)" }
+      ],
+      "reverseControls": [],
+      "practical": "practical",
+      "via": "Lifts/escalators from the station to floor 1, footbridge and moving walkways, lift to the departures floor; entrance gate 4 (official accessible route)",
+      "confidence": "verified",
+      "sources": ["src:ist-official-departing-guide", "src:wikivoyage-ist", "src:osm-ist", "src:ist-official-transport"],
+      "notes": "Distance ≈ 300 m (Wikivoyage) plus level changes; minutes derived at 4.5 km/h plus lifts. The entrance screening is part of the official departing-passenger sequence (Terminal entrance → Security → Check-in). Station hours (phase 2): the official public-transport page gives M11 trains every 20 min, from the airport towards Gayrettepe 06:00–00:00 and from Gayrettepe towards the airport 06:00–00:40 (≈ 30 min ride, so the last arriving train ≈ 01:10). The walk is therefore open 05:30–01:15 (union of both directions; a departing passenger must reach the platform before the 00:00 last train). Wikivoyage: 06:00–00:00.",
+      "hours": [
+        { "from": "05:30", "until": "01:15" }
+      ]
+    },
+    {
+      "id": "w:ist-arrhall-metro",
+      "from": "ist-arr-hall",
+      "to": "ist-metro",
+      "bidirectional": false,
+      "access": "public",
+      "minutes": { "min": 5, "typical": 8, "max": 12, "basis": "derived" },
+      "distanceM": 350,
+      "practical": "practical",
+      "via": "Exit gate 9 (turn right) or 13 (turn left), red 'U' metro signs, moving walkways opposite gate 11",
+      "confidence": "verified",
+      "sources": ["src:ist-official-arrival-guide", "src:ist-official-transport", "src:wikivoyage-ist"],
+      "hours": [
+        { "from": "05:30", "until": "24:00" }
+      ],
+      "notes": "Station hours (phase 2): last train from the airport towards Gayrettepe/the city 00:00, first 06:00, every 20 min (official public-transport page; Wikivoyage 06:00–00:00). Arriving passengers can reach a train only between ≈ 05:30 and midnight."
+    },
+    {
+      "id": "w:ist-arrhall-hall",
+      "from": "ist-arr-hall",
+      "to": "ist-landside",
+      "bidirectional": true,
+      "access": "public",
+      "minutes": { "min": 3, "typical": 5, "max": 9, "basis": "derived", "note": "Phase 2: ≈ 150 m on the OSM-projected plan between the arrivals exits and the departures-floor centre, at 4.5 km/h, plus 2–4 min for lifts/escalators between the arrivals floor and the departures floor (several floors). Was assumed 3/5/8." },
+      "practical": "practical",
+      "via": "Lifts/escalators between the arrivals and departures floors inside the terminal",
+      "confidence": "inferred",
+      "sources": ["src:ist-official-arrival-guide", "src:ist-official-departing-guide", "src:osm-ist"],
+      "notes": "Both floors are in the same building (official guides: arrivals floor P3, departures floor P6). Whether a passenger going up from arrivals to departures is screened again at an internal checkpoint is not documented (open question q:ist-arrivals-to-departures)."
+    },
+    {
+      "id": "w:ist-hall-intl",
+      "from": "ist-landside",
+      "to": "ist-intl-hub",
+      "bidirectional": false,
+      "access": "public",
+      "minutes": { "min": 4, "typical": 7, "max": 12, "basis": "derived" },
+      "controls": [
+        { "kind": "passport", "minutes": { "min": 3, "typical": 10, "max": 45, "basis": "assumed" }, "note": "Exit passport control (e-passport gates for Turkish citizens)" },
+        { "kind": "security", "minutes": { "min": 5, "typical": 12, "max": 40, "basis": "assumed" }, "note": "Second security after passport control (the first was at the terminal entrance)" }
+      ],
+      "practical": "practical",
+      "via": "Check-in → passport control → second security → departures hall",
+      "confidence": "verified",
+      "sources": ["src:ist-official-departing-guide", "src:tk-faq-excerpt", "src:wikivoyage-ist"],
+      "notes": "Official order for international departures: terminal entrance (security) → check-in → passport control → security control → gates. The official site publishes live waiting times (not read). Departure direction only; arriving passengers leave through w:ist-arr-intl-exit."
+    },
+    {
+      "id": "w:ist-hall-dom",
+      "from": "ist-landside",
+      "to": "ist-dom-hub",
+      "bidirectional": false,
+      "access": "public",
+      "minutes": { "min": 2, "typical": 5, "max": 9, "basis": "derived", "note": "Phase 2: from the centre of the check-in hall to the domestic second security at the east end ≈ 250–400 m on the OSM-projected plan at 4.5 km/h (less from the domestic check-in islands B–D, which are near entrance gate 1 per the official guide). Was assumed 2/4/8." },
+      "controls": [
+        { "kind": "security", "minutes": { "min": 3, "typical": 10, "max": 30, "basis": "assumed" }, "note": "Domestic second security (boarding-pass turnstile, then screening)" }
+      ],
+      "practical": "practical",
+      "via": "Check-in islands B–D → domestic second security",
+      "confidence": "verified",
+      "sources": ["src:ist-official-departing-guide", "src:yt-mydelicioustrips-2026", "src:wikivoyage-ist", "src:osm-ist"],
+      "notes": "Official: 'the security gate will open once your ticket is scanned at the turnstile'; priority lane in the eastern section of the second security zone for domestic flights."
+    },
+    {
+      "id": "w:ist-intl-a",
+      "from": "ist-intl-hub",
+      "to": "ist-pier-a",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": { "min": 5, "typical": 8, "max": 18, "basis": "derived", "note": "Typical = mid-pier on OSM distance at 4.5 km/h (moving walkways offset the level changes); max = far end (≈ 870–925 m OSM; TPG 2019 measured 'more than 3,000 feet' ≈ 915 m from security to a far gate; Wikivoyage 15–20 min to A11/B15/D17/F16/G11)." },
+      "distanceM": 660,
+      "practical": "long",
+      "via": "Moving walkways along the pier; far end A11 ≈ 870 m from the centre",
+      "confidence": "verified",
+      "sources": ["src:osm-ist", "src:wikivoyage-ist", "src:ist-official-buggy", "src:tpg-2019-ist"],
+      "notes": "Typical = centre of the departures hall to mid-pier (≈ 660 m on the OSM geometry, 4.5 km/h, moving walkways partly offset level changes). Max = far end (Wikivoyage: 15–20 min from the central area to A11). Rated 'long' because the airport sells a buggy service for these distances; the buggy is not routed (paid, see r:ist-buggy)."
+    },
+    {
+      "id": "w:ist-intl-b",
+      "from": "ist-intl-hub",
+      "to": "ist-pier-b",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": { "min": 5, "typical": 9, "max": 18, "basis": "derived", "note": "Typical = mid-pier on OSM distance at 4.5 km/h (moving walkways offset the level changes); max = far end (≈ 870–925 m OSM; TPG 2019 measured 'more than 3,000 feet' ≈ 915 m from security to a far gate; Wikivoyage 15–20 min to A11/B15/D17/F16/G11)." },
+      "distanceM": 670,
+      "practical": "long",
+      "via": "Moving walkways; far end B15–B18 ≈ 900 m from the centre",
+      "confidence": "verified",
+      "sources": ["src:osm-ist", "src:wikivoyage-ist", "src:ist-official-buggy", "src:tpg-2019-ist"],
+      "notes": "Derived as for pier A; Wikivoyage names B15 as the far gate (15–20 min)."
+    },
+    {
+      "id": "w:ist-intl-d",
+      "from": "ist-intl-hub",
+      "to": "ist-pier-d",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": { "min": 3, "typical": 6, "max": 15, "basis": "derived", "note": "Typical = mid-pier ≈ 410 m on OSM at 4.5 km/h plus the stairs/escalators down at the pier head; max = D17 (≈ 640 m) at a slow pace (Wikivoyage 15–20 min to the far gates)." },
+      "distanceM": 410,
+      "practical": "practical",
+      "via": "Stairs/escalators down at the head of D (turnstile line signed 'D1–D17'), then moving walkways; D17 ≈ 640 m",
+      "confidence": "verified",
+      "sources": ["src:osm-ist", "src:wikivoyage-ist", "src:yt-bfree-2026"],
+      "notes": "D is the shortest international pier. The 2026 video shows a row of turnstiles under a 'D1–D17' sign at the pier head; if these are boarding-pass gates they add no meaningful time, but their purpose is open (q:ist-d-turnstiles)."
+    },
+    {
+      "id": "w:ist-intl-f",
+      "from": "ist-intl-hub",
+      "to": "ist-pier-f",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": { "min": 6, "typical": 10, "max": 20, "basis": "derived", "note": "Typical = mid-pier on OSM distance at 4.5 km/h (moving walkways offset the level changes); max = far end (≈ 870–925 m OSM; TPG 2019 measured 'more than 3,000 feet' ≈ 915 m from security to a far gate; Wikivoyage 15–20 min to A11/B15/D17/F16/G11)." },
+      "distanceM": 725,
+      "practical": "long",
+      "via": "Moving walkways; far end F16–F19 ≈ 925 m from the centre",
+      "confidence": "verified",
+      "sources": ["src:osm-ist", "src:wikivoyage-ist", "src:yt-justin-f17-d10", "src:ist-official-buggy", "src:tpg-2019-ist"],
+      "notes": "Derived on the OSM geometry. The 2022 real-time video F17 → D10 reaches the main building ≈ 5.5 min after leaving the F17 area (edited with talking-head inserts, so only a lower bound). Guides give 20–25 min from check-in to the far end of F."
+    },
+    {
+      "id": "w:ist-dom-g",
+      "from": "ist-dom-hub",
+      "to": "ist-pier-g",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": { "min": 4, "typical": 7, "max": 12, "basis": "observed" },
+      "distanceM": 400,
+      "practical": "practical",
+      "via": "Floor-change point (lift, escalator, stairs) down to the information desk, then right along the pier with moving walkways",
+      "confidence": "verified",
+      "sources": ["src:ist-official-departing-guide", "src:yt-wanderingaround-dom", "src:osm-ist"],
+      "notes": "2019 domestic walk: start of the shopping street after security 0:00 → escalators 2:50 → information desk 3:45 → G1 4:38 → G6 8:25 → G11 10:50 (filming pace, including shop stops). Typical = to mid-pier."
+    },
+    {
+      "id": "w:ist-a-arr",
+      "from": "ist-pier-a",
+      "to": "ist-arr-intl",
+      "bidirectional": false,
+      "access": "airside",
+      "flow": "arrivals",
+      "minutes": { "min": 6, "typical": 10, "max": 20, "basis": "derived", "note": "Derived: departure-level pier walk (OSM distance at 4.5 km/h, moving walkways) + 2 min for the level changes. Cross-check (observed, pier unknown): 2023 Maxi & Maro video, aircraft door → red International Transfer pylon ≈ 9.5–10.5 min including the jet-bridge queue and an escalator up to the arrivals corridor." },
+      "practical": "practical",
+      "via": "Separate arrivals corridor along the pier (above the gate lounges), escalators down to the transfer point",
+      "confidence": "probable",
+      "sources": ["src:yt-mjtravel-2026", "src:yt-leann-2024", "src:osm-ist", "src:ist-official-transfer-guide", "src:yt-maximaro-2023"],
+      "notes": "Arrivals flow. Pier of the 2026 video not identified; the arrivals level is shown as a glazed gallery overlooking the departure lounges. Minutes = departure-level walk + 2 min for level changes."
+    },
+    {
+      "id": "w:ist-b-arr",
+      "from": "ist-pier-b",
+      "to": "ist-arr-intl",
+      "bidirectional": false,
+      "access": "airside",
+      "flow": "arrivals",
+      "minutes": { "min": 6, "typical": 11, "max": 20, "basis": "derived", "note": "Derived: departure-level pier walk (OSM distance at 4.5 km/h, moving walkways) + 2 min for the level changes. Cross-check (observed, pier unknown): 2023 Maxi & Maro video, aircraft door → red International Transfer pylon ≈ 9.5–10.5 min including the jet-bridge queue and an escalator up to the arrivals corridor." },
+      "practical": "practical",
+      "via": "Arrivals corridor along pier B, escalators down to the transfer point",
+      "confidence": "probable",
+      "sources": ["src:yt-mjtravel-2026", "src:yt-leann-2024", "src:osm-ist", "src:ist-official-transfer-guide", "src:yt-maximaro-2023"],
+      "notes": "Arrivals flow; minutes derived as for pier A."
+    },
+    {
+      "id": "w:ist-d-arr",
+      "from": "ist-pier-d",
+      "to": "ist-arr-intl",
+      "bidirectional": false,
+      "access": "airside",
+      "flow": "arrivals",
+      "minutes": { "min": 4, "typical": 8, "max": 16, "basis": "derived", "note": "Derived: departure-level pier walk (OSM distance at 4.5 km/h, moving walkways) + 2 min for the level changes. Cross-check (observed, pier unknown): 2023 Maxi & Maro video, aircraft door → red International Transfer pylon ≈ 9.5–10.5 min including the jet-bridge queue and an escalator up to the arrivals corridor." },
+      "practical": "practical",
+      "via": "Arrivals corridor along pier D, escalators down to the transfer point",
+      "confidence": "probable",
+      "sources": ["src:yt-mjtravel-2026", "src:yt-leann-2024", "src:osm-ist", "src:ist-official-transfer-guide", "src:yt-maximaro-2023"],
+      "notes": "Arrivals flow; minutes derived as for pier A."
+    },
+    {
+      "id": "w:ist-f-arr",
+      "from": "ist-pier-f",
+      "to": "ist-arr-intl",
+      "bidirectional": false,
+      "access": "airside",
+      "flow": "arrivals",
+      "minutes": { "min": 6, "typical": 12, "max": 22, "basis": "derived", "note": "Derived: departure-level pier walk (OSM distance at 4.5 km/h, moving walkways) + 2 min for the level changes. Cross-check (observed, pier unknown): 2023 Maxi & Maro video, aircraft door → red International Transfer pylon ≈ 9.5–10.5 min including the jet-bridge queue and an escalator up to the arrivals corridor." },
+      "practical": "practical",
+      "via": "Arrivals corridor along pier F (moving walkways), escalators down to the transfer point",
+      "confidence": "probable",
+      "sources": ["src:yt-justin-f17-d10", "src:yt-mjtravel-2026", "src:osm-ist", "src:ist-official-transfer-guide", "src:yt-maximaro-2023"],
+      "notes": "Arrivals flow. The 2022 F17 → D10 video follows this corridor (long moving-walkway sections) to the main building."
+    },
+    {
+      "id": "w:ist-ce-arr",
+      "from": "ist-intl-hub",
+      "to": "ist-arr-intl",
+      "bidirectional": false,
+      "access": "airside",
+      "flow": "arrivals",
+      "minutes": { "min": 2, "typical": 4, "max": 8, "basis": "derived", "note": "Phase 2: gates C1–C4 and E1–E4 lie ≈ 150–300 m from the centre of the hall on the OSM gate positions; plus 1–2 min for the level change down to the transfer point. Was assumed 2/4/8 (same numbers, now with a geometric basis)." },
+      "practical": "practical",
+      "via": "From gates C/E (on the main building) down to the transfer point",
+      "confidence": "inferred",
+      "sources": ["src:osm-ist", "src:ist-official-transfer-guide"],
+      "notes": "Arrivals flow for flights arriving at C or E gates; the arrivals path from these gates is not documented."
+    },
+    {
+      "id": "w:ist-arr-intl-hub",
+      "from": "ist-arr-intl",
+      "to": "ist-intl-hub",
+      "bidirectional": false,
+      "access": "transfer",
+      "minutes": { "min": 2, "typical": 4, "max": 8, "basis": "observed" },
+      "controls": [
+        { "kind": "transfer-security", "minutes": { "min": 5, "typical": 15, "max": 45, "basis": "assumed" }, "note": "International-to-international transfer security (red 'International Transfers'); transfer desks opposite. No passport control." }
+      ],
+      "practical": "practical",
+      "via": "Red 'Uluslararası Transfer / International Transfers' → transfer security → escalators up into the departures hall",
+      "confidence": "verified",
+      "sources": ["src:ist-official-transfer-guide", "src:ist-official-transfer-desks", "src:yt-mjtravel-2026", "src:yt-leann-2024", "src:tpg-2019-ist", "src:yt-maximaro-2023"],
+      "notes": "Connecting passengers with an onward boarding pass. 2026 video: transfer area 3:10 → after security 3:49 → escalators up ≈ 4:05. Separate-ticket passengers with checked bags must go through passport control and baggage claim instead (w:ist-arr-intl-exit). Phase 2: this is the single central international transfer checkpoint (official guide; TPG 2019 \"a single checkpoint for transiting passengers\"; 2023 and 2026 videos reach it from different piers). No published night closure: IST operates around the clock and the transfer security follows the 24 h transfer banks; no hours set. An international→international connection therefore passes exactly one security (this one) and no passport control."
+    },
+    {
+      "id": "w:ist-arr-intl-exit",
+      "from": "ist-arr-intl",
+      "to": "ist-arr-hall",
+      "bidirectional": false,
+      "access": "airside",
+      "minutes": { "min": 4, "typical": 7, "max": 14, "basis": "derived", "note": "Phase 2: transfer/passport point under the centre of the hall to the arrivals exits on the south front ≈ 330 m on the OSM-projected plan at 4.5 km/h (≈ 4.5 min) plus 1–3 min for the escalators down to the reclaim hall. Excludes passport queue (control allowance), baggage wait and customs queue. Was assumed 4/8/15." },
+      "controls": [
+        { "kind": "passport", "minutes": { "min": 5, "typical": 20, "max": 60, "basis": "assumed" }, "note": "Entry passport control (blue signs)" },
+        { "kind": "customs", "minutes": { "min": 0, "typical": 2, "max": 10, "basis": "assumed" }, "note": "After baggage claim; also the first-entry customs for international → domestic passengers who must collect their bags at IST (r:ist-intl-dom-baggage)" }
+      ],
+      "practical": "practical",
+      "via": "Blue 'Pasaport Kontrol – Bagaj Alım' → passport control → baggage claim → customs → arrivals hall",
+      "confidence": "verified",
+      "sources": ["src:ist-official-arrival-guide", "src:yt-leann-2024", "src:yt-mjtravel-2026", "src:osm-ist"],
+      "notes": "Excludes waiting for checked baggage."
+    },
+    {
+      "id": "w:ist-arr-intl-dom",
+      "from": "ist-arr-intl",
+      "to": "ist-dom-hub",
+      "bidirectional": false,
+      "access": "transfer",
+      "minutes": { "min": 4, "typical": 7, "max": 12, "basis": "derived", "note": "Phase 2: purple 'Domestic Transfers' point (centre of the arrivals level) to the domestic departures street ≈ 360 m on the OSM-projected plan at 4.5 km/h plus 1–2 min for the escalators up. Was assumed 4/7/12 (same numbers, now with a geometric basis)." },
+      "controls": [
+        { "kind": "passport", "minutes": { "min": 3, "typical": 12, "max": 45, "basis": "assumed" }, "note": "Entry passport control on the domestic-transfer route" },
+        { "kind": "transfer-security", "minutes": { "min": 3, "typical": 10, "max": 30, "basis": "assumed" }, "note": "Domestic transfer security" }
+      ],
+      "practical": "practical",
+      "via": "Purple 'İç Hatlar Transfer / Domestic Transfers' → transfer desk → passport control → security → escalators up to the domestic departures floor",
+      "confidence": "verified",
+      "sources": ["src:ist-official-transfer-guide", "src:tk-video-intl-dom", "src:yt-leann-2024", "src:osm-ist"],
+      "notes": "Official international-to-domestic guide: follow the purple 'Domestic Transfers' signs; transfer desks; security; priority lane 'in the passport control area'. Turkish Airlines video (2019): domestic-transfer signs with passport control, then escalators 'Tüm gate'ler / All gates'. Phase 3 (r:ist-intl-dom-baggage): no baggage claim and no customs on this route; it is valid for single-ticket passengers whose bags are tagged through to a domestic customs airport (customs at the destination). Passengers who must collect bags at IST (separate tickets, non-customs final airport, bags not through-checked) take passport → baggage claim → customs → landside → check-in → domestic security instead (public profile)."
+    },
+    {
+      "id": "w:ist-g-arr",
+      "from": "ist-pier-g",
+      "to": "ist-arr-dom",
+      "bidirectional": false,
+      "access": "airside",
+      "flow": "arrivals",
+      "minutes": { "min": 4, "typical": 7, "max": 12, "basis": "derived", "note": "Phase 2: mirrors the departure-level walk along pier G (observed in the 2019 domestic walk: floor-change point → mid-pier ≈ 4–7 min, G11 at ≈ 8 min after the information desk), on the arrivals corridor of the same pier. Was assumed 4/7/12." },
+      "practical": "practical",
+      "via": "Domestic arrivals corridor from the G gates",
+      "confidence": "probable",
+      "sources": ["src:ist-official-transfer-guide", "src:tk-video-dom-intl", "src:osm-ist", "src:yt-wanderingaround-dom"],
+      "notes": "Arrivals flow. Official buggy note: buggies run 'from the flight gates to the end of the domestic pier' (stop between G5 and G6)."
+    },
+    {
+      "id": "w:ist-arr-dom-exit",
+      "from": "ist-arr-dom",
+      "to": "ist-arr-hall",
+      "bidirectional": false,
+      "access": "airside",
+      "minutes": { "min": 3, "typical": 6, "max": 10, "basis": "assumed" },
+      "practical": "practical",
+      "via": "Domestic baggage claim → welcome area",
+      "confidence": "probable",
+      "sources": ["src:ist-official-arrival-guide"],
+      "notes": "No passport or customs control for domestic arrivals (official domestic arrival guide: arrival gate → baggage claim → welcome area). Excludes waiting for bags."
+    },
+    {
+      "id": "w:ist-arr-dom-dom",
+      "from": "ist-arr-dom",
+      "to": "ist-dom-hub",
+      "bidirectional": false,
+      "access": "transfer",
+      "minutes": { "min": 3, "typical": 5, "max": 10, "basis": "assumed" },
+      "practical": "practical",
+      "via": "Domestic transfer point → departures floor",
+      "confidence": "probable",
+      "sources": ["src:ist-official-transfer-guide"],
+      "notes": "Official domestic-to-domestic guide: 'The Departures Floor can be accessed through the domestic transfer point'. It lists no security step; whether a re-screening applies is open (q:ist-dom-dom-security)."
+    },
+    {
+      "id": "w:ist-arr-dom-intl",
+      "from": "ist-arr-dom",
+      "to": "ist-intl-hub",
+      "bidirectional": false,
+      "access": "transfer",
+      "minutes": { "min": 5, "typical": 9, "max": 15, "basis": "observed" },
+      "controls": [
+        { "kind": "passport", "minutes": { "min": 3, "typical": 10, "max": 45, "basis": "assumed" }, "note": "Exit passport control on the international-transfer route" },
+        { "kind": "transfer-security", "minutes": { "min": 3, "typical": 10, "max": 30, "basis": "assumed" }, "note": "Security after passport control" }
+      ],
+      "practical": "practical",
+      "via": "Follow 'International transfer' → passport control → security → escalators up; arrive near gates E1–E4",
+      "confidence": "probable",
+      "sources": ["src:tk-video-dom-intl", "src:ist-official-transfer-guide"],
+      "notes": "Turkish Airlines video (2019, ≈ 1:45 edited): domestic arrival → escalator → 'International transfer' signs → passport control ('After passport control, proceed to the international departures') → walk-through security → escalators → E1–E4 sign. The official domestic-to-international page (2026) mentions a security queue and the area above passport control but gives no step-by-step text."
+    }
+  ],
+  "rules": [
+    {
+      "id": "r:ist-layout",
+      "text": "One terminal building for domestic and international flights. International piers A, B, D and F; domestic pier G (south-east). Gates C1–C4 and E1–E4 open directly off the main building and are not separate piers. No second passenger terminal is in operation (2026-10-31).",
+      "confidence": "verified",
+      "sources": ["src:wikipedia-ist", "src:wikivoyage-ist", "src:osm-ist", "src:ist-official-fb-stores"]
+    },
+    {
+      "id": "r:ist-zones",
+      "text": "Zones: international (piers A, B, D, F, gates C/E, the departures hall and the international arrivals level) and domestic (pier G, gates F1/F3, the domestic departures street and the domestic arrivals level). Crossing between them always passes passport control and a security check; Schengen does not apply.",
+      "confidence": "verified",
+      "sources": ["src:ist-official-transfer-guide", "src:ist-official-departing-guide", "src:tk-video-dom-intl", "src:tk-video-intl-dom"]
+    },
+    {
+      "id": "r:ist-departure-sequence",
+      "text": "Departing passengers are screened twice: at the terminal entrance (before check-in) and again after check-in (international: passport control, then security; domestic: the domestic second security with a boarding-pass turnstile).",
+      "confidence": "verified",
+      "sources": ["src:ist-official-departing-guide", "src:tk-faq-excerpt"]
+    },
+    {
+      "id": "r:ist-intl-transfer",
+      "text": "International-to-international connections: follow the red 'International Transfer' signs from the gate; transfer desks (TGS, Çelebi, Havaş, Fugo) are opposite the international transfer security; after security, escalators lead up into the departures hall. No passport control. Passengers with separate tickets and checked bags go through passport control and baggage claim and check in again.",
+      "confidence": "verified",
+      "sources": ["src:ist-official-transfer-guide", "src:ist-official-transfer-desks", "src:yt-mjtravel-2026", "src:yt-leann-2024"]
+    },
+    {
+      "id": "r:ist-short-connection",
+      "text": "Short connections: the official guide tells international transfer passengers with less than 90 minutes to follow the orange 'Short International Connection' instructions instead of the red International Transfer Point. A 2019 video shows passengers escorted by a staff member holding a sign; its uploader says the route leads to a fast-track security but is not shorter in distance (F15 → B15). Wikivoyage places short-connection security areas in each pier (A opposite A5, B opposite B8, D near D16, F opposite F8) for passengers who must re-clear security with < 60 min, and the same channel's 2022 video says a same-pier short connection would take under 3 minutes. Not routed: eligibility is assigned per passenger and the pier points are not confirmed by an official source.",
+      "confidence": "probable",
+      "sources": ["src:ist-official-transfer-guide", "src:wikivoyage-ist", "src:yt-justin-short-2019", "src:yt-justin-f17-d10"]
+    },
+    {
+      "id": "r:ist-buggy",
+      "text": "iGA Buggy: on-demand electric carts (3–5 seats). Departures floor: desks C1 and E1 (international) and G (domestic); paid (international 18.75 EUR + VAT, domestic 229.17 TRY + VAT per adult) except for iGA Pass members, Meet & Greet, guests 65+, pregnant guests, families with children 0–2 and contracted airlines. Arrivals floor (gates → passport control / transfer point): desks A5, B5, D9, F6 and G5, call points opposite A11, near B16–17, D13–14 and F14–16, phones 24/7; free groups only (no sales, except a Taxi Buggy subject to availability). Drawn as lines l:ist-buggy-a/b/d/f/g marked notRouted: paid, on demand, no published ride times.",
+      "confidence": "verified",
+      "sources": ["src:ist-official-buggy", "src:ist-official-buggy-faq", "src:ist-official-transfer-guide", "src:wikivoyage-ist"]
+    },
+    {
+      "id": "r:ist-no-people-mover",
+      "text": "There is no airside train or people mover; all airside movement between the centre and the piers is on foot (moving walkways) or by buggy. Apron buses serve remote stands (e.g. domestic remote gate G3).",
+      "confidence": "probable",
+      "sources": ["src:wikipedia-ist", "src:wikivoyage-ist", "src:ist-official-departing-guide"],
+      "notes": "Absence inferred from the official guides and Wikipedia/Wikivoyage, none of which mention a people mover."
+    },
+    {
+      "id": "r:ist-mct",
+      "text": "Wikivoyage gives a minimum connection time of 75 minutes, explained by the long distances and possible security checks. Not confirmed from an airline or airport source; the times in this model are movement-only and are not an MCT.",
+      "confidence": "inferred",
+      "sources": ["src:wikivoyage-ist"]
+    },
+    {
+      "id": "r:ist-capacity",
+      "text": "Expansion: IGA said in March 2024 that capacity would rise from 90 to 120 million passengers within about two years by changes inside the existing terminal, with no satellite terminal; the masterplan's later terminals and satellites have no published date. Nothing new is open for passengers as of 2026-10-31.",
+      "confidence": "probable",
+      "sources": ["src:haberturk-2024-capacity", "src:wikipedia-ist"]
+    },
+    {
+      "id": "r:ist-metro",
+      "text": "M11 metro: İstanbul Havalimanı station opened 22 January 2023 (Kağıthane section), Gayrettepe 29 January 2024, Taşoluk/Arnavutköy 19 March 2024, Halkalı–Arnavutköy 20 June 2026. Hours (official public-transport page, read 2026-10-31): every 20 min; airport → Gayrettepe 06:00–00:00, Gayrettepe → airport 06:00–00:40; ride Gayrettepe–airport 30 min. The metro walks carry these hours, so the metro row/column is unroutable at 03:00.",
+      "confidence": "probable",
+      "sources": ["src:ist-official-transport", "src:wikivoyage-ist"]
+    },
+    {
+      "id": "r:ist-quiet",
+      "text": "Quiet airport: announcements are made only in the gate areas; passengers are told to track their gate in the app. Traveller guides report late gate publication and frequent gate changes (not confirmed officially), so the pier walk is often decided late.",
+      "confidence": "probable",
+      "sources": ["src:ist-official-transfer-guide"]
+    },
+    {
+      "id": "r:ist-transfer-checkpoints",
+      "text": "Transfer checkpoints (2026-10-31): international→international passengers pass one security only, the central International Transfer security (red) on the arrivals/transfer level under the departures hall, then escalators up; no passport control. International→domestic: purple Domestic Transfers → passport control → security. Domestic→international: International transfer signs → passport control → security → escalators up near E1–E4. Departing passengers from the landside are screened twice by design (terminal entrance, then the second security after check-in/passport control); the audit's double-security flags for metro → airside routes are therefore real, not double counting. Families with children under 5 and guests 65+ may use 'fast transfer transition points' at the floor-change areas (official). No checkpoint has published night hours; the airport runs 24 h.",
+      "confidence": "verified",
+      "sources": ["src:ist-official-transfer-guide", "src:ist-official-departing-guide", "src:tpg-2019-ist", "src:yt-maximaro-2023", "src:yt-mjtravel-2026", "src:tk-video-intl-dom", "src:tk-video-dom-intl"]
+    },
+    {
+      "id": "r:ist-intl-dom-baggage",
+      "text": "International → domestic baggage and customs (phase 3, 2026-11-01). Single ticket, bags tagged through: the passenger leaves the aircraft with cabin baggage only, passes passport control at IST (entry into Türkiye) on the purple Domestic Transfers route, then the domestic transfer security, and collects checked bags at the domestic destination, where customs is done if that airport is a customs airport (Turkish Airlines transfer page, search excerpt; ANA Istanbul page, search excerpt). If the final airport has no customs, or the tickets are separate / not connected, or the bags are not through-checked, the passenger collects the bags at IST: passport control → baggage claim → customs → arrivals hall → check-in of the onward flight → domestic second security (official iGA transfer guide: 'If your flights are not connected, you need to claim your baggage from the carousel, then proceed through the check-in process'; checklist: 'asked the airline whether my flights are connected and if I need to retrieve my baggage'). The model routes the through-checked case with the transfer profile (w:ist-arr-intl-dom, no customs) and the reclaim case with the public (self-transfer) profile (w:ist-arr-intl-exit → landside → w:ist-hall-dom). Which domestic airports count as customs airports is not modelled; the airline decides. Waiting for bags and re-check-in time are not in the movement minutes.",
+      "confidence": "probable",
+      "sources": ["src:ist-official-transfer-guide", "src:tk-transfer-transit-excerpt", "src:ana-ist-excerpt", "src:tk-video-intl-dom"]
+    }
+  ],
+  "openQuestions": [
+    {
+      "id": "q:ist-short-connection",
+      "question": "Where exactly are the short-connection security points (per pier), who may use them (connection < 90 min per the official guide or < 60 min per Wikivoyage) and do they let an arriving passenger enter the departures level of the same pier? Is the orange route an escorted fast-track to the same central checkpoint (2019 video) or a separate checkpoint inside each pier (Wikivoyage)?",
+      "impact": "If confirmed, connections within one pier (e.g. F → F) avoid the walk to the central transfer security; the model currently routes all arriving connections through the centre.",
+      "howToResolve": "Owner capture of the official transfer guide's orange 'Short International Connection' steps (rendered content), or a dated video/photo of the pier checkpoint signs."
+    },
+    {
+      "id": "q:ist-bus-gates",
+      "question": "Which international gates are bus (remote) gates and how are they numbered and reached?",
+      "impact": "Only G3 is marked as a bus gate; remote international stands may add 10–20 minutes and a different gate floor.",
+      "howToResolve": "Owner capture of the official airport map (/en/airport/maps/airport-map is an app shell) or dated boarding-pass/gate photos."
+    },
+    {
+      "id": "q:ist-f-domestic",
+      "question": "Which F gates are domestic (F1 and F3 attested; Wikivoyage says three bridges) and do they swing between domestic and international use?",
+      "impact": "Gates F1/F3 are routed as domestic; a swing gate used internationally would be reached from pier F instead.",
+      "howToResolve": "Flight-information snapshots for F1–F3 over several days, or signage photos at the domestic information desk."
+    },
+    {
+      "id": "q:ist-dom-dom-security",
+      "question": "Does a domestic-to-domestic transfer passenger pass a security check between the domestic arrivals level and the domestic departures floor?",
+      "impact": "Adds 0–15 min to domestic transfers; currently no control is modelled.",
+      "howToResolve": "A dated domestic-transfer video or the rendered official domestic-to-domestic transfer guide."
+    },
+    {
+      "id": "q:ist-walk-signage",
+      "question": "Does IST publish walking times to the gates (signs or screens), and what do they say for each pier?",
+      "impact": "All pier walking times are derived from OSM geometry (4.5 km/h); published values would replace them.",
+      "howToResolve": "Owner photos of the gate-direction signs/screens in the departures hall and at the transfer security exit. Secondary guides (unverified) say the overhead FIDS screens show walking times to each gate (≈ 10 min near, 25 min far): an owner photo of such a screen would give published values."
+    },
+    {
+      "id": "q:ist-gate-suffix",
+      "question": "What do the A/B suffixes mean (B6A/B6B, G5A/G5B …): two holdrooms per stand, contact vs bus door, or MARS stands?",
+      "impact": "Gate lookup lists both forms; the walking point is the same either way.",
+      "howToResolve": "Signage photos or the official map."
+    },
+    {
+      "id": "q:ist-d-turnstiles",
+      "question": "What is the turnstile line under the 'D1–D17' sign at the head of pier D (boarding-pass check, flow control)?",
+      "impact": "Could add a control between the departures hall and pier D.",
+      "howToResolve": "Close-up video/photo of the D pier entrance."
+    },
+    {
+      "id": "q:ist-arrivals-to-departures",
+      "question": "Is a passenger going from the arrivals hall up to the departures floor inside the terminal screened again?",
+      "impact": "Affects landside re-check-in routes (separate tickets).",
+      "howToResolve": "Field observation or official FAQ."
+    },
+    {
+      "id": "q:ist-buggy-times",
+      "question": "How long does an iGA Buggy ride take from the C1/E1 desks to each pier, and how long is the typical wait at peaks (departures) and at the arrivals-floor desks?",
+      "impact": "Would allow the buggy to be shown with a time next to the walking route for eligible passengers (65+, families with infants, iGA Pass).",
+      "howToResolve": "Owner field timing or iGA statement; a schema field for paid/eligibility-limited services would let it be routed for a profile."
+    }
+  ],
+  "sources": [
+    { "id": "src:tk-faq-special-security", "title": "Turkish Airlines FAQ: special security flights (USA, Canada, UK) use Gate 4 and check-in islands G, J, H", "url": "https://www.turkishairlines.com/en-tr/istanbul-airport/faq/", "publisher": "Turkish Airlines", "kind": "airline", "group": "tk", "accessed": "2026-11-01", "notes": "Search excerpt only (page timed out); the page is about 7 years old." },
+    { "id": "src:dhs-tsa-2017-enhanced", "title": "DHS / TSA: enhanced security measures for all commercial flights to the United States (June 2017; >280 last-point-of-departure airports, security directives and emergency amendments)", "url": "https://www.dhs.gov/", "publisher": "U.S. Department of Homeland Security", "kind": "official", "group": "dhs", "accessed": "2026-11-01", "published": "2017-06", "notes": "Read through the DHS 2017 testimony by the research pass of 2026-11-01; exact page URL not recorded. Procedures themselves are not public." },
+    { "id": "src:fd-feed-terminals-2026-11-01", "title": "CDG Navigator flight-data server: terminal / gate strings observed in the collected feed (2026-10-30 – 2026-11-01), read-only GET /fd-api/stats/distribution and /fd-api/flights", "url": "http://127.0.0.1:8790/fd-api/stats/summary", "publisher": "CDG Navigator (local flight-data collection, AeroDataBox-derived)", "kind": "other", "group": "fd-feed", "accessed": "2026-11-01", "notes": "Cross-tabulated by the other airport's Schengen zone and by gate letter; counts in docs/research/AIRPORT_DATA_REMEDIATION.md. Local research data, not for display." },
+    {
+      "id": "src:ist-official-transfer-guide",
+      "title": "Transfer Passenger Guide (domestic↔international, international↔international) — rendered content via the site's own GetPassengerGuideLocationInfo endpoint (pageIds 1929, 1930, 1932, 1933)",
+      "url": "https://www.istairport.com/en/flights/airport-guides/transfer-passenger-guide",
+      "publisher": "iGA İstanbul Havalimanı (istairport.com)",
+      "kind": "official",
+      "group": "iga",
+      "accessed": "2026-10-31",
+      "notes": "robots.txt allows the page and the JSON (only query keys like placeId/flight/id/date are disallowed). Int→Int: red 'International Transfer Point', <90 min follow orange 'Short International Connection', transfer security, buggy stops/call points. Int→Dom: purple 'Domestic Transfers', transfer desk, security, priority lane at passport control, departure from G. Dom→Dom: 'Departures floor accessed through the domestic transfer point'."
+    },
+    {
+      "id": "src:ist-official-departing-guide",
+      "title": "Departing Passenger Guide (international pageId 1922, domestic 1923)",
+      "url": "https://www.istairport.com/en/flights/airport-guides/departing-passenger-guide",
+      "publisher": "iGA İstanbul Havalimanı (istairport.com)",
+      "kind": "official",
+      "group": "iga",
+      "accessed": "2026-10-31",
+      "notes": "Sequence entrance → security → check-in → passport control → security → gates; check-in islands B–S; domestic second security with turnstile; domestic gate-floor description (F1/F3 left of the information desk, G2–G11, remote G3); buggy stations."
+    },
+    {
+      "id": "src:ist-official-arrival-guide",
+      "title": "Arrival Passenger Guide (domestic pageId 1926, international 1927)",
+      "url": "https://www.istairport.com/en/flights/airport-guides/arrival-passenger-guide",
+      "publisher": "iGA İstanbul Havalimanı (istairport.com)",
+      "kind": "official",
+      "group": "iga",
+      "accessed": "2026-10-31",
+      "notes": "Passport control (blue signs), baggage claim, welcome area, exit gates 9/13 to taxis, car parks and the metro."
+    },
+    {
+      "id": "src:ist-official-transfer-desks",
+      "title": "Transfer Desks",
+      "url": "https://www.istairport.com/en/flights/airport-guides/transfer-passenger-guide/services/complimentary-services/transfer-desks",
+      "publisher": "iGA İstanbul Havalimanı (istairport.com)",
+      "kind": "official",
+      "group": "iga",
+      "accessed": "2026-10-31"
+    },
+    {
+      "id": "src:ist-official-buggy",
+      "title": "iGA Buggy",
+      "url": "https://www.istairport.com/en/services/discover/iga-pass-experiences/iga-pass-premium-services/iga-buggy",
+      "publisher": "iGA İstanbul Havalimanı (istairport.com)",
+      "kind": "official",
+      "group": "iga",
+      "accessed": "2026-10-31",
+      "notes": "Prices, free categories, 'no buggy service on the arrival floor' (sales), taxi buggy on the international arrivals floor."
+    },
+    {
+      "id": "src:ist-official-transport",
+      "title": "Urban transportation — public transportation (M11 metro, Havaist, IETT)",
+      "url": "https://www.istairport.com/en/airport/airport-transportation/urban-transportation/public-transportation",
+      "publisher": "iGA İstanbul Havalimanı (istairport.com)",
+      "kind": "official",
+      "group": "iga",
+      "accessed": "2026-10-31"
+    },
+    {
+      "id": "src:ist-official-fb-stores",
+      "title": "Restaurant and store pages with gate locations (from the official sitemap)",
+      "url": "https://www.istairport.com/en/sitemap.xml",
+      "publisher": "iGA İstanbul Havalimanı (istairport.com)",
+      "kind": "official",
+      "group": "iga",
+      "accessed": "2026-10-31",
+      "notes": "Page slugs name gates: A1, A3–A5, A6, A7, A11, B1, B6, B8, B10, B18, C1, D3, D6, D7, D9, D13, D16, E1, F2, F6, F7, F9, F13, G1–G6, G9; 'close to A-B pier', 'close to F pier', 'domestic airside', 'transfer passenger floor E'."
+    },
+    {
+      "id": "src:osm-ist",
+      "title": "OpenStreetMap: aeroway=gate/terminal, railway=station around LTFM (Overpass, data 2026-10-31T13:05Z)",
+      "url": "https://www.openstreetmap.org/way/687768729",
+      "publisher": "OpenStreetMap contributors",
+      "kind": "osm",
+      "group": "osm",
+      "accessed": "2026-10-31",
+      "notes": "87 gate nodes (A 9, B 27, C 4, D 17, E 4, F 17, G 9) with level tags; terminal outline (≈ 1.27 × 1.21 km); M11 station node. © OpenStreetMap contributors, ODbL. Placement source; projected north-up at ≈ 2.34 m per unit."
+    },
+    {
+      "id": "src:wikivoyage-ist",
+      "title": "Istanbul Airport — Wikivoyage",
+      "url": "https://en.wikivoyage.org/wiki/Istanbul_Airport",
+      "publisher": "Wikivoyage",
+      "kind": "wiki",
+      "group": "wikivoyage",
+      "accessed": "2026-10-31",
+      "notes": "Five concourses A, B, D, F, G; C/E not separate; 15–20 min to the far gates A11, B15, D17, F16, G11; short-connection points A5, B8, D16, F8; buggy stations; three F bridges domestic; MCT 75 min; metro 300 m."
+    },
+    {
+      "id": "src:wikipedia-ist",
+      "title": "Istanbul Airport — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Istanbul_Airport",
+      "publisher": "Wikipedia",
+      "kind": "wiki",
+      "group": "wikipedia",
+      "accessed": "2026-10-31",
+      "notes": "Concourses A, B, D, F international, G domestic; 143 boarding bridges; phased masterplan (second terminal, satellites) without dates."
+    },
+    {
+      "id": "src:tk-video-dom-intl",
+      "title": "Domestic to International Transfer - Turkish Airlines (YouTube _DNj_7boUuU)",
+      "url": "https://www.youtube.com/watch?v=_DNj_7boUuU",
+      "publisher": "Turkish Airlines",
+      "kind": "airline",
+      "group": "turkishairlines",
+      "accessed": "2026-10-31",
+      "published": "2019-04-03",
+      "notes": "107 s official walkthrough read frame by frame (storyboard 160×90, 1 s). Pre-2020 signage; layout unchanged since."
+    },
+    {
+      "id": "src:tk-video-intl-dom",
+      "title": "International to Domestic Transfer - Turkish Airlines (YouTube KQ-b2Zb5UlU)",
+      "url": "https://www.youtube.com/watch?v=KQ-b2Zb5UlU",
+      "publisher": "Turkish Airlines",
+      "kind": "airline",
+      "group": "turkishairlines",
+      "accessed": "2026-10-31",
+      "published": "2019-03-23",
+      "notes": "95 s official walkthrough read frame by frame."
+    },
+    {
+      "id": "src:tk-faq-excerpt",
+      "title": "Turkish Airlines — Istanbul Airport FAQ (search-engine excerpt only)",
+      "url": "https://www.turkishairlines.com/en-int/istanbul-airport/faq/",
+      "publisher": "Turkish Airlines",
+      "kind": "airline",
+      "group": "turkishairlines",
+      "accessed": "2026-10-31",
+      "notes": "turkishairlines.com refused automated fetches (connection reset / timeout); not circumvented. Excerpt: two security check areas, one landside before passport control and one airside after it; one roof for domestic and international."
+    },
+    {
+      "id": "src:yt-mjtravel-2026",
+      "title": "Istanbul Airport (IST) International Transfers (2026) | Airport POV Walking Tour (YouTube Qc6B7gwz3iM)",
+      "url": "https://www.youtube.com/watch?v=Qc6B7gwz3iM",
+      "publisher": "MJ-Travel",
+      "kind": "video",
+      "group": "yt-mjtravel",
+      "accessed": "2026-10-31",
+      "published": "2026-05-20",
+      "notes": "387 s, storyboard 320×180 every 5 s, read in full."
+    },
+    {
+      "id": "src:yt-leann-2024",
+      "title": "How to Transit at Istanbul Airport, Turkey - Connecting Flight Transfer (YouTube zt7fO423P8o)",
+      "url": "https://www.youtube.com/watch?v=zt7fO423P8o",
+      "publisher": "Leann Travel Research",
+      "kind": "video",
+      "group": "yt-leann",
+      "accessed": "2026-10-31",
+      "published": "2024-05-19",
+      "notes": "505 s, storyboard 320×180 every 5 s; arrivals-level signs read."
+    },
+    {
+      "id": "src:yt-justin-f17-d10",
+      "title": "Istanbul Transit Guide Real time Gate to Gate (F17 → D10) (YouTube p1bVnkft0RI)",
+      "url": "https://www.youtube.com/watch?v=p1bVnkft0RI",
+      "publisher": "Justin & Thailand",
+      "kind": "video",
+      "group": "yt-justin",
+      "accessed": "2026-10-31",
+      "published": "2022-06-01",
+      "notes": "1526 s, storyboard 160×90 every 10 s (low resolution); chapters and an on-screen note on the short-connection option at pier F."
+    },
+    {
+      "id": "src:yt-wanderingaround-dom",
+      "title": "ISTANBUL NEW AIRPORT (IST) walking tour (domestic departures terminal) (YouTube ctdnkHn0ygs)",
+      "url": "https://www.youtube.com/watch?v=ctdnkHn0ygs",
+      "publisher": "Wandering Around",
+      "kind": "video",
+      "group": "yt-wanderingaround",
+      "accessed": "2026-10-31",
+      "published": "2019-11-02",
+      "notes": "686 s; uploader chapters name F1/F3 and G1–G11 (A/B pairs); storyboard 160×90 every 5 s viewed for the sequence."
+    },
+    {
+      "id": "src:yt-bfree-2026",
+      "title": "Istanbul Airport Departures Terminal - One of the World's Biggest Airports (YouTube dwdii4-NRxo)",
+      "url": "https://www.youtube.com/watch?v=dwdii4-NRxo",
+      "publisher": "BFree & Adventures",
+      "kind": "video",
+      "group": "yt-bfree",
+      "accessed": "2026-10-31",
+      "published": "2026-02-21",
+      "notes": "1091 s, storyboard 320×180 every 10 s: 'D1–D17' sign over turnstiles, gates D13–D15, departures hall."
+    },
+    {
+      "id": "src:yt-mydelicioustrips-2026",
+      "title": "ISTANBUL AIRPORT, Turkey — This Place Feels Like a City | 4K Walking Tour 2026 (YouTube 4VJFjRVPNDA)",
+      "url": "https://www.youtube.com/watch?v=4VJFjRVPNDA",
+      "publisher": "my delicious trips",
+      "kind": "video",
+      "group": "yt-mydelicioustrips",
+      "accessed": "2026-10-31",
+      "published": "2026-10-02",
+      "notes": "962 s, landside: entrance gate 1 'International / Domestic Departures', main check-in hall, 'İç Hatlar Giden Yolcu / Domestic Departures' entrance."
+    },
+    {
+      "id": "src:flightreport-b6b",
+      "title": "Turkish Airlines TK978 Istanbul IST – Ercan (trip report, 12 March 2019)",
+      "url": "https://flight-report.com/en/report/39781/turkish-airlines-tk978-istanbul-ist-nicosia-ecn/",
+      "publisher": "Flight-Report",
+      "kind": "forum",
+      "group": "flight-report",
+      "accessed": "2026-10-31",
+      "published": "2019-03-12",
+      "notes": "Gate 'B6b'; first security within 5 min, later security and passport control < 5 min each (one morning, 2019)."
+    },
+    {
+      "id": "src:haberturk-2024-capacity",
+      "title": "İstanbul Havalimanı'nda 120 milyon için hazırlık (Güntay Şimşek)",
+      "url": "https://www.haberturk.com/ozel-icerikler/guntay-simsek-1019/3671996-istanbul-havalimaninda-120-milyon-icin-hazirlik",
+      "publisher": "Habertürk",
+      "kind": "news",
+      "group": "haberturk",
+      "accessed": "2026-10-31",
+      "published": "2024-03-24",
+      "notes": "IGA: no satellite terminal; the existing terminal to reach 120 million within two years through design/operating changes."
+    },
+    {
+      "id": "src:yt-maximaro-2023",
+      "title": "TRANSFER AT ISTANBUL Airport - Transit walk to international connection flight (Traveller - Maxi & Maro)",
+      "url": "https://www.youtube.com/watch?v=xMZ-ubbc414",
+      "publisher": "Traveller - Maxi & Maro (YouTube)",
+      "kind": "video",
+      "group": "yt-maximaro",
+      "accessed": "2026-10-31",
+      "published": "2023-05-28",
+      "notes": "Cape Town → IST → Copenhagen on Turkish Airlines, international transfer from the aircraft door to the departures hall. Read frame by frame (storyboard, 10 s per frame, 0–15 min); frames deleted. Arrival pier not identifiable."
+    },
+    {
+      "id": "src:yt-justin-short-2019",
+      "title": "New Istanbul Airport The short Connection (Justin & Thailand)",
+      "url": "https://www.youtube.com/watch?v=0Ov6T7ZdzTM",
+      "publisher": "Justin & Thailand (YouTube)",
+      "kind": "video",
+      "group": "yt-justin",
+      "accessed": "2026-10-31",
+      "published": "2019-10-10",
+      "notes": "Same channel (independence group) as src:yt-justin-f17-d10. Short-connection escort F15 → B15; description and storyboard frames 6:15–10:25 read; frames deleted. Heavily edited (talking-head inserts): no timing."
+    },
+    {
+      "id": "src:tpg-2019-ist",
+      "title": "Inside IST, the new Istanbul Airport",
+      "url": "https://thepointsguy.com/news/inside-ist-new-airport",
+      "publisher": "The Points Guy",
+      "kind": "guide",
+      "group": "thepointsguy",
+      "accessed": "2026-10-31",
+      "published": "2019-05-04",
+      "notes": "'only one single security checkpoint for passengers originating in Istanbul, as well as a single checkpoint for transiting passengers'; no mass transit between piers, moving walkways; measured 'more than 3,000 feet' from security to one of the farthest gates. 2019 (opening year)."
+    },
+    {
+      "id": "src:ist-official-buggy-faq",
+      "title": "iGA Buggy — service details and FAQ (desks, call points, eligibility, prices)",
+      "url": "https://www.istairport.com/en/services/discover/iga-pass-experiences/iga-pass-premium-services/iga-buggy",
+      "publisher": "iGA İstanbul Havalimanı (istairport.com)",
+      "kind": "official",
+      "group": "iga",
+      "accessed": "2026-10-31",
+      "notes": "Same page as src:ist-official-buggy, read again 2026-10-31 for the FAQ: departures desks C1, E1 (international) and G (domestic); arrivals-floor desks A5, B5, D9, F6 and G5; call points opposite A11, near B16–17, D13–14, F14–16; desk phones and call points 24/7; no buggy sales on the arrivals floor except Taxi Buggy subject to availability."
+    },
+    {
+      "id": "src:ist-official-waiting-times",
+      "title": "Live Waiting Times widget (home page; /umbraco/api/Checkpoint/GetWaitingTimes)",
+      "url": "https://www.istairport.com/en#waitingpoints",
+      "publisher": "iGA İstanbul Havalimanı (istairport.com)",
+      "kind": "official",
+      "group": "iga",
+      "accessed": "2026-10-31",
+      "notes": "One read of the home page's own endpoint (not disallowed by robots.txt) at 2026-10-31 15:49 UTC returned no data (statusCode 204); the widget then stays hidden. It covers the terminal entrance checkpoint, passport control and the domestic queue only, not the transfer security. Not polled (no recurring collection)."
+    },
+    {
+      "id": "src:tk-transfer-transit-excerpt",
+      "title": "Turkish Airlines — Transfer and transit passengers (search-engine excerpts of several regional copies)",
+      "url": "https://www.turkishairlines.com/en-int/any-questions/transfer-transit-passengers/",
+      "publisher": "Turkish Airlines",
+      "kind": "airline",
+      "group": "turkishairlines",
+      "accessed": "2026-11-01",
+      "notes": "turkishairlines.com resets automated connections; not fetched, not circumvented. Search excerpts (EN, TR): single-ticket passengers from abroad to a domestic airport/customs point leave the aircraft with cabin baggage only, pass passport control and collect checked bags at the destination airport; different ticket or airline: collect bags at the international baggage claim and check in again at the domestic counter; a 'customs airports' list (e.g. ESB, AYT, ADB, SAW, TZX) and a 'duty free airports' case where bags are collected at the first point, cleared through customs and re-checked; layovers over 12 h: collect bags at the first point. Excerpts are fragmentary and differ by regional copy; owner capture wanted."
+    },
+    {
+      "id": "src:ana-ist-excerpt",
+      "title": "ANA — Istanbul Airport travel information (search-engine excerpts, EN and TR copies)",
+      "url": "https://www.ana.co.jp/en/us/travel-information/airport-and-city-info/istanbul/",
+      "publisher": "All Nippon Airways",
+      "kind": "airline",
+      "group": "ana",
+      "accessed": "2026-11-01",
+      "notes": "Fetch failed (connection reset, 2026-11-01); not retried or circumvented. Excerpt: 'If your final destination airport does not have customs, you will be required to clear customs in Istanbul'; after entering, collect checked baggage, complete customs and proceed to the connecting flight's check-in counter."
+    }
+  ]
+}

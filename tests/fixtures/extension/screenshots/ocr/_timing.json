@@ -1,0 +1,282 @@
+[
+ {
+  "image": "details-one-stop@1x.png",
+  "scale": 3,
+  "ms": 13033,
+  "init": 599,
+  "recognize": 12324,
+  "words": 64,
+  "peakMB": 0,
+  "afterMB": null
+ },
+ {
+  "image": "details-one-stop@1.25x.png",
+  "scale": 3,
+  "ms": 33044,
+  "init": 6641,
+  "recognize": 25971,
+  "words": 65,
+  "peakMB": 0,
+  "afterMB": null
+ },
+ {
+  "image": "details-one-stop@1.5x.png",
+  "scale": 2.86,
+  "ms": 24762,
+  "init": 7257,
+  "recognize": 16953,
+  "words": 65,
+  "peakMB": 0,
+  "afterMB": null
+ },
+ {
+  "image": "details-one-stop@2x.png",
+  "scale": 2.14,
+  "ms": 33197,
+  "init": 8327,
+  "recognize": 23851,
+  "words": 65,
+  "peakMB": 0,
+  "afterMB": null
+ },
+ {
+  "image": "details-one-stop-wide@1x.png",
+  "scale": 2.79,
+  "ms": 23108,
+  "init": 5076,
+  "recognize": 17604,
+  "words": 65,
+  "peakMB": 0,
+  "afterMB": null
+ },
+ {
+  "image": "details-return@1.25x.png",
+  "scale": 3,
+  "ms": 27775,
+  "init": 5173,
+  "recognize": 21726,
+  "words": 84,
+  "peakMB": 0,
+  "afterMB": null
+ },
+ {
+  "image": "details-return@1x.png",
+  "scale": 3,
+  "ms": 26732,
+  "init": 3470,
+  "recognize": 22706,
+  "words": 83,
+  "peakMB": 0,
+  "afterMB": null
+ },
+ {
+  "image": "details-overnight-self@1x.png",
+  "scale": 3,
+  "ms": 21421,
+  "init": 3891,
+  "recognize": 17166,
+  "words": 74,
+  "peakMB": 0,
+  "afterMB": null
+ },
+ {
+  "image": "details-overnight-self@2x.png",
+  "scale": 2.14,
+  "ms": 33020,
+  "init": 6668,
+  "recognize": 25469,
+  "words": 74,
+  "peakMB": 0,
+  "afterMB": null
+ },
+ {
+  "image": "details-to-tlv@1.5x.png",
+  "scale": 2.86,
+  "ms": 10823,
+  "init": 1568,
+  "recognize": 8701,
+  "words": 45,
+  "peakMB": 0,
+  "afterMB": null
+ },
+ {
+  "image": "details-us-format@1x.png",
+  "scale": 3,
+  "ms": 10196,
+  "init": 1561,
+  "recognize": 8385,
+  "words": 47,
+  "peakMB": 0,
+  "afterMB": null
+ },
+ {
+  "image": "details-airport-change@1.25x.png",
+  "scale": 3,
+  "ms": 16922,
+  "init": 3731,
+  "recognize": 12738,
+  "words": 43,
+  "peakMB": 0,
+  "afterMB": null
+ },
+ {
+  "image": "booking-one-stop@1x.png",
+  "scale": 3,
+  "ms": 12731,
+  "init": 2889,
+  "recognize": 9575,
+  "words": 39,
+  "peakMB": 0,
+  "afterMB": null
+ },
+ {
+  "image": "booking-return@2x.png",
+  "scale": 1.94,
+  "ms": 20424,
+  "init": 4045,
+  "recognize": 15498,
+  "words": 68,
+  "peakMB": 0,
+  "afterMB": null
+ },
+ {
+  "image": "card-one-stop@1x.png",
+  "scale": 2.93,
+  "ms": 11461,
+  "init": 5171,
+  "recognize": 6176,
+  "words": 17,
+  "peakMB": 0,
+  "afterMB": null
+ },
+ {
+  "image": "card-one-stop@1.5x.png",
+  "scale": 1.95,
+  "ms": 12912,
+  "init": 6009,
+  "recognize": 6774,
+  "words": 17,
+  "peakMB": 0,
+  "afterMB": null
+ },
+ {
+  "image": "card-return@1.25x.png",
+  "scale": 2.34,
+  "ms": 13974,
+  "init": 5641,
+  "recognize": 8086,
+  "words": 21,
+  "peakMB": 0,
+  "afterMB": null
+ },
+ {
+  "image": "card-two-stops-self@1x.png",
+  "scale": 2.93,
+  "ms": 18605,
+  "init": 8273,
+  "recognize": 10203,
+  "words": 20,
+  "peakMB": 0,
+  "afterMB": null
+ },
+ {
+  "image": "card-one-stop-narrow@2x.png",
+  "scale": 1.88,
+  "ms": 11716,
+  "init": 4498,
+  "recognize": 7100,
+  "words": 17,
+  "peakMB": 0,
+  "afterMB": null
+ },
+ {
+  "image": "crop-details-one-stop-right@1x.png",
+  "scale": 3,
+  "ms": 25920,
+  "init": 7379,
+  "recognize": 18354,
+  "words": 62,
+  "peakMB": 0,
+  "afterMB": null
+ },
+ {
+  "image": "partial-details-one-stop-top@1.5x.png",
+  "scale": 2.86,
+  "ms": 21368,
+  "init": 10233,
+  "recognize": 10981,
+  "words": 28,
+  "peakMB": 0,
+  "afterMB": null
+ },
+ {
+  "image": "crop-card-return-nologo@1x.png",
+  "scale": 3,
+  "ms": 12708,
+  "init": 7062,
+  "recognize": 5368,
+  "words": 19,
+  "peakMB": 0,
+  "afterMB": null
+ },
+ {
+  "image": "partial-details-return-outbound@1x.png",
+  "scale": 3,
+  "ms": 14033,
+  "init": 5060,
+  "recognize": 8704,
+  "words": 40,
+  "peakMB": 0,
+  "afterMB": null
+ },
+ {
+  "image": "noise@1x.png",
+  "scale": 3,
+  "ms": 15903,
+  "init": 4740,
+  "recognize": 10907,
+  "words": 29,
+  "peakMB": 0,
+  "afterMB": null
+ },
+ {
+  "image": "details-one-stop-zoom80@1x.png",
+  "scale": 3,
+  "ms": 14879,
+  "init": 2987,
+  "recognize": 11712,
+  "words": 65,
+  "peakMB": 0,
+  "afterMB": null
+ },
+ {
+  "image": "card-return-zoom80@1x.png",
+  "scale": 3,
+  "ms": 14913,
+  "init": 7668,
+  "recognize": 6998,
+  "words": 20,
+  "peakMB": 0,
+  "afterMB": null
+ },
+ {
+  "image": "details-return-jpeg@1x.jpg",
+  "scale": 3,
+  "ms": 22594,
+  "init": 3405,
+  "recognize": 18576,
+  "words": 84,
+  "peakMB": 0,
+  "afterMB": null
+ },
+ {
+  "image": "details-to-tlv-dark@1.25x.png",
+  "scale": 3,
+  "ms": 19537,
+  "init": 1836,
+  "recognize": 17265,
+  "words": 49,
+  "peakMB": 0,
+  "afterMB": null
+ }
+]

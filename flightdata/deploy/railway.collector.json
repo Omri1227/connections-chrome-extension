@@ -1,0 +1,6 @@
+{
+  "$schema": "https://railway.com/railway.schema.json",
+  "$comment": "TEMPLATE — not deployed. Cron service: runs one tick every 15 minutes and exits. Needs FD_DATABASE_URL, FD_ASSIGNMENTS and source keys as Railway variables. See docs/FLIGHT_DATA_OPERATIONS.md §4.",
+  "build": { "builder": "NIXPACKS", "buildCommand": "npm ci" },
+  "deploy": { "startCommand": "npm run fd -- tick", "cronSchedule": "*/15 * * * *", "restartPolicyType": "NEVER" }
+}

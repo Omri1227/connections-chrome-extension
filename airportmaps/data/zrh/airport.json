@@ -1,0 +1,850 @@
+{
+  "iata": "ZRH",
+  "icao": "LSZH",
+  "name": "Zurich Airport (Flughafen Zürich)",
+  "city": "Zurich (Kloten)",
+  "asOf": "2026-10-31",
+  "schematic": {
+    "width": 1000,
+    "height": 640,
+    "northDeg": 0,
+    "background": [
+      { "kind": "runway", "label": "10/28", "shape": { "type": "poly", "points": [[0, 129], [1000, 141], [1000, 149], [0, 137]] } },
+      { "kind": "runway", "label": "16/34", "shape": { "type": "poly", "points": [[244, 580], [49, 165], [0, 154], [0, 161], [43, 170], [236, 583]] } },
+      { "kind": "runway", "label": "14/32", "shape": { "type": "poly", "points": [[738, 0], [797, 55], [791, 60], [731, 0]] } },
+      { "kind": "other", "label": "Bus gates A50–A59", "shape": { "type": "poly", "points": [[636, 180], [658, 182], [654, 225], [636, 223]] } },
+      { "kind": "other", "label": "Bus gates A01–A06", "shape": { "type": "poly", "points": [[646, 256], [676, 266], [655, 293], [646, 290]] } },
+      { "kind": "other", "label": "Bus gates D21–D26", "shape": { "type": "poly", "points": [[556, 525], [562, 460], [580, 462], [575, 511], [573, 530]] } },
+      { "kind": "other", "label": "Bus gates B01–B10 (Busgate Süd)", "shape": { "type": "poly", "points": [[582, 557], [642, 564], [639, 589], [582, 583]] } },
+      { "kind": "other", "label": "Security check building", "shape": { "type": "poly", "points": [[615, 353], [639, 366], [656, 334], [632, 321]] } },
+      { "kind": "rail", "label": "SBB Zürich Flughafen (underground)", "shape": { "type": "rect", "x": 640, "y": 600, "w": 120, "h": 8 } }
+    ],
+    "labels": [
+      { "text": "Dock E (midfield satellite, non-Schengen)", "at": [150, 12], "kind": "district" },
+      { "text": "Runway 10/28 — the Skymetro runs underneath", "at": [60, 124], "kind": "runway" },
+      { "text": "Schematic: the ≈680 m between Dock E and Dock A is drawn compressed", "at": [640, 120], "kind": "note" },
+      { "text": "Dock A (Schengen)", "at": [360, 188], "kind": "district" },
+      { "text": "Dock B/D (B Schengen upper level · D non-Schengen lower level)", "at": [330, 395], "kind": "district" },
+      { "text": "Airport Centre", "at": [735, 470], "kind": "district" },
+      { "text": "Temporary modular building (bus gates, lounges) south of Dock B: commissioning expected 2027", "at": [300, 610], "kind": "note" },
+      { "text": "OSM-derived geometry © OpenStreetMap contributors (ODbL); schematic, not survey-accurate", "at": [20, 630], "kind": "note" }
+    ]
+  },
+  "feedTerminals": { "arrival": { "1": ["zrh-a", "zrh-b"], "2": ["zrh-a", "zrh-b", "zrh-d", "zrh-e"]}},
+  "oneStopSecurity": { "countries": ["AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IE", "IT", "LV", "LT", "LU", "MT", "NL", "PL", "PT", "RO", "SK", "SI", "ES", "SE", "IS", "NO", "LI", "CH", "CA", "US", "GB", "ME", "SG"], "airports": ["FAE", "BEG"], "excludedAirports": ["TLV"], "asOf": "2026-11-01", "sources": ["src:zrh-official-transfer", "src:eu-oss-2025-920", "src:eu-avsec-scope"], "note": "Flughafen Zürich: depending on the country of origin, connecting passengers pass security again. Switzerland applies the EU aviation-security rules (EU–CH air transport agreement). EU one-stop security (Reg. 2015/1998 Attachment 4-B as amended by Reg. 2019/413 and 2025/920): passengers from EU / EEA / Swiss airports and from the recognised third countries are not re-screened on transfer. Ben Gurion (TLV) was removed by Reg. 2025/920, Kangerlussuaq, Guernsey, Isle of Man and Jersey too. Belgrade (BEG) was added by Reg. 2020/111 and not removed since (consolidated text reconstructed from mirrors, likely: docs/research/EVIDENCE_2026-11-02.md); Reg. 2025/920 applies from 21 May 2025. The official consolidated Attachment 4-B was not read (EUR-Lex: owner capture)." },
+  "specialScreening": [{ "id": "ss:zrh-lx-us-documents", "appliesTo": { "destinationCountries": ["US"], "airlines": ["LX"]}, "certainty": "verified", "issueLevel": "secondary", "text": "SWISS flights to the United States: \"all travellers are required to be physically present at check-in due to document checks\" (Zurich Airport SWISS page). This is a document check at check-in, not extra screening time: on a self-transfer, online check-in and the self bag drop are not enough; use a staffed desk. Whether connecting passengers with a through boarding pass have their documents checked at a transfer desk or the gate is not established.", "sources": ["src:zrh-airline-swiss"]},{ "id": "ss:zrh-elal", "appliesTo": { "airlines": ["LY"]}, "certainty": "probable", "issueLevel": "material", "deadline": { "minutesBeforeDeparture": 120, "basis": "published", "text": "El Al gate security must be finished 2 h before departure (El Al Switzerland page, search excerpt)" }, "text": "El Al at Zurich: check-in 2 (rows 3–4) opens 3 h before departure (airport page); El Al states that its gate security check must be finished 2 h before departure (search excerpt). Feed TLV departures use Dock E (E42, E57) and D (D25, D51): no dedicated area.", "sources": ["src:zrh-airlines-israel", "src:elal-zrh", "src:fd-feed-terminals-2026-11-01"]},{ "id": "ss:zrh-israel-other", "appliesTo": { "destinationCountries": ["IL"]}, "certainty": "unknown", "issueLevel": "material", "text": "Flights to Israel: whether this airline has an additional document check, interview or separate screening at Zurich (only El Al is documented) is not established by any source we could read. Allow extra time and check with the airline.", "sources": ["src:zrh-airlines-israel"]},{ "id": "ss:zrh-us-enhanced", "appliesTo": { "destinationCountries": ["US"]}, "certainty": "unknown", "issueLevel": "secondary", "text": "US-bound flights: TSA / DHS enhanced security measures for all last-point-of-departure airports (2017, still the baseline as far as known) may add checks at check-in or at the gate (interviews, document checks, separate screening of electronics). The procedures are not public; no time is known.", "sources": ["src:dhs-tsa-2017-enhanced"]}],
+  "areas": [
+    {
+      "id": "zrh-t1",
+      "checkIn": { "serves": ["zrh-a", "zrh-b", "zrh-d", "zrh-e"], "sources": ["src:fd-feed-terminals-2026-11-01", "src:zrh-airline-swiss"], "note": "Check-in 1 (SWISS and most full-service airlines); all departures then pass the central security", "facilities": [{ "id": "f:zrh-lx-ci1", "airlines": ["LX"], "kind": "desk", "name": "SWISS check-in desks (Check-in 1)", "hours": [{ "from": "04:00", "until": "22:00" }], "hoursNote": "opens 04:00, at the earliest two hours before the first departure; early check-in from 23 h before departure during opening hours", "sources": ["src:zrh-airline-swiss"]}]},
+      "name": "Terminal 1 · Check-in 1 / Arrival 1 (public side)",
+      "short": "T1",
+      "kind": "landside-hall",
+      "terminal": "T1",
+      "side": "landside",
+      "zone": "n/a",
+      "matrix": true,
+      "anchor": [690, 330],
+      "shape": { "type": "poly", "points": [[656, 274], [727, 308], [670, 395], [640, 380], [662, 330]] },
+      "description": "Check-in 1 (most full-service airlines, incl. SWISS) and, below it, Arrival 1 where passengers from Schengen flights leave the baggage hall. Departing passengers go from Check-in 1 to the central security check building and on to the Airside Center.",
+      "confidence": "verified",
+      "sources": ["src:osm-zrh", "src:zrh-official-security-building", "src:pointsanalyst-zrh", "src:yt-bfree-departures", "src:slotcoord-directions"],
+      "notes": "Arrival 1 = Schengen arrivals (Slot Coordination Switzerland directions). OSM 'Terminal 1' building, levels −1 to 2."
+    },
+    {
+      "id": "zrh-t2",
+      "checkIn": { "serves": ["zrh-a", "zrh-b", "zrh-d", "zrh-e"], "sources": ["src:fd-feed-terminals-2026-11-01", "src:zrh-airline-swiss"], "note": "Check-in 2 (e.g. easyJet; El Al rows 3–4)", "facilities": [{ "id": "f:zrh-lx-ci2-sbd", "airlines": ["LX"], "kind": "self-bag-drop", "name": "SWISS Self Bag Drop (Check-in 2, row 5)", "hours": [{ "from": "04:00", "until": "20:30" }], "eligibility": "for passengers who checked in online and have a valid boarding pass; luggage restrictions apply", "sources": ["src:zrh-airline-swiss"]}]},
+      "name": "Terminal 2 · Check-in 2 / Arrival 2 (public side)",
+      "short": "T2",
+      "kind": "landside-hall",
+      "terminal": "T2",
+      "side": "landside",
+      "zone": "n/a",
+      "matrix": true,
+      "anchor": [620, 482],
+      "shape": { "type": "poly", "points": [[600, 430], [628, 388], [648, 398], [636, 540], [590, 535], [597, 470]] },
+      "description": "Check-in 2 (e.g. easyJet, Vueling; self bag drop) and Arrival 2, where passengers from non-Schengen flights arrive after entry passport control, baggage reclaim and customs. Shares the central security check building with Terminal 1.",
+      "confidence": "verified",
+      "sources": ["src:osm-zrh", "src:zrh-official-security-building", "src:slotcoord-directions", "src:yt-yvr-e-arrival", "src:zrh-official-new-routes"],
+      "notes": "Arrival 2 = non-Schengen arrivals (Slot Coordination Switzerland directions)."
+    },
+    {
+      "id": "zrh-centre",
+      "checkIn": { "serves": ["zrh-a", "zrh-b", "zrh-d", "zrh-e"], "sources": ["src:fd-feed-terminals-2026-11-01", "src:zrh-airline-swiss", "src:zrh-selfbagdrop"], "note": "Check-in 3 above the railway station", "facilities": [{ "id": "f:zrh-lx-ci3-sbd", "airlines": ["LX"], "kind": "self-bag-drop", "name": "SWISS Self Bag Drop (Check-in 3)", "hours": [{ "from": "04:30", "until": "17:30" }], "hoursNote": "SWISS airline page: 04:00 (at the earliest two hours before the first departure)–17:30; the airport self-bag-drop page: 04:30–17:30. The later opening is used until the conflict is resolved", "eligibility": "boarding pass only; Business Class passengers may also use the staffed desks", "sources": ["src:zrh-airline-swiss", "src:zrh-selfbagdrop"]}]},
+      "name": "Airport Centre · railway station, Check-in 3, bus and tram",
+      "short": "Rail",
+      "kind": "landside-hall",
+      "side": "landside",
+      "zone": "n/a",
+      "matrix": true,
+      "anchor": [688, 512],
+      "shape": { "type": "rect", "x": 652, "y": 470, "w": 75, "h": 80 },
+      "level": "Check-in 3 directly above the SBB station (platforms two levels below ground)",
+      "description": "Landside hub between the terminals: Airport Shopping, Check-in 3 (directly above the railway station), SBB station Zürich Flughafen, Glattalbahn tram and bus station.",
+      "status": [
+        { "state": "active", "note": "Airport Shopping (northern part) is being rebuilt: some passenger routes inside the Airport Centre are diverted, e.g. to Check-in 1, the gates and the car parks; all routes are signposted. No end date published.", "confidence": "probable", "sources": ["src:zrh-official-renovation", "src:zrh-official-new-routes"] }
+      ],
+      "confidence": "verified",
+      "sources": ["src:osm-zrh", "src:zrh-official-reduced-mobility", "src:wiki-zrh-en", "src:yt-yvr-e-arrival", "src:yt-bfree-departures"],
+      "notes": "Drawn as a rectangle east of Terminal 2; OSM places the SBB station node at the projected point (656, 515). Check-in 3 location from the official reduced-mobility page (search excerpt: 'Check-in 3 directly above the airport railway station')."
+    },
+    {
+      "id": "zrh-ac",
+      "name": "Airside Center · departure level (shops, Schengen)",
+      "short": "AC",
+      "kind": "transfer-hub",
+      "side": "airside",
+      "zone": "schengen",
+      "matrix": true,
+      "anchor": [604, 290],
+      "shape": { "type": "poly", "points": [[585, 252], [642, 252], [646, 300], [620, 350], [606, 415], [582, 420]] },
+      "level": "Departure level (airside shopping); the passport control hall and the Skymetro station lie below",
+      "stack": { "group": "zrh-ac", "order": 1, "label": "Dep" },
+      "description": "Central airside building (opened 2004) between Docks A and B. All departing passengers reach this common departure level after the central security check; signs split to 'A' (left) and 'B D E' (right). Non-Schengen passengers continue through exit passport control.",
+      "confidence": "verified",
+      "sources": ["src:zrh-official-airside-center", "src:wiki-zrh-en", "src:osm-zrh", "src:yt-bfree-departures", "src:yt-airportwalker-a"],
+      "notes": "Zone 'schengen': per Wikipedia all departing passengers share the departure level and are segregated on the way to the gates, non-Schengen passengers passing emigration control first."
+    },
+    {
+      "id": "zrh-hub",
+      "name": "Passport control hall · non-Schengen transfer area and Skymetro station",
+      "short": "Transit",
+      "kind": "transfer-hub",
+      "side": "airside",
+      "zone": "non-schengen",
+      "matrix": false,
+      "anchor": [598, 345],
+      "shape": { "type": "poly", "points": [[585, 252], [642, 252], [646, 300], [620, 350], [606, 415], [582, 420]] },
+      "level": "Below the Airside Center (underground passport control hall; Skymetro platforms at OSM level −2)",
+      "stack": { "group": "zrh-ac", "order": 0, "label": "Lower" },
+      "description": "Non-Schengen side of the central passport control hall: reached from the Airside Center through exit passport control; leads to the Skymetro to Dock E, to the D gates (lower level of Dock B) and to the transit hotel. Arriving passengers from Dock E come up from the Skymetro here and go either to transfer ('Transit / Departures A B D') or to entry passport control and the exit.",
+      "confidence": "probable",
+      "sources": ["src:zrh-official-passport-hall", "src:zrh-official-passport-hall-expansion", "src:yt-airportwalker-e", "src:yt-airportwalker-a", "src:yt-yvr-e-arrival", "src:osm-zrh"],
+      "notes": "Simplification: the Skymetro arrival and departure platforms (separated since the 2009–2011 conversion) and the non-Schengen corridors are one node. Official: the hall 'links the Airside Center with Dock E and Dock B' and is 'located at the heart of Zurich Airport, between Docks A and B' (underground)."
+    },
+    {
+      "id": "zrh-a",
+      "intraWalk": { "min": 1, "typical": 3, "max": 7, "basis": "derived", "note": "Derived (R-02): pier length ≈ 450 m (Dock A ≈ 450 m (w:zrh-ac-a)); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Dock A (Schengen)",
+      "short": "A",
+      "kind": "pier",
+      "terminal": "Dock A",
+      "side": "airside",
+      "zone": "schengen",
+      "matrix": true,
+      "anchor": [470, 218],
+      "shape": { "type": "poly", "points": [[326, 196], [640, 229], [640, 247], [325, 216]] },
+      "level": "Departures upper level; arrivals corridor with moving walkways on a separate level",
+      "description": "Finger pier directly attached to the Airside Center, Schengen flights only (incl. domestic). Contact gates A62–A86 along the pier; bus gates A50–A59 and A01–A06 near the dock root. Serves about one third of all passengers; to be replaced by a new Dock A north of it (construction from 2027).",
+      "confidence": "verified",
+      "sources": ["src:wiki-zrh-en", "src:osm-zrh", "src:yt-bfree-departures", "src:yt-airportwalker-a", "src:zrh-official-new-dock-a", "src:pointsanalyst-zrh"]
+    },
+    {
+      "id": "zrh-b",
+      "intraWalk": { "min": 1, "typical": 2.5, "max": 5.5, "basis": "derived", "note": "Derived (R-02): pier length ≈ 300 m (gate path × 1.2 m/unit (scale from Dock E)); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Dock B/D · Gates B (Schengen, upper level)",
+      "short": "B",
+      "kind": "pier",
+      "terminal": "Dock B",
+      "side": "airside",
+      "zone": "schengen",
+      "matrix": true,
+      "anchor": [500, 432],
+      "shape": { "type": "poly", "points": [[412, 400], [593, 424], [589, 463], [409, 446]] },
+      "level": "Upper level (OSM level 1)",
+      "stack": { "group": "zrh-bd", "order": 1, "label": "B" },
+      "description": "Dock B (rebuilt, reopened November 2011): every stand has two gate numbers, B for Schengen flights and D for non-Schengen flights, with separate passenger routes; the jet bridge is connected to one or the other level. B gates are reached from the Airside Center without passport control; bus gates B01–B10 lie south of the dock (Busgate Süd).",
+      "confidence": "verified",
+      "sources": ["src:wiki-zrh-en", "src:pointsanalyst-zrh", "src:alviator-d-lounge", "src:osm-zrh", "src:yt-airportwalker-a"],
+      "notes": "B = upper level is from OSM (B gates level 1, D gates level 0 at the same coordinates) and The Points Analyst ('non-Schengen passengers on Gates D clear passport control on the lower level of the same pier'); the level assignment is probable, the B = Schengen assignment verified."
+    },
+    {
+      "id": "zrh-d",
+      "intraWalk": { "min": 1, "typical": 2.5, "max": 5.5, "basis": "derived", "note": "Derived (R-02): pier length ≈ 300 m (same building as Dock B (r:zrh-zones)); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Dock B/D · Gates D (non-Schengen, lower level)",
+      "short": "D",
+      "kind": "pier",
+      "terminal": "Dock B",
+      "side": "airside",
+      "zone": "non-schengen",
+      "matrix": true,
+      "anchor": [500, 432],
+      "shape": { "type": "poly", "points": [[412, 400], [593, 424], [589, 463], [409, 446]] },
+      "level": "Lower level (OSM level 0)",
+      "stack": { "group": "zrh-bd", "order": 0, "label": "D" },
+      "description": "Same stands as the B gates, used by non-Schengen flights. Reached from the passport control hall along a long hallway that also leads to the SWISS Lounge D; bus gates D21–D26 in a separate building south-east of the dock.",
+      "confidence": "verified",
+      "sources": ["src:wiki-zrh-en", "src:pointsanalyst-zrh", "src:alviator-d-lounge", "src:lh-business-zrh", "src:osm-zrh"]
+    },
+    {
+      "id": "zrh-e",
+      "intraWalk": { "min": 1, "typical": 3.5, "max": 7.5, "basis": "derived", "note": "Derived (R-02): pier length ≈ 500 m (Dock E 500 m × 24 m (area description)); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Dock E (midfield, non-Schengen)",
+      "short": "E",
+      "kind": "satellite",
+      "terminal": "Dock E",
+      "side": "airside",
+      "zone": "non-schengen",
+      "matrix": true,
+      "anchor": [280, 64],
+      "shape": { "type": "poly", "points": [[96, 22], [457, 57], [455, 96], [94, 58]] },
+      "level": "Level 1 arrivals, level 2 departures, top floor lounges; Skymetro station in the basement",
+      "description": "Stand-alone satellite between the runways (opened September 2003), 500 m × 24 m, up to 27 aircraft stands incl. two A380 stands. Non-Schengen flights only. Reached only by the Skymetro from the Airside Center (about 3 minutes, under runway 10/28).",
+      "confidence": "verified",
+      "sources": ["src:zrh-official-dock-e", "src:wiki-zrh-en", "src:osm-zrh", "src:yt-yvr-e-arrival", "src:yt-airportwalker-e"]
+    }
+  ],
+  "gateGroups": [
+    {
+      "id": "zrh-gates-a62-a86",
+      "area": "zrh-a",
+      "label": "A62–A86",
+      "gates": ["A62", "A63", "A64", "A65", "A66", "A67", "A71", "A72", "A73", "A74", "A75", "A81", "A82", "A83", "A84", "A85", "A86"],
+      "path": [[612, 232], [523, 226], [430, 217], [343, 209]],
+      "confidence": "probable",
+      "sources": ["src:osm-zrh", "src:yt-bfree-departures"],
+      "notes": "Contact gates along Dock A (OSM level 1). A62 seen on a gate sign (video r_ShgZIXAOA, Sept 2026). A60, A61, A68–A70, A76–A80 not attested."
+    },
+    {
+      "id": "zrh-gates-a50-a59-bus",
+      "area": "zrh-a",
+      "label": "A50–A59 (bus)",
+      "gates": ["A50", "A51", "A52", "A53", "A54", "A55", "A56", "A57", "A58", "A59"],
+      "path": [[656, 187], [640, 221]],
+      "bus": true,
+      "confidence": "verified",
+      "sources": ["src:osm-zrh", "src:yt-bfree-departures", "src:flightreport-a54", "src:atxjetsetter-a55"],
+      "notes": "OSM building 'Busgate A (A50-59)', alt_name 'Ehemals Busgates A01-10' (former numbering). Sign 'A50–58' in Dock A (Sept 2026 video); A54 (July 2026) and A55 reported as bus gates."
+    },
+    {
+      "id": "zrh-gates-a01-a06-bus",
+      "area": "zrh-a",
+      "label": "A01–A06 (bus)",
+      "gates": ["A01", "A02", "A03", "A04", "A05", "A06"],
+      "path": [[645, 286], [657, 268]],
+      "bus": true,
+      "confidence": "probable",
+      "sources": ["src:osm-zrh"],
+      "notes": "OSM building 'Busgate A (A01-06)' at apron level next to the Airside Center / Terminal 1. Only OSM; not seen in a video. See open question on the A bus-gate renumbering."
+    },
+    {
+      "id": "zrh-gates-b31-b43",
+      "area": "zrh-b",
+      "label": "B31–B43",
+      "gates": ["B31", "B33", "B34", "B35", "B36", "B38", "B39", "B41", "B43"],
+      "path": [[562, 440], [490, 438], [416, 425]],
+      "confidence": "probable",
+      "sources": ["src:osm-zrh", "src:alviator-d-lounge", "src:yt-airportwalker-a"],
+      "notes": "Same stands as D31–D43. B34 attested by a guide (B34 = D34). The walkthrough (2023) shows a 'B11–B43' direction caption; B11–B30, B32, B37, B40, B42 not attested as gates."
+    },
+    {
+      "id": "zrh-gates-b01-b10-bus",
+      "area": "zrh-b",
+      "label": "B01–B10 (bus)",
+      "gates": ["B01", "B02", "B03", "B04", "B05", "B06", "B07", "B08", "B09", "B10"],
+      "path": [[585, 575], [633, 580]],
+      "bus": true,
+      "confidence": "verified",
+      "sources": ["src:osm-zrh", "src:zrh-official-busgate-b10", "src:yt-airportwalker-a"],
+      "notes": "OSM building 'Busgate Süd' / 'Busgates (B01-10)', reached via 'Passage B'. Official event-location page (search excerpt): bus gate B10 runs parallel to the Dock B stands. Sign 'B01–10' in the Airside Center (2023 video)."
+    },
+    {
+      "id": "zrh-gates-d31-d43",
+      "area": "zrh-d",
+      "label": "D31–D43",
+      "gates": ["D31", "D33", "D34", "D35", "D36", "D38", "D39", "D41", "D43"],
+      "path": [[562, 440], [490, 438], [416, 425]],
+      "confidence": "probable",
+      "sources": ["src:osm-zrh", "src:alviator-d-lounge"],
+      "notes": "Same stands as B31–B43 on the lower level (OSM level 0). D34 attested by a guide (April 2026)."
+    },
+    {
+      "id": "zrh-gates-d51-d58",
+      "area": "zrh-d",
+      "label": "D51–D58",
+      "gates": ["D51", "D52", "D53", "D54", "D55", "D56", "D57", "D58"],
+      "path": [[500, 451], [439, 444]],
+      "confidence": "probable",
+      "sources": ["src:osm-zrh", "src:yt-airportwalker-a"],
+      "notes": "OSM level 0 along the south side of Dock B; a 2023 sign in the Airside Center reads 'D21–58' (range). Whether these are bus gates is not established (not marked bus)."
+    },
+    {
+      "id": "zrh-gates-d21-d26-bus",
+      "area": "zrh-d",
+      "label": "D21–D26 (bus)",
+      "gates": ["D21", "D22", "D23", "D24", "D25", "D26"],
+      "path": [[575, 469], [560, 526]],
+      "bus": true,
+      "confidence": "probable",
+      "sources": ["src:osm-zrh", "src:yt-airportwalker-a"],
+      "notes": "OSM building 'Busgate D' / 'Busgates (D21-26)'. Range sign 'D21–58' (2023)."
+    },
+    {
+      "id": "zrh-gates-e22-e59",
+      "area": "zrh-e",
+      "label": "E22–E59",
+      "gates": ["E22", "E23", "E24", "E25", "E26", "E27", "E34", "E35", "E36", "E37", "E42", "E43", "E44", "E45", "E46", "E47", "E52", "E53", "E54", "E55", "E56", "E57", "E58", "E59"],
+      "path": [[445, 75], [290, 62], [112, 48]],
+      "confidence": "verified",
+      "sources": ["src:osm-zrh", "src:yt-yvr-e-arrival", "src:yt-spielmann-transfer", "src:pointsanalyst-zrh"],
+      "notes": "Contact gates on both sides of Dock E (OSM level 2). E34 (arrival, 2025 video), E42 (2017 video), E36/E37/E52 (lounge references, 2026 guide). The 2025 arrival sign reads 'E34–67'. E28–E33, E38–E41, E48–E51 not attested."
+    },
+    {
+      "id": "zrh-gates-e18-e19",
+      "area": "zrh-e",
+      "label": "E18–E19",
+      "gates": ["E18", "E19"],
+      "path": [[455, 58], [440, 109]],
+      "confidence": "probable",
+      "sources": ["src:osm-zrh"],
+      "notes": "East head of Dock E, OSM level 1 (function not established)."
+    },
+    {
+      "id": "zrh-gates-e62-e67",
+      "area": "zrh-e",
+      "label": "E62–E67",
+      "gates": ["E62", "E64", "E67"],
+      "path": [[94, 52], [96, 22]],
+      "confidence": "probable",
+      "sources": ["src:osm-zrh", "src:yt-yvr-e-arrival"],
+      "notes": "West head of Dock E, OSM level 1; the arrival sign range 'E34–67' includes them. Function (bus or walk-out gates) not established."
+    }
+  ],
+  "stops": [
+    {
+      "id": "s:zrh-sky-ac",
+      "egressControls": [{ "kind": "transfer-security", "when": "origin-not-one-stop", "minutes": { "min": 3, "typical": 10, "max": 25, "basis": "assumed" }, "note": "Transfer security for Dock E arrivals from outside one-stop security (official: depends on the country of origin). The Skymetro carries unscreened arrivals in separate cars; the checkpoint position at the Airside Center is inferred, not documented." }],
+      "name": "Skymetro · Airside Center",
+      "area": "zrh-hub",
+      "side": "airside",
+      "anchor": [569, 321],
+      "accessMinutes": { "min": 1, "typical": 2, "max": 4, "basis": "observed" },
+      "where": "Below the Airside Center (OSM level −2). Departing passengers reach it after exit passport control (signs 'Gates E' with a countdown to the next train); arriving passengers come up from it towards 'Transit / Departures A B D' or 'Exit'.",
+      "confidence": "verified",
+      "sources": ["src:zrh-official-airside-center", "src:osm-zrh", "src:yt-themaintrain-skymetro", "src:yt-airportwalker-e", "src:yt-yvr-e-arrival"],
+      "notes": "Observed: platform → escalators → passport control ≈ 1.5–2.5 min (2024 and 2025 videos). Separate platforms for arriving and departing passengers (de.wikipedia; glass dividers per en.wikipedia)."
+    },
+    {
+      "id": "s:zrh-sky-e",
+      "name": "Skymetro · Dock E",
+      "area": "zrh-e",
+      "side": "airside",
+      "anchor": [288, 66],
+      "accessMinutes": { "min": 1, "typical": 3, "max": 5, "basis": "observed" },
+      "where": "Basement of Dock E (OSM level −1), escalators from the departure and arrival concourses; signed 'A B D · Ausgang/Exit · Gepäckausgabe/Baggage Claim'.",
+      "confidence": "verified",
+      "sources": ["src:zrh-official-dock-e", "src:osm-zrh", "src:yt-airportwalker-e", "src:yt-yvr-e-arrival"],
+      "notes": "Observed: gate E34 → platform ≈ 3.5 min (2025, incl. arrival walk); departure concourse near E42 → platform ≈ 2 min (2024)."
+    },
+    {
+      "id": "s:zrh-bus-ac",
+      "egressControls": [{ "kind": "transfer-security", "when": "origin-not-one-stop", "minutes": { "min": 3, "typical": 10, "max": 25, "basis": "assumed" }, "note": "As at the Skymetro Airside Center platform (relief buses during the works)." }],
+      "name": "Relief bus · Airside Center side (boarding point not published)",
+      "area": "zrh-hub",
+      "side": "airside",
+      "anchor": [560, 300],
+      "accessMinutes": { "min": 2, "typical": 4, "max": 8, "basis": "assumed" },
+      "where": "Not established. Announced only as buses 'to Dock E' at peak times; the boarding level and its position relative to exit passport control are unknown.",
+      "confidence": "unknown",
+      "sources": ["src:skynews-skymetro-phase2", "src:travelnews-skymetro-2025"],
+      "notes": "Placeholder stop for the not-routed relief bus line; placed in the non-Schengen node because passengers bound for Dock E are non-Schengen (assumption)."
+    },
+    {
+      "id": "s:zrh-bus-e",
+      "name": "Relief bus · Dock E (boarding point not published)",
+      "area": "zrh-e",
+      "side": "airside",
+      "anchor": [330, 92],
+      "accessMinutes": { "min": 2, "typical": 4, "max": 8, "basis": "assumed" },
+      "where": "Not established (Dock E apron level).",
+      "confidence": "unknown",
+      "sources": ["src:skynews-skymetro-phase2", "src:ictseurope-skymetro"],
+      "notes": "Placeholder stop for the not-routed relief bus line. ICTS reports managing 'temporary terminal entry doors' for bus and open-stand arrival passengers from end Jan 2026 (≈6 months), location not given."
+    }
+  ],
+  "lines": [
+    {
+      "id": "l:zrh-skymetro",
+      "name": "Skymetro (Airside Center ↔ Dock E)",
+      "mode": "people-mover",
+      "operator": "Flughafen Zürich AG",
+      "colour": "#d52b1e",
+      "access": "airside",
+      "side": "airside",
+      "stops": ["s:zrh-sky-ac", "s:zrh-sky-e"],
+      "direction": "both",
+      "rideMin": [2.5],
+      "ride": [
+        { "min": 2, "typical": 2.5, "max": 3, "basis": "measured", "note": "Two uncut front-window rides (2 s storyboards, two channels): departure → stop at the far platform 144 ± 4 s (dKFPf7433G0, 2023) and ≈130–138 s from first motion (-BrDR_bFtUU, Mar 2025); the bored-tunnel section takes 72 s and 70 s in the two videos. Independent check: doors closed ≈55 s → Dock E ≈185 s (Jnr5qlnvI1E, 2024, ≈130 s). Door-close → door-open ≈2.3–2.7 min; official 'around three minutes' kept as the max. All measurements predate the modernisation (a +14–20 s longer ride after it is reported only in unreadable search excerpts)." }
+      ],
+      "service": [
+        {
+          "hours": "Single tunnel (works phase 2): during Dock E flight operations (exact hours not published); relief buses at daily peaks",
+          "validFrom": "2026-11-03",
+          "validUntil": "2027-05-31",
+          "headwayMin": { "min": 6, "max": 9 },
+          "headwayBasis": "derived",
+          "waitMin": { "min": 0, "typical": 4, "max": 9, "basis": "derived" },
+          "sources": ["src:skynews-skymetro-phase2", "src:aerotelegraph-skymetro-phase2", "src:airportzentrale-skymetro-phase2", "src:baublatt-skymetro-phase2"],
+          "notes": "Works phase 2 (announced 30 Oct 2026): from Tuesday 3 Nov 2026 the not yet modernised tunnel is closed for about six months, until about May 2027 (end date approximate; validUntil set to 31 May 2027). The official staff timetable of 27 Oct 2025 had planned phase 2 as 'Mo, 19. Oktober 2026: Sperrung Tunnel 1' with relief buses for 6 months until 'ca. Ende April 2027'; the later announcement (3 Nov 2026) is used, and the end stays 31 May 2027 (conservative). The Skymetro keeps running in the modernised tunnel with reduced capacity; a bus replacement service runs at the daily peaks (see l:zrh-skymetro-relief-bus, not routed). Hours and headway for phase 2 are not published, so no windows are set. Headway: one train shuttling in one tunnel gives a departure every full cycle ≈ 2 × (2.5 min ride + 1–2 min dwell) ≈ 7–9 min (derived); the official phase-1 single-shuttle headway of 6–7 min (three-car train, other tunnel) is consistent with this but is not assumed for phase 2."
+        },
+        {
+          "hours": "Single tunnel (works phase 1): Skymetro single shuttle with 3 cars 04:45–23:30, every 6–7 min (official diagram); buses 06:00–09:00 and 10:30–13:00",
+          "windows": [{ "from": "04:45", "until": "23:30" }],
+          "validFrom": "2025-11-04",
+          "validUntil": "2026-06-15",
+          "headwayMin": { "min": 6, "max": 7 },
+          "headwayBasis": "published",
+          "waitMin": { "min": 0, "typical": 3.5, "max": 7, "basis": "derived", "note": "Half the published 6–7 min headway." },
+          "sources": ["src:zrh-staff-newsletter-skymetro-2025", "src:skynews-skymetro-2025", "src:travelnews-skymetro-2025", "src:aerotelegraph-skymetro"],
+          "notes": "Historical: tunnel 2 closed from Tue 4 Nov 2025 to about mid-June 2026 (official staff diagram 'Gültigkeit Bauphase 1: täglich 04.11.2025 – ca. Mitte Juni 2026'); one three-car train in tunnel 1 (cars labelled EU, EU, ICAO), 04:45–23:30, 'alle 6–7 min' (published, ev:zrh-p3-phase1-diagram). Buses carried part of the passengers 06:00–09:00 and 10:30–13:00. These figures belong to phase 1 only and are not carried over to phase 2."
+        },
+        {
+          "hours": "During Dock E flight operations (exact hours not published)",
+          "headwayMin": { "min": 3, "max": 5 },
+          "headwayBasis": "derived",
+          "waitMin": { "min": 0, "typical": 2, "max": 5, "basis": "derived" },
+          "sources": ["src:yt-spielmann-transfer", "src:yt-airportwalker-e", "src:skynews-skymetro-2025"],
+          "notes": "Two-tunnel operation, one train per tunnel (dual shuttle). Applies before 4 Nov 2025, between the phases (mid-June – 2 Nov 2026: tunnel 1 with a three-car train, modernised tunnel 2 with a four-car train) and after the works (two four-car trains, from about May 2027). This is the service on 2026-10-31. Headway not published: platform countdowns showed 1:58 (2017) and ≈3:05 (2024) to the next train; two trains each cycling ≈7–9 min give a departure every ≈3.5–4.5 min per direction (derived)."
+        }
+      ],
+      "eligibility": "Air passengers only (not public transport). Non-Schengen airside: departing passengers after exit passport control in the Airside Center, arriving and connecting passengers from Dock E. Passengers screened to EU standards and unscreened arrivals ride in separate cars (glass dividers on the platforms).",
+      "path": [[569, 321], [577, 306], [590, 161], [576, 151], [364, 92], [337, 68], [288, 66]],
+      "confidence": "verified",
+      "sources": ["src:zrh-official-dock-e", "src:zrh-official-airside-center", "src:zrh-official-transfer", "src:wiki-skymetro-en", "src:osm-zrh", "src:yt-themaintrain-skymetro", "src:yt-airportwalker-e", "src:yt-yvr-e-arrival", "src:yt-trainbytrain-skymetro", "src:yt-soibuakhao-skymetro", "src:skynews-skymetro-phase2"],
+      "notes": "Cable-hauled air-cushion people mover, 1,138 m, two parallel tunnels under runway 10/28, max 47.9 km/h; ride 'around three minutes' (official), measured ≈2.2–2.5 min in motion. No intermediate stops. The line is never suspended by the 2025–27 modernisation (one tunnel always stays in service), so the works are modelled as dated service entries (single-tunnel headway), not as status periods. Capacity 8,000 → 10,000 passengers per hour and direction after the works (two four-car trains)."
+    },
+    {
+      "id": "l:zrh-skymetro-relief-bus",
+      "name": "Skymetro relief bus (Airside Center ↔ Dock E, works peaks)",
+      "mode": "bus",
+      "operator": "Flughafen Zürich AG",
+      "colour": "#8a8a8a",
+      "access": "airside",
+      "side": "airside",
+      "stops": ["s:zrh-bus-ac", "s:zrh-bus-e"],
+      "direction": "both",
+      "rideMin": [8],
+      "ride": [
+        { "min": 5, "typical": 8, "max": 15, "basis": "assumed", "note": "No published or observed ride time; the apron route between the Airside Center side and Dock E is not documented." }
+      ],
+      "notRouted": "Boarding points, eligibility (who is sent to the bus) and frequency are not published; announced only as a peak-time relief while one Skymetro tunnel is closed. The Skymetro keeps running, so routes use it.",
+      "service": [
+        {
+          "hours": "Works phase 2: daily peak times (hours not published)",
+          "validFrom": "2026-11-03",
+          "validUntil": "2027-05-31",
+          "headwayMin": { "min": 5, "max": 15 },
+          "headwayBasis": "assumed",
+          "waitMin": { "min": 0, "typical": 5, "max": 15, "basis": "assumed" },
+          "sources": ["src:skynews-skymetro-phase2", "src:aerotelegraph-skymetro-phase2", "src:baublatt-skymetro-phase2"],
+          "notes": "Phase-2 peak hours, frequency, flows, stops and passport arrangement are not published (no phase-2 diagram found as of 2026-11-01). Phase 1 used 06:00–09:00 and 10:30–13:00 about every 3 min with direction-specific flows; none of this is assumed for phase 2."
+        },
+        {
+          "hours": "06:00–09:00 and 10:30–13:00 (works phase 1), about every 3 min",
+          "windows": [{ "from": "06:00", "until": "09:00" }, { "from": "10:30", "until": "13:00" }],
+          "validFrom": "2025-11-04",
+          "validUntil": "2026-06-15",
+          "headwayMin": { "min": 3, "max": 3 },
+          "headwayBasis": "published",
+          "waitMin": { "min": 0, "typical": 1.5, "max": 3, "basis": "derived", "note": "Half the published 'ca. alle 3 min'." },
+          "sources": ["src:zrh-staff-newsletter-skymetro-2025", "src:skynews-skymetro-2025", "src:travelnews-skymetro-2025"],
+          "notes": "Historical. Official staff diagram (27 Oct 2025): 'Busentlastung' 06:00–09:00 and 10:30–13:00, 'ca. alle 3 min'. Flows: 06:00–09:00 only ICAO passengers E → A/B; 10:30–13:00 ICAO E → A/B and EU A/B → E (ev:zrh-p3-phase1-diagram). ICAO/EU are read as the Skymetro car labels (unscreened non-EU-standard arrivals vs passengers screened to EU standard); stands, levels and the passport arrangement are not shown. Times 'können je nach Bedarf ... angepasst werden'."
+        }
+      ],
+      "eligibility": "Not published: 'part of the passengers and staff' (phase 1); 'passengers to Dock E at peak times' (phase 2). Presumably non-Schengen airside passengers after exit passport control, but this is not established.",
+      "path": [[560, 300], [575, 150], [330, 92]],
+      "status": [
+        { "state": "planned", "until": "2025-11-03", "note": "Not running before works phase 1 (emergency buses only during Skymetro breakdowns).", "confidence": "probable", "sources": ["src:skynews-skymetro-2025", "src:bluewin-skymetro-stuck"] },
+        { "state": "active", "from": "2025-11-04", "until": "2026-06-15", "note": "Works phase 1 (tunnel 2 closed, daily 4 Nov 2025 – ca. mid-June 2026): peak-time buses 06:00–09:00 and 10:30–13:00, about every 3 min (official staff diagram).", "confidence": "verified", "sources": ["src:zrh-staff-newsletter-skymetro-2025", "src:skynews-skymetro-2025", "src:travelnews-skymetro-2025"] },
+        { "state": "closed", "from": "2026-06-16", "until": "2026-11-02", "note": "Between the works phases both tunnels run; no relief buses. Phase 2 was planned for Mon 19 Oct 2026 in the official Oct 2025 timetable (later 'mid-October') and was then announced to start on 3 Nov 2026.", "confidence": "probable", "sources": ["src:skynews-skymetro-phase2", "src:aerotelegraph-skymetro-phase2", "src:zrh-staff-newsletter-skymetro-2025", "src:skynews-skymetro-2025"] },
+        { "state": "active", "from": "2026-11-03", "until": "2027-05-31", "note": "Works phase 2 (the not yet modernised tunnel closed for about six months, until about May 2027): bus replacement at the daily peaks.", "confidence": "probable", "sources": ["src:skynews-skymetro-phase2", "src:aerotelegraph-skymetro-phase2", "src:airportzentrale-skymetro-phase2", "src:baublatt-skymetro-phase2"] },
+        { "state": "closed", "from": "2027-06-01", "note": "After the works (two four-car trains); end date approximate ('May 2027').", "confidence": "inferred", "sources": ["src:skynews-skymetro-phase2"] }
+      ],
+      "confidence": "probable",
+      "sources": ["src:skynews-skymetro-2025", "src:travelnews-skymetro-2025", "src:skynews-skymetro-phase2", "src:aerotelegraph-skymetro-phase2", "src:baublatt-skymetro-phase2", "src:airportzentrale-skymetro-phase2"],
+      "notes": "Not given `replaces`: the Skymetro is not suspended but runs with reduced capacity, and the bus only relieves it. The existence and dates are probable (several news outlets reporting the same airport announcement, so effectively one origin); boarding points, levels, passport-control arrangement and ride are unknown. A third-party map site claims the buses load at the B/D bus-gate level; not used (unreliable)."
+    }
+  ],
+  "walks": [
+    {
+      "id": "w:zrh-t1-ac",
+      "from": "zrh-t1",
+      "to": "zrh-ac",
+      "bidirectional": false,
+      "access": "public",
+      "minutes": { "min": 3, "typical": 6, "max": 10, "basis": "derived" },
+      "controls": [
+        { "kind": "security", "minutes": { "min": 5, "typical": 15, "max": 45, "basis": "assumed" }, "note": "Central security check building (26 lanes on 4 levels, single entrance from Terminals 1 and 2); 45–60 min queues reported at the 06:00–09:00 peak" }
+      ],
+      "practical": "practical",
+      "via": "Check-in 1 → central security check building → Airside Center departure level",
+      "confidence": "verified",
+      "sources": ["src:zrh-official-security-building", "src:pointsanalyst-zrh", "src:yt-bfree-departures", "src:osm-zrh"],
+      "notes": "Minutes derived from OSM distances (≈150–250 m plus level changes, 70 m/min). The way back to the public side is the arrivals route (see w:zrh-ac-t1-exit)."
+    },
+    {
+      "id": "w:zrh-t2-ac",
+      "from": "zrh-t2",
+      "to": "zrh-ac",
+      "bidirectional": false,
+      "access": "public",
+      "minutes": { "min": 3, "typical": 5, "max": 9, "basis": "derived" },
+      "controls": [
+        { "kind": "security", "minutes": { "min": 5, "typical": 15, "max": 45, "basis": "assumed" }, "note": "Central security check building, entered from Terminal 2" }
+      ],
+      "practical": "practical",
+      "via": "Check-in 2 → central security check building → Airside Center departure level",
+      "confidence": "verified",
+      "sources": ["src:zrh-official-security-building", "src:zrh-official-new-routes", "src:pointsanalyst-zrh"]
+    },
+    {
+      "id": "w:zrh-ac-t1-exit",
+      "from": "zrh-ac",
+      "to": "zrh-t1",
+      "bidirectional": false,
+      "access": "airside",
+      "minutes": { "min": 4, "typical": 6, "max": 10, "basis": "derived", "note": "OSM-projected distance Airside Center → Check-in 1 ≈130 m straight; the way down to the Schengen arrivals level, through the reclaim hall and customs is estimated at 250–400 m with two level changes, at 70 m/min ≈ 4–6 min (+ up to 4 min for lifts/queues at the exit). Route itself not documented." },
+      "controls": [
+        { "kind": "customs", "minutes": { "min": 0, "typical": 1, "max": 5, "basis": "assumed" }, "note": "Swiss customs (Switzerland is outside the EU customs union)" }
+      ],
+      "practical": "practical",
+      "via": "Schengen arrivals level → baggage reclaim → customs → Arrival 1",
+      "confidence": "inferred",
+      "sources": ["src:wiki-zrh-en", "src:slotcoord-directions"],
+      "notes": "Leaving the Schengen airside without a flight (e.g. a cancelled departure). Exact route not documented; arriving Schengen passengers exit to Arrival 1."
+    },
+    {
+      "id": "w:zrh-a-t1-arr",
+      "from": "zrh-a",
+      "to": "zrh-t1",
+      "bidirectional": false,
+      "access": "airside",
+      "minutes": { "min": 4, "typical": 7, "max": 12, "basis": "derived" },
+      "controls": [
+        { "kind": "customs", "minutes": { "min": 0, "typical": 1, "max": 5, "basis": "assumed" } }
+      ],
+      "practical": "practical",
+      "flow": "arrivals",
+      "via": "Dock A arrivals corridor (moving walkways) → Schengen baggage reclaim → customs → Arrival 1",
+      "confidence": "probable",
+      "sources": ["src:yt-airportwalker-a", "src:yt-spielmann-transfer", "src:slotcoord-directions"],
+      "notes": "Arrivals flow. The A arrivals corridor signs 'Ausgang/Exit · Gepäckausgabe/Baggage Claim' and 'A B D E / Flight connections' (2017 and 2023 videos)."
+    },
+    {
+      "id": "w:zrh-b-t1-arr",
+      "from": "zrh-b",
+      "to": "zrh-t1",
+      "bidirectional": false,
+      "access": "airside",
+      "minutes": { "min": 3, "typical": 6, "max": 10, "basis": "derived" },
+      "controls": [
+        { "kind": "customs", "minutes": { "min": 0, "typical": 1, "max": 5, "basis": "assumed" } }
+      ],
+      "practical": "practical",
+      "flow": "arrivals",
+      "via": "Arrival at a B gate → Schengen baggage reclaim → customs → Arrival 1",
+      "confidence": "inferred",
+      "sources": ["src:slotcoord-directions", "src:wiki-zrh-en"],
+      "notes": "Arrivals flow; the corridor from Dock B to the Schengen reclaim is not documented."
+    },
+    {
+      "id": "w:zrh-d-t2-arr",
+      "from": "zrh-d",
+      "to": "zrh-t2",
+      "bidirectional": false,
+      "access": "airside",
+      "minutes": { "min": 4, "typical": 7, "max": 11, "basis": "derived" },
+      "controls": [
+        { "kind": "passport", "minutes": { "min": 5, "typical": 15, "max": 60, "basis": "assumed" }, "note": "Entry control in the passport control hall (EES registration for third-country nationals since its introduction)" },
+        { "kind": "customs", "minutes": { "min": 0, "typical": 1, "max": 5, "basis": "assumed" } }
+      ],
+      "practical": "practical",
+      "flow": "arrivals",
+      "via": "Arrival at a D gate → entry passport control → non-Schengen baggage reclaim → customs → Arrival 2",
+      "confidence": "inferred",
+      "sources": ["src:zrh-official-passport-hall-expansion", "src:slotcoord-directions"],
+      "notes": "Arrivals flow; whether D arrivals use the central hall or a control in the pier is not established."
+    },
+    {
+      "id": "w:zrh-hub-t2",
+      "from": "zrh-hub",
+      "to": "zrh-t2",
+      "bidirectional": false,
+      "access": "airside",
+      "minutes": { "min": 3, "typical": 5, "max": 8, "basis": "observed" },
+      "controls": [
+        { "kind": "passport", "minutes": { "min": 5, "typical": 15, "max": 60, "basis": "assumed" }, "note": "Entry control: e-gates (EU/EEA/CH biometric passports, 12+), self-service kiosks, 'All passports' counters; EES registration for third-country nationals" },
+        { "kind": "customs", "minutes": { "min": 0, "typical": 1, "max": 5, "basis": "assumed" } }
+      ],
+      "practical": "practical",
+      "via": "Up from the Skymetro arrival platform → entry passport control hall → baggage reclaim → customs → Arrival 2",
+      "confidence": "verified",
+      "sources": ["src:yt-yvr-e-arrival", "src:zrh-official-passport-hall-expansion", "src:zrh-official-border-control", "src:slotcoord-directions", "src:osm-zrh"],
+      "notes": "Used by passengers arriving at Dock E after the Skymetro (2025 video: platform 6:50 → passport queue 9:20 → baggage claim 11:10 → customs exit 13:20; walking ≈5 min excluding queues and bag wait). One-way."
+    },
+    {
+      "id": "w:zrh-centre-t1",
+      "from": "zrh-centre",
+      "to": "zrh-t1",
+      "bidirectional": true,
+      "access": "public",
+      "minutes": { "min": 3, "typical": 5, "max": 9, "basis": "derived" },
+      "practical": "practical",
+      "via": "Through Airport Shopping (signposted 'Check-in 1'; diverted during the shopping rebuild)",
+      "status": [
+        { "state": "active", "note": "Route diverted inside Airport Shopping during the rebuild of its northern part; Check-in 1 stays reachable via Terminal 2 throughout (official).", "confidence": "probable", "sources": ["src:zrh-official-renovation", "src:zrh-official-new-routes"] }
+      ],
+      "confidence": "verified",
+      "sources": ["src:zrh-official-new-routes", "src:yt-bfree-departures", "src:slotcoord-directions"],
+      "notes": "Slot Coordination directions: railway station → Operation Center 1 ≈ 10 min vs Arrival 1 → OC1 ≈ 5 min."
+    },
+    {
+      "id": "w:zrh-centre-t2",
+      "from": "zrh-centre",
+      "to": "zrh-t2",
+      "bidirectional": true,
+      "access": "public",
+      "minutes": { "min": 2, "typical": 4, "max": 6, "basis": "observed" },
+      "practical": "practical",
+      "via": "Arrival 2 → across the forecourt road → Airport Centre; SBB platforms one level down",
+      "confidence": "verified",
+      "sources": ["src:yt-yvr-e-arrival", "src:slotcoord-directions"],
+      "notes": "2025 video: customs exit 13:20 → 'cross street to train station' 14:22 → 'trains and ticketing down 1 level' 16:57 (≈3.5 min)."
+    },
+    {
+      "id": "w:zrh-t1-t2",
+      "from": "zrh-t1",
+      "to": "zrh-t2",
+      "bidirectional": true,
+      "access": "public",
+      "minutes": { "min": 3, "typical": 4, "max": 7, "basis": "derived", "note": "≈235 m centre to centre on the OSM-projected plan × ≈1.3 for the indirect, partly diverted route ≈ 300 m at 75 m/min ≈ 4 min; the Slot Coordination directions imply a ≈3 min difference between Arrival 2 and Arrival 1 (lower bound)." },
+      "practical": "practical",
+      "via": "Landside, via the arrival halls (Arrival 2 → Arrival 1) or the check-in level",
+      "confidence": "probable",
+      "sources": ["src:slotcoord-directions", "src:zrh-official-new-routes", "src:osm-zrh"],
+      "notes": "Check-in 1 and Check-in 2 are adjacent halls of one landside complex (not separate terminal buildings), so a 3–4 min walk is plausible. Phase 2 raised the typical value from 3 to 4 min after measuring the OSM distance with a detour factor (the Airport Shopping rebuild diverts routes). Slot Coordination: Arrival 2 → across arrival hall 1 ≈ 8 min vs Arrival 1 ≈ 5 min to the same office."
+    },
+    {
+      "id": "w:zrh-ac-a",
+      "from": "zrh-ac",
+      "to": "zrh-a",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": { "min": 2, "typical": 4, "max": 8, "basis": "derived" },
+      "practical": "practical",
+      "via": "Airside Center → left ('A') → Dock A; arriving A passengers come up from the arrivals corridor by escalator",
+      "confidence": "verified",
+      "sources": ["src:zrh-official-airside-center", "src:yt-bfree-departures", "src:yt-airportwalker-a", "src:osm-zrh"],
+      "notes": "Schengen ↔ Schengen, no control (no security seen on the 2023 A arrival → Airside Center walk). Dock A is ≈450 m long: add up to 5 min to the far end (A81–A86)."
+    },
+    {
+      "id": "w:zrh-ac-b",
+      "from": "zrh-ac",
+      "to": "zrh-b",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": { "min": 2, "typical": 4, "max": 7, "basis": "derived" },
+      "practical": "practical",
+      "via": "Airside Center → right ('B D E') → Dock B upper level; bus gates B01–B10 via Passage B",
+      "confidence": "verified",
+      "sources": ["src:zrh-official-airside-center", "src:yt-airportwalker-a", "src:wiki-zrh-en", "src:osm-zrh"]
+    },
+    {
+      "id": "w:zrh-ac-hub",
+      "from": "zrh-ac",
+      "to": "zrh-hub",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": { "min": 1, "typical": 3, "max": 5, "basis": "derived" },
+      "controls": [
+        { "kind": "passport", "minutes": { "min": 3, "typical": 10, "max": 40, "basis": "assumed" }, "note": "Exit control (e-gates for EU/EEA/CH adults with biometric passports; 'All passports' counters)" }
+      ],
+      "reverseControls": [
+        { "kind": "passport", "minutes": { "min": 5, "typical": 15, "max": 60, "basis": "assumed" }, "note": "Entry control for passengers connecting from non-Schengen to Schengen flights (and EES registration)" }
+      ],
+      "practical": "practical",
+      "via": "Airside Center → passport control hall (underground, between Docks A and B)",
+      "confidence": "verified",
+      "sources": ["src:zrh-official-passport-hall", "src:zrh-official-passport-hall-expansion", "src:wiki-zrh-en", "src:yt-airportwalker-a", "src:yt-airportwalker-e"],
+      "notes": "Transfer security for arrivals from airports outside EU one-stop security is not modelled on this link (location unknown, see open question)."
+    },
+    {
+      "id": "w:zrh-hub-d",
+      "reverseControls": [{ "kind": "transfer-security", "when": "origin-not-one-stop", "minutes": { "min": 3, "typical": 10, "max": 25, "basis": "assumed" }, "note": "Dock D arrivals from outside one-stop security leaving D for another area (official: depends on the country of origin; location inferred)." }],
+      "from": "zrh-hub",
+      "to": "zrh-d",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": { "min": 2, "typical": 4, "max": 7, "basis": "derived" },
+      "practical": "practical",
+      "via": "Long hallway past the SWISS Lounge D to the lower level of Dock B",
+      "confidence": "verified",
+      "sources": ["src:zrh-official-passport-hall", "src:alviator-d-lounge", "src:pointsanalyst-zrh", "src:lh-business-zrh"],
+      "notes": "Non-Schengen ↔ non-Schengen, no control. Lufthansa Group's hub page (search excerpt) gives D ↔ E 5–10 min."
+    },
+    {
+      "id": "w:zrh-hub-e-tunnel",
+      "from": "zrh-hub",
+      "to": "zrh-e",
+      "bidirectional": true,
+      "access": "restricted",
+      "minutes": { "min": 12, "typical": 15, "max": 20, "basis": "derived" },
+      "practical": "avoid",
+      "via": "Skymetro tunnel under runway 10/28 (no passenger walkway)",
+      "confidence": "probable",
+      "sources": ["src:bluewin-skymetro-stuck", "src:zrh-official-dock-e", "src:wiki-skymetro-de"],
+      "notes": "Recorded only to state that there is no walking alternative: Dock E is reached by the Skymetro (or emergency buses). On 20 July 2026 about 50 passengers were evacuated on foot through the tunnel after a breakdown ≈200 m before a station. 1.1 km at 4.5 km/h ≈ 15 min (derived). Never routed."
+    }
+  ],
+  "rules": [
+    { "id": "r:zrh-works-phase2-2026", "text": "Works phase 2 (official newsroom, 30 Oct 2026, read 2026-11-01): from 3 Nov 2026 the not yet renovated Skymetro tunnel is closed for about six months (until about May 2027); the Skymetro keeps running with reduced capacity in the renovated tunnel and replacement buses run only at the daily peaks (\"zu Spitzenzeiten\"). The release gives no bus hours and no passenger groups. The phase-1 bus hours (06:00–09:00 and 10:30–13:00, staff newsletter of 27 Oct 2025) are historical and are NOT applied to phase 2.", "confidence": "verified", "sources": ["src:zrh-newsroom-skymetro-phase2", "src:aerotelegraph-skymetro-phase2"]},
+    {
+      "id": "r:zrh-zones",
+      "text": "Dock A (gates A) serves Schengen flights only. Dock B serves both: each stand has a B number (Schengen) and a D number (non-Schengen) with separate passenger routes on two levels. Dock E (gates E) serves non-Schengen flights only. Lufthansa Group: Schengen flights from A and B, non-Schengen from D and E.",
+      "confidence": "verified",
+      "sources": ["src:wiki-zrh-en", "src:pointsanalyst-zrh", "src:alviator-d-lounge", "src:lh-business-zrh"]
+    },
+    {
+      "id": "r:zrh-central-security",
+      "text": "All departing passengers pass the central security check building (between Terminals 1/2 and the Airside Center; 26 checkpoints on four levels, single entrance from Terminal 1 or 2, in operation since 1 Dec 2011) and reach the common departure level of the Airside Center; non-Schengen passengers then pass exit passport control.",
+      "confidence": "verified",
+      "sources": ["src:zrh-official-security-building", "src:wiki-zrh-en", "src:pointsanalyst-zrh"]
+    },
+    {
+      "id": "r:zrh-passport-hall",
+      "text": "The passport control hall (underground, between Docks A and B, opened 2004, altered 2008–2011) links the Airside Center with Dock E and Dock B and is the hub for immigration, emigration and transfer between Schengen and non-Schengen areas. It is being expanded during operations from 2025 (full operation expected about 2030) with separate areas for immigration, emigration and transfer immigration and more e-gates.",
+      "confidence": "verified",
+      "sources": ["src:zrh-official-passport-hall", "src:zrh-official-passport-hall-expansion", "src:yt-yvr-e-arrival"]
+    },
+    {
+      "id": "r:zrh-transfer-security",
+      "text": "Depending on the country of origin, connecting passengers pass security again (official transfer page). The Skymetro carries passengers screened to EU standards and unscreened arrivals in separate cars. Where the transfer security check is located is not established; it is not modelled as a control.",
+      "confidence": "verified",
+      "sources": ["src:zrh-official-transfer", "src:wiki-skymetro-en", "src:wiki-skymetro-de"]
+    },
+    {
+      "id": "r:zrh-arrival-halls",
+      "text": "Arriving Schengen passengers leave through Arrival 1, non-Schengen passengers through Arrival 2 after entry passport control and customs.",
+      "confidence": "probable",
+      "sources": ["src:slotcoord-directions", "src:wiki-zrh-en"]
+    },
+    {
+      "id": "r:zrh-skymetro-works",
+      "text": "The Skymetro is being modernised (four-car trains in dual-shuttle mode instead of three-car trains; new control and drive systems; plan approval 25 April 2024). Phase 1: tunnel 2 closed 4 Nov 2025 – about mid-June 2026, buses 06:00–09:00 and 10:30–13:00. Between the phases (so on 2026-10-31) both tunnels run. Phase 2: the not yet modernised tunnel closes from Tuesday 3 Nov 2026 for about six months (until about May 2027); the Skymetro keeps running in the modernised tunnel with reduced capacity and buses relieve the daily peaks. Earlier plans gave 19 Oct / 'mid-October' 2026 and 'end of April 2027'; the 30 Oct 2026 announcement supersedes them. Capacity 8,000 → 10,000 passengers per hour and direction.",
+      "confidence": "verified",
+      "sources": ["src:skynews-skymetro-phase2", "src:aerotelegraph-skymetro-phase2", "src:airportzentrale-skymetro-phase2", "src:baublatt-skymetro-phase2", "src:skynews-skymetro-2025", "src:travelnews-skymetro-2025", "src:bahnonline-skymetro", "src:aerotelegraph-skymetro", "src:zrh-official-renovation", "src:wiki-skymetro-de"]
+    },
+    {
+      "id": "r:zrh-night-curfew",
+      "text": "Night curfew: no flight operations 23:00–06:00, with up to 30 min (to 23:30) for delayed departures and arrivals (in force since 29 July 2010). Slot coordination allocates no arrivals 23:00–06:09 and no departures 22:46–05:44. Terminal, security and Skymetro opening hours are not published, so night routes (23:30, 03:00) are computed as if the walks and the Skymetro were open and carry an 'hours not published' warning.",
+      "confidence": "verified",
+      "sources": ["src:zrh-newsroom-curfew", "src:slotcoord-restrictions"]
+    },
+    {
+      "id": "r:zrh-dock-a-replacement",
+      "text": "Dock A, its tower and the dock base will be replaced by a new Dock A built north of the current one (project start 2023, construction from 2027; dock base 'as of 2030'). The old Dock A stays in operation until the new dock is operational. As preparation, a temporary five-storey modular building south of Dock B (construction started May 2025, commissioning expected by 2027) will provide temporary bus gates, lounges and Airside Center logistics.",
+      "confidence": "probable",
+      "sources": ["src:zrh-official-new-dock-a", "src:zrh-official-modulbau"]
+    }
+  ],
+  "openQuestions": [
+    {
+      "id": "q:zrh-skymetro-relief-buses",
+      "question": "During Skymetro works phase 2 (3 Nov 2026 – about May 2027), at which hours and frequency do the relief buses run, which passenger flows are sent to them, where do they board (level; before or after exit passport control) and where do they arrive at Dock E? Phase 1 (official diagram): 06:00–09:00 and 10:30–13:00, about every 3 min; mornings ICAO E → A/B, midday also EU A/B → E; boarding points never published.",
+      "impact": "The relief bus is drawn but not routed; at peaks the real route to Dock E may be a bus with a different time, and the Skymetro wait is a derived single-train value.",
+      "howToResolve": "Owner capture of the official passenger notice for phase 2 (not on the renovation page as of 2026-10-31), or a dated photo/video of the bus signage in the passport control hall after 3 Nov 2026."
+    },
+    {
+      "id": "q:zrh-skymetro-service",
+      "question": "What are the Skymetro operating hours in normal and phase-2 service (phase 1 single shuttle: 04:45–23:30 every 6–7 min, official; does normal service also stop during the curfew?) and headway (normal and during the single-tunnel works), and the night opening hours of the central security check and the passport control hall?",
+      "impact": "Wait times are derived from countdown displays and the train cycle; at 23:30 and 03:00 every route is computed as if open and carries an 'hours not published' warning.",
+      "howToResolve": "Ask Flughafen Zürich, or time two consecutive departures and note the first/last train on site; owner capture of the BAZL plan-approval documents (the PDFs return 404) and of the 2005-style official transfer-time brochure (routesonline copy HTTP 403)."
+    },
+    {
+      "id": "q:zrh-transfer-security",
+      "question": "Where do connecting passengers from airports outside EU one-stop security pass the transfer security check (Airside Center Skymetro arrival level, passport control hall, Dock E)?",
+      "impact": "Transfers from such origins may need an extra 5–30 min not included in the matrix.",
+      "howToResolve": "Owner capture of the interactive map (LocusLabs) layers, or a 2025–2026 walkthrough from a non-EU-OSS origin."
+    },
+    {
+      "id": "q:zrh-d-passport",
+      "question": "Do D-gate passengers clear passport control in the central hall below the Airside Center or in a separate control on the lower level of Dock B?",
+      "impact": "Affects the B ↔ D transfer time and the D arrivals flow; currently both go through the central hall node.",
+      "howToResolve": "A dated walkthrough from the Airside Center to a D gate, or the official interactive map."
+    },
+    {
+      "id": "q:zrh-bus-gate-numbering",
+      "question": "Are A01–A06 and A50–A59 both current bus-gate ranges (OSM: 'Busgate A (A50-59)', formerly A01–A10), and are D51–D58, E18–E19 and E62–E67 bus gates?",
+      "impact": "Bus flags and gate placement may be wrong for these groups.",
+      "howToResolve": "Official departure board snapshots for these gates, or photos of the bus-gate signage."
+    },
+    {
+      "id": "q:zrh-modulbau",
+      "question": "Which gate numbers will the temporary modular building south of Dock B use when it opens (expected 2027), and which bus gates will close for the new Dock A works?",
+      "impact": "Future status periods for bus gates cannot be dated yet.",
+      "howToResolve": "Watch Flughafen Zürich newsroom / construction pages in 2027."
+    },
+    {
+      "id": "q:zrh-mct",
+      "question": "What is the official minimum connecting time at ZRH (Schengen/non-Schengen combinations)?",
+      "impact": "Not used by the movement-only router, but useful as a rule. Only unofficial values (40 min, or 45–60 min) were found, and they contradict each other.",
+      "howToResolve": "SWISS or Lufthansa Group connection-time page (Lufthansa business page returned HTTP 403 to automated access)."
+    }
+  ],
+  "sources": [
+    { "id": "src:zrh-airline-swiss", "title": "Zurich Airport airline page: SWISS (check-in locations and opening hours; document checks at check-in for US flights)", "url": "https://www.flughafen-zuerich.ch/en/passengers/fly/flightinformation/airlines/swiss", "publisher": "Flughafen Zürich AG", "kind": "official", "group": "flughafen-zuerich", "accessed": "2026-11-01", "notes": "Owner screenshots 2026-11-02: Check-in 1 04:00 (at the earliest two hours before first departure)–22:00, early check-in 23 h before departure; Check-in 2 row 5 Self Bag Drop 04:00–20:30 (online check-in and valid boarding pass); Check-in 3 Self Bag Drop 04:00 (at the earliest two hours before first departure)–17:30, Business Class may use staffed desks; \"On flights to the United States, all travellers are required to be physically present at check-in due to document checks.\"" },
+    { "id": "src:zrh-selfbagdrop", "title": "Zurich Airport: Self Bag Drop", "url": "https://www.flughafen-zuerich.ch/en/passengers/fly/all-about-the-flight/selfbagdrop", "publisher": "Flughafen Zürich AG", "kind": "official", "group": "flughafen-zuerich", "accessed": "2026-11-01", "notes": "Owner report 2026-11-02: Check-in 3 self bag drop 04:30–17:30 (30 min later than the SWISS airline page). Conflict under verification." },
+    { "id": "src:zrh-airlines-israel", "title": "Flughafen Zürich: airlines to Israel (El Al check-in 2, rows 3–4, opens 3 h before departure)", "url": "https://www.flughafen-zuerich.ch/en/passengers/fly/flightinformation/airlines/israel", "publisher": "Flughafen Zürich AG", "kind": "official", "group": "zrh-official", "accessed": "2026-11-01" },
+    { "id": "src:elal-zrh", "title": "El Al Switzerland station page (gate security must be finished 2 h before departure)", "url": "https://www.elal.com/en/Switzerland/Pages/ZRH-Airport-Information.aspx", "publisher": "El Al", "kind": "airline", "group": "elal", "accessed": "2026-11-01", "notes": "Search excerpt (elal.com returns a bot wall)." },
+    { "id": "src:dhs-tsa-2017-enhanced", "title": "DHS / TSA: enhanced security measures for all commercial flights to the United States (June 2017; >280 last-point-of-departure airports, security directives and emergency amendments)", "url": "https://www.dhs.gov/", "publisher": "U.S. Department of Homeland Security", "kind": "official", "group": "dhs", "accessed": "2026-11-01", "published": "2017-06", "notes": "Read through the DHS 2017 testimony by the research pass of 2026-11-01; exact page URL not recorded. Procedures themselves are not public." },
+    { "id": "src:fd-feed-terminals-2026-11-01", "title": "CDG Navigator flight-data server: terminal / gate strings observed in the collected feed (2026-10-30 – 2026-11-01), read-only GET /fd-api/stats/distribution and /fd-api/flights", "url": "http://127.0.0.1:8790/fd-api/stats/summary", "publisher": "CDG Navigator (local flight-data collection, AeroDataBox-derived)", "kind": "other", "group": "fd-feed", "accessed": "2026-11-01", "notes": "Cross-tabulated by the other airport's Schengen zone and by gate letter; counts in docs/research/AIRPORT_DATA_REMEDIATION.md. Local research data, not for display." },
+    { "id": "src:eu-oss-2025-920", "title": "Commission Implementing Regulation (EU) 2025/920 amending Reg. (EU) 2015/1998 (one-stop security lists: Ben Gurion removed from Attachments 3-B / 4-B; Kangerlussuaq, Guernsey, Isle of Man, Jersey removed)", "url": "https://eur-lex.europa.eu/eli/reg_impl/2025/920/oj", "publisher": "European Commission", "kind": "official", "group": "eu-law", "accessed": "2026-11-01", "published": "2025-05-20", "notes": "Recitals read from the umwelt-online.de text (EUR-Lex HTML returned empty). The consolidated Attachment 4-B list was NOT read: owner capture. Baseline list: Reg. (EU) 2019/413 (Canada, Faroe Islands Vagar, Greenland Kangerlussuaq, Guernsey, Isle of Man, Jersey, Montenegro, Singapore Changi, United Kingdom, United States)." },
+    { "id": "src:eu-avsec-scope", "title": "European Commission: aviation security (common rules also apply to Norway, Iceland, Liechtenstein and Switzerland)", "url": "https://transport.ec.europa.eu/transport-modes/air/aviation-security_en", "publisher": "European Commission", "kind": "official", "group": "eu-commission", "accessed": "2026-11-01", "notes": "Search excerpt." },
+    { "id": "src:zrh-newsroom-skymetro-phase2", "title": "Flughafen Zürich newsroom: Start der zweiten Bauetappe der Skymetro-Modernisierung", "url": "https://newsroom.flughafen-zuerich.ch/en/start-of-the-second-construction-phase-of-the-skymetro-modernisation/", "publisher": "Flughafen Zürich AG", "kind": "official", "group": "zrh-official", "accessed": "2026-11-01", "published": "2026-10-30" },
+    { "id": "src:zrh-official-transfer", "title": "Transfer", "url": "https://www.flughafen-zuerich.ch/en/passengers/fly/all-about-the-flight/transfer", "publisher": "Flughafen Zürich AG", "kind": "official", "group": "flughafen-zuerich", "accessed": "2026-10-31", "notes": "Transfer desks in all gate areas A, B, D, E; Skymetro links A, B, D with E 'in just a few minutes and without any stops'; renewed security depending on origin." },
+    { "id": "src:zrh-official-dock-e", "title": "Dock E (completed construction project)", "url": "https://www.flughafen-zuerich.ch/en/company/flughafen-zuerich/airport-development/old-conctruction-projects/dock-e", "publisher": "Flughafen Zürich AG", "kind": "official", "group": "flughafen-zuerich", "accessed": "2026-10-31", "notes": "500 m × 24 m, 27 stands (2 A380), opened Sept 2003, levels (1 arrivals, 2 departures), Skymetro ≈3 min under runway 10/28 to the basement." },
+    { "id": "src:zrh-official-airside-center", "title": "Airside Center (completed construction project)", "url": "https://www.flughafen-zuerich.ch/en/company/flughafen-zuerich/airport-development/old-conctruction-projects/airside-center", "publisher": "Flughafen Zürich AG", "kind": "official", "group": "flughafen-zuerich", "accessed": "2026-10-31", "notes": "Opened 15 Sept 2004; structural link between Docks A and B; Skymetro 3 min to Dock E basement." },
+    { "id": "src:zrh-official-passport-hall", "title": "Passport Control Hall (completed construction project)", "url": "https://www.flughafen-zuerich.ch/en/company/flughafen-zuerich/airport-development/old-conctruction-projects/passport-control-hall", "publisher": "Flughafen Zürich AG", "kind": "official", "group": "flughafen-zuerich", "accessed": "2026-10-31", "notes": "Links the Airside Center with Dock E and Dock B; new Schengen external border; works 2008–2011; 17 desks." },
+    { "id": "src:zrh-official-passport-hall-expansion", "title": "Expansion of the Passport Control Hall", "url": "https://www.flughafen-zuerich.ch/en/company/flughafen-zuerich/airport-development/current-construction-projects/passport-control-hall", "publisher": "Flughafen Zürich AG", "kind": "official", "group": "flughafen-zuerich", "accessed": "2026-10-31", "notes": "Underground, between Docks A and B; hub for immigration, emigration and transfer; construction from 2025, full operation ≈2030." },
+    { "id": "src:zrh-official-security-building", "title": "Security Check Building (completed construction project)", "url": "https://www.flughafen-zuerich.ch/en/company/flughafen-zuerich/airport-development/old-conctruction-projects/security-check-building", "publisher": "Flughafen Zürich AG", "kind": "official", "group": "flughafen-zuerich", "accessed": "2026-10-31", "notes": "Between Terminals 1/2 and the Airside Center; 26 checkpoints on 4 levels; single entrance from T1 or T2; since 1 Dec 2011." },
+    { "id": "src:zrh-official-new-dock-a", "title": "Main airport complex development (new Dock A, tower and dock base)", "url": "https://www.flughafen-zuerich.ch/en/company/flughafen-zuerich/airport-development/current-construction-projects/main-airport-complex-development", "publisher": "Flughafen Zürich AG", "kind": "official", "group": "flughafen-zuerich", "accessed": "2026-10-31", "notes": "New Dock A north of the current one; project start 2023, construction 2027; old dock dismantled after the new one opens." },
+    { "id": "src:zrh-official-modulbau", "title": "Modular construction", "url": "https://www.flughafen-zuerich.ch/en/company/flughafen-zuerich/airport-development/current-construction-projects/modulbau", "publisher": "Flughafen Zürich AG", "kind": "official", "group": "flughafen-zuerich", "accessed": "2026-10-31", "notes": "Temporary 5-storey building south of Dock B for bus gates, lounges and logistics; construction started May 2025, commissioning by 2027." },
+    { "id": "src:zrh-official-renovation", "title": "Umbauarbeiten am Flughafen Zürich / Renovation works", "url": "https://www.flughafen-zuerich.ch/de/passagiere/news/aktuelle-informationen/umbauarbeiten", "publisher": "Flughafen Zürich AG", "kind": "official", "group": "flughafen-zuerich", "accessed": "2026-10-31", "notes": "Page body (Oct 2026): Airport Shopping rebuild, diverted routes. Page metadata still says 'die Skymetro zum Dock E wird modernisiert'. Skymetro phase-2 dates (mid-Oct 2026 – end Apr 2027), one tunnel closed, one Skymetro always running, buses at peaks: search-engine excerpts of this page (en + de), not in the current body. Phase 2 (2026-10-31 re-read: no Skymetro text in the en or de body): the dates are superseded by the 30 Oct 2026 announcement (start 3 Nov 2026, until about May 2027)." },
+    { "id": "src:zrh-staff-newsletter-skymetro-2025", "title": "Skymetro – Arbeiten an Technik und Infrastruktur (partner newsletter, with diagrams 'Terminplan' and 'Skymetro Single Shuttle und Busersatzverkehr')", "url": "https://www.flughafen-zuerich.ch/de/zrh-staff/arbeitsmittel-und-mitarbeiterservices/mitarbeiterservices/partner-newsletter/uebersichtsseite/20251027-skymetro", "publisher": "Flughafen Zürich AG", "kind": "official", "group": "flughafen-zuerich", "accessed": "2026-11-01", "published": "2025-10-27", "notes": "Official staff/partner newsletter. Text: staged tunnel closures, 'Busersatz' 06:00–09:00 and 10:30–13:00, times adjustable 'je nach Bedarf'. Diagram skymetro-2.png: Bauphase 1 (daily 04.11.2025 – ca. Mitte Juni 2026) Skymetro single shuttle with 3 cars (EU, EU, ICAO) 04:45–23:30 'alle 6–7 min'; 'Busentlastung' ca. every 3 min, 06:00–09:00 ICAO E → A/B, 10:30–13:00 ICAO E → A/B and EU A/B → E. Diagram skymetro_terminplan.jpg: Bauphase 1 Tue 4 Nov 2025 tunnel 2 closed, relief buses for 7 months to ca. mid-June 2026; summer 2026 normal operation (tunnel 1 three cars, tunnel 2 four cars); Bauphase 2 planned Mon 19 Oct 2026 tunnel 1 closed, relief buses for 6 months to ca. end of April 2027; from summer 2027 two four-car trains. Planning document of Oct 2025: the phase-2 start was later announced for 3 Nov 2026. Images read by the coordinator on 2026-11-01, not stored." },
+    { "id": "src:skynews-skymetro-2025", "title": "Flughafen Zürich: Skymetro wird saniert und erweitert", "url": "https://skynews.ch/zivilluftfahrt/flughafen-zuerich-skymetro-wird-saniert-und-erweitert/", "publisher": "SkyNews.ch", "kind": "news", "group": "skynews", "accessed": "2026-10-31", "published": "2025-10-27", "notes": "Citing the airport's announcement: phase 1 from 4 Nov 2025 with tunnel 2 closed; buses to Dock E for about seven months 06:00–09:00 and 10:30–13:00 for 'part of the passengers and staff'; from about mid-June 2026 both tunnels (tunnel 1 three-car, tunnel 2 four-car); phase 2 from 19 Oct 2026, tunnel 1 closed about six months; normal operation with two four-car trains about end of April 2027; four-car trains in dual-shuttle mode." },
+    { "id": "src:travelnews-skymetro-2025", "title": "Umbau der Skymetro am Flughafen Zürich sorgt für Einschränkungen", "url": "https://www.travelnews.ch/services/30693-umbau-der-skymetro-am-flughafen-zuerich-sorgt-fuer-einschraenkungen.html", "publisher": "travelnews.ch", "kind": "news", "group": "travelnews", "accessed": "2026-10-31", "published": "2025-11-25", "notes": "Same facts as SkyNews 2025 (bus 06:00–09:00 and 10:30–13:00 in phase 1; phase 2 from 19 Oct 2026; both tunnels with four-car trains from late April 2027). Reports the same airport announcement." },
+    { "id": "src:skynews-skymetro-phase2", "title": "ZRH: Start der zweiten Etappe der Skymetro-Modernisierung", "url": "https://skynews.ch/zivilluftfahrt/flughafen-zuerich-start-der-zweiten-etappe-der-skymetro-modernisierung/", "publisher": "SkyNews.ch", "kind": "news", "group": "skynews", "accessed": "2026-10-31", "published": "2026-10-30", "notes": "'Ab dem 3. November 2026 wird der zweite, noch nicht umgebaute Tunnel für rund sechs Monate gesperrt'; until about May 2027; the Skymetro keeps running in the rebuilt tunnel with reduced capacity; bus replacement at peak times; phase 1 completed June 2026; capacity 8,000 → 10,000 per hour and direction. No bus hours, stops, headway or ride time." },
+    { "id": "src:aerotelegraph-skymetro-phase2", "title": "Flughafen Zürich setzt Umbau der Skymetro fort – in Spitzenzeiten Busersatzverkehr", "url": "https://www.aerotelegraph.com/ticker/flughafen-zuerich-setzt-umbau-der-skymetro-fort-in-spitzenzeiten-busersatzverkehr/tzj1y3d", "publisher": "aeroTELEGRAPH", "kind": "news", "group": "aerotelegraph", "accessed": "2026-10-31", "published": "2026-10-30", "notes": "Phase 1 'im Juni 2026 abgeschlossen'; phase 2 from 3 November, until about May 2027; Skymetro in the converted tunnel; 'während der Tagesspitzen ein Busersatzverkehr'." },
+    { "id": "src:airportzentrale-skymetro-phase2", "title": "Flughafen Zürich startet zweite Bauphase der Skymetro-Modernisierung", "url": "https://www.airportzentrale.de/flughafen-zuerich-startet-zweite-bauphase-der-skymetro-modernisierung/94598/", "publisher": "airportzentrale.de", "kind": "news", "group": "airportzentrale", "accessed": "2026-10-31", "published": "2026-10-30", "notes": "3 Nov 2026, second and last stage; unmodernised tunnel closed about six months; link stays open with reduced capacity; buses at daily peaks; completion May 2027." },
+    { "id": "src:baublatt-skymetro-phase2", "title": "Flughafen Zürich: Der zweite Skymetro-Tunnel wird saniert", "url": "https://www.baublatt.ch/bauprojekte/flughafen-zuerich-der-zweite-skymetro-tunnel-wird-saniert-39827", "publisher": "Baublatt", "kind": "news", "group": "baublatt", "accessed": "2026-10-31", "published": "2026-10-30", "notes": "Works start 'next Tuesday' (3 Nov 2026), about six months to May 2027; buses only at peak times to Dock E; the Skymetro keeps running. (Tages-Anzeiger headline, search result only: 'Ab Dienstag müssen Passagiere zu Spitzenzeiten per Bus zum Dock E'; page redirect loop.)" },
+    { "id": "src:bahnonline-skymetro", "title": "Skymetro am Flughafen Zürich wird modernisiert", "url": "https://www.bahnonline.ch/92065/skymetro-am-flughafen-zuerich-wird-modernisiert/", "publisher": "Bahnonline.ch", "kind": "news", "group": "bahnonline", "accessed": "2026-10-31", "published": "2026-10-10", "notes": "Garaventa/Doppelmayr/SISAG: first of two conversion phases completed (tunnel 2 runs with the new technology); next phase starts November 2026; ≈11 million passengers a year." },
+    { "id": "src:yt-trainbytrain-skymetro", "title": "Skymetro Zürich! Fahrt zum Terminal E (-BrDR_bFtUU)", "url": "https://www.youtube.com/watch?v=-BrDR_bFtUU", "publisher": "Train by Train (Thomas1980)", "kind": "video", "group": "yt-trainbytrain", "accessed": "2026-10-31", "published": "2025-03-18", "notes": "Front-window ride to Dock E, storyboard 2 s read frame by frame: motion from ≈10 s (video starts as the train moves off), bored tunnel 34–104 s, arrival platform with 'Goodbye. Come back soon!' signs from ≈108 s, stop ≈140–146 s; no cut seen." },
+    { "id": "src:yt-soibuakhao-skymetro", "title": "Switzerland 2023 – A Ride on Zurich Airport 'Skymetro' (dKFPf7433G0)", "url": "https://www.youtube.com/watch?v=dKFPf7433G0", "publisher": "Soi Buakhao", "kind": "video", "group": "yt-soibuakhao", "accessed": "2026-10-31", "published": "2024-02-02", "notes": "Recorded 2023. Storyboard 2 s read: platform screen doors and cars (0–86 s, edited), boarding ≈86 s, cut to front window at 88 s, train moves off ≈100 s, bored tunnel 124–196 s, arrival platform 198–216 s, stop ≈244 s, alighting 246 s." },
+    { "id": "src:zrh-newsroom-curfew", "title": "Zurich Airport News Flash No 12 – Extension of night-time curfew at Zurich Airport", "url": "https://newsroom.flughafen-zuerich.ch/en/zurich-airport-news-flash-no-12--extension-of-night-time-curfew-at-zurich-airport/", "publisher": "Flughafen Zürich AG", "kind": "official", "group": "flughafen-zuerich", "accessed": "2026-10-31", "published": "2010-07-29", "notes": "Curfew from 23:00, plus half an hour for delayed departures and arrivals, until 06:00; in force since 29 July 2010." },
+    { "id": "src:slotcoord-restrictions", "title": "Restrictions Zurich (ZRH/LSZH)", "url": "https://www.slotcoordination.ch/airport-information/zurich-zrhlszh/restrictions-zurich.html/112", "publisher": "Slot Coordination Switzerland", "kind": "operator", "group": "slotcoordination", "accessed": "2026-10-31", "notes": "Night curfew for slot allocation: arrivals 2300–0609, departures 2246–0544 local; no exceptions." },
+    { "id": "src:ictseurope-skymetro", "title": "ICTS supports Zurich Airport during SkyMetro renovation", "url": "https://www.ictseurope.com/news-articles-blogs/icts-supports-zurich-airport-during-skymetro-renovation", "publisher": "ICTS Europe", "kind": "operator", "group": "ictseurope", "accessed": "2026-10-31", "notes": "Passenger guidance during the renovation Dec 2025 – Jun 2026; manages 'temporary terminal entry doors' for bus and open-stand arrival passengers from end Jan 2026 (≈6 months). No locations." },
+    { "id": "src:zrh-official-new-routes", "title": "Redesign – new routes", "url": "https://www.flughafen-zuerich.ch/en/passengers/practical/guidance/new-routes", "publisher": "Flughafen Zürich AG", "kind": "official", "group": "flughafen-zuerich", "accessed": "2026-10-31", "notes": "Check-in 1 reachable via Terminal 2 during construction; departing passengers from Airport Shopping use Terminal 2 security." },
+    { "id": "src:zrh-official-border-control", "title": "Border control", "url": "https://www.flughafen-zuerich.ch/en/passengers/fly/all-about-the-flight/border-control", "publisher": "Flughafen Zürich AG", "kind": "official", "group": "flughafen-zuerich", "accessed": "2026-10-31", "notes": "e-gates (departure 18+, entry 12+, biometric passport, CH/EU/EEA or Swiss permit), self-service, 'All passports'; EES registration on site. No locations." },
+    { "id": "src:zrh-official-reduced-mobility", "title": "Travelling with reduced mobility", "url": "https://www.flughafen-zuerich.ch/en/passengers/fly/assistance/travelling-with-reduced-mobility", "publisher": "Flughafen Zürich AG", "kind": "official", "group": "flughafen-zuerich", "accessed": "2026-10-31", "notes": "Search excerpt: pick-up point in Check-in 3 'directly above the airport railway station'. Page not fetched." },
+    { "id": "src:zrh-official-busgate-b10", "title": "Event location Bus gate B10", "url": "https://www.flughafen-zuerich.ch/en/business/renting-and-advertising/events-and-conferences/eventlocation/eventlocation-busgate-b10", "publisher": "Flughafen Zürich AG", "kind": "official", "group": "flughafen-zuerich", "accessed": "2026-10-31", "notes": "Search excerpt only (the URL returns 404 now): passengers usually board the bus to the aircraft at the bus gates; B10 runs parallel to the Dock B stands." },
+    { "id": "src:osm-zrh", "title": "OpenStreetMap: aeroway=gate|terminal|runway, railway=station|funicular (Skymetro), Zurich Airport", "url": "https://www.openstreetmap.org/#map=15/47.4555/8.5585", "publisher": "OpenStreetMap contributors", "kind": "osm", "group": "osm", "accessed": "2026-10-31", "notes": "Overpass snapshot 2026-10-31 (103 gate nodes with levels, terminal buildings incl. bus-gate buildings, Skymetro ways E71/E72 and stations at levels −2/−1, SBB station). © OpenStreetMap contributors, ODbL. Placement source; projected piecewise (vertical gap Dock E ↔ Dock A compressed)." },
+    { "id": "src:wiki-zrh-en", "title": "Zurich Airport (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Zurich_Airport", "publisher": "Wikipedia", "kind": "wiki", "group": "wikipedia", "accessed": "2026-10-31", "notes": "Terminal complex: A Schengen only; B with B/D double numbers; E non-Schengen; common departure level; separate arrival areas. Low weight." },
+    { "id": "src:wiki-skymetro-en", "title": "Skymetro (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Skymetro", "publisher": "Wikipedia", "kind": "wiki", "group": "wikipedia", "accessed": "2026-10-31", "notes": "1,138 m guideways, max 47.9 km/h, 3 min; screened/unscreened passengers in separate cars since 2009; pinched loop or shuttle modes." },
+    { "id": "src:wiki-skymetro-de", "title": "Skymetro (Wikipedia, deutsch)", "url": "https://de.wikipedia.org/wiki/Skymetro", "publisher": "Wikipedia", "kind": "wiki", "group": "wikipedia", "accessed": "2026-10-31", "notes": "2–3 min; arriving/departing and Schengen/non-Schengen-origin passengers carried separately; air passengers only; plan approval for the modernisation 25 April 2024; Tages-Anzeiger 10 Jan 2024 'Passagiere müssen auf Busse ausweichen'." },
+    { "id": "src:aerotelegraph-skymetro", "title": "Skymetro in Zürich bekommt mehr Wagen – und eine Pause", "url": "https://www.aerotelegraph.com/flughaefen/skymetro-in-zuerich-bekommt-mehr-wagen-und-eine-pause/kk7wy5j", "publisher": "aeroTELEGRAPH", "kind": "news", "group": "aerotelegraph", "accessed": "2026-10-31", "published": "2025-11-20", "notes": "Phase 1 until ≈June 2026, phase 2 Oct 2026 – Apr 2027; one tunnel closed at times; some travellers by bus; two 4-car trains instead of 3-car; ≈18,000 users per day." },
+    { "id": "src:bluewin-skymetro-stuck", "title": "Skymetro gets stuck in the tunnel – passengers have to continue on foot", "url": "https://www.bluewin.ch/en/news/switzerland/skymetro-gets-stuck-in-the-tunnel-passengers-have-to-continue-on-foot-li.3535349", "publisher": "blue News (bluewin.ch)", "kind": "news", "group": "bluewin", "accessed": "2026-10-31", "published": "2026-07-20", "notes": "20 July 2026 ≈08:00: train stopped ≈200 m before a station; ≈50 passengers walked out through the tunnel with the fire brigade; emergency procedures include buses between the Airside Center and Terminal E." },
+    { "id": "src:pointsanalyst-zrh", "title": "Zurich Airport (ZRH) guide", "url": "https://www.thepointsanalyst.com/zurich-airport-zrh/", "publisher": "The Points Analyst", "kind": "guide", "group": "pointsanalyst", "accessed": "2026-10-31", "published": "2026-03-17", "notes": "A Schengen only; B/D same stands, two flows; D passport control on the lower level of the pier; E satellite; security at Check-in 1 and 2; lounges near E36/E37/E52; MCT values contradictory (not used)." },
+    { "id": "src:alviator-d-lounge", "title": "Review: Swiss Lounge D, Zurich (ZRH)", "url": "https://thealviator.com/2026/04/swiss-d-lounge-zurich/", "publisher": "The Alviator", "kind": "guide", "group": "alviator", "accessed": "2026-10-31", "published": "2026-04-08", "notes": "First-hand: lounge D 'just past passport control, on the way to the D-gates', long hallway; 'gate B34 and D34 are in the same place (just on different levels)'." },
+    { "id": "src:lh-business-zrh", "title": "Flughafen Zürich (Lufthansa Group business travel hub page)", "url": "https://business.lufthansagroup.com/ch/de/program/experts/at-the-airport/hubs/zurich-airport", "publisher": "Lufthansa Group", "kind": "airline", "group": "lufthansa-group", "accessed": "2026-10-31", "notes": "HTTP 403 to automated fetch (not circumvented). Search excerpts only: four gate areas A, B, D, E; Schengen from A and B, non-Schengen from D and E; E → A/B 15–20 min, A/B → D 15–20 min, D → E 5–10 min; Dock E in three minutes by Skymetro." },
+    { "id": "src:slotcoord-directions", "title": "Directions to the head office (from Arrival 1 / Arrival 2 / railway station)", "url": "https://www.slotcoordination.ch/contact/directions-head-office.html/73", "publisher": "Slot Coordination Switzerland", "kind": "operator", "group": "slotcoordination", "accessed": "2026-10-31", "notes": "Arrival 1 (Schengen) ≈5 min, Arrival 2 (non-Schengen, across arrival hall 1) ≈8 min, railway station ≈10 min to Operation Center 1." },
+    { "id": "src:flightreport-a54", "title": "SWISS LX1102 Zurich – Munich (flight report)", "url": "https://flight-report.com/fr/report/78114/swiss-lx1102-zurich-zrh-munich-muc/", "publisher": "Flight-Report", "kind": "guide", "group": "flight-report", "accessed": "2026-10-31", "published": "2026-07-08", "notes": "'We boarded from A54, a bus gate' (flight 8 July 2026)." },
+    { "id": "src:atxjetsetter-a55", "title": "Review: SWISS A220-100 Business Class (ZRH-PRG)", "url": "https://atxjetsetter.com/?p=5330", "publisher": "ATX Jetsetter", "kind": "guide", "group": "atxjetsetter", "accessed": "2026-10-31", "notes": "Search excerpt only: Prague flight departing from gate A55, 'which happened to be a bus gate'. Date not established." },
+    { "id": "src:yt-airportwalker-e", "title": "Zurich Airport walk through… How I get from E Gates to A, B and D Gates? (XHvDtZFMoqY)", "url": "https://www.youtube.com/watch?v=XHvDtZFMoqY", "publisher": "Airport Walker (i fly for you.tv)", "kind": "video", "group": "yt-airportwalker", "accessed": "2026-10-31", "published": "2024-03-08", "notes": "Storyboard (2 s) read: Dock E departure concourse → escalator down signed 'A B D · Ausgang/Exit · Baggage Claim' → Skymetro → Airside Center platform → escalators 'Transit Hotel / Departures A B D' and 'Ausgang/Exit' → border control (not filmed) → Airside Center shops, signs 'A Gates' / 'B/D Gates'. Edited (time-lapse), no ride timing." },
+    { "id": "src:yt-airportwalker-a", "title": "How to Transfer at Zurich Airport | From Arrival A Gates to B, E & D Gates (LoXRg0UJMTk)", "url": "https://www.youtube.com/watch?v=LoXRg0UJMTk", "publisher": "Airport Walker (i fly for you.tv)", "kind": "video", "group": "yt-airportwalker", "accessed": "2026-10-31", "published": "2023-12-22", "notes": "Storyboard (5 s) read: A arrivals corridor (moving walkways, 'A B D E' signs) → escalators up into the Airside Center (no security) → shops → signs 'B01–10', 'D21–58', 'Transfer desk & Transit hotel' → caption 'B11–B43 go straight ahead' → passport control → transit hotel." },
+    { "id": "src:yt-yvr-e-arrival", "title": "Zurich Airport Arrival Walkthrough | From E Gates to Downtown by Train (qObTfomYhNA)", "url": "https://www.youtube.com/watch?v=qObTfomYhNA", "publisher": "YVR Travels", "kind": "video", "group": "yt-yvrtravels", "accessed": "2026-10-31", "published": "2025-11-04", "notes": "Chapters + storyboard (10 s) read: deplane E34; sign 'A–B · E34–67 · Baggage Claim'; down to Skymetro 1:51–3:33; ride; Airside Center 7:25; stairs up; 'Alle Pässe / All Passports' + e-gates 9:20; baggage 11:10; customs exit 13:20; station 16:57." },
+    { "id": "src:yt-bfree-departures", "title": "Zurich Airport Departures Terminal | ZRH Airport Walking Tour, Check In, Security & Gates (r_ShgZIXAOA)", "url": "https://www.youtube.com/watch?v=r_ShgZIXAOA", "publisher": "BFree & Adventures", "kind": "video", "group": "yt-bfree", "accessed": "2026-10-31", "published": "2026-09-22", "notes": "Storyboard (5 s) read: Airport Shopping → signs 'Gates' / 'Check-in 1 Check-in 2' → Check-in 1 (SWISS) → (security not filmed) → Airside Center, signs 'B D E' right, 'A' left → Dock A, gate A62, sign 'A50–58'." },
+    { "id": "src:yt-themaintrain-skymetro", "title": "Zurich Airport skymetro: Airside Centre to Gates E (Jnr5qlnvI1E)", "url": "https://www.youtube.com/watch?v=Jnr5qlnvI1E", "publisher": "TheMainTrain", "kind": "video", "group": "yt-themaintrain", "accessed": "2026-10-31", "published": "2024-06-01", "notes": "Storyboard (2 s) read: crowded Airside Center platform, platform door '2', train display 'Gates E'; doors closed ≈55 s, tunnel graphics, arrival at Dock E ≈185 s." },
+    { "id": "src:yt-spielmann-transfer", "title": "Transfer at Zurich Kloten Airport (ykv-UQ-mSTw)", "url": "https://www.youtube.com/watch?v=ykv-UQ-mSTw", "publisher": "Pit Spielmann", "kind": "video", "group": "yt-spielmann", "accessed": "2026-10-31", "published": "2017-12-07", "notes": "Historical (2017), storyboard (5 s, 160 px) read: A arrival sign 'Ausgang/Exit · Gepäckausgabe/Baggage Claim · Gates A01–69, B D E'; Airside Center 'B D E' signs; Skymetro departure board 'Gates E' with countdown 1:58; arrival at E42." }
+  ]
+}

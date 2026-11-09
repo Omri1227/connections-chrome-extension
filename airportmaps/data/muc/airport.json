@@ -1,0 +1,3287 @@
+{
+  "iata": "MUC",
+  "icao": "EDDM",
+  "name": "Munich Airport (Franz Josef Strauss)",
+  "city": "Munich",
+  "asOf": "2026-10-31",
+  "schematic": {
+    "width": 1000,
+    "height": 640,
+    "northDeg": 0,
+    "background": [
+      {
+        "kind": "apron",
+        "label": "West apron (T1 Pier)",
+        "shape": {
+          "type": "rect",
+          "x": 100,
+          "y": 180,
+          "w": 170,
+          "h": 110
+        }
+      },
+      {
+        "kind": "apron",
+        "label": "East apron (T2 / Satellite)",
+        "shape": {
+          "type": "rect",
+          "x": 668,
+          "y": 60,
+          "w": 120,
+          "h": 470
+        }
+      },
+      {
+        "kind": "parking",
+        "label": "P20",
+        "shape": {
+          "type": "rect",
+          "x": 490,
+          "y": 332,
+          "w": 30,
+          "h": 48
+        }
+      },
+      {
+        "kind": "rail",
+        "label": "S1/S8 (tunnel)",
+        "shape": {
+          "type": "poly",
+          "points": [
+            [
+              60,
+              372
+            ],
+            [
+              396,
+              320
+            ],
+            [
+              396,
+              326
+            ],
+            [
+              60,
+              378
+            ]
+          ]
+        }
+      }
+    ],
+    "labels": [
+      {
+        "text": "Terminal 1 (modules A–E)",
+        "at": [
+          196,
+          420
+        ],
+        "kind": "district"
+      },
+      {
+        "text": "Terminal 2",
+        "at": [
+          660,
+          600
+        ],
+        "kind": "district"
+      },
+      {
+        "text": "Satellite",
+        "at": [
+          835,
+          450
+        ],
+        "kind": "district"
+      },
+      {
+        "text": "MAC",
+        "at": [
+          446,
+          255
+        ],
+        "kind": "district"
+      },
+      {
+        "text": "Runway 08L/26R lies north of the drawing, 08R/26L south of it",
+        "at": [
+          440,
+          18
+        ],
+        "kind": "runway"
+      },
+      {
+        "text": "PTS tunnel (people mover)",
+        "at": [
+          690,
+          300
+        ],
+        "kind": "note"
+      },
+      {
+        "text": "Transfer buses run on the apron (non-public area); paths indicative",
+        "at": [
+          430,
+          50
+        ],
+        "kind": "note"
+      },
+      {
+        "text": "OSM-derived geometry © OpenStreetMap contributors (ODbL); schematic, not survey-accurate",
+        "at": [
+          20,
+          630
+        ],
+        "kind": "note"
+      }
+    ]
+  },
+  "feedTerminals": { "arrival": { "1": ["muc-t1-pier", "muc-t1-c", "muc-t1-d"], "2": ["muc-t2-g", "muc-t2-h", "muc-sat-k", "muc-sat-l"], "1A": ["muc-t1-pier"], "1B": ["muc-t1-pier"], "1C": ["muc-t1-c"], "1D": ["muc-t1-d"], "1E": ["muc-t1-c", "muc-t1-d"], "1F": ["muc-hall-f"]}, "departure": { "1": ["muc-t1-pier", "muc-t1-c", "muc-t1-d"], "2": ["muc-t2-g", "muc-t2-h", "muc-sat-k", "muc-sat-l"], "1A": ["muc-t1-pier"], "1B": ["muc-t1-pier"], "1C": ["muc-t1-pier", "muc-t1-c"], "1D": ["muc-t1-d", "muc-t1-pier"], "1Z": ["muc-t1-pier", "muc-t1-c", "muc-t1-d"], "1F": ["muc-hall-f"]}},
+  "oneStopSecurity": { "countries": ["AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IE", "IT", "LV", "LT", "LU", "MT", "NL", "PL", "PT", "RO", "SK", "SI", "ES", "SE", "IS", "NO", "LI", "CH", "CA", "US", "GB", "ME", "SG"], "airports": ["FAE", "BEG"], "excludedAirports": ["TLV"], "asOf": "2026-11-01", "sources": ["src:muc-official-transfer", "src:eu-oss-2025-920", "src:eu-oss-2019-413"], "note": "FMG: depending on origin and destination, connecting passengers may have to pass security again. EU one-stop security (Reg. 2015/1998 Attachment 4-B as amended by Reg. 2019/413 and 2025/920): passengers from EU / EEA / Swiss airports and from the recognised third countries are not re-screened on transfer. Ben Gurion (TLV) was removed by Reg. 2025/920, Kangerlussuaq, Guernsey, Isle of Man and Jersey too. Belgrade (BEG) was added by Reg. 2020/111 and not removed since (consolidated text reconstructed from mirrors, likely: docs/research/EVIDENCE_2026-11-02.md); Reg. 2025/920 applies from 21 May 2025. The official consolidated Attachment 4-B was not read (EUR-Lex: owner capture)." },
+  "specialScreening": [{ "id": "ss:muc-israel-hall-f", "appliesTo": { "destinationCountries": ["IL"]}, "areas": ["muc-hall-f"], "certainty": "verified", "issueLevel": "material", "text": "Flights to Israel (El Al, Israir and Lufthansa \"Abflüge nach Tel Aviv: T1 F\") check in and depart at Terminal 1 Hall F, a separate building reachable only on foot through the public area. Connecting passengers follow \"Exit / Hall F\":  they leave the airside area and pass check-in and security again. Feed 2026-10-30 – 11-01: all 9 TLV departures (LH, LY, BZ) report terminal \"1F\". No screening duration is published.", "sources": ["src:muc-airline-elal", "src:muc-airline-israir", "src:muc-airline-lh", "src:muc-faq-hall-f", "src:fd-feed-terminals-2026-11-01"]},{ "id": "ss:muc-us-enhanced", "appliesTo": { "destinationCountries": ["US"]}, "certainty": "unknown", "issueLevel": "secondary", "text": "US-bound flights: TSA / DHS enhanced security measures for all last-point-of-departure airports (2017, still the baseline as far as known) may add checks at check-in or at the gate (interviews, document checks, separate screening of electronics). The procedures are not public; no time is known.", "sources": ["src:dhs-tsa-2017-enhanced"]}],
+  "areas": [
+    {
+      "id": "muc-t1-land",
+      "checkIn": { "serves": ["muc-t1-pier", "muc-t1-a", "muc-t1-b", "muc-t1-c", "muc-t1-d", "muc-hall-f"], "sources": ["src:fd-feed-terminals-2026-11-01"], "note": "T1 check-in modules A–D (feed: non-Schengen flights check in at A, B, C and board at the Pier); Module F = Hall F (Israel flights)" },
+      "name": "Terminal 1 · Public halls A–E (check-in, arrivals)",
+      "short": "T1",
+      "kind": "landside-hall",
+      "terminal": "T1",
+      "side": "landside",
+      "zone": "n/a",
+      "matrix": true,
+      "anchor": [
+        352,
+        330
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            306,
+            62
+          ],
+          [
+            324,
+            62
+          ],
+          [
+            378,
+            592
+          ],
+          [
+            360,
+            596
+          ]
+        ]
+      },
+      "level": "Level 03 (arrivals, central area) / Level 04 (departures)",
+      "description": "The public side of Terminal 1: one long building with check-in and arrival halls for modules A–E, joined to the central area (S-Bahn) and the MAC. Module E is arrivals only. Each legacy module has its own security checkpoint; the T1 Pier has a central checkpoint.",
+      "confidence": "verified",
+      "sources": [
+        "src:muc-faq",
+        "src:wiki-muc",
+        "src:kayak-muc",
+        "src:yt-jun-landside",
+        "src:yt-pedestrians-t1",
+        "src:osm-muc"
+      ],
+      "notes": "The typical point is near modules B/C (closest to the S-Bahn and the MAC). Modules A and D/E are 10–15 min on foot from the MAC (KAYAK); the walks into the modules carry that distance."
+    },
+    {
+      "id": "muc-sbahn",
+      "name": "S-Bahn station Munich Airport (S1/S8, below the central area)",
+      "short": "S",
+      "kind": "station",
+      "side": "landside",
+      "zone": "n/a",
+      "matrix": true,
+      "anchor": [
+        396,
+        323
+      ],
+      "shape": {
+        "type": "rect",
+        "x": 384,
+        "y": 312,
+        "w": 24,
+        "h": 22
+      },
+      "level": "Level 02 (platforms), escalators to Level 03",
+      "description": "Terminus station 'München Flughafen Terminal' of the S1 and S8 (DB InfraGO), below the Munich Airport Center / central area between T1 and the MAC Forum. From Level 03 signs split to Terminal 1 and Terminal 2.",
+      "confidence": "verified",
+      "sources": [
+        "src:muc-faq",
+        "src:muc-public-transport",
+        "src:osm-muc",
+        "src:yt-jun-landside"
+      ]
+    },
+    {
+      "id": "muc-mac",
+      "name": "Munich Airport Center (MAC Forum)",
+      "short": "MAC",
+      "kind": "landside-hall",
+      "side": "landside",
+      "zone": "n/a",
+      "matrix": false,
+      "anchor": [
+        460,
+        286
+      ],
+      "shape": {
+        "type": "rect",
+        "x": 431,
+        "y": 266,
+        "w": 58,
+        "h": 38
+      },
+      "level": "Level 03 (ground floor)",
+      "description": "Covered open-air forum between Terminal 1 and Terminal 2 (shops, restaurants, Airbräu). Public side only: crossing it means leaving the security area.",
+      "confidence": "verified",
+      "sources": [
+        "src:muc-faq",
+        "src:wiki-muc",
+        "src:pointsanalyst-muc",
+        "src:osm-muc"
+      ]
+    },
+    {
+      "id": "muc-t2-land",
+      "checkIn": { "serves": ["muc-t2-g", "muc-t2-h", "muc-sat-k", "muc-sat-l"], "sources": ["src:fd-feed-terminals-2026-11-01"], "note": "T2 central check-in (Lufthansa Group, Star Alliance); Lufthansa Tel Aviv departures check in at T1 F instead" },
+      "name": "Terminal 2 · Check-in and arrivals hall (public side)",
+      "short": "T2",
+      "kind": "landside-hall",
+      "terminal": "T2",
+      "side": "landside",
+      "zone": "n/a",
+      "matrix": true,
+      "anchor": [
+        556,
+        312
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            514,
+            262
+          ],
+          [
+            592,
+            256
+          ],
+          [
+            600,
+            380
+          ],
+          [
+            523,
+            347
+          ]
+        ]
+      },
+      "level": "Level 04 departures (central security), Level 03 arrivals and bus stops",
+      "description": "Central check-in hall of Terminal 2 (Lufthansa Group and Star Alliance) facing the MAC Forum, with one central security checkpoint; arrivals and bus stops on Level 03.",
+      "confidence": "verified",
+      "sources": [
+        "src:muc-faq",
+        "src:muc-public-transport",
+        "src:wiki-muc",
+        "src:pointsanalyst-muc",
+        "src:osm-muc"
+      ]
+    },
+    {
+      "id": "muc-t1-pier",
+      "intraWalk": { "min": 1, "typical": 2.5, "max": 6, "basis": "derived", "note": "Derived (R-02): pier length ≈ 360 m (area description); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Terminal 1 Pier (non-Schengen, gates A40–A51, A60–A64)",
+      "short": "Pier",
+      "kind": "pier",
+      "terminal": "T1",
+      "side": "airside",
+      "zone": "non-schengen",
+      "matrix": true,
+      "anchor": [
+        212,
+        236
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            312,
+            192
+          ],
+          [
+            250,
+            192
+          ],
+          [
+            150,
+            214
+          ],
+          [
+            118,
+            244
+          ],
+          [
+            124,
+            272
+          ],
+          [
+            312,
+            264
+          ]
+        ]
+      },
+      "level": "Level 05 central security and exit passport control; Level 04 gates A40–A51 and marketplace; Level 03 bus gates, entry passport control and reclaim",
+      "description": "360 m pier into the west apron between modules A and B, opened for regular operations on 21 April 2026 for all T1 non-Schengen flights (~37–40 airlines). Twelve contact positions (or six wide-body), centralised security with CT scanners and passport control, Airport Lounge World and the Emirates lounge. Joined to modules A and B by four connecting bridges (VB 1–4).",
+      "status": [
+        {
+          "state": "planned",
+          "until": "2026-04-20",
+          "note": "Trial operation with test passengers from October 2025; ceremony 13 April 2026; not in passenger service before 21 April 2026.",
+          "confidence": "verified",
+          "sources": [
+            "src:muc-press-pier-grand-opening",
+            "src:pointsanalyst-muc"
+          ]
+        },
+        {
+          "state": "active",
+          "from": "2026-04-21",
+          "note": "Regular operations since 21 April 2026 (first arrival AA from Charlotte, first departure DL to Detroit).",
+          "confidence": "verified",
+          "sources": [
+            "src:muc-press-pier-open",
+            "src:muc-press-pier-100days",
+            "src:pointsanalyst-muc"
+          ]
+        }
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:muc-official-t1pier",
+        "src:muc-press-pier-open",
+        "src:muc-pocketguide-t1",
+        "src:yt-muc-pier-tour",
+        "src:pointsanalyst-muc",
+        "src:osm-muc"
+      ],
+      "notes": "Only non-Schengen passengers use the pier, so it has no Schengen/non-Schengen split (FMG staff story). Gate numbering continues the A series. Arrivals are segregated: arriving passengers leave the aircraft on the Level 05 arrivals corridor (unclean), separate from the Level 04 departure (clean) area (pocket guide).",
+      "arrivals": "segregated"
+    },
+    {
+      "id": "muc-t1-pier-l05",
+      "name": "Terminal 1 Pier · Level 05 arrivals corridor and transfer checkpoint",
+      "short": "Pier5",
+      "kind": "transfer-hub",
+      "terminal": "T1",
+      "side": "airside",
+      "zone": "non-schengen",
+      "matrix": false,
+      "anchor": [
+        290,
+        212
+      ],
+      "level": "Level 05",
+      "description": "Arrivals level of the pier (non-Schengen, \"unclean\"): arriving passengers either go down to the Level 03 entry border control and reclaim, or pass the transfer security checkpoint (Transfer SiKo) back into the Level 04 departure area.",
+      "status": [
+        {
+          "state": "planned",
+          "until": "2026-04-20",
+          "note": "Trial operation with test passengers from October 2025; ceremony 13 April 2026; not in passenger service before 21 April 2026.",
+          "confidence": "verified",
+          "sources": [
+            "src:muc-press-pier-grand-opening",
+            "src:pointsanalyst-muc"
+          ]
+        },
+        {
+          "state": "active",
+          "from": "2026-04-21",
+          "note": "Regular operations since 21 April 2026 (first arrival AA from Charlotte, first departure DL to Detroit).",
+          "confidence": "verified",
+          "sources": [
+            "src:muc-press-pier-open",
+            "src:muc-press-pier-100days",
+            "src:pointsanalyst-muc"
+          ]
+        }
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:muc-pocketguide-t1",
+        "src:muc-official-t1pier"
+      ],
+      "notes": "One official group (pocket guide plan + pier page \"Ebene 05: Ankunft, Pass- und Sicherheitskontrollen\")."
+    },
+    {
+      "id": "muc-t1-a",
+      "zones": [{ "zone": "schengen", "validFrom": "2026-04-21" }],
+      "intraWalk": { "min": 1, "typical": 2, "max": 5, "basis": "derived", "note": "Derived (R-02): pier length ≈ 260 m (gate path × 2.2 m/unit); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Terminal 1 · Module A gates (A09–A28)",
+      "short": "A",
+      "kind": "concourse",
+      "terminal": "T1",
+      "side": "airside",
+      "zone": "mixed",
+      "matrix": true,
+      "anchor": [
+        290,
+        128
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            268,
+            64
+          ],
+          [
+            296,
+            64
+          ],
+          [
+            308,
+            190
+          ],
+          [
+            280,
+            190
+          ]
+        ]
+      },
+      "description": "Legacy module A at the north end of T1 (gates A09–A28 along the west apron). Until April 2026 module A served Schengen flights. Since the pier opened, the pier's connecting bridge VB 1 meets module A at A27/A28, and A28 is the non-Schengen stop of the T1–T2 transfer bus. Its current border zone is not established.",
+      "confidence": "inferred",
+      "sources": [
+        "src:muc-pocketguide-t1",
+        "src:muc-official-transfer-diagram",
+        "src:kayak-muc",
+        "src:wiki-muc",
+        "src:osm-muc"
+      ],
+      "notes": "Zone 'mixed' = unresolved: pre-pier Schengen (KAYAK, Wikipedia, JUN video Nov 2025), post-pier evidence ties A28 to the non-Schengen pier. No airside walk to other modules is modelled (pre-pier sources: modules self-contained). Phase 2: no post-April-2026 source states this module's border zone. A Sept 2026 news report lists the regular T1 checkpoints as modules C and D (Level 5) and the pier only; whether A and B still have their own departure checkpoint is not established."
+    },
+    {
+      "id": "muc-t1-b",
+      "zones": [{ "zone": "schengen", "validFrom": "2026-04-21" }],
+      "intraWalk": { "min": 1, "typical": 2, "max": 4.5, "basis": "derived", "note": "Derived (R-02): pier length ≈ 200 m (gate path × 2.2 m/unit); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Terminal 1 · Module B gates (B02–B17)",
+      "short": "B",
+      "kind": "concourse",
+      "terminal": "T1",
+      "side": "airside",
+      "zone": "mixed",
+      "matrix": true,
+      "anchor": [
+        312,
+        288
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            298,
+            238
+          ],
+          [
+            318,
+            238
+          ],
+          [
+            328,
+            336
+          ],
+          [
+            306,
+            336
+          ]
+        ]
+      },
+      "description": "Legacy module B south of the pier root. Until April 2026 non-Schengen. Its arrivals area was partly rebuilt into the pier (reclaim B1–B4, transfer border control on Level 04 next to the check-in). Current use of the B gates is not established.",
+      "confidence": "inferred",
+      "sources": [
+        "src:muc-pocketguide-t1",
+        "src:muc-press-pier-grand-opening",
+        "src:kayak-muc",
+        "src:wiki-muc",
+        "src:osm-muc"
+      ],
+      "notes": "Zone 'mixed' = unresolved after the pier opening. Phase 2: no post-April-2026 source states this module's border zone. A Sept 2026 news report lists the regular T1 checkpoints as modules C and D (Level 5) and the pier only; whether A and B still have their own departure checkpoint is not established."
+    },
+    {
+      "id": "muc-t1-c",
+      "intraWalk": { "min": 1, "typical": 2, "max": 4.5, "basis": "derived", "note": "Derived (R-02): pier length ≈ 240 m (gate path × 2.2 m/unit); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Terminal 1 · Module C gates (C01–C10)",
+      "short": "C",
+      "kind": "concourse",
+      "terminal": "T1",
+      "side": "airside",
+      "zone": "schengen",
+      "matrix": true,
+      "anchor": [
+        322,
+        392
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            306,
+            340
+          ],
+          [
+            328,
+            340
+          ],
+          [
+            338,
+            442
+          ],
+          [
+            314,
+            442
+          ]
+        ]
+      },
+      "description": "Legacy module C. The current official transfer diagram places the Schengen stop of the T1–T2 transfer bus at gate C08. Before the pier opened module C was a non-Schengen module.",
+      "confidence": "inferred",
+      "sources": [
+        "src:muc-official-transfer-diagram",
+        "src:osm-muc",
+        "src:kayak-muc",
+        "src:wiki-muc",
+        "src:muc-plan-2023"
+      ],
+      "notes": "Schengen assignment rests on one official diagram (undated image, published with the post-pier transfer page) and on the official statement that all T1 non-Schengen flights moved to the pier. Contradicted by pre-April-2026 sources (KAYAK, Wikipedia, JUN video). Phase 2: FMG's own transfer-bus diagram labels the C08 stop 'Non-Schengen' in the Sept 2023 version and 'Schengen' in the 2026 version, while A28 changed from 'Schengen' to 'Non-Schengen' and the 2023 'Busstop Gate D08 Schengen' was dropped. This dated change supports C = Schengen after the pier opening, but all of it is one source group (FMG), so the grade stays inferred. A news report (Sept 2026) names the regular T1 checkpoints as modules C and D on Level 5 plus the pier."
+    },
+    {
+      "id": "muc-t1-d",
+      "intraWalk": { "min": 1, "typical": 2.5, "max": 5.5, "basis": "derived", "note": "Derived (R-02): pier length ≈ 300 m (gate path × 2.2 m/unit); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Terminal 1 · Module D gates (D01–D23, Schengen)",
+      "short": "D",
+      "kind": "concourse",
+      "terminal": "T1",
+      "side": "airside",
+      "zone": "schengen",
+      "matrix": true,
+      "anchor": [
+        336,
+        520
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            316,
+            446
+          ],
+          [
+            340,
+            446
+          ],
+          [
+            356,
+            596
+          ],
+          [
+            330,
+            596
+          ]
+        ]
+      },
+      "description": "Southern legacy module D (Schengen) with its own security checkpoint (CT scanners reported); a long glazed gate hall signed 'D15–D23'.",
+      "confidence": "probable",
+      "sources": [
+        "src:kayak-muc",
+        "src:wiki-muc",
+        "src:yt-jun-landside",
+        "src:yt-pedestrians-t1",
+        "src:osm-muc"
+      ],
+      "notes": "Schengen use documented before the pier opening; no source reports a change for D after April 2026."
+    },
+    {
+      "id": "muc-t2-g",
+      "intraWalk": { "min": 1, "typical": 5.5, "max": 13, "basis": "derived", "note": "Derived (R-02): pier length ≈ 980 m (980 m main pier (area description)); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Terminal 2 · Gates G (Schengen, Level 04)",
+      "short": "G",
+      "kind": "concourse",
+      "terminal": "T2",
+      "side": "airside",
+      "zone": "schengen",
+      "matrix": true,
+      "anchor": [
+        604,
+        180
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            588,
+            56
+          ],
+          [
+            606,
+            56
+          ],
+          [
+            658,
+            534
+          ],
+          [
+            640,
+            536
+          ]
+        ]
+      },
+      "level": "Level 04 (contact gates G01–G48); bus gates G61–G84 on Level 03",
+      "stack": {
+        "group": "muc-t2-main",
+        "order": 0,
+        "label": "L04"
+      },
+      "description": "Schengen level of the 980 m main pier of Terminal 2: contact gates G01–G48 and bus gates G61–G84 one level down. Same aircraft stands as H on Level 05.",
+      "confidence": "verified",
+      "sources": [
+        "src:muc-official-transfer",
+        "src:wiki-muc",
+        "src:pointsanalyst-muc",
+        "src:osm-muc",
+        "src:yt-airportwalker-gl",
+        "src:yt-avfanatic-kg"
+      ]
+    },
+    {
+      "id": "muc-t2-h",
+      "intraWalk": { "min": 1, "typical": 5.5, "max": 13, "basis": "derived", "note": "Derived (R-02): pier length ≈ 980 m (980 m main pier (area description)); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Terminal 2 · Gates H (non-Schengen, Level 05)",
+      "short": "H",
+      "kind": "concourse",
+      "terminal": "T2",
+      "side": "airside",
+      "zone": "non-schengen",
+      "matrix": true,
+      "anchor": [
+        640,
+        430
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            588,
+            56
+          ],
+          [
+            606,
+            56
+          ],
+          [
+            658,
+            534
+          ],
+          [
+            640,
+            536
+          ]
+        ]
+      },
+      "level": "Level 05",
+      "stack": {
+        "group": "muc-t2-main",
+        "order": 1,
+        "label": "L05"
+      },
+      "description": "Non-Schengen level stacked above G (gates H01–H48 on the same stands as G01–G48), reached through passport control.",
+      "confidence": "verified",
+      "sources": [
+        "src:muc-official-transfer",
+        "src:wiki-muc",
+        "src:pointsanalyst-muc",
+        "src:osm-muc",
+        "src:yt-airportwalker-gl"
+      ]
+    },
+    {
+      "id": "muc-sat-k",
+      "intraWalk": { "min": 1, "typical": 4, "max": 9, "basis": "derived", "note": "Derived (R-02): pier length ≈ 609 m (satellite 609 m (area description)); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Satellite · Gates K (Schengen, lower level) and J bus gates",
+      "short": "K",
+      "kind": "satellite",
+      "terminal": "T2",
+      "side": "airside",
+      "zone": "schengen",
+      "matrix": true,
+      "anchor": [
+        828,
+        250
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            802,
+            116
+          ],
+          [
+            862,
+            116
+          ],
+          [
+            898,
+            416
+          ],
+          [
+            830,
+            416
+          ]
+        ]
+      },
+      "level": "Schengen level (gates K); J bus gates at apron level",
+      "stack": {
+        "group": "muc-satellite",
+        "order": 0,
+        "label": "K"
+      },
+      "description": "Midfield satellite of Terminal 2 (opened 26 April 2016, 609 m, 27 stands, 52 gates), airside only, reached only by the PTS people mover. Schengen gates K on the lower gate level, bus gates J at apron level.",
+      "confidence": "verified",
+      "sources": [
+        "src:muc-official-transfer",
+        "src:muc-press-satellite-10y",
+        "src:wiki-muc",
+        "src:pointsanalyst-muc",
+        "src:osm-muc",
+        "src:yt-kurmann-kl",
+        "src:yt-avfanatic-kg"
+      ]
+    },
+    {
+      "id": "muc-sat-l",
+      "intraWalk": { "min": 1, "typical": 4, "max": 9, "basis": "derived", "note": "Derived (R-02): pier length ≈ 609 m (satellite 609 m (area description)); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Satellite · Gates L (non-Schengen, upper level)",
+      "short": "L",
+      "kind": "satellite",
+      "terminal": "T2",
+      "side": "airside",
+      "zone": "non-schengen",
+      "matrix": true,
+      "anchor": [
+        872,
+        330
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            802,
+            116
+          ],
+          [
+            862,
+            116
+          ],
+          [
+            898,
+            416
+          ],
+          [
+            830,
+            416
+          ]
+        ]
+      },
+      "level": "Non-Schengen level, one floor above K",
+      "stack": {
+        "group": "muc-satellite",
+        "order": 1,
+        "label": "L"
+      },
+      "description": "Non-Schengen level of the satellite, directly upstairs from K via passport control; same stands as K. US departures have an additional per-flight document check and a holding area.",
+      "confidence": "verified",
+      "sources": [
+        "src:wiki-muc",
+        "src:pointsanalyst-muc",
+        "src:osm-muc",
+        "src:yt-kurmann-kl",
+        "src:yt-airportwalker-gl"
+      ]
+    },
+    {
+      "id": "muc-hall-f",
+      "name": "Hall F (special-security flights)",
+      "short": "F",
+      "kind": "terminal",
+      "terminal": "T1",
+      "side": "airside",
+      "zone": "mixed",
+      "matrix": false,
+      "anchor": [
+        558,
+        105
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            540,
+            62
+          ],
+          [
+            566,
+            62
+          ],
+          [
+            577,
+            150
+          ],
+          [
+            549,
+            150
+          ]
+        ]
+      },
+      "description": "Separate building between T1 and T2 (north of T2) for flights with extra security requirements (e.g. Israel). Reachable only on foot via the public area; connecting passengers follow 'Exit / Hall F'.",
+      "confidence": "probable",
+      "sources": [
+        "src:muc-faq",
+        "src:kayak-muc",
+        "src:wiki-muc",
+        "src:osm-muc"
+      ],
+      "notes": "No gate number attested; zone not established. Kept outside the matrix."
+    }
+  ],
+  "gateGroups": [
+    {
+      "id": "muc-gates-a09-a28",
+      "area": "muc-t1-a",
+      "label": "A09–A28",
+      "gates": [
+        "A09",
+        "A10",
+        "A11",
+        "A12",
+        "A14",
+        "A15",
+        "A16",
+        "A17",
+        "A18",
+        "A19",
+        "A20",
+        "A21",
+        "A22",
+        "A23",
+        "A24",
+        "A25",
+        "A26",
+        "A27",
+        "A28"
+      ],
+      "path": [
+        [
+          289,
+          71
+        ],
+        [
+          287,
+          96
+        ],
+        [
+          298,
+          137
+        ],
+        [
+          294,
+          152
+        ],
+        [
+          304,
+          185
+        ]
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:osm-muc",
+        "src:muc-pocketguide-t1"
+      ],
+      "notes": "Several stands carry two numbers (A09/A10, A11/A12, A14/A15, A16/A17, A18/A19, A24/A25, A26/A27). A13 not attested. A28 is also the non-Schengen T1–T2 transfer-bus stop."
+    },
+    {
+      "id": "muc-gates-a40-a51",
+      "area": "muc-t1-pier",
+      "label": "A40–A51 (Pier, Level 04)",
+      "gates": [
+        "A40",
+        "A41",
+        "A42",
+        "A43",
+        "A44",
+        "A45",
+        "A46",
+        "A47",
+        "A48",
+        "A49",
+        "A50",
+        "A51"
+      ],
+      "path": [
+        [
+          241,
+          226
+        ],
+        [
+          205,
+          243
+        ],
+        [
+          162,
+          249
+        ],
+        [
+          133,
+          246
+        ]
+      ],
+      "status": [
+        {
+          "state": "planned",
+          "until": "2026-04-20",
+          "note": "Pier not in passenger service before 21 April 2026.",
+          "confidence": "verified",
+          "sources": [
+            "src:muc-press-pier-open",
+            "src:pointsanalyst-muc"
+          ]
+        }
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:muc-pocketguide-t1",
+        "src:osm-muc"
+      ],
+      "notes": "Contact gates on both sides of the pier (positions 103–108; each position = one wide-body or two narrow-body aircraft)."
+    },
+    {
+      "id": "muc-gates-a60-a64",
+      "area": "muc-t1-pier",
+      "label": "A60–A64 (remote, Level 03)",
+      "gates": [
+        "A60",
+        "A61",
+        "A62",
+        "A64"
+      ],
+      "path": [
+        [
+          214,
+          236
+        ],
+        [
+          182,
+          247
+        ]
+      ],
+      "bus": true,
+      "status": [
+        {
+          "state": "planned",
+          "until": "2026-04-20",
+          "note": "Pier not in passenger service before 21 April 2026.",
+          "confidence": "verified",
+          "sources": [
+            "src:muc-press-pier-open",
+            "src:pointsanalyst-muc"
+          ]
+        }
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:muc-pocketguide-t1",
+        "src:muc-official-t1pier",
+        "src:osm-muc"
+      ],
+      "notes": "Pocket guide: 'Remote Gates A60–A62, A64, Ebene 03'; the official pier page lists 'Bus-Gates' on Level 03. A63 is a non-Schengen crew gate (not for passengers) and is not listed."
+    },
+    {
+      "id": "muc-gates-b",
+      "area": "muc-t1-b",
+      "label": "B02–B17",
+      "gates": [
+        "B02",
+        "B05",
+        "B06",
+        "B07",
+        "B08",
+        "B09",
+        "B10",
+        "B11",
+        "B12",
+        "B14",
+        "B15",
+        "B16",
+        "B17"
+      ],
+      "path": [
+        [
+          308,
+          242
+        ],
+        [
+          311,
+          266
+        ],
+        [
+          314,
+          290
+        ],
+        [
+          309,
+          333
+        ]
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:osm-muc",
+        "src:muc-pocketguide-t1"
+      ],
+      "notes": "OSM refs 'B2', 'B5' written here with a leading zero as on MUC signs (G04, K03). B10 only in the pocket guide. B01, B03, B04, B13 not attested; B17 shares a stand with C01."
+    },
+    {
+      "id": "muc-gates-c",
+      "area": "muc-t1-c",
+      "label": "C01–C10",
+      "gates": [
+        "C01",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08",
+        "C09",
+        "C10"
+      ],
+      "path": [
+        [
+          309,
+          336
+        ],
+        [
+          312,
+          357
+        ],
+        [
+          325,
+          386
+        ],
+        [
+          327,
+          440
+        ]
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:osm-muc",
+        "src:muc-official-transfer-diagram"
+      ],
+      "notes": "C08 = Schengen stop of the transfer bus (official diagram). C05–C07 tagged level 1 in OSM (meaning unclear). C02 not attested; C10 shares a stand with D01."
+    },
+    {
+      "id": "muc-gates-d",
+      "area": "muc-t1-d",
+      "label": "D01–D23",
+      "gates": [
+        "D01",
+        "D03",
+        "D04",
+        "D06",
+        "D07",
+        "D09",
+        "D10",
+        "D11",
+        "D12",
+        "D14",
+        "D15",
+        "D16",
+        "D17",
+        "D20",
+        "D21",
+        "D23"
+      ],
+      "path": [
+        [
+          329,
+          458
+        ],
+        [
+          333,
+          507
+        ],
+        [
+          341,
+          560
+        ],
+        [
+          353,
+          590
+        ]
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:osm-muc",
+        "src:yt-pedestrians-t1"
+      ],
+      "notes": "Direction sign 'D15–D23' seen in a 2024 walk. D02, D05, D08, D13, D18, D19, D22 not attested."
+    },
+    {
+      "id": "muc-gates-g01-g48",
+      "area": "muc-t2-g",
+      "label": "G01–G48 (Level 04)",
+      "gates": [
+        "G01",
+        "G02",
+        "G03",
+        "G04",
+        "G05",
+        "G06",
+        "G07",
+        "G08",
+        "G09",
+        "G10",
+        "G11",
+        "G12",
+        "G13",
+        "G14",
+        "G15",
+        "G16",
+        "G17",
+        "G18",
+        "G19",
+        "G20",
+        "G21",
+        "G22",
+        "G23",
+        "G24",
+        "G25",
+        "G26",
+        "G27",
+        "G28",
+        "G29",
+        "G30",
+        "G31",
+        "G32",
+        "G33",
+        "G34",
+        "G35",
+        "G36",
+        "G37",
+        "G38",
+        "G39",
+        "G40",
+        "G41",
+        "G42",
+        "G43",
+        "G44",
+        "G45",
+        "G46",
+        "G47",
+        "G48"
+      ],
+      "path": [
+        [
+          593,
+          59
+        ],
+        [
+          606,
+          168
+        ],
+        [
+          624,
+          312
+        ],
+        [
+          647,
+          531
+        ]
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:osm-muc",
+        "src:yt-avfanatic-kg",
+        "src:wiki-muc"
+      ],
+      "notes": "OSM maps one stand to each pair (G01,G02 … G47,G48), north to south. G04 and G10 also attested in dated flight descriptions (2024–2025)."
+    },
+    {
+      "id": "muc-gates-g-bus",
+      "area": "muc-t2-g",
+      "label": "G61–G84 (bus, Level 03)",
+      "gates": [
+        "G61",
+        "G62",
+        "G63",
+        "G64",
+        "G65",
+        "G66",
+        "G67",
+        "G68",
+        "G69",
+        "G70",
+        "G72",
+        "G81",
+        "G82",
+        "G83",
+        "G84"
+      ],
+      "path": [
+        [
+          614,
+          391
+        ],
+        [
+          630,
+          439
+        ],
+        [
+          629,
+          512
+        ],
+        [
+          639,
+          518
+        ]
+      ],
+      "bus": true,
+      "confidence": "probable",
+      "sources": [
+        "src:osm-muc",
+        "src:wiki-muc",
+        "src:yt-luckytravel-t2t1"
+      ],
+      "notes": "OSM level 0 below the contact gates; Wikipedia: bus gates on Level 3. Sign 'G81–G84' seen in a 2025 video. G83 is also the Schengen stop of the T1–T2 transfer bus. G71, G73–G80 not attested."
+    },
+    {
+      "id": "muc-gates-h01-h48",
+      "area": "muc-t2-h",
+      "label": "H01–H48 (Level 05)",
+      "gates": [
+        "H01",
+        "H02",
+        "H03",
+        "H04",
+        "H05",
+        "H06",
+        "H07",
+        "H08",
+        "H09",
+        "H10",
+        "H11",
+        "H12",
+        "H13",
+        "H14",
+        "H15",
+        "H16",
+        "H17",
+        "H18",
+        "H19",
+        "H20",
+        "H21",
+        "H22",
+        "H23",
+        "H24",
+        "H25",
+        "H26",
+        "H27",
+        "H28",
+        "H29",
+        "H30",
+        "H31",
+        "H32",
+        "H33",
+        "H34",
+        "H35",
+        "H36",
+        "H37",
+        "H38",
+        "H39",
+        "H40",
+        "H41",
+        "H42",
+        "H43",
+        "H44",
+        "H45",
+        "H46",
+        "H47",
+        "H48"
+      ],
+      "path": [
+        [
+          598,
+          60
+        ],
+        [
+          612,
+          168
+        ],
+        [
+          630,
+          312
+        ],
+        [
+          652,
+          531
+        ]
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:osm-muc",
+        "src:wiki-muc",
+        "src:pointsanalyst-muc"
+      ],
+      "notes": "Same stands as G01–G48, one level up (OSM level 2). No H bus gates attested."
+    },
+    {
+      "id": "muc-gates-j",
+      "area": "muc-sat-k",
+      "label": "J01–J06 (satellite bus gates)",
+      "gates": [
+        "J01",
+        "J02",
+        "J03",
+        "J04",
+        "J05",
+        "J06"
+      ],
+      "zone": "mixed",
+      "path": [
+        [
+          876,
+          270
+        ],
+        [
+          877,
+          277
+        ]
+      ],
+      "bus": true,
+      "confidence": "probable",
+      "sources": [
+        "src:osm-muc",
+        "src:wiki-muc",
+        "src:muc-official-transfer"
+      ],
+      "notes": "Wikipedia: 'a J area for apron bus boarding'; OSM level 0. Zone not established (the official transfer diagram lists J with the Schengen gates G and K)."
+    },
+    {
+      "id": "muc-gates-k",
+      "area": "muc-sat-k",
+      "label": "K01–K30",
+      "gates": [
+        "K01",
+        "K03",
+        "K04",
+        "K05",
+        "K06",
+        "K07",
+        "K08",
+        "K09",
+        "K10",
+        "K11",
+        "K12",
+        "K13",
+        "K14",
+        "K15",
+        "K16",
+        "K18",
+        "K19",
+        "K20",
+        "K21",
+        "K22",
+        "K23",
+        "K24",
+        "K25",
+        "K26",
+        "K27",
+        "K28",
+        "K30"
+      ],
+      "path": [
+        [
+          803,
+          118
+        ],
+        [
+          835,
+          395
+        ],
+        [
+          887,
+          412
+        ],
+        [
+          857,
+          145
+        ]
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:osm-muc",
+        "src:yt-kurmann-kl",
+        "src:yt-avfanatic-kg"
+      ],
+      "notes": "West row K01–K27 (odd plus K04–K10 pairs), east row K04–K30 (even). K14 and K27 attested in dated videos (2025–2026). K02, K17, K29 not attested."
+    },
+    {
+      "id": "muc-gates-l",
+      "area": "muc-sat-l",
+      "label": "L01–L30",
+      "gates": [
+        "L01",
+        "L02",
+        "L03",
+        "L04",
+        "L05",
+        "L06",
+        "L07",
+        "L08",
+        "L09",
+        "L11",
+        "L13",
+        "L15",
+        "L19",
+        "L21",
+        "L22",
+        "L23",
+        "L24",
+        "L25",
+        "L26",
+        "L27",
+        "L28",
+        "L30"
+      ],
+      "path": [
+        [
+          806,
+          120
+        ],
+        [
+          838,
+          396
+        ],
+        [
+          890,
+          414
+        ],
+        [
+          860,
+          148
+        ]
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:osm-muc",
+        "src:yt-kurmann-kl"
+      ],
+      "notes": "Same stands as K, one level up. L30 attested (LH 488, Feb 2026). L10, L12, L14, L16–L18, L20, L29 not attested."
+    }
+  ],
+  "stops": [
+    {
+      "id": "s:muc-pts-g",
+      "name": "PTS · Terminal 2 station, Schengen platform (from G)",
+      "area": "muc-t2-g",
+      "side": "airside",
+      "anchor": [
+        646,
+        318
+      ],
+      "accessMinutes": {
+        "min": 2,
+        "typical": 3,
+        "max": 5,
+        "basis": "derived"
+      },
+      "where": "Below the central area of the main pier; follow 'Gates J, K, L' down the escalators",
+      "confidence": "verified",
+      "sources": [
+        "src:muc-official-transfer",
+        "src:osm-muc",
+        "src:yt-luckytravel-t2t1",
+        "src:yt-avfanatic-kg"
+      ],
+      "notes": "Platform signs 'Gates J, K, L' / 'Gates G, H' with platform-screen doors (2025 video). OSM stop 'Gates G,H'."
+    },
+    {
+      "id": "s:muc-pts-h",
+      "name": "PTS · Terminal 2 station, non-Schengen access (from H)",
+      "area": "muc-t2-h",
+      "side": "airside",
+      "anchor": [
+        652,
+        332
+      ],
+      "accessMinutes": {
+        "min": 2.5,
+        "typical": 3,
+        "max": 4.5,
+        "basis": "measured",
+        "note": "Airport Walker (Sep 2025), uncut 5-s frames: H marketplace just past the border control (t≈75 s) → along the H level, glass corridor, long escalator descent (≈150–245 s) → platform doors (t≈250 s) = 175 ± 10 s."
+      },
+      "where": "From the H level follow 'J K L' down several flights of escalators to the platform",
+      "confidence": "probable",
+      "sources": [
+        "src:yt-airportwalker-gl",
+        "src:bt-satellite"
+      ],
+      "notes": "Airport Walker (Sept 2025): G → passport control → H → escalators down → train → satellite → escalators up to L; H marketplace → platform measured ≈2.9 min. That the non-Schengen flow uses its own car/platform rests on a 2016 report of four-car trains with separated passenger flows (search excerpt)."
+    },
+    {
+      "id": "s:muc-pts-k",
+      "name": "PTS · Satellite station, Schengen platform (to K)",
+      "area": "muc-sat-k",
+      "side": "airside",
+      "anchor": [
+        845,
+        294
+      ],
+      "accessMinutes": {
+        "min": 1,
+        "typical": 2,
+        "max": 4,
+        "basis": "derived"
+      },
+      "where": "Centre of the satellite, below the marketplace",
+      "confidence": "verified",
+      "sources": [
+        "src:osm-muc",
+        "src:yt-avfanatic-kg",
+        "src:muc-official-transfer"
+      ]
+    },
+    {
+      "id": "s:muc-pts-l",
+      "name": "PTS · Satellite station, non-Schengen access (to L)",
+      "area": "muc-sat-l",
+      "side": "airside",
+      "anchor": [
+        853,
+        304
+      ],
+      "accessMinutes": {
+        "min": 2,
+        "typical": 2.5,
+        "max": 3.5,
+        "basis": "measured",
+        "note": "Airport Walker (Sep 2025), uncut 5-s frames: satellite platform 'J K L' (t≈315 s) → escalators up past an intermediate level with apron windows and the 'Welcome to Munich Airport' wall → 'You have reached the L area' (t≈450 s) = 135 ± 10 s; typical rounded up for passengers standing on the escalators."
+      },
+      "where": "Escalators up from the platform to the L level",
+      "confidence": "probable",
+      "sources": [
+        "src:yt-airportwalker-gl",
+        "src:bt-satellite"
+      ]
+    },
+    {
+      "id": "s:muc-bus-t1-c08",
+      "name": "Transfer bus · T1 stop at gate C08 (Schengen)",
+      "area": "muc-t1-c",
+      "side": "airside",
+      "anchor": [
+        316,
+        386
+      ],
+      "accessMinutes": {
+        "min": 1,
+        "typical": 3,
+        "max": 6,
+        "basis": "assumed"
+      },
+      "where": "Bus stop at gate C08 (non-public area)",
+      "confidence": "probable",
+      "sources": [
+        "src:muc-official-transfer-diagram"
+      ]
+    },
+    {
+      "id": "s:muc-bus-t2-g83",
+      "name": "Transfer bus · T2 stop at gate G83 (Schengen)",
+      "area": "muc-t2-g",
+      "side": "airside",
+      "anchor": [
+        639,
+        518
+      ],
+      "accessMinutes": {
+        "min": 4,
+        "typical": 6,
+        "max": 9,
+        "basis": "derived"
+      },
+      "where": "South end of T2, bus gates G81–G84 on Level 03; the driver opens the gate door",
+      "confidence": "verified",
+      "sources": [
+        "src:muc-official-transfer-diagram",
+        "src:yt-luckytravel-t2t1"
+      ],
+      "notes": "Distance from the T2 centre ≈ 450 m (OSM), / 70 m per min incl. escalators. Lucky Travel (Feb 2025) walked K → PTS → G83 but the walk includes detours and probable cuts, so it was not timed."
+    },
+    {
+      "id": "s:muc-bus-t1-a28",
+      "egressControls": [{ "kind": "transfer-security", "when": "origin-not-one-stop", "minutes": { "min": 3, "typical": 10, "max": 25, "basis": "assumed" }, "note": "Arrivals from outside one-stop security reaching the T1 Pier by the non-Schengen transfer bus (FMG: depending on origin). Location inferred; the Pier's transfer security is on Level 05." }],
+      "name": "Transfer bus · T1 stop at gate A28 (non-Schengen)",
+      "area": "muc-t1-pier",
+      "side": "airside",
+      "anchor": [
+        300,
+        186
+      ],
+      "accessMinutes": {
+        "min": 3,
+        "typical": 5,
+        "max": 8,
+        "basis": "derived"
+      },
+      "where": "Gate A28 in module A, next to connecting bridge VB 1 from the pier",
+      "confidence": "probable",
+      "sources": [
+        "src:muc-official-transfer-diagram",
+        "src:muc-pocketguide-t1",
+        "src:muc-official-t1pier"
+      ],
+      "notes": "That pier passengers reach A28 over VB 1 without another control is inferred from the pocket-guide plan (A28 'Shuttlebus T1/T2 Non-Schengen' at the end of VB 1) and the pier page ('shuttle bus to Terminal 2 for transfer passengers')."
+    },
+    {
+      "id": "s:muc-bus-t2-ns",
+      "name": "Transfer bus · T2 non-Schengen stop (H/L side)",
+      "area": "muc-t2-h",
+      "side": "airside",
+      "anchor": [
+        588,
+        214
+      ],
+      "accessMinutes": {
+        "min": 2,
+        "typical": 4,
+        "max": 7,
+        "basis": "assumed"
+      },
+      "where": "Non-Schengen bus stop in the northern half of the T2 main pier (diagram position; exact gate not named)",
+      "confidence": "probable",
+      "sources": [
+        "src:muc-official-transfer-diagram"
+      ],
+      "notes": "Placement read from the official schematic only (about one third down the pier)."
+    }
+  ],
+  "lines": [
+    {
+      "id": "l:muc-pts-schengen",
+      "name": "PTS people mover · Schengen cars (T2 G ↔ Satellite K)",
+      "mode": "people-mover",
+      "operator": "Flughafen München / Terminal 2 Betriebsgesellschaft (Bombardier system)",
+      "colour": "#0a6ebd",
+      "access": "airside",
+      "side": "airside",
+      "stops": [
+        "s:muc-pts-g",
+        "s:muc-pts-k"
+      ],
+      "direction": "both",
+      "rideMin": [
+        1
+      ],
+      "service": [
+        {
+          "hours": "04:00–24:00",
+          "windows": [
+            {
+              "from": "04:00",
+              "until": "24:00"
+            }
+          ],
+          "headwayMin": {
+            "min": 4,
+            "max": 4
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 2,
+            "max": 4,
+            "basis": "derived",
+            "note": "half the published 4-min headway"
+          },
+          "sources": [
+            "src:muc-official-transfer"
+          ],
+          "notes": "Official (re-read 2026-10-31): 'The shuttle train runs daily from 4 a.m. to midnight every 4 minutes. The journey takes about 1 minute.' No service 00:00–04:00: the satellite is then not reachable."
+        }
+      ],
+      "eligibility": "Any passenger already airside in the Terminal 2 Schengen area (no check-in, no reclaim in the satellite). Free.",
+      "path": [
+        [
+          646,
+          318
+        ],
+        [
+          700,
+          316
+        ],
+        [
+          800,
+          300
+        ],
+        [
+          845,
+          294
+        ]
+      ],
+      "status": [
+        {
+          "state": "suspended",
+          "from": "2024-01-29",
+          "until": "2024-02-25",
+          "note": "Maintenance; replaced by buses around the apron (+~20 min announced). Historical.",
+          "confidence": "probable",
+          "sources": [
+            "src:frankfurtflyer-pts"
+          ]
+        }
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:muc-official-transfer",
+        "src:muc-press-satellite-10y",
+        "src:asiatraveltips-pts",
+        "src:wiki-muc",
+        "src:yt-avfanatic-kg",
+        "src:yt-luckytravel-t2t1",
+        "src:osm-muc"
+      ],
+      "notes": "382 m twin-track tunnel, up to three trains of four cars (2016). Underground two-stop shuttle only: 'Gates G,H' and 'Gates J,K,L'. Dwell at the platform before departure ≈35 s observed (Apr 2025). Suspended 29 Jan – ~25 Feb 2024 with a replacement bus between Gates G,H and Gates J,K,L (+~20 min announced by FMG on X); the replacement bus is not modelled (stands and zone split not documented).",
+      "ride": [
+        {
+          "min": 0.8,
+          "typical": 1,
+          "max": 1.2,
+          "basis": "measured",
+          "note": "Aviation Fanatic (Apr 2025), uncut front-window view: doors closed ≈125–130 s, doors open at T2 ≈185–190 s → 55–65 s; FMG publishes \"about 1 minute\"."
+        }
+      ]
+    },
+    {
+      "id": "l:muc-pts-nonschengen",
+      "name": "PTS people mover · non-Schengen car (T2 H ↔ Satellite L)",
+      "mode": "people-mover",
+      "operator": "Flughafen München / Terminal 2 Betriebsgesellschaft (Bombardier system)",
+      "colour": "#7a3fb0",
+      "access": "airside",
+      "side": "airside",
+      "stops": [
+        "s:muc-pts-h",
+        "s:muc-pts-l"
+      ],
+      "direction": "both",
+      "rideMin": [
+        1
+      ],
+      "service": [
+        {
+          "hours": "04:00–24:00",
+          "windows": [
+            {
+              "from": "04:00",
+              "until": "24:00"
+            }
+          ],
+          "headwayMin": {
+            "min": 4,
+            "max": 4
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 2,
+            "max": 4,
+            "basis": "derived",
+            "note": "half the published 4-min headway"
+          },
+          "sources": [
+            "src:muc-official-transfer"
+          ],
+          "notes": "The published hours and headway are for 'the shuttle train' as a whole; the non-Schengen car runs in the same trains (2016 report), so the same window applies."
+        }
+      ],
+      "eligibility": "Passengers already in the non-Schengen area (H or L); separated from the Schengen flow inside the same trains (2016 report).",
+      "path": [
+        [
+          652,
+          332
+        ],
+        [
+          700,
+          330
+        ],
+        [
+          800,
+          310
+        ],
+        [
+          853,
+          304
+        ]
+      ],
+      "status": [
+        {
+          "state": "suspended",
+          "from": "2024-01-29",
+          "until": "2024-02-25",
+          "note": "Maintenance; replaced by buses. Historical.",
+          "confidence": "probable",
+          "sources": [
+            "src:frankfurtflyer-pts"
+          ]
+        }
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:yt-airportwalker-gl",
+        "src:bt-satellite",
+        "src:muc-official-transfer"
+      ],
+      "notes": "Observed G → passport control → H → train → L (Sept 2025). The car split rests on a search excerpt of Business Traveller (2016): four-car trains with two Schengen cars, one non-Schengen car and one car for a third flow (not identified).",
+      "ride": [
+        {
+          "min": 0.8,
+          "typical": 1,
+          "max": 1.5,
+          "basis": "published",
+          "note": "FMG 'about 1 minute' for the shuttle train; same trains as the Schengen cars (measured 55–65 s there). The Airport Walker ride (Sep 2025) has a cut and was not timed."
+        }
+      ]
+    },
+    {
+      "id": "l:muc-bus-schengen",
+      "name": "T1–T2 transfer shuttle bus · Schengen (C08 ↔ G83)",
+      "mode": "shuttle-bus",
+      "operator": "Flughafen München (AeroGround)",
+      "colour": "#9fa8da",
+      "access": "transfer",
+      "side": "airside",
+      "stops": [
+        "s:muc-bus-t1-c08",
+        "s:muc-bus-t2-g83"
+      ],
+      "direction": "both",
+      "rideMin": [
+        6
+      ],
+      "service": [
+        {
+          "hours": "07:00–17:00",
+          "windows": [
+            {
+              "from": "07:00",
+              "until": "17:00"
+            }
+          ],
+          "headwayMin": {
+            "min": 10,
+            "max": 10
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 5,
+            "max": 10,
+            "basis": "derived",
+            "note": "half the published 10-min headway"
+          },
+          "sources": [
+            "src:muc-official-transfer"
+          ],
+          "notes": "Official (re-read 2026-10-31): every 10 minutes from 7 a.m. to 5 p.m."
+        },
+        {
+          "hours": "06:00–07:00, 17:00–23:00",
+          "windows": [
+            {
+              "from": "06:00",
+              "until": "07:00"
+            },
+            {
+              "from": "17:00",
+              "until": "23:00"
+            }
+          ],
+          "headwayMin": {
+            "min": 20,
+            "max": 20
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 10,
+            "max": 20,
+            "basis": "derived",
+            "note": "half the published 20-min headway"
+          },
+          "sources": [
+            "src:muc-official-transfer"
+          ],
+          "notes": "Official: every 20 minutes 6–7 a.m. and 5–11 p.m. No service is published for 23:00–06:00; the official pages do not say how connecting passengers change terminals then (open question)."
+        }
+      ],
+      "eligibility": "Free, for passengers with connecting flights; stops in the non-public area. Signs to the connecting gate lead to the bus.",
+      "path": [
+        [
+          316,
+          386
+        ],
+        [
+          262,
+          380
+        ],
+        [
+          250,
+          40
+        ],
+        [
+          590,
+          28
+        ],
+        [
+          668,
+          60
+        ],
+        [
+          668,
+          520
+        ],
+        [
+          639,
+          518
+        ]
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:muc-official-transfer",
+        "src:muc-official-transfer-diagram",
+        "src:pointsanalyst-muc",
+        "src:kayak-muc",
+        "src:yt-luckytravel-t2t1"
+      ],
+      "notes": "Bus path indicative only (the official diagram draws it around the north of the MAC). Lucky Travel (Feb 2025) describes waiting at G83 for the driver to open the door and being dropped at the T1 building.",
+      "ride": [
+        {
+          "min": 5,
+          "typical": 6,
+          "max": 7,
+          "basis": "published",
+          "note": "FMG: 'The bus ride takes 5 to 7 minutes.'"
+        }
+      ]
+    },
+    {
+      "id": "l:muc-bus-nonschengen",
+      "name": "T1–T2 transfer shuttle bus · non-Schengen (A28 ↔ T2 H side)",
+      "mode": "shuttle-bus",
+      "operator": "Flughafen München (AeroGround)",
+      "colour": "#e8711a",
+      "access": "transfer",
+      "side": "airside",
+      "stops": [
+        "s:muc-bus-t1-a28",
+        "s:muc-bus-t2-ns"
+      ],
+      "direction": "both",
+      "rideMin": [
+        6
+      ],
+      "service": [
+        {
+          "hours": "07:00–17:00",
+          "windows": [
+            {
+              "from": "07:00",
+              "until": "17:00"
+            }
+          ],
+          "headwayMin": {
+            "min": 10,
+            "max": 10
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 5,
+            "max": 10,
+            "basis": "derived",
+            "note": "half the published 10-min headway"
+          },
+          "sources": [
+            "src:muc-official-transfer"
+          ],
+          "notes": "Official (re-read 2026-10-31): every 10 minutes from 7 a.m. to 5 p.m. Published for 'the shuttle bus' without distinguishing the Schengen and non-Schengen stops; assumed identical for both."
+        },
+        {
+          "hours": "06:00–07:00, 17:00–23:00",
+          "windows": [
+            {
+              "from": "06:00",
+              "until": "07:00"
+            },
+            {
+              "from": "17:00",
+              "until": "23:00"
+            }
+          ],
+          "headwayMin": {
+            "min": 20,
+            "max": 20
+          },
+          "headwayBasis": "published",
+          "waitMin": {
+            "min": 0,
+            "typical": 10,
+            "max": 20,
+            "basis": "derived",
+            "note": "half the published 20-min headway"
+          },
+          "sources": [
+            "src:muc-official-transfer"
+          ],
+          "notes": "Official: every 20 minutes 6–7 a.m. and 5–11 p.m. No service is published for 23:00–06:00; the official pages do not say how connecting passengers change terminals then (open question). Published for 'the shuttle bus' without distinguishing the Schengen and non-Schengen stops; assumed identical for both."
+        }
+      ],
+      "eligibility": "Free, for non-Schengen connecting passengers (T1 Pier/A28 ↔ T2 H and, via the PTS, L).",
+      "path": [
+        [
+          300,
+          186
+        ],
+        [
+          262,
+          180
+        ],
+        [
+          256,
+          34
+        ],
+        [
+          584,
+          22
+        ],
+        [
+          588,
+          214
+        ]
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:muc-official-transfer-diagram",
+        "src:muc-pocketguide-t1",
+        "src:muc-official-t1pier",
+        "src:muc-official-transfer"
+      ],
+      "notes": "All sources are FMG (one group); no first-hand ride video after the pier opening was found.",
+      "ride": [
+        {
+          "min": 5,
+          "typical": 6,
+          "max": 7,
+          "basis": "published",
+          "note": "FMG: 'The bus ride takes 5 to 7 minutes.'"
+        }
+      ]
+    }
+  ],
+  "walks": [
+    {
+      "id": "w:muc-sbahn-mac",
+      "from": "muc-sbahn",
+      "to": "muc-mac",
+      "bidirectional": true,
+      "access": "public",
+      "minutes": {
+        "min": 1,
+        "typical": 2,
+        "max": 3,
+        "basis": "observed"
+      },
+      "practical": "practical",
+      "via": "Escalators/lifts from the platforms (Level 02) up to Level 03",
+      "confidence": "verified",
+      "sources": [
+        "src:muc-faq",
+        "src:yt-jun-landside"
+      ]
+    },
+    {
+      "id": "w:muc-sbahn-t1",
+      "from": "muc-sbahn",
+      "to": "muc-t1-land",
+      "bidirectional": true,
+      "access": "public",
+      "minutes": {
+        "min": 2,
+        "typical": 3,
+        "max": 5,
+        "basis": "observed"
+      },
+      "practical": "practical",
+      "via": "Level 03 junction 'Terminal 1 ← → Terminal 2', then the central area (moving walkways) into T1",
+      "confidence": "verified",
+      "sources": [
+        "src:muc-faq",
+        "src:yt-jun-landside",
+        "src:yt-pedestrians-t1"
+      ],
+      "notes": "JUN video (Nov 2025): platform 0:19 → Level 03 junction 1:16 → T1 area C 3:27 (≈3 min)."
+    },
+    {
+      "id": "w:muc-mac-t1",
+      "from": "muc-mac",
+      "to": "muc-t1-land",
+      "bidirectional": true,
+      "access": "public",
+      "minutes": {
+        "min": 2,
+        "typical": 4,
+        "max": 6,
+        "basis": "derived"
+      },
+      "practical": "practical",
+      "confidence": "verified",
+      "sources": [
+        "src:muc-faq",
+        "src:osm-muc",
+        "src:yt-jun-landside"
+      ]
+    },
+    {
+      "id": "w:muc-mac-t2",
+      "from": "muc-mac",
+      "to": "muc-t2-land",
+      "bidirectional": true,
+      "access": "public",
+      "minutes": {
+        "min": 3,
+        "typical": 4,
+        "max": 6,
+        "basis": "derived",
+        "note": "OSM 220 m ×1.3 / 70 m/min. Where's My Map (Apr 2025, 10-s frames, cuts possible): T2 arrivals-hall exit sign → revolving door → across the MAC Forum ≈ 1–1.5 min door to door, consistent with the area-centre value."
+      },
+      "distanceM": 220,
+      "practical": "practical",
+      "via": "Across the MAC Forum (covered, open-air)",
+      "confidence": "verified",
+      "sources": [
+        "src:muc-faq",
+        "src:muc-public-transport",
+        "src:osm-muc",
+        "src:yt-wheresmymap-arrival"
+      ],
+      "notes": "FMG: Terminal 1 is a 5–10 min walk from the T2 bus stops."
+    },
+    {
+      "id": "w:muc-t1-a",
+      "from": "muc-t1-land",
+      "to": "muc-t1-a",
+      "bidirectional": true,
+      "access": "public",
+      "minutes": {
+        "min": 5,
+        "typical": 8,
+        "max": 12,
+        "basis": "derived"
+      },
+      "controls": [
+        {
+          "kind": "security",
+          "minutes": {
+            "min": 5,
+            "typical": 15,
+            "max": 40,
+            "basis": "assumed"
+          },
+          "note": "Module A checkpoint; passport control may also apply depending on the module's current zone (not established)"
+        }
+      ],
+      "reverseControls": [],
+      "practical": "practical",
+      "via": "Along the T1 public side to hall A, then the module's security",
+      "confidence": "inferred",
+      "sources": [
+        "src:kayak-muc",
+        "src:wiki-muc",
+        "src:osm-muc"
+      ],
+      "notes": "Module A is 10–15 min from the MAC (KAYAK). Checkpoint arrangement after the pier opening not documented."
+    },
+    {
+      "id": "w:muc-t1-b",
+      "from": "muc-t1-land",
+      "to": "muc-t1-b",
+      "bidirectional": true,
+      "access": "public",
+      "minutes": {
+        "min": 2,
+        "typical": 4,
+        "max": 6,
+        "basis": "derived"
+      },
+      "controls": [
+        {
+          "kind": "security",
+          "minutes": {
+            "min": 5,
+            "typical": 15,
+            "max": 40,
+            "basis": "assumed"
+          },
+          "note": "Module B checkpoint; passport control may also apply (zone not established)"
+        }
+      ],
+      "reverseControls": [],
+      "practical": "practical",
+      "confidence": "inferred",
+      "sources": [
+        "src:kayak-muc",
+        "src:wiki-muc",
+        "src:osm-muc"
+      ]
+    },
+    {
+      "id": "w:muc-t1-c",
+      "from": "muc-t1-land",
+      "to": "muc-t1-c",
+      "bidirectional": true,
+      "access": "public",
+      "minutes": {
+        "min": 2,
+        "typical": 4,
+        "max": 6,
+        "basis": "derived"
+      },
+      "controls": [
+        {
+          "kind": "security",
+          "minutes": {
+            "min": 5,
+            "typical": 15,
+            "max": 40,
+            "basis": "assumed"
+          },
+          "note": "Module C checkpoint on Level 5 (CT lanes, Sept 2026 report)"
+        }
+      ],
+      "reverseControls": [],
+      "practical": "practical",
+      "via": "Sign 'Abflug/Departures Gates B, C, D' from the central area (2024)",
+      "confidence": "inferred",
+      "sources": [
+        "src:kayak-muc",
+        "src:yt-pedestrians-t1",
+        "src:osm-muc",
+        "src:pointsmag-liquids-2026"
+      ]
+    },
+    {
+      "id": "w:muc-t1-d",
+      "from": "muc-t1-land",
+      "to": "muc-t1-d",
+      "bidirectional": true,
+      "access": "public",
+      "minutes": {
+        "min": 4,
+        "typical": 7,
+        "max": 10,
+        "basis": "derived"
+      },
+      "controls": [
+        {
+          "kind": "security",
+          "minutes": {
+            "min": 5,
+            "typical": 15,
+            "max": 40,
+            "basis": "assumed"
+          },
+          "note": "Module D checkpoint on Level 5 (CT lanes; FMG and Sept 2026 report)"
+        }
+      ],
+      "reverseControls": [],
+      "practical": "practical",
+      "confidence": "probable",
+      "sources": [
+        "src:kayak-muc",
+        "src:yt-jun-landside",
+        "src:yt-pedestrians-t1",
+        "src:pointsmag-liquids-2026"
+      ],
+      "notes": "JUN video: T1 area C 3:27 → area D 4:27 on the public side."
+    },
+    {
+      "id": "w:muc-t1-pier-dep",
+      "from": "muc-t1-land",
+      "to": "muc-t1-pier",
+      "bidirectional": false,
+      "access": "public",
+      "minutes": {
+        "min": 5,
+        "typical": 7,
+        "max": 11,
+        "basis": "derived"
+      },
+      "controls": [
+        {
+          "kind": "security",
+          "minutes": {
+            "min": 5,
+            "typical": 15,
+            "max": 40,
+            "basis": "assumed"
+          },
+          "note": "Central pier checkpoint on Level 05 (CT scanners; liquids and laptops stay in the bag), after the boarding-pass gates"
+        },
+        {
+          "kind": "passport",
+          "minutes": {
+            "min": 3,
+            "typical": 10,
+            "max": 45,
+            "basis": "assumed"
+          },
+          "note": "Exit border control on Level 05 (EasyPASS available)"
+        }
+      ],
+      "practical": "practical",
+      "via": "Escalators up to Level 05 → boarding-pass gates → security → passport control → down to the Level 04 marketplace and gates",
+      "status": [
+        {
+          "state": "planned",
+          "until": "2026-04-20",
+          "note": "Pier not in passenger service before 21 April 2026.",
+          "confidence": "verified",
+          "sources": [
+            "src:muc-press-pier-open",
+            "src:pointsanalyst-muc"
+          ]
+        }
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:yt-muc-pier-tour",
+        "src:muc-pocketguide-t1",
+        "src:muc-official-t1pier"
+      ],
+      "notes": "Order of spaces from the official tour video and pocket guide (one group). Distance from the T1 typical point to the pier root ≈ 230 m plus ≈ 200 m along the pier (OSM)."
+    },
+    {
+      "id": "w:muc-t1-pier-arr-l05",
+      "from": "muc-t1-pier",
+      "to": "muc-t1-pier-l05",
+      "bidirectional": false,
+      "access": "airside",
+      "flow": "arrivals",
+      "minutes": {
+        "min": 1,
+        "typical": 2,
+        "max": 4,
+        "basis": "derived"
+      },
+      "practical": "practical",
+      "via": "From the aircraft door up to the Level 05 arrivals corridor",
+      "status": [
+        {
+          "state": "planned",
+          "until": "2026-04-20",
+          "note": "Trial operation with test passengers from October 2025; ceremony 13 April 2026; not in passenger service before 21 April 2026.",
+          "confidence": "verified",
+          "sources": [
+            "src:muc-press-pier-grand-opening",
+            "src:pointsanalyst-muc"
+          ]
+        },
+        {
+          "state": "active",
+          "from": "2026-04-21",
+          "note": "Regular operations since 21 April 2026 (first arrival AA from Charlotte, first departure DL to Detroit).",
+          "confidence": "verified",
+          "sources": [
+            "src:muc-press-pier-open",
+            "src:muc-press-pier-100days",
+            "src:pointsanalyst-muc"
+          ]
+        }
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:muc-pocketguide-t1",
+        "src:muc-official-t1pier"
+      ],
+      "notes": "Arrivals only."
+    },
+    {
+      "id": "w:muc-t1-pier-transfer",
+      "from": "muc-t1-pier-l05",
+      "to": "muc-t1-pier",
+      "bidirectional": false,
+      "access": "airside",
+      "minutes": {
+        "min": 1,
+        "typical": 3,
+        "max": 5,
+        "basis": "derived"
+      },
+      "controls": [
+        {
+          "kind": "transfer-security", "when": "origin-not-one-stop",
+          "minutes": {
+            "min": 3,
+            "typical": 10,
+            "max": 30,
+            "basis": "assumed"
+          },
+          "note": "Transfer security checkpoint (Transfer SiKo) on Level 05 back into the clean non-Schengen departure area"
+        }
+      ],
+      "practical": "practical",
+      "via": "Transfer SiKo on Level 05, then down to the Level 04 marketplace",
+      "status": [
+        {
+          "state": "planned",
+          "until": "2026-04-20",
+          "note": "Trial operation with test passengers from October 2025; ceremony 13 April 2026; not in passenger service before 21 April 2026.",
+          "confidence": "verified",
+          "sources": [
+            "src:muc-press-pier-grand-opening",
+            "src:pointsanalyst-muc"
+          ]
+        },
+        {
+          "state": "active",
+          "from": "2026-04-21",
+          "note": "Regular operations since 21 April 2026 (first arrival AA from Charlotte, first departure DL to Detroit).",
+          "confidence": "verified",
+          "sources": [
+            "src:muc-press-pier-open",
+            "src:muc-press-pier-100days",
+            "src:pointsanalyst-muc"
+          ]
+        }
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:muc-pocketguide-t1"
+      ],
+      "notes": "Location of the checkpoint from the pocket-guide plan; whether every arriving transfer passenger is re-screened is not documented."
+    },
+    {
+      "id": "w:muc-t1-pier-arr",
+      "from": "muc-t1-pier-l05",
+      "to": "muc-t1-land",
+      "bidirectional": false,
+      "access": "airside",
+      "flow": "arrivals",
+      "minutes": {
+        "min": 4,
+        "typical": 7,
+        "max": 11,
+        "basis": "derived"
+      },
+      "controls": [
+        {
+          "kind": "passport",
+          "minutes": {
+            "min": 5,
+            "typical": 15,
+            "max": 60,
+            "basis": "assumed"
+          },
+          "note": "Entry border control on Level 03 (EES registration for third-country nationals)"
+        },
+        {
+          "kind": "customs",
+          "minutes": {
+            "min": 0,
+            "typical": 1,
+            "max": 5,
+            "basis": "assumed"
+          },
+          "note": "Customs (red/green channels) after baggage reclaim; planning value, does not include waiting at the belt"
+        }
+      ],
+      "practical": "practical",
+      "via": "Level 05 → Level 03 entry border control → reclaim belts B1–B4 → customs → public side at module B",
+      "status": [
+        {
+          "state": "planned",
+          "until": "2026-04-20",
+          "note": "Pier not in passenger service before 21 April 2026.",
+          "confidence": "verified",
+          "sources": [
+            "src:muc-press-pier-open",
+            "src:pointsanalyst-muc"
+          ]
+        }
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:muc-pocketguide-t1",
+        "src:muc-official-t1pier",
+        "src:fernwehblog-t1pier-trial",
+        "src:zoll-reisegepaeck"
+      ],
+      "notes": "Arrivals only. Time excludes waiting at the reclaim."
+    },
+    {
+      "id": "w:muc-t2-g",
+      "from": "muc-t2-land",
+      "to": "muc-t2-g",
+      "bidirectional": true,
+      "access": "public",
+      "minutes": {
+        "min": 3,
+        "typical": 4,
+        "max": 6,
+        "basis": "derived"
+      },
+      "controls": [
+        {
+          "kind": "security",
+          "minutes": {
+            "min": 5,
+            "typical": 15,
+            "max": 40,
+            "basis": "assumed"
+          },
+          "note": "Central T2 checkpoint on Level 04 (CT scanners; Lufthansa security time slots)"
+        }
+      ],
+      "reverseControls": [],
+      "practical": "practical",
+      "confidence": "verified",
+      "sources": [
+        "src:muc-official-security",
+        "src:pointsanalyst-muc",
+        "src:yt-airportwalker-gl",
+        "src:yt-avfanatic-kg"
+      ]
+    },
+    {
+      "id": "w:muc-t2-h",
+      "from": "muc-t2-land",
+      "to": "muc-t2-h",
+      "bidirectional": true,
+      "access": "public",
+      "minutes": {
+        "min": 4,
+        "typical": 6,
+        "max": 9,
+        "basis": "derived"
+      },
+      "controls": [
+        {
+          "kind": "security",
+          "minutes": {
+            "min": 5,
+            "typical": 15,
+            "max": 40,
+            "basis": "assumed"
+          },
+          "note": "Central T2 checkpoint"
+        },
+        {
+          "kind": "passport",
+          "minutes": {
+            "min": 3,
+            "typical": 10,
+            "max": 45,
+            "basis": "assumed"
+          },
+          "note": "Exit control between Levels 04 and 05"
+        }
+      ],
+      "reverseControls": [
+        {
+          "kind": "passport",
+          "minutes": {
+            "min": 5,
+            "typical": 15,
+            "max": 60,
+            "basis": "assumed"
+          },
+          "note": "Entry control for arriving non-Schengen passengers"
+        },
+        {
+          "kind": "customs",
+          "minutes": {
+            "min": 0,
+            "typical": 1,
+            "max": 5,
+            "basis": "assumed"
+          },
+          "note": "Customs (red/green channels) after baggage reclaim for arriving non-Schengen passengers; planning value"
+        }
+      ],
+      "practical": "practical",
+      "confidence": "probable",
+      "sources": [
+        "src:pointsanalyst-muc",
+        "src:wiki-muc",
+        "src:yt-airportwalker-gl",
+        "src:zoll-reisegepaeck"
+      ]
+    },
+    {
+      "id": "w:muc-g-h",
+      "from": "muc-t2-g",
+      "to": "muc-t2-h",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": {
+        "min": 1,
+        "typical": 3,
+        "max": 5,
+        "basis": "observed",
+        "note": "Airport Walker (Sep 2025): G after security (t≈10 s) → border control (t≈50 s) → H (t≈70 s); the clip cuts at the passport booths, so this is a lower bound for the walking part only."
+      },
+      "controls": [
+        {
+          "kind": "passport",
+          "minutes": {
+            "min": 3,
+            "typical": 10,
+            "max": 45,
+            "basis": "assumed"
+          },
+          "note": "Exit control G (L04) → H (L05)"
+        }
+      ],
+      "reverseControls": [
+        {
+          "kind": "passport",
+          "minutes": {
+            "min": 5,
+            "typical": 15,
+            "max": 60,
+            "basis": "assumed"
+          },
+          "note": "Entry control H → G"
+        },
+        {
+          "kind": "transfer-security", "when": "origin-not-one-stop",
+          "minutes": {
+            "min": 0,
+            "typical": 5,
+            "max": 30,
+            "basis": "assumed"
+          },
+          "note": "Official: transfer passengers may have to pass security again (depends on origin)"
+        }
+      ],
+      "practical": "practical",
+      "via": "Escalators between Levels 04 and 05 via the border control",
+      "confidence": "verified",
+      "sources": [
+        "src:yt-airportwalker-gl",
+        "src:muc-official-transfer",
+        "src:pointsanalyst-muc"
+      ]
+    },
+    {
+      "id": "w:muc-k-l",
+      "from": "muc-sat-k",
+      "to": "muc-sat-l",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": {
+        "min": 3,
+        "typical": 4,
+        "max": 6,
+        "basis": "observed",
+        "note": "Kurmann (Feb 2026): K14 → escalators → passport hall ≈ 3.5 min of walking with a short queue; the video has cuts (captions), so observed, not measured."
+      },
+      "controls": [
+        {
+          "kind": "passport",
+          "minutes": {
+            "min": 3,
+            "typical": 10,
+            "max": 45,
+            "basis": "assumed"
+          },
+          "note": "Exit control K → L (EasyPASS)"
+        }
+      ],
+      "reverseControls": [
+        {
+          "kind": "passport",
+          "minutes": {
+            "min": 5,
+            "typical": 15,
+            "max": 60,
+            "basis": "assumed"
+          },
+          "note": "Entry control L → K ('Fast Track Immigration' for short connections)"
+        },
+        {
+          "kind": "transfer-security", "when": "origin-not-one-stop",
+          "minutes": {
+            "min": 0,
+            "typical": 5,
+            "max": 30,
+            "basis": "assumed"
+          },
+          "note": "The satellite has transfer security lanes; applies depending on origin"
+        }
+      ],
+      "practical": "practical",
+      "via": "Escalators up one floor ('The L gates are upstairs'), passport control",
+      "confidence": "verified",
+      "sources": [
+        "src:yt-kurmann-kl",
+        "src:pointsanalyst-muc",
+        "src:wiki-muc"
+      ],
+      "notes": "Kurmann (Feb 2026): K14 arrival → 'Gates L' sign ≈1:30 → escalators ≈2:30 → passport hall ≈3:45–4:30 → L area ≈5:15 (short queue)."
+    },
+    {
+      "id": "w:muc-t2-f",
+      "from": "muc-t2-land",
+      "to": "muc-hall-f",
+      "bidirectional": true,
+      "access": "public",
+      "minutes": {
+        "min": 6,
+        "typical": 8,
+        "max": 12,
+        "basis": "derived"
+      },
+      "distanceM": 420,
+      "controls": [
+        {
+          "kind": "security",
+          "minutes": {
+            "min": 10,
+            "typical": 25,
+            "max": 60,
+            "basis": "assumed"
+          },
+          "note": "Hall F has enhanced security for its flights"
+        }
+      ],
+      "reverseControls": [],
+      "practical": "practical",
+      "via": "Public side, follow 'Halle F / Hall F'",
+      "confidence": "probable",
+      "sources": [
+        "src:muc-faq",
+        "src:osm-muc"
+      ],
+      "notes": "FAQ: reachable only on foot via the public area. Time from OSM distance (×1.3, 70 m/min)."
+    }
+  ],
+  "rules": [
+    {
+      "id": "r:muc-t2-levels",
+      "text": "Terminal 2 separates Schengen and non-Schengen by level on the same stands: G (Level 04) Schengen, H (Level 05) non-Schengen, bus gates on Level 03. The satellite (airside only, no check-in or reclaim) mirrors this: K Schengen, L non-Schengen one floor up, J apron-bus gates.",
+      "confidence": "verified",
+      "sources": [
+        "src:wiki-muc",
+        "src:pointsanalyst-muc",
+        "src:osm-muc",
+        "src:yt-kurmann-kl",
+        "src:muc-official-transfer"
+      ]
+    },
+    {
+      "id": "r:muc-pts",
+      "text": "The satellite is reachable only by the underground PTS people mover from the T2 main building: daily 04:00–24:00 every 4 min, about 1 min ride (measured 55–65 s), two stations ('Gates G,H' and 'Gates J,K,L'). Schengen and non-Schengen flows are separated within the trains. Between 00:00 and 04:00 the satellite is not routable.",
+      "confidence": "verified",
+      "sources": [
+        "src:muc-official-transfer",
+        "src:asiatraveltips-pts",
+        "src:pointsanalyst-muc",
+        "src:yt-avfanatic-kg"
+      ]
+    },
+    {
+      "id": "r:muc-t1-t2-transfer",
+      "text": "Between Terminal 1 and Terminal 2 a free shuttle bus for connecting passengers runs in the non-public area (06:00–23:00; every 10 min 07:00–17:00, otherwise every 20 min; ride 5–7 min), with separate Schengen (T1 C08 ↔ T2 G83) and non-Schengen (T1 A28 ↔ T2 H side) stops. Walking between the terminals is possible only via the public side (MAC) with new checks and is not recommended by FMG.",
+      "confidence": "verified",
+      "sources": [
+        "src:muc-official-transfer",
+        "src:muc-official-transfer-diagram",
+        "src:muc-faq",
+        "src:pointsanalyst-muc",
+        "src:kayak-muc"
+      ]
+    },
+    {
+      "id": "r:muc-t1-modules",
+      "text": "Terminal 1 is built as modules A–E (E arrivals only) plus the separate Hall F; before April 2026 A and D were Schengen, B and C non-Schengen, and each module was self-contained airside. Since 21 April 2026 all T1 non-Schengen flights use the new T1 Pier (gates A40–A51, remote A60–A64). The present border zone of legacy modules A, B and C is not fully documented.",
+      "confidence": "probable",
+      "sources": [
+        "src:kayak-muc",
+        "src:wiki-muc",
+        "src:yt-jun-landside",
+        "src:muc-official-t1pier",
+        "src:muc-press-pier-open"
+      ]
+    },
+    {
+      "id": "r:muc-transfer-security",
+      "text": "FMG: depending on origin and destination, connecting passengers may have to pass security again and must pass passport control between Schengen and non-Schengen. The T1 Pier has a transfer security checkpoint on Level 05 and a transfer border control in module B (Level 04); the satellite has transfer security lanes.",
+      "confidence": "probable",
+      "sources": [
+        "src:muc-official-transfer",
+        "src:muc-pocketguide-t1",
+        "src:wiki-muc"
+      ]
+    },
+    {
+      "id": "r:muc-mct",
+      "text": "Guides report a MUC minimum connecting time of 30–45 min (30 domestic / 45 international, or 40 min overall); no official MCT table was read. Times in this model are movement-only, not MCTs.",
+      "confidence": "inferred",
+      "sources": [
+        "src:pointsanalyst-muc"
+      ]
+    },
+    {
+      "id": "r:muc-night",
+      "text": "Night (published hours): the T1–T2 transfer bus runs 06:00–23:00 and the PTS 04:00–24:00. Between 23:00 and 06:00 the model routes T1 ↔ T2 connections only via the public side (arrivals/exit, MAC, security again); between 00:00 and 04:00 the satellite (J/K/L) is unreachable. Checkpoint opening hours at night are not published and are not modelled.",
+      "confidence": "probable",
+      "sources": [
+        "src:muc-official-transfer"
+      ]
+    },
+    {
+      "id": "r:muc-baggage",
+      "text": "Baggage: on one booking, checked bags are transferred automatically to the connecting flight (FMG); with separate bookings whose bags are not checked through, the passenger reclaims the bags, leaves through customs, re-checks them and passes security (and border control) again, so the connection is a landside self-transfer. EU law: hold baggage from a non-EU airport transferred at MUC onto an intra-EU flight is customs-controlled at the last international EU airport of arrival (or at MUC when the onward flight goes to another international German airport, a choice of the Member State that no read source settles for MUC); cabin baggage is controlled at MUC. The model has no reclaim or bag-drop step: self-transfer times exclude waiting at the belt and re-check-in.",
+      "confidence": "probable",
+      "sources": [
+        "src:muc-official-transfer",
+        "src:eu-2015-2447-art39",
+        "src:zoll-reisegepaeck"
+      ]
+    }
+  ],
+  "openQuestions": [
+    {
+      "id": "q:muc-legacy-zones",
+      "question": "Since the T1 Pier opened (21 Apr 2026), which border zone do legacy modules A, B and C serve, and do any T1 modules share an airside area (the 2024 video shows a long airside shopping hall after 'Departures Gates B, C, D')?",
+      "impact": "Modules A and B are modelled as 'mixed' with no airside links; C is Schengen on one official diagram only. Routes to A/B/C gates go via the public side and may be longer than reality.",
+      "howToResolve": "Owner capture of the official digital map (munich-airport.com airport map, Apple Maps embed) or a dated post-April-2026 walk through T1 modules A–C with readable signs."
+    },
+    {
+      "id": "q:muc-t1-schengen-bus",
+      "question": "From the Schengen transfer-bus stop at C08, can passengers reach Schengen gates in modules A, B and D airside (the official diagram labels the stop 'Terminal 1 Gates A, B, C, D')?",
+      "impact": "Schengen T2 → T1 D/A transfers currently route via the public side with security.",
+      "howToResolve": "Recent transfer video T2 G83 → T1, or FMG transfer-desk confirmation."
+    },
+    {
+      "id": "q:muc-ns-bus-t2-stop",
+      "question": "Where exactly is the non-Schengen transfer-bus stop in T2 (gate number on the H side), and do passengers arriving by bus pass a transfer security check?",
+      "impact": "Stop placement and access minutes are assumed.",
+      "howToResolve": "Post-pier ride video A28 → T2, or the official map."
+    },
+    {
+      "id": "q:muc-pier-to-schengen",
+      "question": "How does a passenger arriving at the T1 Pier (non-Schengen) connect to a T1 Schengen gate: via the transfer border control in module B (Level 04), and is security repeated?",
+      "impact": "Pier → C/D currently routes through the public side (entry passport, then module security).",
+      "howToResolve": "Pocket-guide flow confirmation or a dated transfer video."
+    },
+    {
+      "id": "q:muc-pts-cars",
+      "question": "Which PTS cars/platforms serve non-Schengen arrivals versus departures (the 2016 report mentions a fourth car for a third flow), and where do L arrivals clear entry passport control?",
+      "impact": "Non-Schengen PTS line confidence is probable; L → T2 exit routes via K (entry passport) and the Schengen cars.",
+      "howToResolve": "Full read of the Business Traveller article (HTTP 403 to automated fetch) or a dated L-arrival video."
+    },
+    {
+      "id": "q:muc-hall-f",
+      "question": "Is Hall F in use in autumn 2026, which gate numbers does it use, and for which flights?",
+      "impact": "Hall F has no gates and is outside the matrix.",
+      "howToResolve": "Official map capture or a dated photo of Hall F signage."
+    },
+    {
+      "id": "q:muc-night-transfer",
+      "question": "How do connecting passengers move between T1 and T2 when the transfer bus does not run (23:00–06:00)?",
+      "impact": "With a time of 23:00–06:00 the model routes T1 ↔ T2 connections via the public side (passport/security again); whether an on-demand airside transfer exists and whether the T2 central checkpoint and the T1 Level 05 checkpoints are open then is unknown.",
+      "howToResolve": "FMG transfer-desk or ground-handling statement; checkpoint opening hours (not on the official security page, re-read 2026-10-31). The FMG PDF \"openinghours security checkpoints 01062025\" lists STAFF screening points only (T1 Modul A and C closed, Modul D 03:30–21:30, Modul C crew 24 h); it does not give passenger checkpoint hours and is not used as passenger evidence."
+    },
+    {
+      "id": "q:muc-gate-gaps",
+      "question": "Unattested gate numbers: A13, B01/B03/B04/B13, C02, D02/D05/D08/D13/D18/D19/D22, G71/G73–G80, K02/K17/K29, L10/L12/L14/L16–L18/L20/L29; and the zone of J01–J06.",
+      "impact": "Gate lookup coverage only.",
+      "howToResolve": "Official map capture; gate-sign photos."
+    },
+    {
+      "id": "q:muc-t1-ab-checkpoints",
+      "question": "Do legacy modules A and B still have their own departure security checkpoints after the pier opened, or are Schengen passengers for A/B gates screened at the module C/D Level 5 checkpoints and then walk airside?",
+      "impact": "Routes to modules A and B (and the 52 inferred matrix cells) use a module checkpoint that may not exist; real routes may be shorter (via C/D) or impossible (A/B used only for non-Schengen bus boarding).",
+      "howToResolve": "Owner capture of the official digital map (Apple Maps embed) or a dated post-April-2026 departure walk to an A or B gate."
+    },
+    {
+      "id": "q:muc-pts-replacement",
+      "question": "Where did the replacement buses of the 2024 PTS suspension board and alight (G/H bus gates? J gates?), and were Schengen and non-Schengen passengers carried separately?",
+      "impact": "Historical only; the replacement bus is not modelled, so routes to the satellite are unroutable on dates inside a PTS suspension.",
+      "howToResolve": "FMG statement or archived X post; repeat if another suspension is announced."
+    },
+    {
+      "id": "q:muc-domestic-bags",
+      "question": "Non-Schengen arrival at MUC connecting to a German domestic flight on one ticket: are the checked bags customs-controlled at MUC (EU 2015/2447 Art. 39(2) allows the transfer airport when the onward flight goes to another international airport of the same Member State) or at the destination airport?",
+      "impact": "If Germany applies the control at MUC, such passengers would reclaim their bags at MUC and the airside connection modelled today would be wrong for them. No read source states it; the model assumes bags are checked through (FMG transfer page).",
+      "howToResolve": "Lufthansa connection pages (lufthansa.com answered HTTP 403: owner capture) or a zoll.de/FMG statement on international-to-domestic transfers."
+    },
+    {
+      "id": "q:muc-reclaim-time",
+      "question": "How long do baggage reclaim and re-check-in take for a self-transfer at MUC (T1 pier belts B1–B4, T2 belts)?",
+      "impact": "Self-transfer routes go landside through the arrivals exit and departure security, but the reclaim wait and bag drop are not in the model (no schema field), so these routes are too short.",
+      "howToResolve": "Schema: a reclaim/bag-drop step or profile flag; data: FMG or uncut video timing."
+    }
+  ],
+  "sources": [
+    { "id": "src:muc-airline-elal", "title": "Munich Airport airline details: EL AL (check-in Terminal 1 Module F)", "url": "https://www.munich-airport.com/airline-details-75421?airline_id=277", "publisher": "Flughafen München GmbH", "kind": "official", "group": "muc-official", "accessed": "2026-11-01" },
+    { "id": "src:muc-airline-israir", "title": "Munich Airport airline details: Israir (check-in Terminal 1 Module F)", "url": "https://www.munich-airport.com/airline-details-75421?airline_id=3021", "publisher": "Flughafen München GmbH", "kind": "official", "group": "muc-official", "accessed": "2026-11-01" },
+    { "id": "src:muc-airline-lh", "title": "Munich Airport airline details: Lufthansa (\"Abflüge nach Tel Aviv: T1 F\")", "url": "https://www.munich-airport.com/airline-details-75421?airline_id=52", "publisher": "Flughafen München GmbH", "kind": "official", "group": "muc-official", "accessed": "2026-11-01" },
+    { "id": "src:muc-faq-hall-f", "title": "Munich Airport FAQ: Hall F (separate building, reachable only on foot via the public area; transfer passengers follow Exit / Hall F)", "url": "https://www.munich-airport.com/airport-map-261352", "publisher": "Flughafen München GmbH", "kind": "official", "group": "muc-official", "accessed": "2026-11-01", "notes": "FAQ item 3497708 on the airport-map page." },
+    { "id": "src:dhs-tsa-2017-enhanced", "title": "DHS / TSA: enhanced security measures for all commercial flights to the United States (June 2017; >280 last-point-of-departure airports, security directives and emergency amendments)", "url": "https://www.dhs.gov/", "publisher": "U.S. Department of Homeland Security", "kind": "official", "group": "dhs", "accessed": "2026-11-01", "published": "2017-06", "notes": "Read through the DHS 2017 testimony by the research pass of 2026-11-01; exact page URL not recorded. Procedures themselves are not public." },
+    { "id": "src:fd-feed-terminals-2026-11-01", "title": "CDG Navigator flight-data server: terminal / gate strings observed in the collected feed (2026-10-30 – 2026-11-01), read-only GET /fd-api/stats/distribution and /fd-api/flights", "url": "http://127.0.0.1:8790/fd-api/stats/summary", "publisher": "CDG Navigator (local flight-data collection, AeroDataBox-derived)", "kind": "other", "group": "fd-feed", "accessed": "2026-11-01", "notes": "Cross-tabulated by the other airport's Schengen zone and by gate letter; counts in docs/research/AIRPORT_DATA_REMEDIATION.md. Local research data, not for display." },
+    { "id": "src:eu-oss-2025-920", "title": "Commission Implementing Regulation (EU) 2025/920 amending Reg. (EU) 2015/1998 (one-stop security lists: Ben Gurion removed from Attachments 3-B / 4-B; Kangerlussuaq, Guernsey, Isle of Man, Jersey removed)", "url": "https://eur-lex.europa.eu/eli/reg_impl/2025/920/oj", "publisher": "European Commission", "kind": "official", "group": "eu-law", "accessed": "2026-11-01", "published": "2025-05-20", "notes": "Recitals read from the umwelt-online.de text (EUR-Lex HTML returned empty). The consolidated Attachment 4-B list was NOT read: owner capture. Baseline list: Reg. (EU) 2019/413 (Canada, Faroe Islands Vagar, Greenland Kangerlussuaq, Guernsey, Isle of Man, Jersey, Montenegro, Singapore Changi, United Kingdom, United States)." },
+    { "id": "src:eu-oss-2019-413", "title": "Commission Implementing Regulation (EU) 2019/413 (Attachments 3-B, 4-B, 5-A of Reg. 2015/1998)", "url": "https://www.legislation.gov.uk/eur/2019/413/data.html", "publisher": "European Commission (UK legislation mirror)", "kind": "official", "group": "eu-law", "accessed": "2026-11-01", "published": "2019-03-14" },
+    {
+      "id": "src:muc-official-transfer",
+      "title": "Connecting flights / Umsteigen",
+      "url": "https://www.munich-airport.com/connecting-flights-260553",
+      "publisher": "Flughafen München GmbH (munich-airport.com/.de)",
+      "kind": "official",
+      "group": "fmg",
+      "accessed": "2026-10-31",
+      "notes": "Also https://www.munich-airport.de/umsteigen-89552. T1–T2 shuttle bus (5–7 min; every 10 min 07–17, every 20 min 06–07 and 17–23); T2 = G, H; satellite = J, K, L; PTS 04:00–24:00 every 4 min, ~1 min; passport rules by Schengen origin/destination; security may be repeated."
+    },
+    {
+      "id": "src:muc-official-transfer-diagram",
+      "title": "Overview shuttle-bus service Terminal 1 – Terminal 2 (diagram on the transfer page)",
+      "url": "https://www.munich-airport.de/_b/0000000000000040001032bb69e751b2/Gesamtu-bersicht-ohne-info1-ohne-titel-zentriert.jpg",
+      "publisher": "Flughafen München GmbH",
+      "kind": "official-map",
+      "group": "fmg",
+      "accessed": "2026-10-31",
+      "notes": "Image on the transfer page: bus stops in the non-public area — T1 'Busstop Gate A28 Non-Schengen', T1 'Busstop Gate C08 Schengen', T2 'Busstop Non-Schengen' (Gates H, L), T2 'Busstop G83 Schengen' (Gates J, G, K); PTS shuttle T2 ↔ satellite; Hall F between the terminals. Undated; image id suggests spring 2026. Viewed temporarily, not stored."
+    },
+    {
+      "id": "src:muc-official-t1pier",
+      "title": "Terminal 1 Pier / Alles zum neuen Terminal 1-Pier",
+      "url": "https://www.munich-airport.com/terminal-1-pier-40274281",
+      "publisher": "Flughafen München GmbH",
+      "kind": "official",
+      "group": "fmg",
+      "accessed": "2026-10-31",
+      "notes": "Also https://www.munich-airport.de/t1-pier: since 21 Apr 2026 ~40 non-Schengen airlines; 12 positions (6 wide-body); levels 03 reclaim + bus gates, 04 shops/departures, 05 arrival, passport and security; 'shuttle bus to Terminal 2 for transfer passengers'."
+    },
+    {
+      "id": "src:muc-press-pier-open",
+      "title": "Press: Terminal 1 Pier successfully put into operation",
+      "url": "https://www.munich-airport.com/press-terminal-1-pier-successfully-put-into-operation-40004134",
+      "publisher": "Flughafen München GmbH",
+      "kind": "official",
+      "group": "fmg",
+      "accessed": "2026-10-31",
+      "published": "2026-04-21",
+      "notes": "Regular operations started; 11,000 passengers and 70 flights on day one; first arrival AA from Charlotte, first departure DL to Detroit."
+    },
+    {
+      "id": "src:muc-press-pier-100days",
+      "title": "Press: The First 100 Days of Terminal 1 Pier",
+      "url": "https://www.munich-airport.com/press-the-first-100-days-of-terminal-1-pier-a-successful-start-42319643",
+      "publisher": "Flughafen München GmbH",
+      "kind": "official",
+      "group": "fmg",
+      "accessed": "2026-10-31",
+      "published": "2026-07-30",
+      "notes": "Up to 20,000 passengers/day, 37 airlines, 48 destinations in 23 non-Schengen countries; 80% of movements at contact positions."
+    },
+    {
+      "id": "src:muc-press-pier-grand-opening",
+      "title": "Press: Grand opening of Terminal 1 pier on April 13",
+      "url": "https://www.munich-airport.com/press-grand-opening-of-terminal-1-pier-on-april-13-38135963",
+      "publisher": "Flughafen München GmbH",
+      "kind": "official",
+      "group": "fmg",
+      "accessed": "2026-10-31",
+      "notes": "360 m into the west apron, includes part of arrivals module B; six levels, three for passengers; trial operation since October; from 21 April ~40 airlines; Airport Lounge World and Emirates lounge."
+    },
+    {
+      "id": "src:muc-pocketguide-t1",
+      "title": "Pocket Guide: Wayfinding in Terminal 1 Pier (pocketguide-t1-orat.pdf)",
+      "url": "https://www.munich-airport.com/_b/0000000000000036239421bb68fb6178/pocketguide-t1-orat.pdf",
+      "publisher": "Flughafen München GmbH",
+      "kind": "official-pdf",
+      "group": "fmg",
+      "accessed": "2026-10-31",
+      "notes": "Linked publicly from the official T1 Pier page, but marked 'for official purposes only; forwarding or publication not permitted'. Only facts (gate numbers, levels, control locations) are cited; nothing is reproduced. Page 1: Levels 05/04/03 with controls; page 2: modules A/B gates, VB 1–4 bridges, A28 shuttle-bus stop, transfer border control module B L04."
+    },
+    {
+      "id": "src:muc-press-satellite-10y",
+      "title": "Press: Satellite building has been in successful operation for ten years",
+      "url": "https://www.munich-airport.com/press-satellite-building-has-been-in-successful-operation-for-ten...-40158433",
+      "publisher": "Flughafen München GmbH",
+      "kind": "official",
+      "group": "fmg",
+      "accessed": "2026-10-31",
+      "published": "2026-04-26",
+      "notes": "Opened 26 Apr 2016; ~56% transfer passengers; reached after T2 security in about one minute by the automated metro; expansion planned for 2035."
+    },
+    {
+      "id": "src:muc-faq",
+      "title": "Frequently asked questions",
+      "url": "https://www.munich-airport.com/frequently-asked-questions-376207",
+      "publisher": "Flughafen München GmbH",
+      "kind": "official",
+      "group": "fmg",
+      "accessed": "2026-10-31",
+      "notes": "S-Bahn station below the MAC (Level 02) → Level 03 → T1 or across the MAC Forum to T2; changing terminals on foot possible but not recommended ('further checks'); Hall F separate building reachable only on foot via the public area."
+    },
+    {
+      "id": "src:muc-official-security",
+      "title": "Security screening and passport control",
+      "url": "https://www.munich-airport.com/security-screening-and-passport-control-3949908",
+      "publisher": "Flughafen München GmbH",
+      "kind": "official",
+      "group": "fmg",
+      "accessed": "2026-10-31",
+      "notes": "CT scanners at checkpoints in T1 and T2; accessible checkpoint in T2; EasyPASS for non-Schengen trips."
+    },
+    {
+      "id": "src:muc-public-transport",
+      "title": "Public transport",
+      "url": "https://www.munich-airport.com/public-transport-260822",
+      "publisher": "Flughafen München GmbH",
+      "kind": "official",
+      "group": "fmg",
+      "accessed": "2026-10-31",
+      "notes": "S1/S8; bus stops T1 arrivals B / module D, MAC, T2 Level 03; T1 is a 5–10 min walk from the T2 long-distance bus stops."
+    },
+    {
+      "id": "src:yt-muc-pier-tour",
+      "title": "Servus World. New Terminal 1 Pier: Travel the Bavarian Soul (YouTube 3KB_5tFq2I4)",
+      "url": "https://www.youtube.com/watch?v=3KB_5tFq2I4",
+      "publisher": "Munich Airport (official channel)",
+      "kind": "video",
+      "group": "fmg",
+      "accessed": "2026-10-31",
+      "published": "2026-04-13",
+      "notes": "Official tour (7:27): escalators up → boarding-pass gates/screening hall → CT security → passport control with EasyPASS → marketplace. Storyboards read, deleted."
+    },
+    {
+      "id": "src:osm-muc",
+      "title": "OpenStreetMap: aeroway=gate/terminal, railway=monorail/station at EDDM (Overpass)",
+      "url": "https://www.openstreetmap.org/#map=15/48.354/11.789",
+      "publisher": "© OpenStreetMap contributors, ODbL",
+      "kind": "osm",
+      "group": "osm",
+      "accessed": "2026-10-31",
+      "notes": "165 gate nodes (A, B, C, D, G, H, J, K, L) with levels; outlines of Terminal 1, Terminal 2, Terminal 2 Satellit, MAC, Terminal F; PTS monorail (2 tracks) with stops 'Gates G,H' and 'Gates J,K,L'; S-Bahn station. Projection x = 500 + (lon − 11.789)·36000, y = 320 − (lat − 48.35375)·54086 (≈2.06 m/unit)."
+    },
+    {
+      "id": "src:wiki-muc",
+      "title": "Munich Airport (Terminals and facilities)",
+      "url": "https://en.wikipedia.org/wiki/Munich_Airport",
+      "publisher": "Wikipedia",
+      "kind": "wiki",
+      "group": "wikipedia",
+      "accessed": "2026-10-31",
+      "notes": "Low weight. T1 modules A–E (A/D Schengen, B/C non-Schengen, E arrivals), Hall F, central area Z; T2 G L4 / H L5 / bus gates L3; satellite K/L/J, 52 gates, 27 stands, 24 transfer security lanes."
+    },
+    {
+      "id": "src:pointsanalyst-muc",
+      "title": "Munich Airport (MUC) guide",
+      "url": "https://www.thepointsanalyst.com/munich-airport-muc/",
+      "publisher": "The Points Analyst",
+      "kind": "guide",
+      "group": "pointsanalyst",
+      "accessed": "2026-10-31",
+      "notes": "2026 guide (mentions the pier from 21 Apr 2026): airside T1–T2 shuttle bus 5–7 min every 10–20 min; satellite airside only, K Schengen / L non-Schengen; T2 G L4 / H L5; MCT 40 min; module descriptions partly pre-pier."
+    },
+    {
+      "id": "src:kayak-muc",
+      "title": "Munich Franz Josef Strauss Airport guide",
+      "url": "https://www.kayak.co.uk/Munich-Franz-Josef-Strauss-Airport.MUC.ap.html",
+      "publisher": "KAYAK",
+      "kind": "guide",
+      "group": "kayak",
+      "accessed": "2026-10-31",
+      "notes": "Pre-pier text: areas A and D Schengen, B and C non-Schengen, E arrivals, F special; each area self-contained after security; A/E/F 10–15 min walk from the MAC; free transfer bus ~5 min every ~10 min."
+    },
+    {
+      "id": "src:frankfurtflyer-pts",
+      "title": "Umstieg am Flughafen München dauert länger: Zug zwischen Terminal 2 und Satellit fährt nicht mehr",
+      "url": "https://frankfurtflyer.de/umstieg-am-flughafen-muenchen-dauert-laenger-zug-zwischen-terminal-2-und-satellit-faehrt-nicht-mehr/",
+      "publisher": "Frankfurtflyer.de",
+      "kind": "news",
+      "group": "frankfurtflyer",
+      "accessed": "2026-10-31",
+      "published": "2024-01-29",
+      "notes": "PTS out of service for maintenance until ~25 Feb 2024 (citing MUC on X); bus replacement +~20 min."
+    },
+    {
+      "id": "src:asiatraveltips-pts",
+      "title": "Munich Airport's satellite subway (2016)",
+      "url": "https://www.asiatraveltips.com/news16/242-MunichAirport.shtml",
+      "publisher": "AsiaTravelTips",
+      "kind": "news",
+      "group": "asiatraveltips",
+      "accessed": "2026-10-31",
+      "published": "2016",
+      "notes": "382 m twin-track tunnel; up to three trains / 12 cars; ~25 km/h; under one minute; 27 pierside gates, no buses needed at the satellite (at opening)."
+    },
+    {
+      "id": "src:bt-satellite",
+      "title": "Munich Airport opens Terminal 2 satellite",
+      "url": "https://www.businesstraveller.com/news/2016/04/22/munich-airport-opens-terminal-2-satellite/",
+      "publisher": "Business Traveller",
+      "kind": "news",
+      "group": "businesstraveller",
+      "accessed": "2026-10-31",
+      "published": "2016-04-22",
+      "notes": "HTTP 403 to automated fetch (not circumvented); used only through a search-engine excerpt: four-carriage shuttle with Schengen (two carriages), non-Schengen (one) and a third flow (one) separated. Low weight."
+    },
+    {
+      "id": "src:yt-luckytravel-t2t1",
+      "title": "Munich Aéroport (MUC) Terminal 2 Transit Lufthansa Connecting Flight (YouTube IP2nSeDo0NA)",
+      "url": "https://www.youtube.com/watch?v=IP2nSeDo0NA",
+      "publisher": "Lucky Travel",
+      "kind": "video",
+      "group": "yt-luckytravel",
+      "accessed": "2026-10-31",
+      "published": "2025-02-01",
+      "notes": "Description: K → PTS → G → wait at G83 for the T1 shuttle bus → T1. Frames: T2 signs 'Ausgang Exit Terminal 1 A–F' and 'Gates G, H, J, L' (~5:30), 'G81–G84' (~8:45). Storyboards read, deleted."
+    },
+    {
+      "id": "src:yt-kurmann-kl",
+      "title": "How to Connect in Munich MUC Airport K to L Gates (YouTube yN7cn1uY4eo)",
+      "url": "https://www.youtube.com/watch?v=yN7cn1uY4eo",
+      "publisher": "Reto Kurmann",
+      "kind": "video",
+      "group": "yt-kurmann",
+      "accessed": "2026-10-31",
+      "published": "2026-03-19",
+      "notes": "Filmed Feb 2026: LX 1100 at K14 → LH 488 at L30; 'The L gates are upstairs, Non-Schengen part of the T2 satellite'; passport hall with 'Fast Track Immigration … Non-Schengen to Schengen'; per-flight US document check and holding area at L. Storyboards read, deleted."
+    },
+    {
+      "id": "src:yt-airportwalker-gl",
+      "title": "How to Easily Get from G to L Gates at Munich Airport (YouTube V1uri1rxYAA)",
+      "url": "https://www.youtube.com/watch?v=V1uri1rxYAA",
+      "publisher": "Airport Walker",
+      "kind": "video",
+      "group": "yt-airportwalker",
+      "accessed": "2026-10-31",
+      "published": "2025-09-08",
+      "notes": "G (after security) → 'You have reached border control' (~0:50) → 'H area non-Schengen' → 'J K L' signs → long escalators down → train ('Now we wait for the skytrain', ~4:30) → escalators up → 'You have reached the L area' (~7:30). Storyboards read, deleted."
+    },
+    {
+      "id": "src:yt-avfanatic-kg",
+      "title": "Munich Airport: Train between gates J/K/L and G, baggage reclaim and exit (YouTube -Qs3TgzlIzQ)",
+      "url": "https://www.youtube.com/watch?v=-Qs3TgzlIzQ",
+      "publisher": "Aviation Fanatic",
+      "kind": "video",
+      "group": "yt-avfanatic",
+      "accessed": "2026-10-31",
+      "published": "2025-04-13",
+      "notes": "SN2649 arr. K27 (10 Apr 2025) → LH1830 G04. Platform with screen doors signed 'Gates G, H'; ride ≈ 1:35–2:45 (≈70 s); T2 platform signed 'Terminal 2 Gates J, K, L'; signs 'Ausgang Exit Gepäckausgabe Baggage Claim' and 'Terminal 1 A–E, F'. Same channel: alSxB1XzU0I (G10 → K03, Mar 2024, description only). Storyboards read, deleted."
+    },
+    {
+      "id": "src:yt-jun-landside",
+      "title": "ミュンヘン空港の歩き方 Terminal 1・2 (YouTube 202p89h5-CM)",
+      "url": "https://www.youtube.com/watch?v=202p89h5-CM",
+      "publisher": "JUN | ドイツのくらし",
+      "kind": "video",
+      "group": "yt-jun",
+      "accessed": "2026-10-31",
+      "published": "2025-11-20",
+      "notes": "Landside walk: S-Bahn 0:19 → Level 03 junction (sign Terminal 1 A–E / Terminal 2 G–L) 1:16 → T1 C 3:27 → D 4:27. Caption: 'A and D Schengen, B and C international, E arrivals only, F special flights' (pre-pier). Storyboards read, deleted."
+    },
+    {
+      "id": "src:yt-pedestrians-t1",
+      "title": "Walking tour – Munich Airport Terminal 1 (YouTube taoPbPgp3mo)",
+      "url": "https://www.youtube.com/watch?v=taoPbPgp3mo",
+      "publisher": "Pedestrians Only",
+      "kind": "video",
+      "group": "yt-pedestrians",
+      "accessed": "2026-10-31",
+      "published": "2024-05-16",
+      "notes": "Historical (pre-pier): central-area moving walkways, sign 'Abflug/Departures Gates B, C, D' (~3:30), long airside shopping hall, gate hall signed 'D15–D23' (~6:35). Security location not visible. Storyboards read, deleted."
+    },
+    {
+      "id": "src:muc-plan-2023",
+      "title": "Plan_neu_2023_de: overview shuttle-bus service Terminal 1 – Terminal 2 (PDF, created 18 Sep 2023)",
+      "url": "https://www.munich-airport.de/6603538",
+      "publisher": "Flughafen München GmbH",
+      "kind": "official-pdf",
+      "group": "fmg",
+      "accessed": "2026-10-31",
+      "published": "2023-09-21",
+      "notes": "Pre-pier version of the transfer-bus diagram; text layer read with pdftotext. Used to date the change of the T1 bus-stop zone labels."
+    },
+    {
+      "id": "src:pointsmag-liquids-2026",
+      "title": "Flughafen München erlaubt mehr Flüssigkeiten im Handgepäck an allen Sicherheitskontrollen",
+      "url": "https://pointsmag.com/?p=69158",
+      "publisher": "pointsmag",
+      "kind": "news",
+      "group": "pointsmag",
+      "accessed": "2026-10-31",
+      "published": "2026-09",
+      "notes": "Names the CT checkpoints in regular operation (T2 central, T1 modules C and D on Level 5, T1 Pier) and the satellite transfer checkpoint (retrofit by May 2027)."
+    },
+    {
+      "id": "src:yt-wheresmymap-arrival",
+      "title": "Your Virtual Arrival at MUNICH Airport, Germany (MUC) (YouTube Ye8TrrdjA3c)",
+      "url": "https://www.youtube.com/watch?v=Ye8TrrdjA3c",
+      "publisher": "Where's My Map (YouTube)",
+      "kind": "video",
+      "group": "yt-wheresmymap",
+      "accessed": "2026-10-31",
+      "published": "2025-04-17",
+      "notes": "T2 arrival → reclaim → T2 arrivals hall → MAC Forum → T1 side bus stops; storyboard frames every 10 s."
+    },
+    {
+      "id": "src:fernwehblog-t1pier-trial",
+      "title": "Flughafen München Terminal 1 Pier: Komparse im Probebetrieb",
+      "url": "https://fernwehblog.net/flughafen-muenchen-terminal-1-probebetrieb/",
+      "publisher": "Fernwehblog",
+      "kind": "guide",
+      "group": "fernwehblog",
+      "accessed": "2026-11-01",
+      "published": "2025-12-08",
+      "notes": "First-hand account of the pier trial operation (updated 18 Aug 2026): boarding simulated at A44, arrival from Dubai with a long walk to reclaim, then customs control after reclaim. Trial, not regular operation."
+    },
+    {
+      "id": "src:zoll-reisegepaeck",
+      "title": "Zoll online: Reisegepäck (Reisen nach Deutschland aus einem Nicht-EU-Staat)",
+      "url": "https://www.zoll.de/DE/Privatpersonen/Reisen/Reisen-nach-Deutschland-aus-einem-nicht-eu-Staat/Zoll-und-Steuern/Reisegepaeck/reisegepaeck_node.html",
+      "publisher": "Generalzolldirektion (German customs)",
+      "kind": "official",
+      "group": "zoll",
+      "accessed": "2026-11-01",
+      "notes": "Red/green exit channels after baggage reclaim at most German airports. Says nothing about transfers."
+    },
+    {
+      "id": "src:eu-2015-2447-art39",
+      "title": "Commission Implementing Regulation (EU) 2015/2447, Article 39 (baggage on flights transferring at a Union airport)",
+      "url": "https://eur-lex.europa.eu/eli/reg_impl/2015/2447/oj",
+      "publisher": "European Union (EUR-Lex)",
+      "kind": "official",
+      "group": "eu-law",
+      "accessed": "2026-11-01",
+      "notes": "EUR-Lex returned an empty page to the automated fetch; the article text was read on the lawplayer.com mirror (https://lawplayer.com/eu/article/32015R2447/art_39). Hold baggage from a non-Union airport transferred onto an intra-Union flight: customs at the last international Union airport of arrival, or at the transfer airport when the onward flight goes to another international Union airport of the same Member State; cabin baggage at the first international Union airport."
+    }
+  ]
+}

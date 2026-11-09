@@ -1,0 +1,13 @@
+node_modules/
+dist/
+extension/dist/
+extension/dist-test/
+airportmaps/dist/
+flightdata/dist/
+*.log
+.env
+# research evidence and captured pages are kept out of this repository
+airportmaps/data/*/evidence.json
+tests/fixtures/flightdata/
+tests/fixtures/extension/screenshots/*.png
+tests/fixtures/extension/screenshots/*.jpg

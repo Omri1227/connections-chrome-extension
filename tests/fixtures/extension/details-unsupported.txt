@@ -1,0 +1,13 @@
+﻿Outbound
+Thu, 5 Nov 2026
+07:00
+TLV Tel Aviv Ben Gurion
+Aegean A3 929
+09:20
+ATH Athens
+1h 10m connection
+10:30
+ATH Athens
+Aegean A3 600
+12:15
+FCO Rome Fiumicino

@@ -1,0 +1,50 @@
+{
+  "name": "connections-chrome-extension",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Connections Analyst: a Chrome extension that estimates terminals, gate areas, the route and the transfer time of a flight connection at eight European hubs.",
+  "license": "MIT",
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "fd": "tsx flightdata/src/cli.ts",
+    "fd:server": "tsx flightdata/src/server.ts",
+    "fd:dashboard": "vite --config flightdata/vite.config.ts",
+    "fd:build": "tsc --noEmit && vite build --config flightdata/vite.config.ts",
+    "fd:health": "tsx flightdata/scripts/health.ts",
+    "fd:public-snapshot": "tsx flightdata/scripts/public-snapshot.ts",
+    "fd:public": "tsx flightdata/public/server.ts",
+    "maps:dev": "vite --config airportmaps/vite.config.ts",
+    "maps:build": "tsc --noEmit && vite build --config airportmaps/vite.config.ts",
+    "maps:preview": "vite preview --config airportmaps/vite.config.ts",
+    "maps:validate": "tsx airportmaps/scripts/validate.ts all",
+    "ext:build": "tsx extension/scripts/build.ts",
+    "ext:test": "vitest run tests/extension.",
+    "ext:e2e": "node extension/scripts/e2e.mjs",
+    "ext:scenarios": "tsx extension/scripts/scenario-matrix.ts"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "^0.5.13",
+    "@tesseract.js-data/eng": "^1.0.0",
+    "pg": "^8.23.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tesseract.js": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "@types/pg": "^8.23.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "puppeteer-core": "^23.11.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11",
+    "vitest": "^2.1.8"
+  },
+  "engines": {
+    "node": ">=22.13"
+  }
+}

@@ -1,0 +1,17 @@
+Outbound
+Wed, 18 Nov 2026
+Paris to Tel Aviv
+07:00
+CDG Paris Charles de Gaulle
+1h 30m
+Lufthansa LH 2227
+08:30
+MUC Munich
+Connect in airport
+1h 50m connection
+10:20
+MUC Munich
+3h 40m
+Lufthansa LH 686
+15:00
+TLV Tel Aviv Ben Gurion

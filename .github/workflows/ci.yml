@@ -1,0 +1,24 @@
+# Type-check, tests and builds on every push and pull request. Needs no secrets: the tests use in-memory databases and
+# fixture sources, never the live flight-data provider or any booking site.
+name: CI
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx tsc --noEmit
+      - run: npm test
+      - run: npm run ext:build
+      - run: npm run maps:build
+      - run: npm run fd:build

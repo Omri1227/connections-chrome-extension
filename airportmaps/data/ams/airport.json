@@ -1,0 +1,2865 @@
+{
+  "iata": "AMS",
+  "icao": "EHAM",
+  "name": "Amsterdam Airport Schiphol",
+  "city": "Amsterdam (Haarlemmermeer)",
+  "asOf": "2026-10-31",
+  "schematic": {
+    "width": 1000,
+    "height": 640,
+    "northDeg": 0,
+    "background": [
+      {
+        "kind": "other",
+        "label": "Terminal building",
+        "shape": {
+          "type": "poly",
+          "points": [
+            [
+              547,
+              323
+            ],
+            [
+              532,
+              334
+            ],
+            [
+              523,
+              339
+            ],
+            [
+              508,
+              335
+            ],
+            [
+              494,
+              341
+            ],
+            [
+              487,
+              334
+            ],
+            [
+              491,
+              326
+            ],
+            [
+              493,
+              298
+            ],
+            [
+              494,
+              279
+            ],
+            [
+              491,
+              253
+            ],
+            [
+              449,
+              242
+            ],
+            [
+              428,
+              244
+            ],
+            [
+              407,
+              245
+            ],
+            [
+              389,
+              244
+            ],
+            [
+              378,
+              246
+            ],
+            [
+              377,
+              240
+            ],
+            [
+              374,
+              218
+            ],
+            [
+              373,
+              196
+            ],
+            [
+              439,
+              189
+            ],
+            [
+              442,
+              205
+            ],
+            [
+              518,
+              233
+            ],
+            [
+              529,
+              243
+            ],
+            [
+              538,
+              244
+            ],
+            [
+              548,
+              307
+            ]
+          ]
+        }
+      },
+      {
+        "kind": "other",
+        "label": "Temporary BC link (since 25 Sep 2024)",
+        "shape": {
+          "type": "poly",
+          "points": [
+            [
+              434,
+              465
+            ],
+            [
+              438,
+              462
+            ],
+            [
+              523,
+              411
+            ],
+            [
+              528,
+              408
+            ],
+            [
+              531,
+              414
+            ],
+            [
+              442,
+              468
+            ],
+            [
+              438,
+              471
+            ]
+          ]
+        }
+      },
+      {
+        "kind": "other",
+        "label": "AB link (temporary, for pier A)",
+        "shape": {
+          "type": "poly",
+          "points": [
+            [
+              436,
+              488
+            ],
+            [
+              439,
+              493
+            ],
+            [
+              412,
+              510
+            ],
+            [
+              355,
+              547
+            ],
+            [
+              352,
+              542
+            ],
+            [
+              404,
+              509
+            ]
+          ]
+        }
+      },
+      {
+        "kind": "other",
+        "label": "Terminal 1A",
+        "shape": {
+          "type": "poly",
+          "points": [
+            [
+              452,
+              421
+            ],
+            [
+              440,
+              435
+            ],
+            [
+              429,
+              418
+            ],
+            [
+              481,
+              386
+            ],
+            [
+              514,
+              381
+            ],
+            [
+              515,
+              388
+            ],
+            [
+              470,
+              416
+            ]
+          ]
+        }
+      }
+    ],
+    "labels": [
+      {
+        "text": "Holland Boulevard",
+        "at": [
+          478,
+          212
+        ],
+        "kind": "note",
+        "rotate": 20
+      },
+      {
+        "text": "Pier A opens April 2027 (expected)",
+        "at": [
+          300,
+          625
+        ],
+        "kind": "note"
+      },
+      {
+        "text": "OSM-derived geometry © OpenStreetMap contributors (ODbL); schematic, not survey-accurate",
+        "at": [
+          20,
+          632
+        ],
+        "kind": "note"
+      },
+      {
+        "text": "Pier D: lower = non-Schengen D1–D57, upper = Schengen D59–D87",
+        "at": [
+          640,
+          410
+        ],
+        "kind": "note"
+      }
+    ]
+  },
+  "feedTerminals": { "arrival": { "1": ["ams-b", "ams-c", "ams-d-s", "ams-d-n"], "2": ["ams-b", "ams-c", "ams-d-s", "ams-d-n", "ams-e"], "3": ["ams-d-n", "ams-d-s", "ams-e", "ams-f", "ams-g", "ams-h"], "4": ["ams-e", "ams-f", "ams-g", "ams-h"]}, "departure": { "1": ["ams-b", "ams-c", "ams-d-s", "ams-d-n", "ams-e"], "2": ["ams-d-n", "ams-d-s", "ams-e", "ams-f"], "3": ["ams-d-n", "ams-d-s", "ams-e", "ams-f", "ams-g", "ams-h", "ams-m", "ams-b", "ams-c"]}},
+  "oneStopSecurity": { "countries": ["AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IE", "IT", "LV", "LT", "LU", "MT", "NL", "PL", "PT", "RO", "SK", "SI", "ES", "SE", "IS", "NO", "LI", "CH", "CA", "US", "GB", "SG"], "airports": ["BEG"], "excludedAirports": ["TLV"], "asOf": "2026-11-01", "sources": ["src:schiphol-transfer-blog", "src:klm-transfers", "src:benthem-onexs", "src:eu-oss-2025-920"], "note": "Schiphol transfer page (owner copy 2026-11-02, page dated 4 Dec 2023): no repeat security after flights from the United States, Canada, the United Kingdom, Ireland, Singapore, Cyprus, Serbia (Belgrade only) and Schengen countries; Israel is not listed. Schengen ↔ non-Schengen transfers pass passport control. DR-B5 (AMS side) resolved: Canada is in the Schiphol list and the EU list; the KLM excerpt without Canada is an older variant. Montenegro and the Faroe Islands (EU list) are not in the Schiphol list and are left out (conservative)." },
+  "specialScreening": [{ "id": "ss:ams-israel", "appliesTo": { "destinationCountries": ["IL"]}, "certainty": "unknown", "issueLevel": "material", "text": "No official source found for extra screening of Israel flights at Schiphol (schiphol.nl blocked: owner capture). Feed: El Al, Israir and Arkia TLV departures mostly at pier G (G2, G5, G6), one at E4, KLM at D47. Time not known.", "sources": ["src:fd-feed-terminals-2026-11-01"]},{ "id": "ss:ams-us-enhanced", "appliesTo": { "destinationCountries": ["US"]}, "certainty": "unknown", "issueLevel": "secondary", "text": "US-bound flights: TSA / DHS enhanced security measures for all last-point-of-departure airports (2017, still the baseline as far as known) may add checks at check-in or at the gate (interviews, document checks, separate screening of electronics). The procedures are not public; no time is known.", "sources": ["src:dhs-tsa-2017-enhanced"]}],
+  "areas": [
+    {
+      "id": "ams-plaza",
+      "checkIn": { "serves": ["ams-b", "ams-c", "ams-d-n", "ams-d-s", "ams-e", "ams-f", "ams-g", "ams-h", "ams-m"], "sources": ["src:fd-feed-terminals-2026-11-01"], "note": "Departure halls 1–3 (one node); feed: hall 1 serves mostly B/C/D Schengen, hall 2 D/E/F, hall 3 G/H/M and others" },
+      "name": "Schiphol Plaza · departure halls 1–3 and arrivals halls (public side)",
+      "short": "Plaza",
+      "kind": "landside-hall",
+      "terminal": "Terminal",
+      "side": "landside",
+      "zone": "n/a",
+      "matrix": true,
+      "anchor": [
+        425,
+        300
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            378,
+            250
+          ],
+          [
+            430,
+            243
+          ],
+          [
+            470,
+            240
+          ],
+          [
+            492,
+            282
+          ],
+          [
+            487,
+            328
+          ],
+          [
+            470,
+            326
+          ],
+          [
+            430,
+            276
+          ],
+          [
+            392,
+            263
+          ]
+        ]
+      },
+      "level": "Ground floor: Plaza and arrivals 1–4; first floor: departure halls 1, 2, 3",
+      "description": "Single terminal building. Ground floor: Schiphol Plaza with arrivals halls 1–4 and the railway station below; first floor: departure halls 1, 2, 3 with the central security filters (since 2015) leading into Lounge 1 (Schengen) or through passport control into Lounges 2/3.",
+      "confidence": "verified",
+      "sources": [
+        "src:wikivoyage-ams",
+        "src:silverdrive-guide",
+        "src:wiki-ams-en",
+        "src:osm-ams",
+        "src:yt-fal-arrivals-2026"
+      ],
+      "notes": "Drawn on the OSM outline of the landside block west of the airside lounges. Departure hall 1 is at the Lounge 1 (south-east) end, hall 3 at the Lounge 3 (north-west) end; a \"Departures 4\" checkpoint is named by Schiphol (small-bags lanes article) but its position is not established."
+    },
+    {
+      "id": "ams-station",
+      "name": "Schiphol Airport railway station (NS), below Schiphol Plaza",
+      "short": "Rail",
+      "kind": "station",
+      "terminal": "Terminal",
+      "side": "landside",
+      "zone": "n/a",
+      "matrix": false,
+      "anchor": [
+        447,
+        271
+      ],
+      "description": "Underground NS station (platforms 1–6) directly below the Plaza.",
+      "confidence": "verified",
+      "sources": [
+        "src:osm-ams",
+        "src:wikivoyage-ams",
+        "src:yt-fal-arrivals-2026"
+      ]
+    },
+    {
+      "id": "ams-l1",
+      "name": "Lounge 1 (Schengen hub: piers B, C and D59–D87)",
+      "short": "L1",
+      "kind": "transfer-hub",
+      "terminal": "Terminal",
+      "side": "airside",
+      "zone": "schengen",
+      "matrix": true,
+      "anchor": [
+        515,
+        330
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            494,
+            279
+          ],
+          [
+            540,
+            272
+          ],
+          [
+            548,
+            307
+          ],
+          [
+            547,
+            323
+          ],
+          [
+            532,
+            334
+          ],
+          [
+            523,
+            339
+          ],
+          [
+            519,
+            380
+          ],
+          [
+            497,
+            377
+          ],
+          [
+            492,
+            340
+          ]
+        ]
+      },
+      "level": "Departures level (first floor)",
+      "description": "Schengen lounge behind departure-hall-1 security: shops, transfer desks, access to pier C, to pier B (via C and the temporary BC link), and by escalator up to the Schengen level of pier D (D59–D87). Extended by 5,000 m² in November 2024.",
+      "confidence": "verified",
+      "sources": [
+        "src:wikivoyage-ams",
+        "src:schiphol-lounges",
+        "src:schiphol-news-lounge1",
+        "src:yt-metromark-d57-d78",
+        "src:yt-flyandstay-g9-b17"
+      ]
+    },
+    {
+      "id": "ams-b",
+      "intraWalk": { "min": 1, "typical": 3.5, "max": 8.5, "basis": "derived", "note": "Derived (R-02): pier length ≈ 560 m (gate path × 3.1 m/unit); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Pier B (Schengen)",
+      "short": "B",
+      "kind": "pier",
+      "terminal": "Terminal",
+      "side": "airside",
+      "zone": "schengen",
+      "matrix": true,
+      "anchor": [
+        462,
+        515
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            430,
+            463
+          ],
+          [
+            438,
+            471
+          ],
+          [
+            468,
+            518
+          ],
+          [
+            494,
+            560
+          ],
+          [
+            484,
+            566
+          ],
+          [
+            458,
+            524
+          ],
+          [
+            423,
+            468
+          ]
+        ]
+      },
+      "description": "Schengen pier south of Lounge 1. Since 25 Sep 2024 reached through the new temporary BC link from the root of pier C; the old BC corridor is closed for the new baggage basement. The Middenbrug (Central Bridge) Lounge 1 → B is due to open on 18 November (see status of its walk).",
+      "confidence": "verified",
+      "sources": [
+        "src:wiki-ams-en",
+        "src:wikivoyage-ams",
+        "src:yt-flyandstay-g9-b17",
+        "src:osm-ams",
+        "src:schiphol-bc-link-2024"
+      ]
+    },
+    {
+      "id": "ams-c",
+      "intraWalk": { "min": 1, "typical": 2.5, "max": 5.5, "basis": "derived", "note": "Derived (R-02): pier length ≈ 300 m (gate path × 3.1 m/unit); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Pier C (Schengen)",
+      "short": "C",
+      "kind": "pier",
+      "terminal": "Terminal",
+      "side": "airside",
+      "zone": "schengen",
+      "matrix": true,
+      "anchor": [
+        556,
+        445
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            519,
+            378
+          ],
+          [
+            530,
+            398
+          ],
+          [
+            560,
+            446
+          ],
+          [
+            593,
+            465
+          ],
+          [
+            591,
+            472
+          ],
+          [
+            566,
+            476
+          ],
+          [
+            563,
+            489
+          ],
+          [
+            556,
+            487
+          ],
+          [
+            554,
+            451
+          ],
+          [
+            528,
+            408
+          ],
+          [
+            514,
+            386
+          ],
+          [
+            514,
+            378
+          ]
+        ]
+      },
+      "description": "Schengen pier from Lounge 1 to the south-east; its root carries the BC link to pier B. To be rebuilt after pier A opens (Schiphol).",
+      "confidence": "verified",
+      "sources": [
+        "src:wiki-ams-en",
+        "src:wikivoyage-ams",
+        "src:yt-flyandstay-g9-b17",
+        "src:osm-ams"
+      ]
+    },
+    {
+      "id": "ams-d-n",
+      "intraWalk": { "min": 1, "typical": 4, "max": 10, "basis": "derived", "note": "Derived (R-02): pier length ≈ 700 m (lower level of D, gate path × 3.1 m/unit (capped at the D pier length)); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Pier D · lower level (non-Schengen, D1–D57)",
+      "short": "D-low",
+      "kind": "pier",
+      "terminal": "Terminal",
+      "side": "airside",
+      "zone": "non-schengen",
+      "matrix": true,
+      "anchor": [
+        690,
+        322
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            548,
+            300
+          ],
+          [
+            635,
+            298
+          ],
+          [
+            662,
+            262
+          ],
+          [
+            775,
+            264
+          ],
+          [
+            775,
+            292
+          ],
+          [
+            668,
+            292
+          ],
+          [
+            652,
+            318
+          ],
+          [
+            662,
+            342
+          ],
+          [
+            760,
+            348
+          ],
+          [
+            760,
+            380
+          ],
+          [
+            648,
+            378
+          ],
+          [
+            628,
+            334
+          ],
+          [
+            552,
+            332
+          ]
+        ]
+      },
+      "level": "Lower level (OSM level 1)",
+      "stack": {
+        "group": "ams-d",
+        "order": 0,
+        "label": "lower"
+      },
+      "description": "Non-Schengen level of pier D: head D2–D7 at Lounge 2, south finger D10–D31, north finger D41–D57. Reached from Lounge 2; its bus gates lie on the apron level below (2026 arrival video).",
+      "confidence": "verified",
+      "sources": [
+        "src:osm-ams",
+        "src:wikivoyage-ams",
+        "src:silverdrive-guide",
+        "src:yt-metromark-d59-d43",
+        "src:yt-fal-arrivals-2026"
+      ],
+      "notes": "Same stands as the Schengen level (D59–D87 directly above, OSM positions coincide: D44/D74, D48/D78, D52/D82 …). There is no passenger connection inside the pier between the two levels: both videos change level via Lounge 1 → passport control → Lounge 2."
+    },
+    {
+      "id": "ams-d-s",
+      "intraWalk": { "min": 1, "typical": 4, "max": 9.5, "basis": "derived", "note": "Derived (R-02): pier length ≈ 640 m (gate path × 3.1 m/unit); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Pier D · upper level (Schengen, D59–D87)",
+      "short": "D-up",
+      "kind": "pier",
+      "terminal": "Terminal",
+      "side": "airside",
+      "zone": "schengen",
+      "matrix": true,
+      "anchor": [
+        690,
+        322
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            548,
+            300
+          ],
+          [
+            635,
+            298
+          ],
+          [
+            662,
+            262
+          ],
+          [
+            775,
+            264
+          ],
+          [
+            775,
+            292
+          ],
+          [
+            668,
+            292
+          ],
+          [
+            652,
+            318
+          ],
+          [
+            662,
+            342
+          ],
+          [
+            760,
+            348
+          ],
+          [
+            760,
+            380
+          ],
+          [
+            648,
+            378
+          ],
+          [
+            628,
+            334
+          ],
+          [
+            552,
+            332
+          ]
+        ]
+      },
+      "level": "Upper level (OSM level 2)",
+      "stack": {
+        "group": "ams-d",
+        "order": 1,
+        "label": "upper"
+      },
+      "description": "Schengen level of pier D, reached by escalator up from Lounge 1 (sign \"D 59-87\").",
+      "confidence": "verified",
+      "sources": [
+        "src:osm-ams",
+        "src:wikivoyage-ams",
+        "src:wiki-ams-en",
+        "src:silverdrive-guide",
+        "src:yt-metromark-d57-d78"
+      ],
+      "notes": "OSM has only D66 and D68 on the upper level of the south finger; the other upper gates are on the head and the north finger."
+    },
+    {
+      "id": "ams-l2",
+      "name": "Lounge 2 (non-Schengen hub: pier D lower, pier E)",
+      "short": "L2",
+      "kind": "transfer-hub",
+      "terminal": "Terminal",
+      "side": "airside",
+      "zone": "non-schengen",
+      "matrix": true,
+      "anchor": [
+        505,
+        252
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            442,
+            205
+          ],
+          [
+            518,
+            233
+          ],
+          [
+            538,
+            244
+          ],
+          [
+            544,
+            268
+          ],
+          [
+            494,
+            276
+          ],
+          [
+            491,
+            253
+          ],
+          [
+            449,
+            242
+          ]
+        ]
+      },
+      "level": "Departures level",
+      "description": "Non-Schengen lounge between the passport filter from Lounge 1 and Holland Boulevard: transfer desks (T2–T5 signed nearby), access to pier D lower (D2…) and pier E; east end of Holland Boulevard.",
+      "confidence": "verified",
+      "sources": [
+        "src:wikivoyage-ams",
+        "src:schiphol-lounges",
+        "src:yt-metromark-d59-d43",
+        "src:yt-fal-arrivals-2026",
+        "src:yt-flyandstay-g9-b17"
+      ]
+    },
+    {
+      "id": "ams-e",
+      "arrivals": "segregated",
+      "intraWalk": { "min": 1, "typical": 4, "max": 9.5, "basis": "derived", "note": "Derived (R-02): pier length ≈ 650 m (gate path × 3.1 m/unit); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Pier E (non-Schengen)",
+      "short": "E",
+      "kind": "pier",
+      "terminal": "Terminal",
+      "side": "airside",
+      "zone": "non-schengen",
+      "matrix": true,
+      "anchor": [
+        585,
+        160
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            531,
+            240
+          ],
+          [
+            523,
+            239
+          ],
+          [
+            537,
+            215
+          ],
+          [
+            569,
+            167
+          ],
+          [
+            603,
+            106
+          ],
+          [
+            633,
+            66
+          ],
+          [
+            645,
+            74
+          ],
+          [
+            621,
+            111
+          ],
+          [
+            592,
+            161
+          ],
+          [
+            569,
+            187
+          ],
+          [
+            534,
+            242
+          ]
+        ]
+      },
+      "description": "Non-Schengen pier north-east of Lounge 2/Holland Boulevard (E18 and E24 A380-capable). No security at the gate since 2015 (central security); a second floor separates arriving flows.",
+      "confidence": "verified",
+      "sources": [
+        "src:wiki-ams-en",
+        "src:wikivoyage-ams",
+        "src:osm-ams",
+        "src:benthem-onexs"
+      ]
+    },
+    {
+      "id": "ams-l3",
+      "name": "Lounge 3 (non-Schengen hub: piers F, G, H)",
+      "short": "L3",
+      "kind": "transfer-hub",
+      "terminal": "Terminal",
+      "side": "airside",
+      "zone": "non-schengen",
+      "matrix": true,
+      "anchor": [
+        405,
+        222
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            373,
+            196
+          ],
+          [
+            439,
+            189
+          ],
+          [
+            442,
+            205
+          ],
+          [
+            449,
+            242
+          ],
+          [
+            428,
+            244
+          ],
+          [
+            389,
+            244
+          ],
+          [
+            378,
+            246
+          ],
+          [
+            374,
+            218
+          ]
+        ]
+      },
+      "level": "Departures level",
+      "description": "Non-Schengen lounge at the west end of Holland Boulevard, behind departure-hall-3 security and passport control; serves piers F, G and H. Transfer desk T9 signed between G and Lounge 3 (2024 video).",
+      "confidence": "verified",
+      "sources": [
+        "src:wikivoyage-ams",
+        "src:schiphol-lounges",
+        "src:yt-flyandstay-g9-b17"
+      ]
+    },
+    {
+      "id": "ams-f",
+      "arrivals": "segregated",
+      "intraWalk": { "min": 1, "typical": 2.5, "max": 5.5, "basis": "derived", "note": "Derived (R-02): pier length ≈ 290 m (gate path × 3.1 m/unit); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Pier F (non-Schengen)",
+      "short": "F",
+      "kind": "pier",
+      "terminal": "Terminal",
+      "side": "airside",
+      "zone": "non-schengen",
+      "matrix": true,
+      "anchor": [
+        445,
+        150
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            451,
+            196
+          ],
+          [
+            442,
+            205
+          ],
+          [
+            437,
+            153
+          ],
+          [
+            428,
+            125
+          ],
+          [
+            417,
+            114
+          ],
+          [
+            425,
+            105
+          ],
+          [
+            441,
+            113
+          ],
+          [
+            456,
+            103
+          ],
+          [
+            465,
+            111
+          ],
+          [
+            454,
+            127
+          ],
+          [
+            449,
+            147
+          ]
+        ]
+      },
+      "description": "Non-Schengen pier between E and G, rooted on Holland Boulevard at Lounge 3 (KLM Crown Lounge 52 opposite).",
+      "confidence": "verified",
+      "sources": [
+        "src:wiki-ams-en",
+        "src:wikivoyage-ams",
+        "src:osm-ams",
+        "src:schiphol-map-pdf"
+      ]
+    },
+    {
+      "id": "ams-g",
+      "arrivals": "segregated",
+      "intraWalk": { "min": 1, "typical": 2.5, "max": 6, "basis": "derived", "note": "Derived (R-02): pier length ≈ 330 m (gate path × 3.1 m/unit); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Pier G (non-Schengen)",
+      "short": "G",
+      "kind": "pier",
+      "terminal": "Terminal",
+      "side": "airside",
+      "zone": "non-schengen",
+      "matrix": true,
+      "anchor": [
+        311,
+        140
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            324,
+            192
+          ],
+          [
+            324,
+            213
+          ],
+          [
+            304,
+            214
+          ],
+          [
+            303,
+            197
+          ],
+          [
+            305,
+            188
+          ],
+          [
+            300,
+            84
+          ],
+          [
+            315,
+            80
+          ],
+          [
+            320,
+            188
+          ]
+        ]
+      },
+      "description": "Westernmost long non-Schengen pier (G9 A380-capable). Linked to Lounge 3 by a glazed corridor with moving walkways (2024 video).",
+      "confidence": "verified",
+      "sources": [
+        "src:wiki-ams-en",
+        "src:wikivoyage-ams",
+        "src:osm-ams",
+        "src:yt-flyandstay-g9-b17"
+      ]
+    },
+    {
+      "id": "ams-h",
+      "arrivals": "segregated",
+      "intraWalk": { "min": 1, "typical": 2.5, "max": 6, "basis": "derived", "note": "Derived (R-02): pier length ≈ 330 m (gate path × 3.1 m/unit); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Pier H (non-Schengen, low-cost; west half of the H/M pier)",
+      "short": "H",
+      "kind": "pier",
+      "terminal": "Terminal",
+      "side": "airside",
+      "zone": "non-schengen",
+      "matrix": true,
+      "anchor": [
+        248,
+        240
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            327,
+            212
+          ],
+          [
+            374,
+            211
+          ],
+          [
+            374,
+            215
+          ],
+          [
+            300,
+            218
+          ],
+          [
+            195,
+            285
+          ],
+          [
+            190,
+            281
+          ],
+          [
+            295,
+            214
+          ]
+        ]
+      },
+      "description": "Non-Schengen low-cost part of the H/M pier (UK flights mostly). Wikivoyage lists H under Lounge 3; some guides describe H/M as cut off from the rest of the airside.",
+      "confidence": "probable",
+      "sources": [
+        "src:wikivoyage-ams",
+        "src:wiki-ams-en",
+        "src:silverdrive-guide",
+        "src:osm-ams"
+      ],
+      "notes": "H and M share one building and adjacent stands (OSM H1–H7 and M1–M7 ~15 m apart); whether they are separate levels or two sides of one floor is not established, so they are drawn side by side, not as a stack."
+    },
+    {
+      "id": "ams-m",
+      "intraWalk": { "min": 1, "typical": 2.5, "max": 6, "basis": "derived", "note": "Derived (R-02): pier length ≈ 330 m (gate path × 3.1 m/unit); expected gate-to-gate distance L/3 at 72 m/min + 1 min, 90th percentile 0.684·L at 60 m/min + 2 min. Same method for every area: docs/research/AIRPORT_DATA_REMEDIATION.md §3." },
+      "name": "Pier M / Lounge 4 (Schengen, low-cost, isolated)",
+      "short": "M",
+      "kind": "pier",
+      "terminal": "Terminal",
+      "side": "airside",
+      "zone": "schengen",
+      "matrix": true,
+      "anchor": [
+        262,
+        268
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            374,
+            215
+          ],
+          [
+            374,
+            220
+          ],
+          [
+            307,
+            223
+          ],
+          [
+            198,
+            291
+          ],
+          [
+            195,
+            285
+          ],
+          [
+            300,
+            218
+          ]
+        ]
+      },
+      "description": "Schengen low-cost pier with its own lounge (Lounge 4) and security; once airside there is no connection to the other lounges or piers — connecting passengers exit via baggage claim and re-enter.",
+      "confidence": "verified",
+      "sources": [
+        "src:wikivoyage-ams",
+        "src:wiki-ams-en",
+        "src:silverdrive-guide",
+        "src:schiphol-lounges"
+      ]
+    },
+    {
+      "id": "ams-a",
+      "name": "Pier A (new, under construction)",
+      "short": "A",
+      "kind": "pier",
+      "terminal": "Terminal",
+      "side": "airside",
+      "zone": "mixed",
+      "matrix": true,
+      "anchor": [
+        360,
+        560
+      ],
+      "shape": {
+        "type": "poly",
+        "points": [
+          [
+            313,
+            508
+          ],
+          [
+            343,
+            518
+          ],
+          [
+            352,
+            542
+          ],
+          [
+            369,
+            558
+          ],
+          [
+            395,
+            601
+          ],
+          [
+            402,
+            605
+          ],
+          [
+            394,
+            609
+          ],
+          [
+            373,
+            605
+          ],
+          [
+            364,
+            612
+          ],
+          [
+            349,
+            578
+          ],
+          [
+            338,
+            549
+          ],
+          [
+            322,
+            544
+          ],
+          [
+            315,
+            516
+          ]
+        ]
+      },
+      "description": "New pier south-west of pier B: 8 gates (3 for the largest aircraft), security filters and border control over three floors. BAM handover targeted December 2026, passenger use expected April 2027. Gate numbers and the Schengen split are not published in the sources read.",
+      "status": [
+        {
+          "state": "planned",
+          "until": "2027-03-31",
+          "note": "Under construction; Schiphol expects to take pier A into use in April 2027 after the December 2026 handover and a test period.",
+          "confidence": "probable",
+          "sources": [
+            "src:schiphol-pier-a-2027",
+            "src:nltimes-pier-a",
+            "src:khl-pier-a",
+            "src:wiki-ams-en",
+            "src:silverdrive-guide"
+          ]
+        }
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:schiphol-pier-a-2027",
+        "src:nltimes-pier-a",
+        "src:osm-ams",
+        "src:wiki-ams-en"
+      ],
+      "notes": "Zone \"mixed\" is a placeholder (border control facilities are mentioned, the split is not). Environmental groups filed an enforcement request against the pier in Oct 2025 (NL Times); outcome not established."
+    }
+  ],
+  "gateGroups": [
+    {
+      "id": "ams-gates-b",
+      "area": "ams-b",
+      "label": "B13–B36",
+      "gates": [
+        "B13",
+        "B14",
+        "B15",
+        "B16",
+        "B17",
+        "B18",
+        "B20",
+        "B22",
+        "B23",
+        "B24",
+        "B26",
+        "B27",
+        "B28",
+        "B30",
+        "B31",
+        "B32",
+        "B34",
+        "B35",
+        "B36"
+      ],
+      "path": [
+        [
+          440,
+          472
+        ],
+        [
+          490,
+          556
+        ]
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:osm-ams",
+        "src:yt-flyandstay-g9-b17"
+      ],
+      "notes": "OSM 2026-07; B15–B18 also on signs in the Nov 2024 video. B19, B21, B25, B29, B33 not attested."
+    },
+    {
+      "id": "ams-gates-b-bus",
+      "area": "ams-b",
+      "label": "B1–B8 (bus)",
+      "gates": [
+        "B1",
+        "B2",
+        "B3",
+        "B4",
+        "B5",
+        "B6",
+        "B7",
+        "B8"
+      ],
+      "path": [
+        [
+          452,
+          480
+        ],
+        [
+          482,
+          556
+        ]
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:osm-ams",
+        "src:schiphol-remote-pdf"
+      ],
+      "bus": true,
+      "notes": "OSM tags B1–B8 as level 0 (apron level, under pier B); Schiphol remote-handling PDF (excerpt) names B bus stations B01–B08. Zone assumed Schengen with the pier; not confirmed."
+    },
+    {
+      "id": "ams-gates-c",
+      "area": "ams-c",
+      "label": "C4–C18",
+      "gates": [
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15",
+        "C16",
+        "C18"
+      ],
+      "path": [
+        [
+          524,
+          402
+        ],
+        [
+          556,
+          450
+        ],
+        [
+          592,
+          468
+        ]
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:osm-ams",
+        "src:yt-flyandstay-g9-b17"
+      ],
+      "notes": "C6, C8, C10 also on signs (Nov 2024). C1–C3 and C17 not attested."
+    },
+    {
+      "id": "ams-gates-d-head",
+      "area": "ams-d-n",
+      "label": "D2–D7",
+      "gates": [
+        "D2",
+        "D3",
+        "D4",
+        "D5",
+        "D6",
+        "D7"
+      ],
+      "path": [
+        [
+          551,
+          325
+        ],
+        [
+          620,
+          305
+        ]
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:osm-ams",
+        "src:yt-metromark-d59-d43",
+        "src:yt-fal-arrivals-2026"
+      ],
+      "notes": "Head of pier D next to Lounge 2; D2–D7 signs seen in the Nov 2024 and Sep 2026 videos. D1, D8, D9 not attested."
+    },
+    {
+      "id": "ams-gates-d-south",
+      "area": "ams-d-n",
+      "label": "D10–D31",
+      "gates": [
+        "D10",
+        "D12",
+        "D14",
+        "D16",
+        "D18",
+        "D22",
+        "D23",
+        "D24",
+        "D25",
+        "D26",
+        "D27",
+        "D28",
+        "D29",
+        "D31"
+      ],
+      "path": [
+        [
+          632,
+          335
+        ],
+        [
+          754,
+          366
+        ]
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:osm-ams"
+      ],
+      "notes": "South finger, lower level. D11, D13, D15, D17, D19–D21, D30 not attested."
+    },
+    {
+      "id": "ams-gates-d-north",
+      "area": "ams-d-n",
+      "label": "D41–D57",
+      "gates": [
+        "D41",
+        "D43",
+        "D44",
+        "D47",
+        "D48",
+        "D49",
+        "D51",
+        "D52",
+        "D53",
+        "D54",
+        "D55",
+        "D56",
+        "D57"
+      ],
+      "path": [
+        [
+          648,
+          283
+        ],
+        [
+          771,
+          271
+        ]
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:osm-ams",
+        "src:yt-metromark-d59-d43",
+        "src:yt-metromark-d57-d78"
+      ],
+      "notes": "North finger, lower level; D41, D43, D48, D52, D57 and the sign \"D54-57\" seen in the videos. D42, D45, D46, D50 not attested."
+    },
+    {
+      "id": "ams-gates-d-up-head",
+      "area": "ams-d-s",
+      "label": "D59–D64",
+      "gates": [
+        "D59",
+        "D60",
+        "D61",
+        "D62",
+        "D63",
+        "D64"
+      ],
+      "path": [
+        [
+          554,
+          321
+        ],
+        [
+          621,
+          308
+        ]
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:osm-ams",
+        "src:yt-metromark-d59-d43"
+      ],
+      "notes": "Upper level above D2–D7."
+    },
+    {
+      "id": "ams-gates-d-up-south",
+      "area": "ams-d-s",
+      "label": "D66–D68",
+      "gates": [
+        "D66",
+        "D68"
+      ],
+      "path": [
+        [
+          645,
+          346
+        ],
+        [
+          653,
+          360
+        ]
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:osm-ams"
+      ],
+      "notes": "Only D66 and D68 attested on the upper level of the south finger."
+    },
+    {
+      "id": "ams-gates-d-up-north",
+      "area": "ams-d-s",
+      "label": "D71–D87",
+      "gates": [
+        "D71",
+        "D73",
+        "D74",
+        "D77",
+        "D78",
+        "D79",
+        "D81",
+        "D82",
+        "D83",
+        "D84",
+        "D85",
+        "D86",
+        "D87"
+      ],
+      "path": [
+        [
+          652,
+          286
+        ],
+        [
+          771,
+          269
+        ]
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:osm-ams",
+        "src:yt-metromark-d57-d78"
+      ],
+      "notes": "D78 was the destination gate of the Apr 2024 transfer video. D65, D67, D69, D70, D72, D75, D76, D80 not attested."
+    },
+    {
+      "id": "ams-gates-e-low",
+      "area": "ams-e",
+      "label": "E2–E9",
+      "gates": [
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8",
+        "E9"
+      ],
+      "path": [
+        [
+          534,
+          241
+        ],
+        [
+          582,
+          135
+        ]
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:osm-ams"
+      ],
+      "notes": "E10–E16 not attested."
+    },
+    {
+      "id": "ams-gates-e-high",
+      "area": "ams-e",
+      "label": "E17–E24",
+      "gates": [
+        "E17",
+        "E18",
+        "E19",
+        "E20",
+        "E22",
+        "E24"
+      ],
+      "path": [
+        [
+          598,
+          157
+        ],
+        [
+          645,
+          78
+        ]
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:osm-ams",
+        "src:wiki-ams-en",
+        "src:yt-gezenadam-g10-e24"
+      ],
+      "notes": "E18 and E24 A380-capable (Wikipedia); E24 also in a 2019 video title. E21, E23 not attested."
+    },
+    {
+      "id": "ams-gates-f",
+      "area": "ams-f",
+      "label": "F2–F9",
+      "gates": [
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8",
+        "F9"
+      ],
+      "path": [
+        [
+          453,
+          191
+        ],
+        [
+          424,
+          103
+        ]
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:osm-ams"
+      ],
+      "notes": "F1 not attested."
+    },
+    {
+      "id": "ams-gates-g",
+      "area": "ams-g",
+      "label": "G2–G10",
+      "gates": [
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8",
+        "G9",
+        "G10"
+      ],
+      "path": [
+        [
+          322,
+          183
+        ],
+        [
+          298,
+          80
+        ]
+      ],
+      "confidence": "verified",
+      "sources": [
+        "src:osm-ams",
+        "src:yt-flyandstay-g9-b17",
+        "src:yt-gezenadam-g10-e24"
+      ],
+      "notes": "G2–G9 OSM; G4–G10 signs in the Nov 2024 video; G10 also in a 2019 video title. An OSM node \"G11 to G16\" at the root of pier G is not listed (unclear whether gates or a bus lounge)."
+    },
+    {
+      "id": "ams-gates-h",
+      "area": "ams-h",
+      "label": "H1–H7",
+      "gates": [
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H6",
+        "H7"
+      ],
+      "path": [
+        [
+          282,
+          226
+        ],
+        [
+          193,
+          281
+        ]
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:osm-ams"
+      ]
+    },
+    {
+      "id": "ams-gates-m",
+      "area": "ams-m",
+      "label": "M1–M7",
+      "gates": [
+        "M1",
+        "M2",
+        "M3",
+        "M4",
+        "M5",
+        "M6",
+        "M7"
+      ],
+      "path": [
+        [
+          287,
+          233
+        ],
+        [
+          199,
+          289
+        ]
+      ],
+      "confidence": "probable",
+      "sources": [
+        "src:osm-ams"
+      ]
+    }
+  ],
+  "stops": [],
+  "lines": [],
+  "walks": [
+    { "id": "w:ams-e-arr-l2", "from": "ams-e", "to": "ams-l2", "bidirectional": false, "access": "transfer", "flow": "arrivals", "minutes": { "min": 4, "typical": 6, "max": 9, "basis": "derived" }, "controls": [{ "kind": "transfer-security", "when": "origin-not-one-stop", "minutes": { "min": 5, "typical": 15, "max": 40, "basis": "assumed" }, "note": "Transfer security filter (between piers E and F) for passengers arriving from outside one-stop security (KLM / Schiphol); open 24/7 (Schiphol security-filter hours, owner capture 2026-11-02). Same allowance as the model's other AMS security checks." }], "practical": "practical", "confidence": "inferred", "sources": ["src:schiphol-news-central-security", "src:benthem-onexs", "src:klm-transfers", "src:schiphol-filter-hours"], "notes": "Phase R (R-02, R-05): arriving connecting passengers at E use the separate arrivals floor and re-enter Lounge 2 through the transfer filter (conditional on the origin). Minutes = the l2–e walk + 1 min for the floor change (derived)." },
+    { "id": "w:ams-f-arr-l2", "from": "ams-f", "to": "ams-l2", "bidirectional": false, "access": "transfer", "flow": "arrivals", "minutes": { "min": 5, "typical": 7, "max": 10, "basis": "derived" }, "controls": [{ "kind": "transfer-security", "when": "origin-not-one-stop", "minutes": { "min": 5, "typical": 15, "max": 40, "basis": "assumed" }, "note": "Transfer security filter (between piers E and F) for passengers arriving from outside one-stop security (KLM / Schiphol); open 24/7 (Schiphol security-filter hours, owner capture 2026-11-02). Same allowance as the model's other AMS security checks." }], "practical": "practical", "confidence": "inferred", "sources": ["src:schiphol-news-central-security", "src:benthem-onexs", "src:klm-transfers", "src:schiphol-filter-hours"], "notes": "As w:ams-e-arr-l2, for pier F." },
+    { "id": "w:ams-g-arr-l3", "from": "ams-g", "to": "ams-l3", "bidirectional": false, "access": "transfer", "flow": "arrivals", "minutes": { "min": 4, "typical": 5, "max": 8, "basis": "derived" }, "controls": [{ "kind": "transfer-security", "when": "origin-not-one-stop", "minutes": { "min": 5, "typical": 15, "max": 40, "basis": "assumed" }, "note": "Transfer security filter (GH building, first floor) for passengers arriving from outside one-stop security (KLM / Schiphol). Same allowance as the model's other AMS security checks.", "hours": [{ "from": "04:30", "until": "23:30" }], "hoursNote": "Transfer Filter GH 04:30–23:30 (Schiphol security-filter hours, owner capture 2026-11-02)" }], "practical": "practical", "confidence": "inferred", "sources": ["src:schiphol-news-central-security", "src:benthem-onexs", "src:klm-transfers", "src:schiphol-filter-hours"], "notes": "As w:ams-e-arr-l2, for pier G (GH building filter)." },
+    { "id": "w:ams-h-arr-l3", "from": "ams-h", "to": "ams-l3", "bidirectional": false, "access": "transfer", "flow": "arrivals", "minutes": { "min": 4, "typical": 5, "max": 8, "basis": "derived" }, "controls": [{ "kind": "transfer-security", "when": "origin-not-one-stop", "minutes": { "min": 5, "typical": 15, "max": 40, "basis": "assumed" }, "note": "Transfer security filter (GH building, first floor) for passengers arriving from outside one-stop security (KLM / Schiphol). Same allowance as the model's other AMS security checks.", "hours": [{ "from": "04:30", "until": "23:30" }], "hoursNote": "Transfer Filter GH 04:30–23:30 (Schiphol security-filter hours, owner capture 2026-11-02)" }], "practical": "practical", "confidence": "inferred", "sources": ["src:schiphol-news-central-security", "src:benthem-onexs", "src:klm-transfers", "src:schiphol-filter-hours"], "notes": "As w:ams-g-arr-l3, for pier H. Whether H arrivals use the same filter is inferred from the shared GH building (q:ams-hm)." },
+    { "id": "w:ams-e-arr-plaza", "from": "ams-e", "to": "ams-plaza", "bidirectional": false, "access": "airside", "flow": "arrivals", "minutes": { "min": 6, "typical": 9, "max": 14, "basis": "derived" }, "controls": [{ "kind": "passport", "minutes": { "min": 2, "typical": 8, "max": 30, "basis": "assumed" }, "note": "Entry passport control (non-Schengen arrival)" },{ "kind": "customs", "minutes": { "min": 0, "typical": 1, "max": 5, "basis": "assumed" }, "note": "Customs exit (green / red channel) after baggage reclaim" }], "practical": "practical", "confidence": "inferred", "sources": ["src:schiphol-news-central-security", "src:wikivoyage-ams"], "notes": "Arrivals exit from pier E (separate arrivals floor → passport control → reclaim → Plaza). Minutes: e→l2 walk + l2→plaza walk (derived); excludes waiting for bags." },
+    { "id": "w:ams-f-arr-plaza", "from": "ams-f", "to": "ams-plaza", "bidirectional": false, "access": "airside", "flow": "arrivals", "minutes": { "min": 7, "typical": 10, "max": 15, "basis": "derived" }, "controls": [{ "kind": "passport", "minutes": { "min": 2, "typical": 8, "max": 30, "basis": "assumed" }, "note": "Entry passport control (non-Schengen arrival)" },{ "kind": "customs", "minutes": { "min": 0, "typical": 1, "max": 5, "basis": "assumed" }, "note": "Customs exit (green / red channel) after baggage reclaim" }], "practical": "practical", "confidence": "inferred", "sources": ["src:schiphol-news-central-security", "src:wikivoyage-ams"], "notes": "Arrivals exit from pier F; derived as for E." },
+    { "id": "w:ams-h-arr-plaza", "from": "ams-h", "to": "ams-plaza", "bidirectional": false, "access": "airside", "flow": "arrivals", "minutes": { "min": 6, "typical": 8, "max": 12, "basis": "derived" }, "controls": [{ "kind": "passport", "minutes": { "min": 2, "typical": 8, "max": 30, "basis": "assumed" }, "note": "Entry passport control (non-Schengen arrival)" },{ "kind": "customs", "minutes": { "min": 0, "typical": 1, "max": 5, "basis": "assumed" }, "note": "Customs exit (green / red channel) after baggage reclaim" }], "practical": "practical", "confidence": "inferred", "sources": ["src:schiphol-news-central-security", "src:wikivoyage-ams"], "notes": "Arrivals exit from pier H; derived as w:ams-g-arr-plaza." },
+    {
+      "id": "w:ams-plaza-station",
+      "from": "ams-plaza",
+      "to": "ams-station",
+      "bidirectional": true,
+      "access": "public",
+      "minutes": {
+        "min": 1,
+        "typical": 2,
+        "max": 4,
+        "basis": "derived"
+      },
+      "practical": "practical",
+      "via": "Escalators from the Plaza down to platforms 1–6",
+      "confidence": "verified",
+      "sources": [
+        "src:osm-ams",
+        "src:wikivoyage-ams",
+        "src:yt-fal-arrivals-2026"
+      ]
+    },
+    {
+      "id": "w:ams-plaza-l1",
+      "from": "ams-plaza",
+      "to": "ams-l1",
+      "bidirectional": true,
+      "access": "public",
+      "minutes": {
+        "min": 2,
+        "typical": 4,
+        "max": 6,
+        "basis": "derived"
+      },
+      "controls": [
+        {
+          "kind": "security",
+          "minutes": {
+            "min": 5,
+            "typical": 15,
+            "max": 40,
+            "basis": "assumed"
+          },
+          "note": "Central security filter, departure hall 1 (boarding-pass gates first)"
+        }
+      ],
+      "reverseControls": [],
+      "practical": "practical",
+      "via": "Departure hall 1, first floor → central security → Lounge 1",
+      "confidence": "verified",
+      "sources": [
+        "src:wikivoyage-ams",
+        "src:silverdrive-guide",
+        "src:schiphol-news-central-security",
+        "src:yt-schiphol-departure"
+      ],
+      "notes": "Leaving Lounge 1 landside (Schengen arrivals) passes no control except customs exit; the arrival route via baggage halls is folded into the reverse direction."
+    },
+    {
+      "id": "w:ams-plaza-l2",
+      "from": "ams-plaza",
+      "to": "ams-l2",
+      "bidirectional": true,
+      "access": "public",
+      "minutes": {
+        "min": 3,
+        "typical": 5,
+        "max": 8,
+        "basis": "derived"
+      },
+      "controls": [
+        {
+          "kind": "security",
+          "minutes": {
+            "min": 5,
+            "typical": 15,
+            "max": 40,
+            "basis": "assumed"
+          },
+          "note": "Central security filter on the mezzanine of departure hall 2"
+        },
+        {
+          "kind": "passport",
+          "minutes": {
+            "min": 3,
+            "typical": 10,
+            "max": 45,
+            "basis": "assumed"
+          },
+          "note": "Exit passport control into the non-Schengen lounges"
+        }
+      ],
+      "reverseControls": [
+        {
+          "kind": "passport",
+          "minutes": {
+            "min": 5,
+            "typical": 15,
+            "max": 60,
+            "basis": "assumed"
+          },
+          "note": "Entry passport control (EES) for passengers leaving the non-Schengen area"
+        }
+      ],
+      "practical": "practical",
+      "via": "Departure hall 2 → security → passport control → Lounge 2",
+      "confidence": "probable",
+      "sources": [
+        "src:wikivoyage-ams",
+        "src:benthem-onexs",
+        "src:silverdrive-guide"
+      ],
+      "notes": "Exact passport-control position not attested by images. EES rollout reported to add congestion for non-Schengen arrivals."
+    },
+    {
+      "id": "w:ams-plaza-l3",
+      "from": "ams-plaza",
+      "to": "ams-l3",
+      "bidirectional": true,
+      "access": "public",
+      "minutes": {
+        "min": 4,
+        "typical": 6,
+        "max": 9,
+        "basis": "derived"
+      },
+      "controls": [
+        {
+          "kind": "security",
+          "minutes": {
+            "min": 5,
+            "typical": 15,
+            "max": 40,
+            "basis": "assumed"
+          },
+          "note": "Central security filter on the mezzanine of departure hall 3"
+        },
+        {
+          "kind": "passport",
+          "minutes": {
+            "min": 3,
+            "typical": 10,
+            "max": 45,
+            "basis": "assumed"
+          },
+          "note": "Exit passport control"
+        }
+      ],
+      "reverseControls": [
+        {
+          "kind": "passport",
+          "minutes": {
+            "min": 5,
+            "typical": 15,
+            "max": 60,
+            "basis": "assumed"
+          },
+          "note": "Entry passport control"
+        }
+      ],
+      "practical": "practical",
+      "via": "Departure hall 3 → security → passport control → Lounge 3",
+      "confidence": "probable",
+      "sources": [
+        "src:wikivoyage-ams",
+        "src:benthem-onexs",
+        "src:silverdrive-guide"
+      ]
+    },
+    {
+      "id": "w:ams-plaza-m",
+      "from": "ams-plaza",
+      "to": "ams-m",
+      "bidirectional": true,
+      "access": "public",
+      "minutes": {
+        "min": 6,
+        "typical": 8,
+        "max": 12,
+        "basis": "derived",
+        "note": "Scaled from the measured arrival walk M5 → baggage hall: 6.1 min (JaViation Nov 2023, M5 sign t≈110 s → escalator down t≈445 s → baggage hall t≈475 s, 5 s frames, no cut), plus ~1–2 min between the hall and the Plaza; the departing route (via \"Departures 4\" security and Lounge 4) is assumed to be of similar length"
+      },
+      "controls": [
+        {
+          "kind": "security",
+          "minutes": {
+            "min": 5,
+            "typical": 15,
+            "max": 40,
+            "basis": "assumed"
+          },
+          "note": "Dedicated security for Lounge 4 / pier M (departure hall 3 end; \"Departures 4\" naming unconfirmed)"
+        }
+      ],
+      "reverseControls": [],
+      "practical": "practical",
+      "via": "Departure hall 3 → own security → Lounge 4 → pier M",
+      "confidence": "probable",
+      "sources": [
+        "src:wikivoyage-ams",
+        "src:wiki-ams-en",
+        "src:silverdrive-guide",
+        "src:yt-javiation-m5"
+      ],
+      "notes": "M is isolated airside: this walk is its only link. Connecting at M means exiting via baggage claim and re-entering (Wikivoyage)."
+    },
+    {
+      "id": "w:ams-l1-c",
+      "from": "ams-l1",
+      "to": "ams-c",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": {
+        "min": 1,
+        "typical": 2,
+        "max": 4,
+        "basis": "measured",
+        "note": "FlyandStay Nov 2024, 10 s frames, no cut: Lounge 1 (sign \"ABC T2-3\", t≈900 s) → C6 (t≈960 s) 1.0 min, → C8 1.3 min, → C10 (t≈1000 s) 1.7 min; ±20 s"
+      },
+      "practical": "practical",
+      "via": "From Lounge 1 straight into pier C (moving walkways)",
+      "confidence": "verified",
+      "sources": [
+        "src:yt-flyandstay-g9-b17",
+        "src:wikivoyage-ams",
+        "src:osm-ams"
+      ],
+      "notes": "Nov 2024 video: Lounge 1 → C6/C8 ≈ 40–60 s, C10 ≈ 70 s."
+    },
+    {
+      "id": "w:ams-l1-b",
+      "from": "ams-l1",
+      "to": "ams-b",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": {
+        "min": 5,
+        "typical": 7,
+        "max": 10,
+        "basis": "measured",
+        "note": "FlyandStay Nov 2024, 10 s frames, no cut: Lounge 1 (t≈890 s) → C6–C10 → BC link (blue floor, t≈1020–1170 s) → B15 (t≈1210 s) → B17 (t≈1250 s): 6.0 ± 0.3 min at normal pace using moving walkways; +1–3 min to gates deeper in pier B"
+      },
+      "distanceM": 600,
+      "practical": "practical",
+      "via": "Lounge 1 → along pier C (past C6–C10, moving walkways) → temporary BC link (glazed bridge over the apron, blue floor) → pier B at B15",
+      "confidence": "verified",
+      "sources": [
+        "src:schiphol-bc-link-2024",
+        "src:schiphol-news-bc-corridor",
+        "src:osm-ams",
+        "src:yt-flyandstay-g9-b17"
+      ],
+      "notes": "Current route since 25 Sep 2024. Nov 2024 video: Lounge 1 (≈900 s) → B17 (≈1230 s) ≈ 5.5 min; B anchor is mid-pier, hence 8 typical."
+    },
+    {
+      "id": "w:ams-c-b",
+      "from": "ams-c",
+      "to": "ams-b",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": {
+        "min": 3,
+        "typical": 5,
+        "max": 7,
+        "basis": "measured",
+        "note": "FlyandStay Nov 2024, no cut: C8 (t≈980 s) → BC link → B15 (t≈1210 s) 3.8 min, → B17 4.5 min; ±20 s"
+      },
+      "distanceM": 450,
+      "practical": "practical",
+      "via": "From pier C near C10 into the temporary BC link (blue floor, moving walkways) → pier B at B15",
+      "confidence": "probable",
+      "sources": [
+        "src:schiphol-bc-link-2024",
+        "src:osm-ams",
+        "src:yt-flyandstay-g9-b17"
+      ],
+      "notes": "Derived from OSM: ~180 units × 2.5 m × 1.3 / 75 m/min (moving walkways)."
+    },
+    {
+      "id": "w:ams-l1-b-middenbrug",
+      "from": "ams-l1",
+      "to": "ams-b",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": {
+        "min": 3,
+        "typical": 5,
+        "max": 7,
+        "basis": "derived",
+        "note": "≈300 m Lounge 1 → root of pier B over the 50 m bridge (OSM/plan distance) × 1.3 detour ÷ 72 m/min ≈ 5 min"
+      },
+      "distanceM": 300,
+      "practical": "practical",
+      "status": [
+        {
+          "state": "planned",
+          "until": "2026-11-17",
+          "note": "Bridge moved into place in the night of 6 August; opening announced for 18 November. The year is not printed on the item; schiphol.nl prints the year on items from earlier years (e.g. \"13 August 2024\", \"29 July 2025\") and omits it for the current year, so the opening is read as 18 November 2026.",
+          "confidence": "inferred",
+          "sources": [
+            "src:schiphol-middenbrug"
+          ]
+        }
+      ],
+      "via": "Middenbrug (Central Bridge, 50 m) from Lounge 1 to pier B",
+      "confidence": "inferred",
+      "sources": [
+        "src:schiphol-middenbrug"
+      ],
+      "notes": "Modelled as planned until 2026-11-17. If the bridge actually opened in November 2025, it is already in use and the BC-link route overstates the time to B. See q:ams-middenbrug."
+    },
+    {
+      "id": "w:ams-l1-d-s",
+      "from": "ams-l1",
+      "to": "ams-d-s",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": {
+        "min": 1,
+        "typical": 3,
+        "max": 5,
+        "basis": "measured",
+        "note": "Metro Mark: D59 → walkways → Lounge 1 hall ≈1 min (23 Nov 2024, t≈80–135 s); sign \"D 59-87\" in Lounge 1 (t≈485 s) → escalator → start of the upper pier (t≈575 s) 1.5 min → D78 (t≈720–730 s) ≈4 min (19 Apr 2024); 5 s frames, no cut"
+      },
+      "practical": "practical",
+      "via": "Sign \"D 59-87\" in Lounge 1 → escalator up → upper level of pier D",
+      "confidence": "verified",
+      "sources": [
+        "src:yt-metromark-d57-d78",
+        "src:wikivoyage-ams",
+        "src:osm-ams"
+      ],
+      "notes": "Apr 2024 video: Lounge 1 ≈480 s, escalator ≈495–525 s, then the upper pier with long moving walkways to D78."
+    },
+    {
+      "id": "w:ams-l1-l2",
+      "from": "ams-l1",
+      "to": "ams-l2",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": {
+        "min": 2,
+        "typical": 3,
+        "max": 5,
+        "basis": "observed"
+      },
+      "controls": [
+        {
+          "kind": "passport",
+          "minutes": {
+            "min": 3,
+            "typical": 10,
+            "max": 45,
+            "basis": "assumed"
+          },
+          "note": "Passport control (exit Schengen) at the Lounge 1 / Lounge 2 filter by the D-pier root; signed \"D 1-57, E F G H, Transfer\"",
+          "hours": [{ "from": "05:00", "until": "22:00" }],
+          "hoursNote": "\"Departures Schengen (S/NS)\" filter 05:00–22:00 (Schiphol security-filter hours, owner capture 2026-11-02); identified with this Lounge 1 → Lounge 2 filter from the Schiphol checkpoint maps (likely, docs/research/EVIDENCE_2026-11-02.md). The reverse filter \"Arrival Schengen (NS/S)\" is open 24/7"
+        }
+      ],
+      "reverseControls": [
+        {
+          "kind": "passport",
+          "minutes": {
+            "min": 5,
+            "typical": 15,
+            "max": 60,
+            "basis": "assumed"
+          },
+          "note": "Passport control (entry Schengen). Transfer passengers from origins outside EU one-stop security may also need the transfer security filter (see r:ams-transfer-security)"
+        }
+      ],
+      "practical": "practical",
+      "via": "Lounge 1 → escalator → passport control → Lounge 2",
+      "confidence": "verified",
+      "sources": [
+        "src:wikivoyage-ams",
+        "src:silverdrive-guide",
+        "src:yt-metromark-d59-d43",
+        "src:yt-metromark-d57-d78"
+      ],
+      "notes": "Nov 2024 video: Lounge 1 hall ≈225 s → sign \"D 1-57 … Transfer\" + escalator ≈265 s → Lounge 2 ≈275 s (no queue). The booths themselves are not legible in the storyboards."
+    },
+    {
+      "id": "w:ams-l2-d-n",
+      "from": "ams-l2",
+      "to": "ams-d-n",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": {
+        "min": 2,
+        "typical": 4,
+        "max": 6,
+        "basis": "measured",
+        "note": "Metro Mark 23 Nov 2024, 5 s frames, no cut: Lounge 2 hall (t≈270 s) → transfer desk T4 (t≈375 s) → D2 (t≈395 s) 2.1 min → D7 (t≈440 s) 2.8 min → D41 (t≈540 s) 4.5 min → D43 (t≈580 s) 5.2 min; ±10 s"
+      },
+      "practical": "practical",
+      "via": "Lounge 2 → transfer desk T4 → D2 … D7 along moving walkways",
+      "confidence": "verified",
+      "sources": [
+        "src:yt-metromark-d59-d43",
+        "src:yt-fal-arrivals-2026",
+        "src:osm-ams"
+      ],
+      "notes": "Nov 2024: Lounge 2 ≈275 s → D2 ≈390 s → D7 ≈440 s → D41 ≈540 s → D43 ≈580 s; mid-pier ≈4 min."
+    },
+    {
+      "id": "w:ams-l2-e",
+      "from": "ams-l2",
+      "to": "ams-e",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": {
+        "min": 3,
+        "typical": 5,
+        "max": 7,
+        "basis": "derived"
+      },
+      "practical": "practical",
+      "via": "Lounge 2 / east end of Holland Boulevard → pier E",
+      "confidence": "probable",
+      "sources": [
+        "src:wikivoyage-ams",
+        "src:schiphol-map-pdf",
+        "src:osm-ams"
+      ]
+    },
+    {
+      "id": "w:ams-l2-l3",
+      "from": "ams-l2",
+      "to": "ams-l3",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": {
+        "min": 4,
+        "typical": 5,
+        "max": 7,
+        "basis": "measured",
+        "note": "FlyandStay Nov 2024, 10 s frames, no cut: end of the pier-G connector at Lounge 3 (t≈450 s) → Holland Boulevard shops → \"Lounge 2\" sign (t≈730 s): 4.7 ± 0.3 min"
+      },
+      "distanceM": 280,
+      "practical": "practical",
+      "via": "Holland Boulevard (open 24 h; shops, library, former Rijksmuseum annex)",
+      "confidence": "verified",
+      "sources": [
+        "src:schiphol-lounges",
+        "src:schiphol-map-pdf",
+        "src:yt-flyandstay-g9-b17",
+        "src:osm-ams"
+      ]
+    },
+    {
+      "id": "w:ams-l2-f",
+      "from": "ams-l2",
+      "to": "ams-f",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": {
+        "min": 4,
+        "typical": 6,
+        "max": 9,
+        "basis": "derived"
+      },
+      "practical": "practical",
+      "via": "Holland Boulevard → pier F",
+      "confidence": "probable",
+      "sources": [
+        "src:schiphol-map-pdf",
+        "src:osm-ams"
+      ]
+    },
+    {
+      "id": "w:ams-l3-f",
+      "from": "ams-l3",
+      "to": "ams-f",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": {
+        "min": 2,
+        "typical": 4,
+        "max": 6,
+        "basis": "derived"
+      },
+      "practical": "practical",
+      "confidence": "probable",
+      "sources": [
+        "src:wikivoyage-ams",
+        "src:osm-ams"
+      ]
+    },
+    {
+      "id": "w:ams-l3-g",
+      "from": "ams-l3",
+      "to": "ams-g",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": {
+        "min": 3,
+        "typical": 4,
+        "max": 6,
+        "basis": "measured",
+        "note": "FlyandStay Nov 2024, 10 s frames, no cut: G10 (t≈190 s) → G6 (t≈240 s) → G4 → transfer desk T9 (t≈360 s) → glazed connector with moving walkways → Lounge 3 (t≈450 s): G6 → Lounge 3 3.5 min, G10 → Lounge 3 4.3 min; ±20 s"
+      },
+      "practical": "practical",
+      "via": "Lounge 3 → transfer desk T9 → glazed corridor with moving walkways → pier G",
+      "confidence": "verified",
+      "sources": [
+        "src:yt-flyandstay-g9-b17",
+        "src:wikivoyage-ams",
+        "src:osm-ams"
+      ],
+      "notes": "Nov 2024 video: \"took 10 minutes from gate G9\" to Lounge 2 (incl. the G pier, the corridor, Lounge 3 and Holland Boulevard)."
+    },
+    {
+      "id": "w:ams-l3-h",
+      "from": "ams-l3",
+      "to": "ams-h",
+      "bidirectional": true,
+      "access": "airside",
+      "minutes": {
+        "min": 3,
+        "typical": 4,
+        "max": 7,
+        "basis": "observed",
+        "note": "Flight report (Dec 2015): after security and passport at departure area 2, \"an 8-minute walk to the gate\" H6, from posted walking-time signs; with Lounge 2 → Lounge 3 = 5 min (measured) this leaves ≈3–5 min Lounge 3 → H"
+      },
+      "practical": "practical",
+      "via": "Lounge 3 → root of pier G → pier H",
+      "confidence": "probable",
+      "sources": [
+        "src:wikivoyage-ams",
+        "src:osm-ams",
+        "src:benthem-onexs",
+        "src:flightreport-h6"
+      ],
+      "notes": "Wikivoyage lists H under Lounge 3; a 2015 passenger report walked from the non-Schengen departure lounges to H6 airside (8 min, signed). Other guides call H/M isolated. See q:ams-hm."
+    },
+    {
+      "id": "w:ams-g-arr-plaza",
+      "from": "ams-g",
+      "to": "ams-plaza",
+      "bidirectional": false,
+      "access": "airside",
+      "minutes": {
+        "min": 6,
+        "typical": 8,
+        "max": 12,
+        "basis": "derived"
+      },
+      "controls": [
+        {
+          "kind": "passport",
+          "minutes": {
+            "min": 5,
+            "typical": 15,
+            "max": 60,
+            "basis": "assumed"
+          },
+          "note": "Immigration filter on the ground floor of the GH building (non-Schengen arrivals incl. bus arrivals)"
+        },
+        { "kind": "customs", "minutes": { "min": 0, "typical": 1, "max": 5, "basis": "assumed" }, "note": "Customs exit (green / red channel) after baggage reclaim (audit 2026-11-02)" }
+      ],
+      "practical": "practical",
+      "flow": "arrivals",
+      "via": "Pier G arrivals → GH building immigration filter → baggage hall → Plaza",
+      "confidence": "inferred",
+      "sources": [
+        "src:benthem-onexs",
+        "src:osm-ams"
+      ],
+      "notes": "From the 2015 architect description of the GH building; not seen in a video. Derived: ~180 units × 2.5 m × 1.3 / 75 m/min."
+    },
+    {
+      "id": "w:ams-d-n-arr-plaza",
+      "from": "ams-d-n",
+      "to": "ams-plaza",
+      "bidirectional": false,
+      "access": "airside",
+      "minutes": {
+        "min": 4,
+        "typical": 6,
+        "max": 10,
+        "basis": "observed",
+        "note": "Flights and Lounges Sep 2026, 5 s frames: D2 (t≈450 s) → T4 → Lounge 2 → escalator down (t≈525 s) → passport control (t≈535 s, filming not allowed: probable cut) → baggage hall (t≈550 s) → \"Arrivals 2-4\" (t≈630 s) = 3.0 min of walking plus ~1–3 min from mid pier D to D2; passport queue excluded (control allowance)"
+      },
+      "controls": [
+        {
+          "kind": "passport",
+          "minutes": {
+            "min": 5,
+            "typical": 15,
+            "max": 60,
+            "basis": "assumed"
+          },
+          "note": "Arrivals passport control one level down from Lounge 2 (Marechaussee), then baggage hall and customs"
+        },
+        { "kind": "customs", "minutes": { "min": 0, "typical": 1, "max": 5, "basis": "assumed" }, "note": "Customs exit (green / red channel) after baggage reclaim (audit 2026-11-02)" }
+      ],
+      "practical": "practical",
+      "flow": "arrivals",
+      "via": "D lower → Lounge 2 → escalator down → passport control → baggage hall → customs → Plaza",
+      "confidence": "probable",
+      "sources": [
+        "src:yt-fal-arrivals-2026",
+        "src:wikivoyage-ams"
+      ],
+      "notes": "Sep 2026 video: D3 ≈430 s → Lounge 2 ≈480 s → passport control ≈540 s → baggage hall ≈560 s → Plaza/station ≈650 s (walking only)."
+    }
+  ],
+  "rules": [
+    {
+      "id": "r:ams-single-terminal",
+      "text": "One terminal building: departure halls 1–3 on the first floor, Schiphol Plaza with arrivals halls and the railway station on the ground floor; airside Lounges 1 (Schengen), 2 and 3 (non-Schengen) and 4 (pier M). No inter-terminal train, people mover or pier-to-pier bus: all airside movement is on foot (moving walkways). Apron buses serve remote stands only (part of boarding, see r:ams-remote-stands).",
+      "confidence": "verified",
+      "sources": [
+        "src:wikivoyage-ams",
+        "src:wiki-ams-en",
+        "src:silverdrive-guide",
+        "src:schiphol-lounges"
+      ]
+    },
+    {
+      "id": "r:ams-zones",
+      "text": "Schengen: piers B, C, M and D59–D87 (upper level of D). Non-Schengen: D1–D57 (lower level of D), E, F, G, H. Gate allocation is dynamic; the gate number decides the zone at D.",
+      "confidence": "verified",
+      "sources": [
+        "src:wiki-ams-en",
+        "src:wikivoyage-ams",
+        "src:silverdrive-guide",
+        "src:osm-ams",
+        "src:yt-flyandstay-g9-b17"
+      ]
+    },
+    {
+      "id": "r:ams-central-security",
+      "text": "Central security since 3 June 2015: checkpoints in the departure halls (three for departing, two for transfer passengers) replaced the 130 gate lanes; there is no security at the gates of E, F, G. Extra floors on E/F/G keep unscreened arriving passengers apart.",
+      "confidence": "verified",
+      "sources": [
+        "src:schiphol-news-central-security",
+        "src:benthem-onexs",
+        "src:yt-schiphol-departure"
+      ]
+    },
+    {
+      "id": "r:ams-transfer-security",
+      "text": "Transfer passengers arriving from outside the EU one-stop-security area must pass a transfer security filter (central filter in the extension between piers E and F; filter on the first floor of the GH building); arrivals from e.g. the US, UK and Canada generally skip it. Not modelled per route: add ~0–30 min for such arrivals. Remediation (2026-11-01, R-05): modelled as a conditional control (when: origin-not-one-stop) on the arrivals transfer flows of piers E, F, G and H (w:ams-*-arr-l2/l3) with the one-stop list in oneStopSecurity; D (lower level) arrivals are not segregated in the model and still skip it (open). Before: Phase 3: the model cannot apply this filter to only some origins, because no control is conditional on the origin. Every arriving non-Schengen connection is therefore routed without the transfer filter, which fits passengers from one-stop-security origins only. Arrivals from other origins (most of Asia, Africa and Latin America) miss one control allowance (scenario catalogue, \"missing\").",
+      "confidence": "probable",
+      "sources": [
+        "src:benthem-onexs",
+        "src:schiphol-news-central-security",
+        "src:wikivoyage-ams"
+      ]
+    },
+    {
+      "id": "r:ams-m-isolated",
+      "text": "Pier M (Lounge 4, Schengen low-cost) has no airside link to any other lounge or pier: connections to or from M leave through baggage claim and re-enter through security.",
+      "confidence": "verified",
+      "sources": [
+        "src:wikivoyage-ams",
+        "src:wiki-ams-en",
+        "src:silverdrive-guide"
+      ]
+    },
+    {
+      "id": "r:ams-b-access",
+      "text": "Pier B is reached through the temporary BC link from the root of pier C (in use since 25 Sep 2024; the old BC corridor closed for the new baggage basement). The Middenbrug Lounge 1 → B is planned to open on 18 November (year not confirmed).",
+      "confidence": "verified",
+      "sources": [
+        "src:schiphol-bc-link-2024",
+        "src:schiphol-news-bc-corridor",
+        "src:osm-ams",
+        "src:yt-flyandstay-g9-b17",
+        "src:schiphol-middenbrug"
+      ]
+    },
+    {
+      "id": "r:ams-pier-a",
+      "text": "Pier A (8 gates) is not in use on 2026-10-31; handover December 2026, passenger use expected April 2027. Pier C is to be rebuilt after pier A opens.",
+      "confidence": "verified",
+      "sources": [
+        "src:schiphol-pier-a-2027",
+        "src:nltimes-pier-a",
+        "src:khl-pier-a",
+        "src:silverdrive-guide"
+      ]
+    },
+    {
+      "id": "r:ams-remote-stands",
+      "text": "About 136 of 227 stands are remote (2025): passengers are bussed between remote stands and bus gates on the apron level (e.g. B1–B8 under pier B; a bus gate under pier D seen in 2026). The apron bus is part of the flight, not an area-to-area connection; a 2025 ride took ≈6 min.",
+      "confidence": "probable",
+      "sources": [
+        "src:wiki-ams-en",
+        "src:osm-ams",
+        "src:schiphol-remote-pdf",
+        "src:yt-fal-arrivals-2026",
+        "src:yt-metromark-s-ns"
+      ]
+    },
+    {
+      "id": "r:ams-border-transfer",
+      "text": "Transfer passengers pass passport control only when changing between Schengen and non-Schengen flights (entry or exit); non-Schengen ↔ non-Schengen transfers stay in the international transit zone without passport control. Since April 2026 the EU Entry/Exit System (EES) is used for all Schengen ↔ non-Schengen transfers; self-service kiosks in the Schiphol transfer areas pre-register data. Passport allowances stay planning values (no published queue times).",
+      "confidence": "verified",
+      "sources": [
+        "src:marechaussee-transit",
+        "src:wikivoyage-ams",
+        "src:silverdrive-guide"
+      ]
+    },
+    {
+      "id": "r:ams-mct",
+      "text": "KLM minimum connection time at Schiphol: 40 min Schengen ↔ Schengen, 50 min involving non-Schengen (search excerpts of klm.com transfer pages). Movement times in this model are not connection times.",
+      "confidence": "probable",
+      "sources": [
+        "src:klm-transfers"
+      ]
+    },
+    {
+      "id": "r:ams-walk-signage",
+      "text": "Schiphol signs walking times in minutes to each pier/area (\"walking times to each area posted\"; guides: overhead signs quote walking times to each pier). The signed values themselves were not captured (schiphol.nl blocked; no legible sign in the frame-read videos): owner capture wanted.",
+      "confidence": "probable",
+      "sources": [
+        "src:flightreport-h6",
+        "src:silverdrive-guide"
+      ]
+    },
+    {
+      "id": "r:ams-night",
+      "text": "The airport is open 24 hours and Holland Boulevard (Lounge 2 ↔ 3) is open 24 hours; no source gives night hours for the security, passport or transfer filters, so no walk carries opening hours and the model routes every pair at 03:00. Most airline lounges and shops close 21:00–22:00; landside Plaza areas may be limited to passengers and staff 00:00–04:00.",
+      "confidence": "inferred",
+      "sources": [
+        "src:sleepinginairports-ams",
+        "src:schiphol-lounges",
+        "src:wikivoyage-ams"
+      ]
+    }
+  ],
+  "openQuestions": [
+    {
+      "id": "q:ams-middenbrug",
+      "question": "Does the Middenbrug (Central Bridge) Lounge 1 → pier B open on 18 November 2026 as read from the undated Schiphol news item?",
+      "impact": "From 18 Nov 2026 Lounge 1 → B is modelled ~2 min shorter than via the BC link; if the opening slips, the status period must move.",
+      "howToResolve": "Owner capture of schiphol.nl/en/projects/news/central-bridge-in-place (403 to automated fetch) or a dated video after 18 Nov 2026."
+    },
+    {
+      "id": "q:ams-hm",
+      "question": "Is pier H reachable airside from Lounge 3/G, and are H and M two levels, two sides or the same stands? Phase 3: a 2017 first-hand blog (cultureguru.nl) says H and M \"use same gates\" with \"access from different sides\": M has its own security and entrance, and H is reached \"through central security\". This is consistent with the modelled L3 ↔ H walk. The exact airside path from Lounge 3 and the current (2026) arrangement are still unconfirmed.",
+      "impact": "H ↔ other non-Schengen piers is routed airside via Lounge 3 (probable); if H is isolated like M, those routes must go landside.",
+      "howToResolve": "Official terminal map (owner capture), or a dated walkthrough of the H gates."
+    },
+    {
+      "id": "q:ams-passport-points",
+      "question": "Exact positions of the passport filters: Lounge 1 ↔ Lounge 2 (D-pier root), departure halls 2/3 → Lounges 2/3, arrivals filters (GH building ground floor, below Lounge 2), and whether a direct Lounge 1 ↔ Lounge 3 filter exists.",
+      "impact": "Times between Schengen and non-Schengen areas west of Lounge 2 may be overstated or understated.",
+      "howToResolve": "Official map PDF (owner capture) or a video showing the filter signage legibly."
+    },
+    {
+      "id": "q:ams-transfer-filter",
+      "question": "Which arriving transfer passengers must use the transfer security filters (E/F and GH building), where they enter the flow, and typical queue times in 2026 (EES).",
+      "impact": "Not included in route times; may add 10–30 min for arrivals from non-EU-security origins.",
+      "howToResolve": "Schiphol transfer page (blocked to automated fetch) or KLM transfer guidance; Marechaussee publications."
+    },
+    {
+      "id": "q:ams-bus-gates",
+      "question": "Numbering and zone of the bus gates (B1–B8; the bus gate under pier D used in Sep 2026; the bus tablet showed \"Gate A08\"; the OSM node \"G11 to G16\").",
+      "impact": "Bus-gate groups other than B1–B8 are not listed; their walking times to the lounges are unknown.",
+      "howToResolve": "Dated photos of bus-gate signage or the official map."
+    },
+    {
+      "id": "q:ams-gate-gaps",
+      "question": "Unattested gate numbers (e.g. B19, B21, C1–C3, D1, D8–D9, D11–D21 odd, E10–E16, F1).",
+      "impact": "Gate search cannot find them.",
+      "howToResolve": "Official map or departure board snapshots (owner capture; schiphol.nl flight pages are disallowed by robots.txt query rules)."
+    },
+    {
+      "id": "q:ams-pier-a",
+      "question": "Pier A gate numbers, Schengen/non-Schengen split and its walking link (via the AB link / Middenbrug) when it opens in 2027.",
+      "impact": "Pier A has no gates and no walks; it appears only as a planned area.",
+      "howToResolve": "Re-check Schiphol project news in early 2027."
+    },
+    {
+      "id": "q:ams-departures-4",
+      "question": "Where is the security checkpoint for pier M (\"Departures 4\" in a Schiphol article) and how long is the walk from the Plaza?",
+      "impact": "Plaza → M time is assumed.",
+      "howToResolve": "Official map or a dated M-pier departure video."
+    },
+    {
+      "id": "q:ams-night-filters",
+      "question": "Night hours of the departure-hall security filters (1, 2, 3, \"Departures 4\"), the Lounge 1 ↔ Lounge 2 passport filter, the arrivals passport filters and the two transfer security filters.",
+      "impact": "All pairs are routed at 03:00 (no Walk.hours); if filters close at night, Schengen ↔ non-Schengen and landside → airside routes are unavailable then.",
+      "howToResolve": "Owner capture of the schiphol.nl security/transfer pages, or Marechaussee/Schiphol confirmation."
+    },
+    {
+      "id": "q:ams-walk-signs",
+      "question": "The minutes printed on Schiphol walking-time signs (e.g. Lounge 1 → B, C, D59–87; Lounge 2 → D1–57, E, F; Lounge 3 → G, H).",
+      "impact": "Would turn the remaining derived walks (Plaza → lounges, L2 → E/F, L3 → F) into published values.",
+      "howToResolve": "Photos of the signs (owner capture) or the Schiphol app route times."
+    }
+  ],
+  "sources": [
+    { "id": "src:schiphol-transfer-blog", "title": "Schiphol: All about your transfer at Schiphol", "url": "https://www.schiphol.nl/en/blog/all-about-your-transfer-at-schiphol/", "publisher": "Royal Schiphol Group", "kind": "official", "group": "schiphol", "accessed": "2026-11-01", "published": "2023-12-04", "notes": "Text copied by the owner 2026-11-02 (schiphol.nl blocks automated access). No repeat security after flights from the US, Canada, UK, Ireland, Singapore, Cyprus, Serbia (only flights from Belgrade) and Schengen countries; Schengen ↔ non-Schengen transfers need passport control; Schengen → non-Schengen may also need security. Official video of the same date: https://www.youtube.com/watch?v=BAqxZ3TztkU (arrival → transfer security → Lounge 2 → passport e-gates → Lounge 1)." },
+    { "id": "src:schiphol-filter-hours", "title": "Schiphol: opening hours of the security filters (departure filters 1, 1a, 2, 3, M; transfer filters EF and GH; Schengen and arrival passport filters)", "url": "https://www.schiphol.nl/", "publisher": "Royal Schiphol Group", "kind": "official", "group": "schiphol", "accessed": "2026-11-01", "notes": "Table copied by the owner from official Schiphol information on 2026-11-02 (schiphol.nl blocks automated access; exact page URL to be recorded). Transfer Filter EF 24/7; Transfer Filter GH 04:30–23:30; Departure Filter 1 and 3 24/7, 1a 04:00–end of operations, 2 05:15–end of operations (Sat/Sun from 06:00), M 05:00–21:30 depending on the schedule; Arrival Schengen (NS/S) 24/7; Departures Schengen (S/NS) 05:00–22:00 incl. T-passage for crew and PRM; Arrival Filters 1 and 3 06:00–21:30, 2 and 4 24/7. Applied: EF and GH (their positions are named in the model). The other filters await a verified physical mapping." },
+    { "id": "src:dhs-tsa-2017-enhanced", "title": "DHS / TSA: enhanced security measures for all commercial flights to the United States (June 2017; >280 last-point-of-departure airports, security directives and emergency amendments)", "url": "https://www.dhs.gov/", "publisher": "U.S. Department of Homeland Security", "kind": "official", "group": "dhs", "accessed": "2026-11-01", "published": "2017-06", "notes": "Read through the DHS 2017 testimony by the research pass of 2026-11-01; exact page URL not recorded. Procedures themselves are not public." },
+    { "id": "src:fd-feed-terminals-2026-11-01", "title": "CDG Navigator flight-data server: terminal / gate strings observed in the collected feed (2026-10-30 – 2026-11-01), read-only GET /fd-api/stats/distribution and /fd-api/flights", "url": "http://127.0.0.1:8790/fd-api/stats/summary", "publisher": "CDG Navigator (local flight-data collection, AeroDataBox-derived)", "kind": "other", "group": "fd-feed", "accessed": "2026-11-01", "notes": "Cross-tabulated by the other airport's Schengen zone and by gate letter; counts in docs/research/AIRPORT_DATA_REMEDIATION.md. Local research data, not for display." },
+    { "id": "src:eu-oss-2025-920", "title": "Commission Implementing Regulation (EU) 2025/920 amending Reg. (EU) 2015/1998 (one-stop security lists: Ben Gurion removed from Attachments 3-B / 4-B; Kangerlussuaq, Guernsey, Isle of Man, Jersey removed)", "url": "https://eur-lex.europa.eu/eli/reg_impl/2025/920/oj", "publisher": "European Commission", "kind": "official", "group": "eu-law", "accessed": "2026-11-01", "published": "2025-05-20", "notes": "Recitals read from the umwelt-online.de text (EUR-Lex HTML returned empty). The consolidated Attachment 4-B list was NOT read: owner capture. Baseline list: Reg. (EU) 2019/413 (Canada, Faroe Islands Vagar, Greenland Kangerlussuaq, Guernsey, Isle of Man, Jersey, Montenegro, Singapore Changi, United Kingdom, United States)." },
+    {
+      "id": "src:osm-ams",
+      "title": "OpenStreetMap: Amsterdam Airport Schiphol (aeroway=gate|terminal|construction, railway=station) via Overpass",
+      "url": "https://www.openstreetmap.org/#map=15/52.3086/4.7639",
+      "publisher": "OpenStreetMap contributors",
+      "kind": "osm",
+      "group": "osm",
+      "accessed": "2026-10-31",
+      "published": "2026-07-28",
+      "notes": "Overpass (kumi.systems mirror) snapshots 2026-07-15/28: 140 gate nodes with level tags (D1–D57 level 1, D59–D87 level 2, B1–B8 level 0), pier outlines B–H, \"Temporary BC-link\", \"AB-link\", \"A-pier\" (construction=terminal), NS station node. Placement source only. © OpenStreetMap contributors, ODbL."
+    },
+    {
+      "id": "src:wiki-ams-en",
+      "title": "Amsterdam Airport Schiphol (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Amsterdam_Airport_Schiphol",
+      "publisher": "Wikipedia",
+      "kind": "wiki",
+      "group": "wikipedia",
+      "accessed": "2026-10-31",
+      "notes": "Low weight. Piers B, C, M Schengen; E, F, G, H non-Schengen; D both on separate levels; D59–D87 via Departure Hall 1; pier A under construction, expected April 2027, 8 gates; 227 stands in 2025 (91 contact, 136 remote); Lounge 1 expansion completed Nov 2024; G9, E18, E24 A380-capable."
+    },
+    {
+      "id": "src:wikivoyage-ams",
+      "title": "Schiphol Airport (Wikivoyage)",
+      "url": "https://en.wikivoyage.org/wiki/Schiphol_Airport",
+      "publisher": "Wikivoyage",
+      "kind": "guide",
+      "group": "wikivoyage",
+      "accessed": "2026-10-31",
+      "notes": "Lounge 1 (Schengen): B, C, D59–D87 (escalator up from Lounge 1); Lounge 2: E and D3–D57; Lounge 3: F, G, H; Lounge 4: M only, fully separated; Lounge 1 → 2/3 needs immigration; M connections must exit via baggage claim; station under Schiphol Plaza."
+    },
+    {
+      "id": "src:silverdrive-guide",
+      "title": "Schiphol Terminal Guide: Departure Halls, Piers and Lounges",
+      "url": "https://silverdrive.nl/blog/schiphol-terminal-guide/",
+      "publisher": "SilverDrive (chauffeur service) editorial",
+      "kind": "guide",
+      "group": "silverdrive",
+      "accessed": "2026-10-31",
+      "published": "2026-10-04",
+      "notes": "One terminal, departure halls 1–3; D two levels (D59–D87 Schengen, lower numbers non-Schengen); H non-Schengen low-cost, M Schengen low-cost and isolated; pier A not open in 2026, expected April 2027; Lounges 2 and 3 linked to Lounge 1; ~20 min hall → far G gate."
+    },
+    {
+      "id": "src:schiphol-news-central-security",
+      "title": "Greater comfort as a result of central security",
+      "url": "https://news.schiphol.com/greater-comfort-as-a-result-of-central-security/",
+      "publisher": "Royal Schiphol Group (news.schiphol.com)",
+      "kind": "official",
+      "group": "schiphol",
+      "accessed": "2026-10-31",
+      "published": "2015-06-03",
+      "notes": "Central security from 3 June 2015: five central checkpoints (three for departing, two for transfer passengers) replace 130 gate lanes; extra level on piers E, F, G to separate flows."
+    },
+    {
+      "id": "src:schiphol-news-bc-corridor",
+      "title": "Great engineering on Airside (B-C link)",
+      "url": "https://news.schiphol.com/great-engineering-on-airside/",
+      "publisher": "Royal Schiphol Group (news.schiphol.com)",
+      "kind": "official",
+      "group": "schiphol",
+      "accessed": "2026-10-31",
+      "published": "2020-06-11",
+      "notes": "270 m corridor B–C on poles 4 m above the apron, 8 modules; \"Pier B will only be accessible temporarily through this corridor due to the construction of the new terminal\"."
+    },
+    {
+      "id": "src:schiphol-news-lounge1",
+      "title": "Schiphol opens new area: much more space for passengers in Lounge 1",
+      "url": "https://news.schiphol.com/schiphol-opens-new-area-much-more-space-for-passengers-in-lounge-1/",
+      "publisher": "Royal Schiphol Group (news.schiphol.com)",
+      "kind": "official",
+      "group": "schiphol",
+      "accessed": "2026-10-31",
+      "published": "2024-11-08",
+      "notes": "5,000 m² new Lounge 1 section for European flights; new walking route; renewal of pier C listed as a planned project."
+    },
+    {
+      "id": "src:schiphol-pier-a-2027",
+      "title": "New Pier A ready in 2027 (schiphol.nl project news)",
+      "url": "https://www.schiphol.nl/en/projects/news/new-pier-a-ready-in-2027",
+      "publisher": "Royal Schiphol Group (schiphol.nl)",
+      "kind": "official",
+      "group": "schiphol",
+      "accessed": "2026-10-31",
+      "published": "2024-08-13",
+      "notes": "schiphol.nl answers HTTP 403 to automated fetches: read only as search-engine excerpts (pier A in use April 2027, BAM handover end 2026, testing afterwards, 8 gates incl. 3 for the largest aircraft). Owner capture wanted."
+    },
+    {
+      "id": "src:schiphol-bc-link-2024",
+      "title": "Passenger link from pier B to pier C now open (schiphol.nl project news)",
+      "url": "https://www.schiphol.nl/en/projects/news/passenger-link-from-pier-b-to-pier-c-now-open",
+      "publisher": "Royal Schiphol Group (schiphol.nl)",
+      "kind": "official",
+      "group": "schiphol",
+      "accessed": "2026-10-31",
+      "published": "2024-10-01",
+      "notes": "Search excerpt only (403): since Wednesday 25 September 2024 passengers use the new BC link between piers B and C; the old BC corridor is closed for the new baggage basement; a second temporary A-B link is being built."
+    },
+    {
+      "id": "src:schiphol-middenbrug",
+      "title": "Central Bridge in place / De Middenbrug op haar plek (schiphol.nl project news, 14 August)",
+      "url": "https://www.schiphol.nl/en/projects/news/central-bridge-in-place",
+      "publisher": "Royal Schiphol Group (schiphol.nl)",
+      "kind": "official",
+      "group": "schiphol",
+      "accessed": "2026-10-31",
+      "notes": "Search excerpt only (403); the year is not shown in the excerpt. 50 m bridge between Lounge 1 and pier B (later also pier A), 625 m² walking space, ~20 million travellers/year, moved into place in the night of 6 August, opening planned 18 November."
+    },
+    {
+      "id": "src:schiphol-lounges",
+      "title": "Schiphol's lounges (schiphol.nl blog) and \"Lounge 1-4 at Schiphol\"",
+      "url": "https://www.schiphol.nl/en/blog/schiphols-lounges/",
+      "publisher": "Royal Schiphol Group (schiphol.nl)",
+      "kind": "official",
+      "group": "schiphol",
+      "accessed": "2026-10-31",
+      "notes": "Search excerpts only (403): Lounge 1 for flights within Europe, Lounges 2 and 3 intercontinental, Lounge 4 low-cost; Holland Boulevard between Lounge 2 and 3, open 24 h; \"eight piers – B, C, D, E, F, G and H/M\"."
+    },
+    {
+      "id": "src:schiphol-map-pdf",
+      "title": "Schiphol terminal map (B2B download PDF)",
+      "url": "https://www.schiphol.nl/en/download/b2b/1701093291/4izx1fyyWZ2sNOmifq4623.pdf",
+      "publisher": "Royal Schiphol Group (schiphol.nl)",
+      "kind": "official-map",
+      "group": "schiphol",
+      "accessed": "2026-10-31",
+      "notes": "Fetch returned HTTP 404; search excerpt only: lists Lounges 1–4, Holland Boulevard (connects Lounge 2 and 3; piers E and F connect to it), piers B, C, D1, D2, E, F, G, H, M, passport and security points."
+    },
+    {
+      "id": "src:schiphol-remote-pdf",
+      "title": "Schiphol remote handling / bus stations (B2B download PDF)",
+      "url": "https://www.schiphol.nl/en/download/b2b/1500369796/7H7F3cNaKIgIyeIGmUMmoI.pdf",
+      "publisher": "Royal Schiphol Group (schiphol.nl)",
+      "kind": "official-pdf",
+      "group": "schiphol",
+      "accessed": "2026-10-31",
+      "notes": "Fetch returned HTTP 404 (older document); search excerpt only: B bus stations B01–B08, B bus gates B18–B34 on the first floor, a D06 bus station and a C bus station. Low weight (date unknown)."
+    },
+    {
+      "id": "src:benthem-onexs",
+      "title": "One-XS, Amsterdam Airport Schiphol (project page)",
+      "url": "https://www.benthemcrouwel.com/projects/one-xs-amsterdam-airport-schiphol",
+      "publisher": "Benthem Crouwel Architects",
+      "kind": "other",
+      "group": "benthemcrouwel",
+      "accessed": "2026-10-31",
+      "published": "2015",
+      "notes": "Architect of the 2015 central-security project: filters on mezzanines of Departure Halls 2 and 3; new floors on E, F, G; central transfer filter in a 200 m extension between E and F; GH building: immigration filter (ground) and transfer filter (first floor) for non-Schengen flows incl. bus arrivals."
+    },
+    {
+      "id": "src:nltimes-pier-a",
+      "title": "New Schiphol terminal pier delayed to 2027; budget swells to €1.4 billion",
+      "url": "https://nltimes.nl/node/73809",
+      "publisher": "NL Times",
+      "kind": "news",
+      "group": "nltimes",
+      "accessed": "2026-10-31",
+      "published": "2024-07",
+      "notes": "Pier A operational April 2027 after BAM handover in December 2026; ~€1.4 bn."
+    },
+    {
+      "id": "src:khl-pier-a",
+      "title": "Amsterdam airport expansion delayed amid budget increase",
+      "url": "https://khl.com/news/amsterdam-airport-expansion-delayed-amid-budget-increase/8038081.article",
+      "publisher": "KHL Group",
+      "kind": "news",
+      "group": "khl",
+      "accessed": "2026-10-31",
+      "published": "2024",
+      "notes": "Schiphol and BAM aim to complete pier A by December 2026; fire-resistant coating on 18 km of beams replaced."
+    },
+    {
+      "id": "src:yt-metromark-d59-d43",
+      "title": "Transfer at Amsterdam Airport Schiphol | NL | D59 to D43 | 23/11/24",
+      "url": "https://www.youtube.com/watch?v=F0Prp7MoK8E",
+      "publisher": "Metro Mark (YouTube)",
+      "kind": "video",
+      "group": "yt-metromark",
+      "accessed": "2026-10-31",
+      "published": "2025-05-30",
+      "notes": "Recorded 22/23 Nov 2024; Hamburg → Newcastle transfer; storyboard sheets every 5 s read and deleted."
+    },
+    {
+      "id": "src:yt-metromark-d57-d78",
+      "title": "Transfer at Amsterdam Airport Schiphol | NL | D57 to D78 | 19/04/24",
+      "url": "https://www.youtube.com/watch?v=6wFbaOU_guI",
+      "publisher": "Metro Mark (YouTube)",
+      "kind": "video",
+      "group": "yt-metromark",
+      "accessed": "2026-10-31",
+      "published": "2024-06-19",
+      "notes": "Recorded 19 Apr 2024; Newcastle → Stockholm (non-Schengen → Schengen); storyboards every 5 s read and deleted."
+    },
+    {
+      "id": "src:yt-metromark-s-ns",
+      "title": "Transfer at Amsterdam Airport Schiphol | NL | Schengen to Non-Schengen | 30/05/25",
+      "url": "https://www.youtube.com/watch?v=IXtFTYnvvBo",
+      "publisher": "Metro Mark (YouTube)",
+      "kind": "video",
+      "group": "yt-metromark",
+      "accessed": "2026-10-31",
+      "published": "2026-05-29",
+      "notes": "Recorded 30 May 2025; Prague → Newcastle; arrival at a remote stand by apron bus; storyboards every 10 s read and deleted."
+    },
+    {
+      "id": "src:yt-flyandstay-g9-b17",
+      "title": "Amsterdam Schiphol airport transfer (Non Schengen to Schengen) Full video",
+      "url": "https://www.youtube.com/watch?v=VRHKtXPoTmc",
+      "publisher": "FlyandStay (YouTube)",
+      "kind": "video",
+      "group": "yt-flyandstay",
+      "accessed": "2026-10-31",
+      "published": "2024-11-12",
+      "notes": "Arrival near G9/G10, walk through Lounge 3, Holland Boulevard, Lounge 2, Lounge 1, pier C and the BC link to B17; storyboards every 10 s read and deleted."
+    },
+    {
+      "id": "src:yt-fal-arrivals-2026",
+      "title": "Schiphol Airport Arrivals Guide - Bus To Terminal, Passport Control, Customs and Baggage Hall",
+      "url": "https://www.youtube.com/watch?v=ftJ7m3J0CpQ",
+      "publisher": "Flights and Lounges (YouTube)",
+      "kind": "video",
+      "group": "yt-flightsandlounges",
+      "accessed": "2026-10-31",
+      "published": "2026-09-08",
+      "notes": "Apron bus from a remote stand to a bus gate under pier D, escalator into D lower, Lounge 2, arrivals passport control, baggage hall, Plaza, station; storyboards every 5 s read and deleted."
+    },
+    {
+      "id": "src:yt-schiphol-departure",
+      "title": "Vertrek je van Schiphol? Bekijk waar je naartoe moet",
+      "url": "https://www.youtube.com/watch?v=K-lV9lsrVhU",
+      "publisher": "Amsterdam Airport Schiphol (official YouTube)",
+      "kind": "video",
+      "group": "schiphol",
+      "accessed": "2026-10-31",
+      "published": "2023-06-28",
+      "notes": "Official departure-process clip: boarding-pass gates into the security filter, central security lanes (laptop stays in the bag). Storyboards every 1 s read and deleted; no layout detail."
+    },
+    {
+      "id": "src:yt-gezenadam-g10-e24",
+      "title": "Schiphol Airport Amsterdam, Walking from Gate G10 to Gate E24",
+      "url": "https://www.youtube.com/watch?v=4kNsSMoka0w",
+      "publisher": "Gezen Adam (YouTube)",
+      "kind": "video",
+      "group": "yt-gezenadam",
+      "accessed": "2026-10-31",
+      "published": "2019-01-29",
+      "notes": "Title/metadata only (2019, 38 min): attests gate G10 and an airside walk G10 → E24 (both non-Schengen)."
+    },
+    {
+      "id": "src:yt-javiation-m5",
+      "title": "Schiphol Airport – Gate M5 to baggage hall (JaViation)",
+      "url": "https://www.youtube.com/watch?v=l3FPvFJ_p08",
+      "publisher": "JaViation (YouTube)",
+      "kind": "video",
+      "group": "yt-javiation",
+      "accessed": "2026-10-31",
+      "published": "2023-11-07",
+      "notes": "Read frame by frame (storyboard, 5 s/frame): easyJet arrival at a remote-looking stand by stairs, pier M corridor M5 → M1, long walkway corridor, escalator down, one-way exit gates, baggage hall. Frames deleted."
+    },
+    {
+      "id": "src:marechaussee-transit",
+      "title": "Transit at a Dutch airport (Royal Netherlands Marechaussee)",
+      "url": "https://english.marechaussee.nl/topics/b/border-control-passengers/for-international-travellers/transit-at-a-dutch-airport",
+      "publisher": "Koninklijke Marechaussee",
+      "kind": "official",
+      "group": "marechaussee",
+      "accessed": "2026-10-31",
+      "notes": "Border authority: when transfer passengers pass passport control; EES in use for all Schengen ↔ non-Schengen transfers since April 2026; pre-registration kiosks in the Schiphol transfer areas. No opening hours or queue times."
+    },
+    {
+      "id": "src:klm-transfers",
+      "title": "KLM – Transferring at Amsterdam Airport Schiphol",
+      "url": "https://www.klm.com/information/airport/transfers",
+      "publisher": "KLM",
+      "kind": "airline",
+      "group": "klm",
+      "accessed": "2026-10-31",
+      "notes": "klm.com timed out to automated fetch (owner capture wanted); facts from search-engine excerpts of the klm.com/klm.nl/klm.fr transfer pages: minimum connection time 40 min Schengen, 50 min non-Schengen; extra security checks may apply when arriving from outside the EU."
+    },
+    {
+      "id": "src:flightreport-h6",
+      "title": "Flight report easyJet U28878 Amsterdam – London Gatwick (31 Dec 2015)",
+      "url": "https://www.flight-report.com/en/report/12728/EasyJet_U28878_Amsterdam_AMS_London_LGW",
+      "publisher": "Flight-Report (passenger report)",
+      "kind": "forum",
+      "group": "flight-report",
+      "accessed": "2026-10-31",
+      "published": "2016",
+      "notes": "First-hand 2015 report: security and passport control from departure area 2, then into the main (non-Schengen) terminal, then \"an 8-minute walk to the gate\" H6; \"having the walking times to each area posted was a great addition\". Old (pre-2024 works) but pier H is unchanged."
+    },
+    {
+      "id": "src:sleepinginairports-ams",
+      "title": "Sleeping in Airports – Amsterdam Schiphol guide",
+      "url": "https://sleepinginairports.net/guides/amsterdam-airport-guide.htm",
+      "publisher": "Sleeping in Airports",
+      "kind": "guide",
+      "group": "sleepinginairports",
+      "accessed": "2026-10-31",
+      "published": "2026-04-09",
+      "notes": "Night: \"The airport is open 24 hours\"; some landside areas (incl. Schiphol Plaza) may be accessible only to arriving/departing passengers and staff 00:00–04:00. No hours for security or passport filters."
+    },
+    {
+      "id": "src:cultureguru-hm-2017",
+      "title": "Culture Guru — Amsterdam Airport Schiphol terminal H and M (blog)",
+      "url": "https://cultureguru.nl/index.php/2017/05/28/amsterdam-airport-schiphol-terminal-h-and-m/",
+      "publisher": "cultureguru.nl",
+      "kind": "guide",
+      "group": "cultureguru",
+      "accessed": "2026-11-01",
+      "published": "2017-05-28",
+      "notes": "First-hand blog: 'H and M use same gates', access 'from different sides'; M has 'SEPARATE security and entrance'; for H 'you go through central security'; walk to the plane, no jet bridges. Old (2017); not used for times."
+    }
+  ]
+}

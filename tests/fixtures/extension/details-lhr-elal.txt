@@ -1,0 +1,19 @@
+Outbound
+Thu, 19 Nov 2026
+Frankfurt to Tel Aviv
+07:00
+FRA Frankfurt am Main
+1h 45m
+Lufthansa LH 900
+07:45
+LHR London Heathrow
+Connect in airport
+3h 00m connection
+10:45
+LHR London Heathrow
+5h 00m
+El Al LY 316
+17:45
+TLV Tel Aviv Ben Gurion
+Arrives Thu, 19 Nov 2026
+Journey duration 8h 45m
